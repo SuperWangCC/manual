@@ -1,0 +1,459 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Stroke Edit Mode &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../index.html"/>
+        <link rel="up" title="蜡笔系统" href="index.html"/>
+        <link rel="next" title="Animating Sketches" href="animating.html"/>
+        <link rel="prev" title="Brushes" href="drawing/brushes.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">User Interface</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../splash.html">Splash Screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#window-system">Window System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#interface-controls">界面控制</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#tools">工具</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../undo_and_redo.html">撤销和重做 -  Soulv 翻译</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ruler_and_protractor.html">3D 量尺 和 量角器</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">蜡笔系统</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="drawing/index.html">Drawing Strokes</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Stroke Edit Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="animating.html">Animating Sketches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="converting_to_geometry.html">将草图转为物体</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">User Interface</a> &raquo;</li>
+      
+          <li><a href="index.html">蜡笔系统</a> &raquo;</li>
+      
+    <li>Stroke Edit Mode</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/interface/grease_pencil/stroke_edit.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="stroke-edit-mode">
+<h1>Stroke Edit Mode<a class="headerlink" href="#stroke-edit-mode" title="永久链接至标题">¶</a></h1>
+<p>These tools let you move and reshape grease pencil strokes after they have been drawn.</p>
+<p>Open the Grease Pencil tab on the Tool Shelf.
+Look for the tools in the Edit Strokes panel shown here:</p>
+<div class="figure" id="id1">
+<img alt="../../_images/grease_pencil_drawing_edit_strokes_panel.png" src="../../_images/grease_pencil_drawing_edit_strokes_panel.png" />
+<p class="caption"><span class="caption-text">Edit panel with grease pencil strokes.</span></p>
+</div>
+<p>The basic steps are:</p>
+<ol class="arabic simple">
+<li>Enter Stroke Edit Mode.</li>
+<li>Select some strokes.</li>
+<li>Move and reshape them.</li>
+</ol>
+<div class="section" id="selecting">
+<h2>Selecting<a class="headerlink" href="#selecting" title="永久链接至标题">¶</a></h2>
+<p>Grease pencil strokes are formed from a series of connected vertex points.
+To make changes, first select points on the strokes that you want to edit.
+You can only select points on the active layer.
+The selected points are highlighted as in the image above.</p>
+<div class="admonition hint">
+<p class="first admonition-title">提示</p>
+<p class="last">Set the layer&#8217;s <em>Stroke Thickness</em> to 1 to make the points more visible.</p>
+</div>
+<p>Use the mouse to select the points, or one of the selection buttons in the panel as detailed in
+<a class="reference internal" href="../../modeling/meshes/selecting/basics.html"><span class="doc">Basic Selection</span></a>.</p>
+<p>Various selection functions similar to those available when editing meshes can be used:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><th class="stub">Select All</th>
+<td><code class="kbd docutils literal"><span class="pre">A</span></code></td>
+</tr>
+<tr class="row-even"><th class="stub">Border Select</th>
+<td><code class="kbd docutils literal"><span class="pre">B</span></code></td>
+</tr>
+<tr class="row-odd"><th class="stub">Circle Select</th>
+<td><code class="kbd docutils literal"><span class="pre">C</span></code></td>
+</tr>
+<tr class="row-even"><th class="stub">Select Linked</th>
+<td><code class="kbd docutils literal"><span class="pre">Ctrl-L</span></code></td>
+</tr>
+<tr class="row-odd"><th class="stub">Select More</th>
+<td><code class="kbd docutils literal"><span class="pre">Ctrl-NumpadPlus</span></code></td>
+</tr>
+<tr class="row-even"><th class="stub">Select Less</th>
+<td><code class="kbd docutils literal"><span class="pre">Ctrl-NumpadMinus</span></code></td>
+</tr>
+<tr class="row-odd"><th class="stub">Select Stroke</th>
+<td><code class="kbd docutils literal"><span class="pre">Alt-LMB</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="edit-strokes-panel">
+<h2>Edit Strokes Panel<a class="headerlink" href="#edit-strokes-panel" title="永久链接至标题">¶</a></h2>
+<dl class="docutils">
+<dt>Copy</dt>
+<dd>Copies selected Grease Pencil points and strokes.</dd>
+<dt>Paste</dt>
+<dd>Pastes the previously copied strokes.</dd>
+<dt>Paste &amp; Merge</dt>
+<dd>Pastes the previously copied strokes and merge in active layer.</dd>
+<dt>Delete <code class="kbd docutils literal"><span class="pre">X</span></code></dt>
+<dd><dl class="first last docutils">
+<dt>Points</dt>
+<dd>Delete the selected points, leaving a gap in the stroke.</dd>
+<dt>Dissolve</dt>
+<dd>Reconnect the ends so there is no gap in the stroke.</dd>
+<dt>Strokes</dt>
+<dd>Delete the entire stroke containing any selected points.</dd>
+<dt>Frame</dt>
+<dd>Delete a frame when doing <a class="reference internal" href="drawing/layers.html"><span class="doc">Animating Sketches</span></a>.</dd>
+</dl>
+</dd>
+<dt>Duplicate <code class="kbd docutils literal"><span class="pre">Shift-D</span></code></dt>
+<dd>Make a copy of the selected points at the same location. Use the mouse to <em>Translate</em> them into position.
+<code class="kbd docutils literal"><span class="pre">LMB</span></code> places them at their new position. <code class="kbd docutils literal"><span class="pre">RMB</span></code> cancels and removes the duplicates.</dd>
+<dt>Toggle Cyclic</dt>
+<dd>Close or open the selected stroke by adding an edge from the last to first point.</dd>
+<dt>Bend <code class="kbd docutils literal"><span class="pre">Shift-W</span></code></dt>
+<dd>Bends selected item between the 3D cursor and the mouse.</dd>
+<dt>Mirror <code class="kbd docutils literal"><span class="pre">Ctrl-M</span></code></dt>
+<dd>Mirrors selected strokes along one or more axises.</dd>
+<dt>Shear <code class="kbd docutils literal"><span class="pre">Shift-Ctrl-Alt-S</span></code></dt>
+<dd>Shears selected items along the horizontal screen axis.</dd>
+<dt>To Sphere <code class="kbd docutils literal"><span class="pre">Shift-Alt-S</span></code></dt>
+<dd>Move selected vertieces outward in a spherical shape around the midpoint.</dd>
+<dt>Arrange Strokes</dt>
+<dd><p class="first">Arranges selected strokes up/down in the drawing order of the active layer.</p>
+<p class="last">Bring Froward, Send Backward, Bring to Front, Send to Back</p>
+</dd>
+<dt>Move to Color</dt>
+<dd>Moves the selected strokes to active color.</dd>
+<dt>Interpolate</dt>
+<dd>Interpolates grease pencil strokes between frames.</dd>
+<dt>Sequence</dt>
+<dd>Interpolates full grease pencil strokes sequence between frames.</dd>
+<dt>Interpolate All Layers</dt>
+<dd>Interpolates all layers, not only active.</dd>
+<dt>Interpolate Selected Strokes</dt>
+<dd>Interpolates only the selected strokes in the original frame.</dd>
+<dt>Join Strokes</dt>
+<dd><dl class="first last docutils">
+<dt>Type</dt>
+<dd><dl class="first last docutils">
+<dt>Join</dt>
+<dd>Joins selected strokes.</dd>
+<dt>Join &amp; Copy</dt>
+<dd>Joins selected strokes as a new stroke.</dd>
+</dl>
+</dd>
+<dt>Leave Gaps</dt>
+<dd>Leaves gaps between joined strokes instead of linking them.</dd>
+</dl>
+</dd>
+<dt>Flip Direction</dt>
+<dd>Flips the start and end of a stroke.</dd>
+<dt>Show Directions</dt>
+<dd>Displays stroke drawing direection with a bigger green dot of the start point
+and a smaller red dot for the end point.</dd>
+<dt>Reproject Strokes</dt>
+<dd>Reprojects the selected strokes from the current viewpoint to get all points on the same plane again.
+This can be useful to fix problem from accidental 3D cursor movement, or viewport changes.</dd>
+</dl>
+</div>
+<div class="section" id="sculpt-strokes-panel">
+<h2>Sculpt Strokes Panel<a class="headerlink" href="#sculpt-strokes-panel" title="永久链接至标题">¶</a></h2>
+<p>Several tools for editing Grease Pencil strokes are provided in the form of brushes which you can use to &#8220;paint&#8221;
+or &#8220;sculpt&#8221; the appearance of the strokes without having to keep doing a tedious select-tweak-select-tweak
+pattern of edits.</p>
+<p>Common Options:</p>
+<dl class="docutils">
+<dt>Radius</dt>
+<dd>The size of the brush.</dd>
+<dt>Strength</dt>
+<dd>The Strength off the brush, can be changed by the pressure of the stylus.</dd>
+<dt>Use Falloff</dt>
+<dd>Enables a linear falloff to calculate the influence of the brush on a point.
+That is, a point closer to the midpoint of the brush (i.e. the point under the cursor)
+will get affected more than the ones at the edges.</dd>
+</dl>
+<p>The brushes currently implemented are:</p>
+<dl class="docutils">
+<dt>Smooth</dt>
+<dd><p class="first">Allows you to selectively smooth out jitter/shake and bumpiness, to tidy up messy parts of your sketches.</p>
+<dl class="last docutils">
+<dt>Affect Pressure</dt>
+<dd>Use this option to perform smoothing on stroke thickness values.</dd>
+</dl>
+</dd>
+<dt>Thickness</dt>
+<dd>The Thickness Brush can be used to increase or decrease the thickness of the parts of the stroke under the cursor.</dd>
+<dt>Grab</dt>
+<dd>Takes the stroke points which fall within the brush circle when the sculpting action begins,
+and allows you to translate this set of points.</dd>
+<dt>Push</dt>
+<dd>The Push Brush is very similar to the Grab brush, in that it also allows the user to translate stroke points.
+However, unlike the Grab Brush, the Push Brush is not restricted to operating only on the first set of points
+which were under the brush when the sculpt action was initiated. Instead, on each brush movement,
+the points currently under the brush get moved based on the amount
+the brush has moved since the last time it was evaluated.</dd>
+<dt>Twist</dt>
+<dd>Used to twist/rotate points around the cursor, creating a &#8220;swirling&#8221; effect.
+It is useful for applying low levels of distortion to stroke points.</dd>
+<dt>Pinch/Inflate</dt>
+<dd><p class="first">Used to draw points away from the cursor, or towards it.</p>
+<dl class="last docutils">
+<dt>Pinch</dt>
+<dd>Draw points towards the cursor.</dd>
+<dt>Inflate</dt>
+<dd>Push points away from the cursor.</dd>
+</dl>
+</dd>
+<dt>Clone Brush</dt>
+<dd><p class="first">Used to paste whatever is on the Copy/Paste buffer on the active layer, located at the point where you clicked.</p>
+<dl class="last docutils">
+<dt>Stamp Mode</dt>
+<dd>Moves the newly pasted strokes so that their center follows the movements of the brush/cursor</dd>
+<dt>Stamp + Smudge</dt>
+<dd>When the <em>Use Falloff</em> option is enabled, instead of moving all the newly pasted strokes by the same amount,
+only the points that are currently under the cursor get affected. Thus, this in this mode of operation,
+the brush is closer to a Paste + Push operation instead.</dd>
+<dt>Continuous</dt>
+<dd>As the brush moves, repeatedly just paste new copies for where the brush is now.
+In effect, this treats the contents of the copy buffer as the &#8220;brush template/kernel&#8221;
+used for &#8220;dabbing&#8221; samples all over the canvas.</dd>
+</dl>
+</dd>
+<dt>Selection Mask</dt>
+<dd>Used to restrict the brush to only operating on the selected points.</dd>
+<dt>Alpha</dt>
+<dd>Alpha value for selected vertices.</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="animating.html" class="btn btn-neutral float-right" title="Animating Sketches" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="drawing/brushes.html" class="btn btn-neutral" title="Brushes" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

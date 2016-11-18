@@ -1,0 +1,525 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Editing UVs &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../../index.html"/>
+        <link rel="up" title="UV Editing" href="index.html"/>
+        <link rel="next" title="Layout Worflow" href="layout_workflow.html"/>
+        <link rel="prev" title="Selecting" href="selecting.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#d">3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#animation">动画</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#image-video">图像/视频</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">UV/Image Editor</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../navigating.html">Navigating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../image/index.html">Image</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">UV Editing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../display_panel.html">Display Panel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../painting.html">Painting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../masking.html">Masking</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../sequencer/index.html">视频剪辑编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../movie_clip_editor/index.html">Movie Clip Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="../index.html">UV/Image Editor</a> &raquo;</li>
+      
+          <li><a href="index.html">UV Editing</a> &raquo;</li>
+      
+    <li>Editing UVs</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/editors/uv_image/uv_editing/layout_editing.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="editing-uvs">
+<h1>Editing UVs<a class="headerlink" href="#editing-uvs" title="永久链接至标题">¶</a></h1>
+<p>After unwrap, you will likely need to arrange the UV maps into something that can be logically
+textured or painted. Your goals for editing are:</p>
+<ul class="simple">
+<li>Stitch some pieces (UV maps) back together.</li>
+<li>Minimize wasted space in the image.</li>
+<li>Enlarge the faces where you want more detail.</li>
+<li>Re-size/enlarge the faces that are stretched.</li>
+<li>Shrink the faces that are too grainy and have too much detail.</li>
+</ul>
+<p>With a minimum of dead space,
+the most pixels can be dedicated to giving the maximum detail and fineness to the UV Texture.
+A UV face can be as small as a pixel (the little dots that make up an image)
+or as large as an entire image. You probably want to make some major adjustments first,
+and then tweak the layout.</p>
+<div class="section" id="menu">
+<h2>Menu<a class="headerlink" href="#menu" title="永久链接至标题">¶</a></h2>
+<dl class="docutils">
+<dt>Snap to pixel</dt>
+<dd>Will force the UVs to snap to the nearest pixels of an image if loaded.</dd>
+<dt>Constraining to Image Bounds</dt>
+<dd>Turning on <em>Constrain to Image Bounds</em> will prevent UVs from being moved outside the
+0 to 1 UV range.</dd>
+<dt>UV Sculpt</dt>
+<dd></dd>
+<dt>Live Unwrap</dt>
+<dd></dd>
+<dt>Unwrap</dt>
+<dd></dd>
+</dl>
+<div class="section" id="pin-and-unpin">
+<h3>Pin and Unpin<a class="headerlink" href="#pin-and-unpin" title="永久链接至标题">¶</a></h3>
+<p>You can pin UVs so they do not move between multiple unwrap operations.</p>
+<p>When Unwrapping a model it is sometimes useful to &#8220;Lock&#8221; certain UVs,
+so that parts of a UV layout stay the same shape, and/or in the same place.</p>
+<p>Pinning is done selecting a UV, then by selecting <em>Pin</em> from the <em>UVs</em> menu,
+or the shortcut <code class="kbd docutils literal"><span class="pre">P</span></code>. You can <em>Unpin a UV</em> with the shorctut <code class="kbd docutils literal"><span class="pre">Alt-P</span></code></p>
+<p>Pinning is most effective when using the Unwrap method of UV mapping, for organic objects.
+An example is when you are modeling a symmetrical object using the
+<a class="reference internal" href="../../../modeling/modifiers/generate/mirror.html"><span class="doc">Mirror Modifier</span></a>.
+Some of the UVs on the mirror axis may be shared across the mirrored counterparts.
+You could pin the UVs that correspond to the midline, then align them on the X axis,
+and they will stay in that location.</p>
+<p>Pinning also work great with the Live Unwrap tool. If you pin two or more UVs,
+with Live Unwrap on, dragging pinned UVs will interactively unwrap the model.
+This helps with fitting a UV island to a certain shape or region.</p>
+</div>
+<div class="section" id="pack-islands">
+<h3>Pack Islands<a class="headerlink" href="#pack-islands" title="永久链接至标题">¶</a></h3>
+<p>The <em>Pack Islands</em> tool, shortcut <code class="kbd docutils literal"><span class="pre">Ctrl-P</span></code>, will uniformly scale,
+then individually transform each Island so that they fill up the UV space as much as possible.
+This is an important tool for efficiently making use of the texture space.</p>
+</div>
+<div class="section" id="average-island-scale">
+<h3>Average Island Scale<a class="headerlink" href="#average-island-scale" title="永久链接至标题">¶</a></h3>
+<p>Using the <em>Average Island Scale</em> tool, shortcut <code class="kbd docutils literal"><span class="pre">Ctrl-A</span></code>,
+will scale each UV island so that they are all approximately the same scale.</p>
+</div>
+<div class="section" id="minimize-stretch">
+<h3>Minimize Stretch<a class="headerlink" href="#minimize-stretch" title="永久链接至标题">¶</a></h3>
+<p>The <em>Minimize Stretch</em> tool, <code class="kbd docutils literal"><span class="pre">Ctrl-V</span></code>,
+reduces UV stretch by minimizing angles. This essentially relaxes the UVs.</p>
+</div>
+<div class="section" id="stitch">
+<h3>Stitch<a class="headerlink" href="#stitch" title="永久链接至标题">¶</a></h3>
+<p><em>Stitch</em>, <code class="kbd docutils literal"><span class="pre">V</span></code>, will join selected UVs that share vertices.
+You set the tool to limit stitching by distance in the Tool Settings,
+by activating <em>Use Limit</em> and adjusting the <em>Limit Distance</em></p>
+</div>
+<div class="section" id="seams">
+<h3>Seams<a class="headerlink" href="#seams" title="永久链接至标题">¶</a></h3>
+<dl class="docutils">
+<dt>Mark Seam</dt>
+<dd></dd>
+<dt>Clear Seam</dt>
+<dd></dd>
+<dt>Seams From Island</dt>
+<dd></dd>
+</dl>
+</div>
+<div class="section" id="copy-mirrored-uv-coords">
+<h3>Copy Mirrored UV coords<a class="headerlink" href="#copy-mirrored-uv-coords" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="transform">
+<h3>Transform<a class="headerlink" href="#transform" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>Translate <code class="kbd docutils literal"><span class="pre">G</span></code></li>
+<li>Rotate <code class="kbd docutils literal"><span class="pre">R</span></code></li>
+<li>Scale <code class="kbd docutils literal"><span class="pre">S</span></code></li>
+<li>Shear <code class="kbd docutils literal"><span class="pre">Shift-Ctrl-Alt-S</span></code></li>
+</ul>
+<div class="section" id="axis-locking">
+<h4>Axis Locking<a class="headerlink" href="#axis-locking" title="永久链接至标题">¶</a></h4>
+<p>Transformations can be locked to an axis by pressing <code class="kbd docutils literal"><span class="pre">X</span></code> or <code class="kbd docutils literal"><span class="pre">Y</span></code> after
+one of the transform tools. Also,
+holding the <code class="kbd docutils literal"><span class="pre">MMB</span></code> will constrain movement to the X or Y axis.</p>
+</div>
+</div>
+<div class="section" id="mirror">
+<h3>Mirror<a class="headerlink" href="#mirror" title="永久链接至标题">¶</a></h3>
+<p>UVs can be mirrored on the Y axis or the X axis:</p>
+<ul class="simple">
+<li>Mirror X</li>
+<li>Mirror Y</li>
+</ul>
+<p>You can also use the hotkey <code class="kbd docutils literal"><span class="pre">Ctrl-M</span></code>, then enter <code class="kbd docutils literal"><span class="pre">X</span></code> or <code class="kbd docutils literal"><span class="pre">Y</span></code>,
+or hold the <code class="kbd docutils literal"><span class="pre">MMB</span></code> and drag in the mirror direction.</p>
+</div>
+<div class="section" id="snap">
+<h3>Snap<a class="headerlink" href="#snap" title="永久链接至标题">¶</a></h3>
+<p>Snapping in UV/image editor is similar to
+<a class="reference internal" href="../../3dview/object/transform/transform_control/precision/snap.html"><span class="doc">Snapping in 3D</span></a>.
+For the snap to pixel options to work an image has to be loaded.</p>
+<dl class="docutils">
+<dt>Selected to Pixels</dt>
+<dd>Moves selection to nearest pixel. See also <em>Snap to pixel</em> above.</dd>
+<dt>Selected to Cursor</dt>
+<dd>Moves selection to 2D cursor location.</dd>
+<dt>Selected to Cursor (Offset)</dt>
+<dd>Moves selection center to 2D cursor location, while preserving the offset of the vertices from the center.</dd>
+<dt>Selected to Adjacent Unselected</dt>
+<dd>Moves selection to adjacent unselected element.</dd>
+<dt>Cursor to Pixels</dt>
+<dd>Snaps the cursor to the nearest pixels.</dd>
+<dt>Cursor to Selected</dt>
+<dd>Moves the Cursor to the center of the selection.</dd>
+</dl>
+</div>
+<div class="section" id="weld-align">
+<h3>Weld/Align<a class="headerlink" href="#weld-align" title="永久链接至标题">¶</a></h3>
+<p>The <em>Weld or Align</em> tool, <code class="kbd docutils literal"><span class="pre">W</span></code>.</p>
+<dl class="docutils">
+<dt>Weld</dt>
+<dd>The <em>Weld</em> tool will move selected UVs to their average position.</dd>
+<dt>Remove Doubles UV</dt>
+<dd></dd>
+<dt>Straighten</dt>
+<dd>Auto, X, Y</dd>
+<dt>Align</dt>
+<dd><p class="first">Will line up the selected UVs on the X axis, Y axis, or automatically chosen axis.</p>
+<p class="last">Auto, X, Y</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="proportional-editing">
+<h3>Proportional Editing<a class="headerlink" href="#proportional-editing" title="永久链接至标题">¶</a></h3>
+<p>Proportional Editing is available in UV editing. The controls are the same as in the 3D View.
+See <a class="reference internal" href="../../3dview/object/transform/transform_control/proportional_edit.html"><span class="doc">Proportional Editing in 3D</span></a>
+for full reference.</p>
+</div>
+<div class="section" id="show-hide-faces">
+<h3>Show/Hide Faces<a class="headerlink" href="#show-hide-faces" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>Reveal Hidden <code class="kbd docutils literal"><span class="pre">Alt-H</span></code></li>
+<li>Hide Select <code class="kbd docutils literal"><span class="pre">H</span></code></li>
+<li>Hide Unselect <code class="kbd docutils literal"><span class="pre">Shift-H</span></code></li>
+</ul>
+</div>
+<div class="section" id="export-uv-layout">
+<span id="uv-image-export-layout"></span><h3>Export UV Layout<a class="headerlink" href="#export-uv-layout" title="永久链接至标题">¶</a></h3>
+<p>Using your favorite image painting program, you could use an exported UV layout to create a texture.
+Then save your changes, and back in Blender,
+use the <span class="menuselection">Image ‣ Open</span> menu command to load it as your UV image
+for the mesh in Edit Mode for the desired (and active) UV Texture layer.</p>
+<p>As a way of communicating to an artist who is painting your UV Texture for you,
+Blender has a tool called <em>Save UV Face Layout</em>
+(located in the UV/Image Editor, <span class="menuselection">UVs ‣ Save UV Face Layout</span>)
+that saves an image as a <code class="docutils literal"><span class="pre">Targa</span></code> (<code class="docutils literal"><span class="pre">.tga</span></code>), <code class="docutils literal"><span class="pre">EPS</span></code>, or an <code class="docutils literal"><span class="pre">SVG</span></code> format for the object you have selected.</p>
+<p>The image is an outline of the UV face mapping.
+Activating the tool brings up the File Browser with options for saving the layout:</p>
+<div class="figure" id="id3">
+<img alt="../../../_images/editors_uv-image_uv-editing_layout-editing_export-panel.png" src="../../../_images/editors_uv-image_uv-editing_layout-editing_export-panel.png" />
+<p class="caption"><span class="caption-text">Export Options.</span></p>
+</div>
+<dl class="docutils">
+<dt>All UVs</dt>
+<dd>if disabled, then only the UV faces selected will be outlined</dd>
+<dt>Modified</dt>
+<dd>Export UVs from the modified mesh.</dd>
+<dt>Format</dt>
+<dd>Select the type of image file to save (<code class="docutils literal"><span class="pre">.png</span></code>, <code class="docutils literal"><span class="pre">.eps</span></code>, <code class="docutils literal"><span class="pre">.svg</span></code>)</dd>
+<dt>Size</dt>
+<dd>select the size of the image in pixels. The image be square.</dd>
+<dt>Fill Opacity</dt>
+<dd>Set the opacity of the fill.</dd>
+</dl>
+<p>The image will be lines defining the UV edges that are within the image area of the UV mapping
+area. Edges outside the boundary, even if selected, will not be shown in the saved graphic.</p>
+<p>The artist will use this as a transparent layer in their paint program as a guide when
+painting your texture. The example below shows Blender in the background,
+and the Gimp working on the texture, using the saved layout as a guide.
+Note that targa format supports the Alpha channel,
+so you can paint transparent areas of the mesh.</p>
+<p>For using images as textures, see the page on
+<a class="reference internal" href="../../../render/blender_render/textures/types/image/index.html"><span class="doc">Image Textures</span></a>.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id4">
+<a class="reference internal image-reference" href="../../../_images/editors_uv-image_uv-editing_layout-editing_uv-layout.png"><img alt="../../../_images/editors_uv-image_uv-editing_layout-editing_uv-layout.png" src="../../../_images/editors_uv-image_uv-editing_layout-editing_uv-layout.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">A UV Layout in the UV/Image Editor.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id5">
+<a class="reference internal image-reference" href="../../../_images/editors_uv-image_uv-editing_layout-editing_uv-layout-export.png"><img alt="../../../_images/editors_uv-image_uv-editing_layout-editing_uv-layout-export.png" src="../../../_images/editors_uv-image_uv-editing_layout-editing_uv-layout-export.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">A UV Layout in an paint program.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="header">
+<h2>Header<a class="headerlink" href="#header" title="永久链接至标题">¶</a></h2>
+<div class="section" id="pivot-point">
+<h3>Pivot Point<a class="headerlink" href="#pivot-point" title="永久链接至标题">¶</a></h3>
+<p>The UV/Image editor has a 2D cursor.
+Its position can be changed by <code class="kbd docutils literal"><span class="pre">LMB</span></code> clicking in the UV/Image editor.
+You can also manually adjust its position in the Properties region.
+The range by default is from 0 to 256 starting from the lower left corner.
+By enabling <em>Normalized</em> under <em>Coordinates</em>,
+the range changes from 0 to 1.</p>
+<p>The Pivot Point can be changed to:</p>
+<ul class="simple">
+<li>Bounding Box Center</li>
+<li>Median Point</li>
+<li>2D Cursor Location</li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h3>Proportional Editing<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
+<p>Proportional Editing is available in UV editing. The controls are the same as in the 3D View.
+See <a class="reference internal" href="../../3dview/object/transform/transform_control/proportional_edit.html"><span class="doc">Proportional Editing in 3D</span></a>
+for full reference.</p>
+</div>
+<div class="section" id="id2">
+<h3>Snap<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="uv-data">
+<h3>UV Data<a class="headerlink" href="#uv-data" title="永久链接至标题">¶</a></h3>
+</div>
+</div>
+<div class="section" id="d-view">
+<h2>3D View<a class="headerlink" href="#d-view" title="永久链接至标题">¶</a></h2>
+<div class="section" id="face-mirror-and-rotate-uvs">
+<h3>Face Mirror and Rotate UVs<a class="headerlink" href="#face-mirror-and-rotate-uvs" title="永久链接至标题">¶</a></h3>
+<p>The orientation of the UV Texture is defined by each face.
+If the image is, for example, upside down or laying on its side,
+use the <span class="menuselection">Face ‣ Rotate UVs</span> (in the 3D View in Face Select mode)
+menu to rotate the UVs per face in 90-degree turns.</p>
+<p>The <span class="menuselection">Face ‣ Mirror UVs</span> tool mirrors the UVs per face,
+which flips the image over, showing you the image reversed.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="layout_workflow.html" class="btn btn-neutral float-right" title="Layout Worflow" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="selecting.html" class="btn btn-neutral" title="Selecting" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

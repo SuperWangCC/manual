@@ -1,0 +1,428 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Ocean Modifier &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../../index.html"/>
+        <link rel="up" title="修改器" href="../index.html"/>
+        <link rel="next" title="Particle Instance Modifier" href="particle_instance.html"/>
+        <link rel="prev" title="爆炸修改器–knight翻译" href="explode.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">Metaball</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">Empties</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">修改器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">介绍&#8211;一钱不名</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#modify">修改</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#generate">生成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#deform">形变</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#simulate">模拟</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="explode.html">爆炸修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Ocean Modifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particle_instance.html">Particle Instance Modifier</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">制作模型</a> &raquo;</li>
+      
+          <li><a href="../index.html">修改器</a> &raquo;</li>
+      
+    <li>Ocean Modifier</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/modeling/modifiers/simulate/ocean.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ocean-modifier">
+<h1>Ocean Modifier<a class="headerlink" href="#ocean-modifier" title="永久链接至标题">¶</a></h1>
+<p>The <em>Ocean Modifier</em> is an ocean simulation tool to simulate and generate a deforming ocean surface,
+and associated texture, used to render the simulation data.</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">The <em>Ocean Modifier</em> is ported from the open source Houdini Ocean Toolkit
+and is intended to simulate deep ocean waves and foam.</p>
+</div>
+<div class="section" id="options">
+<h2>选项<a class="headerlink" href="#options" title="永久链接至标题">¶</a></h2>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../_images/ocean_modifier.png"><img alt="../../../_images/ocean_modifier.png" src="../../../_images/ocean_modifier.png" style="width: 240px;" /></a>
+<p class="caption"><span class="caption-text">Ocean Modifier.</span></p>
+</div>
+<div class="section" id="geometry">
+<h3>几何数据<a class="headerlink" href="#geometry" title="永久链接至标题">¶</a></h3>
+<dl class="docutils">
+<dt>几何数据</dt>
+<dd><dl class="first last docutils">
+<dt>生成</dt>
+<dd><p class="first">Creates a tiled mesh grid that exactly corresponds with the resolution of the simulation data.</p>
+<p class="last">When generating a mesh surface, the existing mesh object is completely overridden with the ocean grid.
+A UV channel is also added, mapping the (0.0 to 1.0) UV space to the simulation grid.</p>
+</dd>
+<dt>置换</dt>
+<dd><p class="first last">通过任意拓扑，对已有的网格进行置换。</p>
+</dd>
+</dl>
+</dd>
+<dt>重复X，重复Y</dt>
+<dd>When generating a mesh surface, controls the number of times the grid is tiled in X and Y directions.
+UVs for these tiled mesh areas continue outside of the (0.0 to 1.0) UV space.</dd>
+<dt>时间</dt>
+<dd>The time at which the ocean surface is being evaluated.
+To make an animated ocean, you will need to insert keyframes <code class="kbd docutils literal"><span class="pre">RMB</span></code> and animate this time value.
+The speed that the time value is changing will determine the speed of the wave animation.</dd>
+<dt>深度</dt>
+<dd><p class="first last">即模拟区域下方的洋底的恒定深度。 较低的值模拟较浅的水但是波浪更细密。</p>
+</dd>
+<dt>随机种</dt>
+<dd><p class="first last">不同的种子导致不同的模拟结果。</p>
+</dd>
+<dt>分辨率</dt>
+<dd><p class="first">这是模拟引擎的速度与品质的关键控制点，它决定了由模拟生成的内置二维网格面的精度。</p>
+<p>The internal grids are powers of two of the resolution value,
+so a resolution value of 16, will create simulation data of size 256×256.
+The higher the resolution, the more detail will be produced, but the slower it will be to calculate.</p>
+<div class="last admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">当使用“Generate（生成）”修改器几何体选项时，此精度值也会决定所生成网格面的精度，与内置模拟数据的精度相同。</p>
+</div>
+</dd>
+<dt>大小</dt>
+<dd><p class="first last">简单的尺寸变换，不会影响波浪高度或者其他模拟行为。</p>
+</dd>
+<dt>空间尺寸</dt>
+<dd><p class="first last">这是所模拟的海洋表面区域的宽度，单位是米。它也决定了所生成网格的尺寸，或者说是置换区域，单位是BU（Blender单位）。当然你可以在物体模式下对洋面模拟器所在的物体进行缩放来调节它场景中的视觉尺寸。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="wave">
+<h3>Wave<a class="headerlink" href="#wave" title="永久链接至标题">¶</a></h3>
+<dl class="docutils">
+<dt>翻滚度</dt>
+<dd><p class="first last">波峰的翻滚程度。当值为0时，海洋表面只是在Z方向上做上下置换。而较高的翻滚度值则会让波浪产生X向与Y向的置换效果，来产生较为尖锐的波峰效果。</p>
+</dd>
+<dt>缩放</dt>
+<dd><p class="first last">这是对波幅的总体缩放控制。它能够通过正负值控制波浪的高度或深度。它不仅能够对洋面物体进行Z向缩放，而且可以对各个模拟面进行缩放，包括X与Y向的置换，以及对应的水沫与法线。</p>
+</dd>
+<dt>对齐</dt>
+<dd><p class="first last">它控制着波形随风而动的方向性。当值为0时，风和波浪的面向是随机而均匀的。定向值越高，则风吹的方向就越恒定，这使得波浪看起来在单一方向上更扁平，更对齐。</p>
+</dd>
+<dt>方向</dt>
+<dd><p class="first last">当使用Alignment（对齐）时，它指定的是波浪所对齐的方向。</p>
+</dd>
+<dt>衰减</dt>
+<dd><p class="first last">当使用Alignment（对齐）项时，此项指定了相互反射的波浪的衰减量。它会产生一种效果，能够使得波浪运动更具方向性（不只是波形）。当衰减值为0.0时，波浪会在各个方向上反射彼此，当衰减值为1.0时，这些相互反射的波浪会发生衰减，只会保留与风吹方向相同的波浪。</p>
+</dd>
+<dt>最小波浪</dt>
+<dd><p class="first last">指定所生成波浪尺寸的下限。与低通滤波器功能相仿，这会将高频波浪的细节移除。</p>
+</dd>
+<dt>风速率</dt>
+<dd><p class="first last">以米/秒为单位的风速。风速较低时，表面会形成会相应较小的波浪。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="simulation-data-generation-options">
+<h3>模拟数据生成选项<a class="headerlink" href="#simulation-data-generation-options" title="永久链接至标题">¶</a></h3>
+<div class="figure" id="id2">
+<a class="reference internal image-reference" href="../../../_images/ocean_foam_layer_name.jpg"><img alt="../../../_images/ocean_foam_layer_name.jpg" src="../../../_images/ocean_foam_layer_name.jpg" style="width: 240px;" /></a>
+<p class="caption"><span class="caption-text">Using foam vertex colors with a named data layer.</span></p>
+</div>
+<p>默认情况下，模拟器只会生成置换数据，因为这样的工作量最小，也会获得最迅捷的反馈。附加的模拟数据也可以为渲染而生成。</p>
+<dl class="docutils">
+<dt>生成法线</dt>
+<dd><p class="first last">用来模拟附加的法线贴图数据。当贴图作为凹凸贴图映射到法线时，并在烘焙的时候启用了生成法线贴图图像序列时，它可以被Ocean（洋面）纹理调用。</p>
+</dd>
+<dt>生成水沫</dt>
+<dd><p class="first last">用来模拟附加的水沫数据。在烘焙的时候启用了生成法线贴图图像序列时，可以被Ocean Texture（洋面纹理）调用并作为纹理使用（可能用作蒙板）。</p>
+</dd>
+<dt>水沫覆盖度</dt>
+<dd>Tweaks the amount of foam covering the waves, negative values will reduce the amount of foam
+(leaving only the topmost peaks), positive values will add it. Typically ranges from (-1.0 to 1.0)</dd>
+<dt>水沫数据层名称:</dt>
+<dd><p class="first last">作为顶点数据层的可选命名，被洋面修改器用来以顶点颜色形式存储水沫贴图。在渲染器中调用水沫数据时需要用到此名称。</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="baking">
+<h2>烘焙<a class="headerlink" href="#baking" title="永久链接至标题">¶</a></h2>
+<p>洋面数据不仅可以进行实时模拟，而且可以被烘焙到硬盘上。当对模拟进行烘焙时，模拟器引擎完全完全不发挥作用，同时，修改器/纹理会从烘焙文件中获取全部信息。</p>
+<p>烘焙具有以下几方面的优势：</p>
+<ul class="simple">
+<li>It is faster to use the stored data rather than re-calculating it.</li>
+<li>Allows rendering ocean data in external renderers.</li>
+<li>Enables more advanced foam maps.</li>
+</ul>
+<div class="section" id="data-files">
+<h3>数据文件<a class="headerlink" href="#data-files" title="永久链接至标题">¶</a></h3>
+<p>模拟数据以OpenEXR图形贴图序列的形式存储在磁盘上，每个数据对应了单独的置换、法线以及水沫（如果启用生成的话）在从这些烘焙文件中读取数据时，当烘焙序列中的一帧从磁盘上读取时，它会缓存在内存中，这意味着在随后访问已读取帧的速度会加快，而无需重新从磁盘读取数据了。</p>
+<p>由于所烘焙的文件是常规的OpenEXR格式图像，它们也可以由其它支持此格式的程序或渲染器读取及渲染。</p>
+</div>
+<div class="section" id="baking-foam">
+<h3>烘焙水沫<a class="headerlink" href="#baking-foam" title="永久链接至标题">¶</a></h3>
+<p>Baking also provides improved foam capabilities. When simulating live,
+the ocean simulator retrieves data for that current frame only. In the case of the foam map,
+this represents the tips of wave crests for that given frame. In reality,
+after foam is created by wave interactions,
+it remains sitting on the top of the wave surface for a while, as it dissipates. With baking,
+it is possible to approximate that behavior, by accumulating foam from previous frames,
+leaving it remaining on the surface.</p>
+<iframe src="https://player.vimeo.com/video/17517981" style="border: 0; height: 286px; width: 500px">
+</iframe></div>
+<div class="section" id="baking-options">
+<h3>烘焙选项<a class="headerlink" href="#baking-options" title="永久链接至标题">¶</a></h3>
+<dl class="docutils">
+<dt>开始 / 结束</dt>
+<dd><p class="first last">这里设定的是用于烘焙（包括）模拟的帧范围。当从烘焙范围外进行烘焙时，始帧与末帧将被重复执行烘焙操作。</p>
+</dd>
+<dt>缓存路径</dt>
+<dd><p class="first last">指定了所烘焙的EXR文件的存储路径。序列格式为disp_####.exr，normal_####.exr，以及foam_####.exr，这里的####代表四位数的帧数值。如果窜出路径文件夹不存在，将会被新建。</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="simulation-internals">
+<h2>内置模拟<a class="headerlink" href="#simulation-internals" title="永久链接至标题">¶</a></h2>
+<p>The simulator itself uses FFT methods to generate 2D grids of simulation information internally,
+very similar to 2D texture maps.
+The simulator can generate three types of data: displacement, normals,
+and extra data, that is used to calculate wave crest intersections (i.e. foam).
+After simulation, these maps are used to displace the ocean surface geometry in 3D,
+and also can be used for shading via the Ocean texture. The internal simulation engine is
+multi threaded with OpenMP to take advantage of multiple cores.</p>
+</div>
+<div class="section" id="examples">
+<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
+<iframe src="https://player.vimeo.com/video/18911131" style="border: 0; height: 286px; width: 500px">
+</iframe><p>在Blender中模拟和烘焙贴图，在3Dlight里面渲染。                                                                                                            历史 History
+模拟器的核心开发者是Drew Whitehouse，源自 Houdini Ocean Toolkit。由Hamed Zaghaghi转换为C语言并集成在Blender 2.4系列的一个补丁中，由ProMotion Studios/Red Cartel在短片《Lighthouse（灯塔）》的制作过程中提供资助。
+在此项目中，Matt Ebb将核心模拟器再次引入到Blender 2.5版本中，同时增加了功能，并进行了修复与优化。由&#8217;Save the Ocean Sim（拯救洋面模拟器）&#8217;项目提供资助。</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="particle_instance.html" class="btn btn-neutral float-right" title="Particle Instance Modifier" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="explode.html" class="btn btn-neutral" title="爆炸修改器–knight翻译" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

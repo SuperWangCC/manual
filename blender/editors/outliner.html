@@ -1,0 +1,437 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>大纲视图–­爱在南江村路口等你翻译 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../genindex.html"/>
+        <link rel="search" title="搜索" href="../search.html"/>
+    <link rel="top" title="Blender Manual" href="../index.html"/>
+        <link rel="up" title="编辑器" href="index.html"/>
+        <link rel="next" title="用户偏好设置" href="../preferences/index.html"/>
+        <link rel="prev" title="Properties Editor" href="properties_editor.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">User Interface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#d">3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#settings">设置</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="properties_editor.html">Properties Editor</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">大纲视图&#8211;­爱在南江村路口等你翻译</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tree-view">Tree View</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#header">Header</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../preferences/index.html">User Preferences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="info/index.html">Info Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">编辑器</a> &raquo;</li>
+      
+    <li>大纲视图&#8211;­爱在南江村路口等你翻译</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/editors/outliner.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="outliner">
+<h1>大纲视图&#8211;­爱在南江村路口等你翻译<a class="headerlink" href="#outliner" title="永久链接至标题">¶</a></h1>
+<div class="figure" id="id1">
+<img alt="../_images/editors_outliner.png" src="../_images/editors_outliner.png" />
+<p class="caption"><span class="caption-text">The Outliner editor.</span></p>
+</div>
+<p>The <em>Outliner</em> is a list that organizes data in the blend-file.
+i.e. the scene data and also the User Preferences.</p>
+<p class="rubric">Usage</p>
+<ul class="simple">
+<li><p class="first">查看场景中的数据。</p>
+</li>
+<li><p class="first">选择或取消选择场景中的物体。</p>
+</li>
+<li><p class="first">隐藏或显示场景中的物体。</p>
+</li>
+<li><p class="first">启用或禁用选择 (以使物体在 3D 视图中 &#8220;不可选择&#8221; )。</p>
+</li>
+<li><p class="first">禁用 / 启用是否渲染物体</p>
+</li>
+<li><p class="first">从场景中删除对象。</p>
+</li>
+<li>Unlink data (equivalent to pressing the <em>X</em> button next to the name of a data-block).</li>
+<li><p class="first">简单选择那些渲染层需要渲染。</p>
+</li>
+<li><p class="first">简单选择那些渲染层需要渲染。（比如你可以选择只渲染 <em>高光</em> 通道）</p>
+</li>
+</ul>
+<div class="section" id="tree-view">
+<h2>Tree View<a class="headerlink" href="#tree-view" title="永久链接至标题">¶</a></h2>
+<p>Each row in the <em>Outliner</em> shows a data-block. You can click the plus-sign to the
+left of a name to expand the current data-block and see what other data-blocks it contains.</p>
+<p>You can select data-blocks in the <em>Outliner</em>,
+but this will not necessarily select the data-block in the scene.
+To select the data-block in the scene, you have to activate it.</p>
+<div class="section" id="selecting-and-activating">
+<h3>选择和主控<a class="headerlink" href="#selecting-and-activating" title="永久链接至标题">¶</a></h3>
+<p>Single selection does not require any pre-selection: just work directly with <code class="kbd docutils literal"><span class="pre">LMB</span></code>
+(and/or <code class="kbd docutils literal"><span class="pre">RMB</span></code> - contextual menu, see below) <em>inside</em> the name/icon area.</p>
+<p>When you select an object in the list this way,
+it is selected and becomes the active object in all other 3D Views.</p>
+<div class="section" id="activating-a-data-block">
+<h4>Activating a data-block<a class="headerlink" href="#activating-a-data-block" title="永久链接至标题">¶</a></h4>
+<p>To &#8220;activate&#8221; the data-block with <code class="kbd docutils literal"><span class="pre">LMB</span></code> on the <em>icon</em> of the data-block.
+Activating the data-block will automatically switch to the relevant mode.
+For example, activating the mesh data of the cube will select the cube
+and enter <em>Edit Mode</em> while activating the object data of the
+cube will select the cube and enter <em>Object Mode</em> (see right).</p>
+</div>
+<div class="section" id="selecting-a-group-of-data-blocks">
+<h4>Selecting a group of data-blocks<a class="headerlink" href="#selecting-a-group-of-data-blocks" title="永久链接至标题">¶</a></h4>
+<p>Useful when you want to select/deselect a whole bunch of data-blocks.
+For this you must prepare the selection using, to your liking:</p>
+<ul class="simple">
+<li><p class="first">RMB鼠标右键 或 LMB鼠标左键,</p>
+</li>
+<li><p class="first">Shift-RMB鼠标右键 or Shift-LMB鼠标左键,</p>
+</li>
+<li><p class="first">RMB鼠标右键 拖动 或LMB鼠标左键 拖动,</p>
+</li>
+</ul>
+<p>全部 outside 名称/图标区域。这些预先选择有其较亮的颜色一致。 然后，您可以选择或取消选择RMB鼠标右键 开启 在名称/图标区域，弹出上下文菜单（参见下文）</p>
+<div class="figure" id="id2">
+<img alt="../_images/editors_outliner_column-icons.png" src="../_images/editors_outliner_column-icons.png" />
+<p class="caption"><span class="caption-text">Selection of a data-block.</span></p>
+</div>
+</div>
+<div class="section" id="context-menu">
+<h4>上下文菜单<a class="headerlink" href="#context-menu" title="永久链接至标题">¶</a></h4>
+<p>Show the context menu for a data-block with <code class="kbd docutils literal"><span class="pre">RMB</span></code> on the icon or name.
+Depending on the type of the pre-selected data-block(s), you will have all or part of the following options:</p>
+<ul class="simple">
+<li><p class="first">选择.</p>
+</li>
+<li><p class="first">取消选择.</p>
+</li>
+<li><em>Delete</em> <code class="kbd docutils literal"><span class="pre">X</span></code>.</li>
+<li><em>Unlink</em> - To unlink a data-block from its &#8220;owner&#8221; (e.g., a material from its mesh).</li>
+<li><em>Make Local</em> - To create a &#8220;local&#8221; duplicate of this data-block.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">Some data-block types will not have a context menu at all!</p>
+</div>
+</div>
+</div>
+<div class="section" id="object-level-restrictions">
+<h3>Object-level Restrictions<a class="headerlink" href="#object-level-restrictions" title="永久链接至标题">¶</a></h3>
+<p>The three following toggles, in the right side of the <em>Outliner</em> editor,
+are only available for objects:</p>
+<dl class="docutils">
+<dt>Visibility (eye icon)</dt>
+<dd><p class="first last">切换3d视图内显示与隐藏对象,按 V 键将切换此属性用于在大纲视图中选择任何对象</p>
+</dd>
+<dt>Selectability (mouse cursor icon)</dt>
+<dd>This is useful for if you have placed something in the scene
+and do not want to accidentally select it when working on something else.
+<code class="kbd docutils literal"><span class="pre">S</span></code> will toggle this property for any objects that are selected in the <em>Outliner</em>.</dd>
+<dt>Rendering (camera icon)</dt>
+<dd><p class="first last">这仍将保持该对象可见的场景，但它会被渲染器被忽略. 按 R 键将切换此属性用于在选择任何对象</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="header">
+<h2>Header<a class="headerlink" href="#header" title="永久链接至标题">¶</a></h2>
+<div class="section" id="view-menu">
+<h3>View Menu<a class="headerlink" href="#view-menu" title="永久链接至标题">¶</a></h3>
+<dl class="docutils">
+<dt>Sort Alphabetically</dt>
+<dd>Sort the entries alphabetically.</dd>
+<dt>Show Restriction Columns</dt>
+<dd>Toggles the three columns of <a class="reference internal" href="#object-level-restrictions">Object-level Restrictions</a>.</dd>
+<dt>Show Active</dt>
+<dd>Centers the Tree View to selected object <code class="kbd docutils literal"><span class="pre">.</span></code>.</dd>
+<dt>Show/Hide One Level</dt>
+<dd>Expand one level down in the tree <code class="kbd docutils literal"><span class="pre">NumpadPlus</span></code> and <code class="kbd docutils literal"><span class="pre">NumpadMinus</span></code> to collapse.</dd>
+<dt>Show Hierarchy</dt>
+<dd>To collapse all levels of the tree <code class="kbd docutils literal"><span class="pre">Home</span></code>.</dd>
+</dl>
+</div>
+<div class="section" id="display-mode">
+<h3>Display Mode<a class="headerlink" href="#display-mode" title="永久链接至标题">¶</a></h3>
+<p>The editors header has a select menu that let you filter what the Outliner should show. It helps to narrow the
+list of objects so that you can find things quickly and easily.</p>
+<dl class="docutils">
+<dt>所有场景</dt>
+<dd>Shows <em>everything</em> the <em>Outliner</em> can display (in all scenes, all layers, etc.)</dd>
+<dt>当前场景</dt>
+<dd><p class="first last">一切都显示当前场景中。</p>
+</dd>
+<dt>可见层</dt>
+<dd>Shows everything on the visible (currently selected) layers in the current scene.
+Use the <a class="reference internal" href="3dview/object/properties/relations/layers.html"><span class="doc">layer</span></a> buttons
+to make objects on a layer visible in the 3D View.</dd>
+<dt>选中项</dt>
+<dd>Lists the object(s) that are currently selected in the 3D View.
+See <a class="reference internal" href="3dview/object/selecting.html"><span class="doc">selecting in the 3D View</span></a> for more information.</dd>
+<dt>主控</dt>
+<dd><p class="first last">仅列出活动（通常是最后选定的）对象</p>
+</dd>
+<dt>相同类型</dt>
+<dd>Lists only those objects in the current scene that are of the same types as those selected in the 3D View.</dd>
+<dt>组</dt>
+<dd>Lists only <a class="reference internal" href="3dview/object/properties/relations/groups.html"><span class="doc">Groups</span></a> and their members.</dd>
+<dt>序列</dt>
+<dd>Lists <a class="reference internal" href="../data_system/data_blocks.html"><span class="doc">data-block</span></a>
+that are used by the <a class="reference internal" href="sequencer/index.html"><span class="doc">Sequencer</span></a>.</dd>
+<dt>Blender File</dt>
+<dd>Lists all data in the current blend-file.</dd>
+<dt>Data-Blocks</dt>
+<dd>Lists every <a class="reference internal" href="../data_system/data_blocks.html"><span class="doc">data-block</span></a> along with any properties that they might have.</dd>
+<dt>用户设置</dt>
+<dd>Lists options that can be found in the <a class="reference internal" href="../preferences/index.html"><span class="doc">User Preferences</span></a>
+along with some other settings.</dd>
+<dt>Orphan Data</dt>
+<dd>Lists <a class="reference internal" href="../data_system/data_blocks.html"><span class="doc">data-blocks</span></a>
+which are unused and/or will be lost when the file is reloaded.</dd>
+</dl>
+</div>
+<div class="section" id="searching">
+<h3>搜索<a class="headerlink" href="#searching" title="永久链接至标题">¶</a></h3>
+<p>You can search the view for data-blocks,
+by using Search field in the header of the <em>Outliner</em>,
+The <em>Search</em> menu lets you toggle the following options:</p>
+<ul class="simple">
+<li>Case Sensitive Matches Only</li>
+<li>Complete Matches Only</li>
+</ul>
+</div>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="永久链接至标题">¶</a></h2>
+<div class="figure" id="id3">
+<img alt="../_images/editors_outliner_example.png" src="../_images/editors_outliner_example.png" />
+<p class="caption"><span class="caption-text">The Outliner with different kind of data.</span></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../preferences/index.html" class="btn btn-neutral float-right" title="用户偏好设置" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="properties_editor.html" class="btn btn-neutral" title="Properties Editor" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

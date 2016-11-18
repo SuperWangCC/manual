@@ -1,0 +1,378 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>植皮修改器–knight翻译 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../../index.html"/>
+        <link rel="up" title="修改器" href="../index.html"/>
+        <link rel="next" title="加固修改器–knight翻译" href="solidify.html"/>
+        <link rel="prev" title="螺旋修改器–knight翻译" href="screw.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">Metaball</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">Empties</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">修改器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">介绍&#8211;一钱不名</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#modify">修改</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#generate">生成</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="array.html">阵列修改器&#8211;gkuggkug豆豆翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bevel.html">倒角修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="booleans.html">布尔修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="build.html">建造修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="decimate.html">精简修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="edge_split.html">棱线分离修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mask.html">遮罩修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mirror.html">镜像修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="multiresolution.html">多分辨率修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="remesh.html">重新网面化修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="screw.html">螺旋修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">植皮修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="solidify.html">加固修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsurf.html">细分表面修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="triangulate.html">三角化修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wireframe.html">线框修改器&#8211;lifetree翻译</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#deform">形变</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#simulate">模拟</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">制作模型</a> &raquo;</li>
+      
+          <li><a href="../index.html">修改器</a> &raquo;</li>
+      
+    <li>植皮修改器&#8211;knight翻译</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/modeling/modifiers/generate/skin.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="skin-modifier">
+<h1>植皮修改器&#8211;knight翻译<a class="headerlink" href="#skin-modifier" title="永久链接至标题">¶</a></h1>
+<p>植皮修改器使用顶点和边来创建有表皮的面，使用每个顶点的半径可获取更好的形状。输出通常是四边形，尽管一些三角形可能出现相交。</p>
+<p>用任意拓扑来雕刻和/或光滑形体来生成基网面是一种快速的方法。</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">原始几何形体的面会被皮肤修改器忽略掉。</p>
+</div>
+<div class="section" id="options">
+<h2>选项<a class="headerlink" href="#options" title="永久链接至标题">¶</a></h2>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../_images/skin-ui.jpg"><img alt="../../../_images/skin-ui.jpg" src="../../../_images/skin-ui.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">皮肤修改器界面。</span></p>
+</div>
+<dl class="docutils">
+<dt>创建骨架</dt>
+<dd><p class="first">Create an armature on top of the object. Each edge becomes a bone.</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">如果根顶点有多于一个的邻接边，它会创建额外的一根骨头作为根。</p>
+</div>
+<p>该功能实现了下面几条：</p>
+<ol class="last arabic simple">
+<li><p class="first">适配输入的网面的骨头构成新的骨架物体而被添加进来。活动的选择将切换到新的骨架上。</p>
+</li>
+<li><p class="first">权重组添加到了输入网面。植皮修改器也传播这些权重到输出网面。</p>
+</li>
+<li><p class="first">骨架修改器直接添加到植皮修改器之下。注意到骨架修改器是在植皮修改器之后应用的，因为它应该仅仅变形输出，反之如果它在植皮修改器之上的话，它可能会修改最终的拓扑结构。</p>
+</li>
+</ol>
+</dd>
+<dt>分支光滑</dt>
+<dd><p class="first last">分支顶点是一个有三个或三个以上连接边的顶点。这些区域倾向于产生更复杂的拓扑，其中一些可能相交。 <em>分支光滑</em> 设置使这些点周围的表面松弛，但会有收缩表面的副效果。</p>
+</dd>
+<dt>平滑着色</dt>
+<dd><p class="first last">采用光滑着色而不是平坦着色来输出面。输入几何形体的光滑、平坦着色不被保留。</p>
+</dd>
+<dt>选择的顶点</dt>
+<dd><dl class="first last docutils">
+<dt>标记、清除松弛</dt>
+<dd><p class="first last">默认情况下，为了保持输出紧凑，分支顶点 (具有三个或更多的连接边的顶点) 将沿相邻的边生成额外的边环。可通过点击 <em>标记松弛</em> 使分支松弛，这将使输出在所有相邻的顶点之间伸展开来。可对选定的顶点再次点击 <em>清除松弛</em> 而禁用。</p>
+</dd>
+<dt>标记根节点</dt>
+<dd><p class="first">将一个顶点标记为根，将导致该顶点用来为连接的枝干计算旋转。根顶点也影响骨架的输出，它们会用作根骨头的原点。</p>
+<p>根在3D视图里是以红色虚线圆圈显示的，绕着该顶点。</p>
+<p class="last">每个连接的顶点集应该只有一个根节点。 <em>标记根节点</em> 加强了每个集和有一个根节点的条件，所以手动取消标记根节点就没有必要了。</p>
+</dd>
+<dt>均衡半径</dt>
+<dd><p class="first last">使选择顶点的表皮半径在每个轴上都相等。</p>
+</dd>
+</dl>
+</dd>
+<dt>对称轴</dt>
+<dd><p class="first">对称轴复选框用来保持输出的拓扑在它们各自的轴上对称。换句话讲，使用它可以避免在某个轴上合并三角面，除非三角面构成一个对称的四边形。</p>
+<div class="last admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">这些对称轴复选框不会在对称的轴上添加几何体。因此，应当使用镜像修改器，且通常置于皮肤修饰符之上。</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="usage">
+<h2>用法<a class="headerlink" href="#usage" title="永久链接至标题">¶</a></h2>
+<p>Add the Skin modifier to a mesh. Disable <em>Limit selection to visible</em> in the 3D View so that you can see
+the vertices inside the new geometry.</p>
+<p>植皮修改器用普通的顶点和边作为输入。当构建一个带表皮的网面时，在编辑模式下的所有常规工具（比如挤出、细分、平移、缩放，以及旋转）都可以使用。</p>
+<p>The radius of selected vertices can be adjusted in the <em>Transform</em> panel of the <em>Properties</em> region <code class="kbd docutils literal"><span class="pre">N</span></code></p>
+</div>
+<div class="section" id="examples">
+<h2>例子<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
+<div class="figure" id="id2">
+<span id="fig-modifier-skin-creature"></span><img alt="../../../_images/modeling_modifiers_generate_skin_example.png" src="../../../_images/modeling_modifiers_generate_skin_example.png" />
+<p class="caption"><span class="caption-text">Simple creature, made with only the Skin modifier.</span></p>
+</div>
+<ul class="simple">
+<li><p class="first">在修改器菜单里添加一个 <em>植皮</em> 修改器。</p>
+</li>
+<li><p class="first">按下 <code class="kbd docutils literal"><span class="pre">Tab</span></code> 进入编辑模式，然后挤出。</p>
+</li>
+<li>Try to sketch results similar to Fig. <a class="reference internal" href="#fig-modifier-skin-creature"><span class="std std-ref">Simple creature, made with only the Skin modifier.</span></a>,
+through extruding the vertices of the object.</li>
+<li><p class="first">用 <code class="kbd docutils literal"><span class="pre">Ctrl-A</span></code> 来改变这个怪物不同区域的尺寸。</p>
+</li>
+<li><p class="first">在像脖子一样的区域用上 <em>标记松弛</em> ，可以使这些面更紧凑地在一起。</p>
+</li>
+<li>To get smoother results, activate <em>Smooth Shading</em> and add a
+<a class="reference internal" href="subsurf.html"><span class="doc">Subdivision Surface</span></a></li>
+</ul>
+</div>
+<div class="section" id="external-links">
+<h2>外部链接<a class="headerlink" href="#external-links" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://www.blendernation.com/2011/03/11/skin-modifier-development/">Skin Modifier Development at Blender Nation</a> &#8211;
+An early demonstration of the skin modifier by Nicholas Bishop (March 2011).</li>
+<li>Ji, Zhongping; Liu, Ligang; Wang, Yigang (2010).
+<a class="reference external" href="http://www.math.zju.edu.cn/ligangliu/CAGD/Projects/BMesh/">B-Mesh: A Fast Modeling System for Base Meshes of 3D Articulated Shapes</a>,
+Computer Graphics Forum 29(7), pp. 2169-2178. &#8211; The work this modifier is based on
+(<a class="reference external" href="http://www.math.zju.edu.cn/ligangliu/cagd/projects/bmesh/paper/bmesh.pdf">direct link to PDF</a>).</li>
+<li><a class="reference external" href="http://blenderartists.org/forum/showthread.php?209551-B-mesh-modeling-tools-papers-better-than-zsfere">Related thread on Blender artists</a>.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="solidify.html" class="btn btn-neutral float-right" title="加固修改器–knight翻译" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="screw.html" class="btn btn-neutral" title="螺旋修改器–knight翻译" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

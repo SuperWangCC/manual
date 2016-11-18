@@ -1,0 +1,375 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Keying Sets &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../index.html"/>
+        <link rel="up" title="Keyframes" href="index.html"/>
+        <link rel="next" title="动作—小A翻译" href="../actions.html"/>
+        <link rel="prev" title="Visualization" href="visualization.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">动画</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介&#8211;毛货翻译</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Keyframes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing.html">Editing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="visualization.html">Visualization</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Keying Sets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#keying-set-panel">Keying Set Panel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#active-keying-set-panel">Active Keying Set Panel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-properties">Adding Properties</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../actions.html">动作&#8212;小A翻译</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../drivers/index.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../markers.html">标记符—小A翻译</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shape_keys/index.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#animation-techniques">Animation Techniques</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">动画</a> &raquo;</li>
+      
+          <li><a href="index.html">Keyframes</a> &raquo;</li>
+      
+    <li>Keying Sets</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/animation/keyframes/keying_sets.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="keying-sets">
+<h1>Keying Sets<a class="headerlink" href="#keying-sets" title="永久链接至标题">¶</a></h1>
+<div class="figure align-right" id="id2">
+<img alt="../../_images/editors_timeline_keying-sets.png" src="../../_images/editors_timeline_keying-sets.png" />
+<p class="caption"><span class="caption-text">Timeline Keying Sets.</span></p>
+</div>
+<p>Keying Sets are a collection of properties.</p>
+<p>They are used to record multiple properties at the same time.
+Now when you press <code class="kbd docutils literal"><span class="pre">I</span></code> in the 3D View,
+Blender will add keyframes for all the properties in the active keying set.</p>
+<p>There are some built in Keying Sets,
+and also, custom Keying Sets called <em>Absolute Keying Sets</em>.</p>
+<p>To select and use a Keying Set, set the <em>Active Keying Set</em> in the
+<a class="reference internal" href="../../editors/timeline.html#animation-editors-timeline-autokeyframe"><span class="std std-ref">Timeline Header</span></a>,
+or the Keying Set panel, or press <code class="kbd docutils literal"><span class="pre">Ctrl-Alt-Shift-I</span></code> in the 3D View.</p>
+<div class="section" id="keying-set-panel">
+<h2>Keying Set Panel<a class="headerlink" href="#keying-set-panel" title="永久链接至标题">¶</a></h2>
+<p>This panel is used to add, select, manage <em>Absolute Keying Sets</em>.</p>
+<div class="figure" id="id3">
+<img alt="../../_images/animation_keyframes_keying-sets_scene-keying-set-panel.png" src="../../_images/animation_keyframes_keying-sets_scene-keying-set-panel.png" />
+<p class="caption"><span class="caption-text"><span class="menuselection">Properties ‣ Scene ‣ Keying Set Panel</span></span></p>
+</div>
+<dl class="docutils">
+<dt>Active Keying Set</dt>
+<dd><p class="first">The <a class="reference internal" href="../../interface/controls/templates/list_presets.html#ui-list-view"><span class="std std-ref">List View</span></a> of Keying Sets in the active Scene.</p>
+<dl class="last docutils">
+<dt>Add <code class="docutils literal"><span class="pre">+</span></code></dt>
+<dd>Adds a empty Keying Set.</dd>
+</dl>
+</dd>
+</dl>
+<div class="section" id="properties">
+<h3>Properties<a class="headerlink" href="#properties" title="永久链接至标题">¶</a></h3>
+<dl class="docutils">
+<dt>Description</dt>
+<dd>A short description of the keying set.</dd>
+<dt>Export to File</dt>
+<dd>Export Keying Set to a Python script <code class="docutils literal"><span class="pre">File.py</span></code>.
+To re-add the keying set from the <code class="docutils literal"><span class="pre">File.py</span></code>, open then run the <code class="docutils literal"><span class="pre">File.py</span></code> from the Text Editor.</dd>
+<dt>Keyframing Settings</dt>
+<dd><p class="first">These options control all properties in the Keying Set.
+Note, the same settings in <em>User Preferences</em> override these settings if enabled.</p>
+<dl class="last docutils">
+<dt>Only Needed</dt>
+<dd>Only insert keyframes where they are needed in the relevant F-Curves.</dd>
+<dt>Visual Keying</dt>
+<dd>Insert keyframes based on the visual transformation.</dd>
+<dt>XYZ to RGB</dt>
+<dd>For new F-Curves, set the colors to RGB for the property set, Location XYZ for example.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="active-keying-set-panel">
+<h2>Active Keying Set Panel<a class="headerlink" href="#active-keying-set-panel" title="永久链接至标题">¶</a></h2>
+<p>This panel is used to add properties to the active Keying Set.</p>
+<div class="figure" id="id4">
+<img alt="../../_images/animation_keyframes_keying-sets_scene-active-keying-set-panel.png" src="../../_images/animation_keyframes_keying-sets_scene-active-keying-set-panel.png" />
+<p class="caption"><span class="caption-text"><span class="menuselection">Properties ‣ Scene ‣ Active Keying Set Panel</span></span></p>
+</div>
+<div class="figure" id="id5">
+<img alt="../../_images/editors_graph-editor_introduction_channels-region.png" src="../../_images/editors_graph-editor_introduction_channels-region.png" />
+<p class="caption"><span class="caption-text"><span class="menuselection">Properties ‣ Graph Editor ‣ Channels, Named Group</span></span></p>
+</div>
+<dl class="docutils">
+<dt>Active Keying Set Paths</dt>
+<dd><p class="first">A collection of paths in a <a class="reference internal" href="../../interface/controls/templates/list_presets.html#ui-list-view"><span class="std std-ref">List View</span></a> each with a <em>Data Path</em> to a property
+to add to the active Keying Set.</p>
+<dl class="last docutils">
+<dt>Add <code class="docutils literal"><span class="pre">+</span></code></dt>
+<dd>Adds a empty path.</dd>
+</dl>
+</dd>
+</dl>
+<div class="section" id="id1">
+<h3>Properties<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
+<dl class="docutils">
+<dt>Target</dt>
+<dd><dl class="first last docutils">
+<dt>ID-Block</dt>
+<dd>Set the ID-Type and the <em>Object IDs</em> Data Path for the property.</dd>
+<dt>Data Path</dt>
+<dd>Set the rest of the Data Path for the property.</dd>
+<dt>Array Target</dt>
+<dd>Use <em>All Items</em> from the Data Path or select the array index for a specific property.</dd>
+</dl>
+</dd>
+<dt>F-Curve Grouping</dt>
+<dd><p class="first">This controls what group to add the channels to.</p>
+<p class="last">Keying Set Name, None, Named Group</p>
+</dd>
+<dt>Keyframing Settings</dt>
+<dd><p class="first">These options control individual properties in the Keying Set.</p>
+<dl class="last docutils">
+<dt>Only Needed</dt>
+<dd>Only insert keyframes where they are needed in the relevant F-Curves.</dd>
+<dt>Visual Keying</dt>
+<dd>Insert keyframes based on the visual transformation.</dd>
+<dt>XYZ to RGB</dt>
+<dd>For new F-Curves, set the colors to RGB for the property set, Location XYZ for example.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="adding-properties">
+<h2>Adding Properties<a class="headerlink" href="#adding-properties" title="永久链接至标题">¶</a></h2>
+<p>Some ways to add properties to keying sets.</p>
+<p><code class="kbd docutils literal"><span class="pre">RMB</span></code> the property in the <em>User Interface</em>, then select <em>Add Single to Keying Set</em> or <em>Add All to Keying Set</em>.
+This will add the properties to the active keying set, or to a new keying set if none exist.</p>
+<p>Hover the mouse over the properties, then press <code class="kbd docutils literal"><span class="pre">K</span></code>, to add <em>Add All to Keying Set</em>.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../actions.html" class="btn btn-neutral float-right" title="动作—小A翻译" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="visualization.html" class="btn btn-neutral" title="Visualization" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

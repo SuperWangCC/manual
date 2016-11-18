@@ -1,0 +1,453 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>序列显示模式 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../index.html"/>
+        <link rel="up" title="视频剪辑编辑器" href="index.html"/>
+        <link rel="next" title="Movie Clip Editor" href="../movie_clip_editor/index.html"/>
+        <link rel="prev" title="Meta Strips" href="strips/meta.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#d">3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#animation">动画</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#image-video">图像/视频</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../uv_image/index.html">UV/Image Editor</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">视频剪辑编辑器</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="navigating.html">Navigating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selecting.html">Selecting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="frame.html">Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="editing.html">Editing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="strips/index.html">Strips</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">序列显示模式</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../movie_clip_editor/index.html">Movie Clip Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="index.html">视频剪辑编辑器</a> &raquo;</li>
+      
+    <li>序列显示模式</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/editors/sequencer/display_modes.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sequence-display-modes">
+<h1>序列显示模式<a class="headerlink" href="#sequence-display-modes" title="永久链接至标题">¶</a></h1>
+<p>By default, the VSE only displays the strips, however, there are a few ways to preview the result of your sequence.
+The first is the preview mode, this can be enable by hitting the texture button (<a class="reference internal" href="../../_images/icons_texture.png"><img alt="texture-button" src="../../_images/icons_texture.png" style="width: 1.1em;" /></a>).</p>
+<p>Several options in the header allow you change the editor
+to display the sequence in real time, and in various ways.</p>
+<div class="figure" id="id1">
+<img alt="../../_images/editors_sequencer_display-modes_header.png" src="../../_images/editors_sequencer_display-modes_header.png" />
+<p class="caption"><span class="caption-text">Sequencer Display Header.</span></p>
+</div>
+<p>第二个按钮改变编辑器只显示预览效果，第三个是预览和序列同时显示效果。</p>
+<p>VSE的工作空间可以给有各种不同的组合方式，当然是在当前的框架允许范围之内。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Image/Sequence:</th><td class="field-body">Colors (what you see).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Chroma:</th><td class="field-body">Color hue and saturation.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Luma:</th><td class="field-body">Brightness/contrast.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Histogram:</th><td class="field-body">Levels of red, green, and blue.</td>
+</tr>
+</tbody>
+</table>
+<p>在色度 曝光度 和图像显示模式中，有一个通道选择器。通道0是显示最终的合成特效效果。通道1是当然最底层通道的显示效果（这时的通道1其实是最底部的图像或者序列或者影片画面）你可以只显示最底层的0通道（合成层），或是通道列表中所有通道的帧（1～n通道）</p>
+<div class="section" id="properties-region">
+<h2>Properties Region<a class="headerlink" href="#properties-region" title="永久链接至标题">¶</a></h2>
+<div class="section" id="scene-preview-render">
+<h3>Scene Preview/Render<a class="headerlink" href="#scene-preview-render" title="永久链接至标题">¶</a></h3>
+<dl class="docutils">
+<dt>OpenGL Preview</dt>
+<dd><p class="first">When enabled <a class="reference internal" href="strips/types/scene.html"><span class="doc">Scene Strips</span></a>
+use a quick OpenGL preview (see <a class="reference internal" href="../../render/opengl.html"><span class="doc">OpenGL render</span></a> for more on this subject).</p>
+<p>Otherwise a full render is used, which can be very slow.</p>
+<dl class="docutils">
+<dt>Sequencer Preview Shading</dt>
+<dd>Method for rendering OpenGL renders.</dd>
+<dt>Textured Solid</dt>
+<dd>Display textures even when in solid mode.</dd>
+</dl>
+<p>Settings used by OpenGL Previews:</p>
+<ul class="last simple">
+<li>The anti-alias setting from the active scene is used for all scenes.</li>
+<li>The alpha setting is taken from each scene,
+where <em>Sky</em> fills in a solid background and <em>Transparent</em> has a transparent background.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="view-settings">
+<h3>View Settings<a class="headerlink" href="#view-settings" title="永久链接至标题">¶</a></h3>
+<dl class="docutils">
+<dt>Show Overexposed</dt>
+<dd>Shows overexposed (bright white) areas using a zebra pattern.
+The threshold can be adjust with the slider.</dd>
+<dt>Proxy Render Size</dt>
+<dd>Size to display proxies at in the preview region.
+Using a smaller preview size will increase speed.</dd>
+</dl>
+</div>
+<div class="section" id="safe-areas">
+<h3>Safe Areas<a class="headerlink" href="#safe-areas" title="永久链接至标题">¶</a></h3>
+<p>Shows guides used to position elements to ensure that the
+most important parts of the video can be seen across all screens.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">参见</p>
+<p class="last">See <a class="reference internal" href="../../render/blender_render/camera/object_data.html#camera-safe-areas"><span class="std std-ref">Safe Areas</span></a> in the camera docs.</p>
+</div>
+</div>
+<div class="section" id="grease-pencil">
+<h3>Grease Pencil<a class="headerlink" href="#grease-pencil" title="永久链接至标题">¶</a></h3>
+<p>Allows you to use <a class="reference internal" href="../../interface/grease_pencil/index.html"><span class="doc">Grease Pencil</span></a> in the sequencer.</p>
+</div>
+</div>
+<div class="section" id="previews">
+<h2>Previews<a class="headerlink" href="#previews" title="永久链接至标题">¶</a></h2>
+<p>The are an array of different display modes available, each having a specific purpose.
+You can adjust the view by zooming in with <code class="kbd docutils literal"><span class="pre">Plus</span></code> and zoom out with <code class="kbd docutils literal"><span class="pre">Minus</span></code>.
+You can also reset the view with <code class="kbd docutils literal"><span class="pre">Home</span></code>.</p>
+<div class="section" id="image-preview">
+<h3>图像预览<a class="headerlink" href="#image-preview" title="永久链接至标题">¶</a></h3>
+<p>In the upper area of the Sequence screen layout is another VSE editor,
+this one set to Image Preview mode. It shows you what the resulting video will look like when saved.
+This is the main working mode for adding strips and moving them around,
+cutting, grouping (making meta) and splicing them through special effects.</p>
+</div>
+<div class="section" id="luma-waveform">
+<h3>流明波形<a class="headerlink" href="#luma-waveform" title="永久链接至标题">¶</a></h3>
+<p>对于所选择的频道，亮度，或光度，被映射到该显示。</p>
+<p>A luma waveform allows you to judge the quality of the luminance distribution across the video signal,
+you can view a luma-waveform instead of the usual output display on every control monitor.</p>
+<p>显示图的每个扫描线的亮度值。这些线条都是画在彼此的顶部。点变得明亮如线交叉（这是非常有可能毕竟几百条扫描线）。如果你给电视接上一个示波器的输入输出就能轻易地明白图片的亮度分布。它基本上会看起来是一样的。</p>
+<p>In this mode, the vertical axis represents the luminosity: 0 at the bottom, 1 at the top;
+the horizontal axis is a mapping from the horizontal axis of the frame.
+There are as many curves as scanlines in the frame:
+each one of this curves represents the luminosity of the pixels of one line.
+Moreover, the color of a pixel in this mode represents the number of pixels from the matching column of the
+frame sharing the same luminosity, i.e. the number of curves that cross at this point
+(black/transparent, for no pixel, white/opaque for at least three pixels).</p>
+<dl class="docutils">
+<dt>Separate Colors</dt>
+<dd>Separates RGB channels into separate graphs.</dd>
+</dl>
+<p>良好显示样式</p>
+<ul class="simple">
+<li><p class="first">如果波形不能填满整个画面你可能想使用“设置”和“增益”主滑块在“伽马”-插件里调整，直到填满整个画面（对比度自动伸展）。</p>
+</li>
+<li>With the more advanced gamma-plugin you can decide where you have to desaturated (especially in dark regions).</li>
+<li><p class="first">你可以判断你是否想把整个调整删除掉，因为它在顶部或底部的剪辑是完全扭曲的。</p>
+</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id2">
+<img alt="../../_images/editors_sequencer_display-modes_luma-waveform-example-1.png" src="../../_images/editors_sequencer_display-modes_luma-waveform-example-1.png" />
+<p class="caption"><span class="caption-text">The various horizontal lines in the Luma waveform
+match the uniform-color lines of the picture. Note that the &#8216;gray 20%&#8217;
+one-pixel width line (inside the yellow strip) is represented in the Luma waveform by a gray line.
+The two lines drawing an &#8220;X&#8221; are from the two linear tone shades (white &#8211;&gt; black and black &#8211;&gt; white).
+Finally, the broken line matches the complex tone shade at the bottom of the picture.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id3">
+<img alt="../../_images/editors_sequencer_display-modes_luma-waveform-example-2.png" src="../../_images/editors_sequencer_display-modes_luma-waveform-example-2.png" />
+<p class="caption"><span class="caption-text">The curves are quite visible. We found a luma of 80-100% for the sky,
+a luma around 40% for the sea, and a luma of 10-20% for the mountains, growing around 40% for the sunny part.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last"><em>VSE</em> 的例子 <em>亮度</em> 预览。请注意，图片（在顶部的第一个绿框）只有50像素高，以限制*亮度波形*显示曲线的数量！</p>
+</div>
+<p>Use this display to check for appropriate contrast and luminosity across all frames in the channel.
+When spots in the film that should have even illumination do not,
+it looks like a flashbulb went off or an extra light was suddenly turned on. This can happen
+if two strips were rendered or shot under different lighting conditions but are supposed to be contiguous.</p>
+</div>
+<div class="section" id="chroma-vectorscope">
+<h3>色度的矢量<a class="headerlink" href="#chroma-vectorscope" title="永久链接至标题">¶</a></h3>
+<div class="figure" id="id4">
+<img alt="../../_images/editors_sequencer_display-modes_example.jpg" src="../../_images/editors_sequencer_display-modes_example.jpg" />
+<p class="caption"><span class="caption-text">Example image.</span></p>
+</div>
+<div class="figure" id="id5">
+<img alt="../../_images/editors_sequencer_display-modes_vectorscope.png" src="../../_images/editors_sequencer_display-modes_vectorscope.png" />
+<p class="caption"><span class="caption-text">Example of Chroma Vectorscope Preview.</span></p>
+</div>
+<p>使用这种方式判断颜色分布和饱和度的质量，您还可以查看u/v散点图。</p>
+<p>将图片转换为YUV格式。u和v-值表示颜色的角度。对于图片的像素，一个像素分别用U和V的值关系来表示。如果几个像素有相同的U / V值，图中的像素变亮。</p>
+<p>为了帮助理解什么是颜色，用一个六边形标记的极限位置（红、品红、蓝、青、绿、黄）来绘制并且用红色交叉来标注此点。</p>
+<p>换句话说，对于选定的通道，该显示器显示了一个六边形内的图像颜色空间。六边形的每个点是一个主要的颜色：红色，红色，蓝色，青色，绿色，黄色。黑色是中心，整体的饱和度是按比例缩小到外面的。右边的例子显示，图像有很多红色（50%饱和度）和少量的蓝色，没有绿色。</p>
+<p>通常的，记住要打开一个额外的控制监视器来显示最终结果。颜色的矫正是个重要的工作，但是取决于个人的审美需求。</p>
+<p>Use this display to check for too much color saturation.
+While over-saturated images look great for op-art and computer displays,
+they stink when shown on the big screen TV. Use <code class="kbd docutils literal"><span class="pre">Alt-A</span></code> to scrub the video;
+this display will update with a new/revised map for each frame.
+Just like watching the Image preview to see what it looks like,
+watch the Chroma Vectorscope to watch for color use.</p>
+<p>良好显示样式</p>
+<ul class="simple">
+<li><p class="first">如果你的图片看上去非常的不协调的时候，你可能想看看在U / V型图。你很可能会看到所有像素构建人群的起源。如果您添加使用“伽马”-plugin你可以在U / V-情节看你是否扭曲色彩饱和度。</p>
+</li>
+<li><p class="first">当你去做色彩适配的时候，你可以从匹配颜色的角度去观察各种不同的通道显示。</p>
+</li>
+</ul>
+</div>
+<div class="section" id="histogram">
+<h3>色彩的直方图<a class="headerlink" href="#histogram" title="永久链接至标题">¶</a></h3>
+<div class="figure" id="id6">
+<img alt="../../_images/editors_sequencer_display-modes_example.jpg" src="../../_images/editors_sequencer_display-modes_example.jpg" />
+<p class="caption"><span class="caption-text">Example image.</span></p>
+</div>
+<div class="figure" id="id7">
+<img alt="../../_images/editors_sequencer_display-modes_histogram.png" src="../../_images/editors_sequencer_display-modes_histogram.png" />
+<p class="caption"><span class="caption-text">Example of Histogram Preview.</span></p>
+</div>
+<p>此模式显示一个图形显示当前显示的图像的像素中的颜色信息的分布。X轴代表值的像素，从0到1（或0到255），而Y轴代表，色调范围的像素数。一个主要以暗调为主的图像，大部分图像信息在图的左侧部分。</p>
+<p>使用此模式来平衡图像中的色调范围。一个平衡的图像应该有一个很好的平滑的颜色值分布。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../movie_clip_editor/index.html" class="btn btn-neutral float-right" title="Movie Clip Editor" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="strips/meta.html" class="btn btn-neutral" title="Meta Strips" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

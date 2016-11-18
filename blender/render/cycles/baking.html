@@ -1,0 +1,394 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>渲染烘焙–Leroy 翻译 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../index.html"/>
+        <link rel="up" title="Cycles Render Engine" href="index.html"/>
+        <link rel="next" title="Optimizing Renders" href="optimizations/index.html"/>
+        <link rel="prev" title="GPU渲染" href="gpu_rendering.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blender_render/index.html">Blender Render Engine</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Cycles Render Engine</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="settings/index.html">渲染设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="materials/index.html">材质</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nodes/index.html">节点&#8211;leroy翻译</a></li>
+<li class="toctree-l3"><a class="reference internal" href="world.html">世界</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lamps.html">灯光</a></li>
+<li class="toctree-l3"><a class="reference internal" href="camera.html">摄像机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="features.html">特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpu_rendering.html">GPU渲染</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">渲染烘焙&#8211;Leroy 翻译</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#options">选项</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#additional-options">附加选项</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="optimizations/index.html">Optimizing Renders</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../output/index.html">Render Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../post_process/index.html">Post Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workflows/index.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../opengl.html">OpenGL Render</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../audio/index.html">Audio Rendering</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">渲染</a> &raquo;</li>
+      
+          <li><a href="index.html">Cycles Render Engine</a> &raquo;</li>
+      
+    <li>渲染烘焙&#8211;Leroy 翻译</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/render/cycles/baking.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="render-baking">
+<h1>渲染烘焙&#8211;Leroy 翻译<a class="headerlink" href="#render-baking" title="永久链接至标题">¶</a></h1>
+<p>Refer to the Blender Render page for <a class="reference internal" href="../blender_render/bake.html"><span class="doc">general baking guidelines</span></a></p>
+<p>在Cycles中使用渲染设置（采样、反弹、……）进行烘焙。因此烘焙纹理的品质将会和场景的渲染一致。</p>
+<p>The baking happens into the respective active textures of the object materials.
+The active texture is the last selected Image Texture node of the material node tree.
+That means the active object (or the selected objects, when not baking &#8216;Selected to Active&#8217;) needs a material,
+and that material needs at least an Image Texture node, with the image to be used for the baking.
+Note, the node does not need to be connected to any other node.
+The active texture is what projection painting and the viewport use as a criteria to which image to use.
+This way after the baking is done you can automatically preview the baked result in the Texture mode.</p>
+<div class="section" id="options">
+<h2>选项<a class="headerlink" href="#options" title="永久链接至标题">¶</a></h2>
+<div class="figure" id="id1">
+<img alt="../../_images/cycles-bake-ao.png" src="../../_images/cycles-bake-ao.png" />
+<p class="caption"><span class="caption-text">Ambient Occlusion Pass.</span></p>
+</div>
+<div class="section" id="bake-mode">
+<h3>烘焙模式<a class="headerlink" href="#bake-mode" title="永久链接至标题">¶</a></h3>
+<dl class="docutils">
+<dt>合成结果</dt>
+<dd><p class="first">Bakes all materials, textures, and lighting except specularity.</p>
+<div class="figure" id="id2">
+<img alt="../../_images/cycles-bake-combined.png" src="../../_images/cycles-bake-combined.png" />
+<p class="caption"><span class="caption-text">Combined Pass Options.</span></p>
+</div>
+<p class="last">The passes that contribute to the combined pass can be toggled individually to form the final map.</p>
+</dd>
+<dt>环境光遮蔽</dt>
+<dd><p class="first last">烘焙世界面板中指定的环境光遮蔽，忽略场景中的其他灯光。</p>
+</dd>
+<dt>阴影</dt>
+<dd><p class="first last">烘焙阴影及灯光。</p>
+</dd>
+<dt>法线</dt>
+<dd><p class="first">烘焙不同空间的法线：</p>
+<div class="figure" id="id3">
+<img alt="../../_images/cycles-bake-normal.png" src="../../_images/cycles-bake-normal.png" />
+<p class="caption"><span class="caption-text">Normal Pass Options.</span></p>
+</div>
+<dl class="last docutils">
+<dt>Normal Space</dt>
+<dd><p class="first">Normals can be baked in different spaces:</p>
+<dl class="last docutils">
+<dt>Object space</dt>
+<dd>Normals in object coordinates, independent of object transformation, but dependent on deformation.</dd>
+<dt>Tangent space</dt>
+<dd>Normals in tangent space coordinates, independent of object transformation and deformation.
+This is the default, and the right choice in most cases, since then the normal map can be used for animated
+objects too.</dd>
+</dl>
+</dd>
+<dt>Normal Swizzle</dt>
+<dd>Axis to bake into the red, green and blue channel.</dd>
+</dl>
+</dd>
+</dl>
+<p>在材质中你也可以选择相同的空间坐标，也就是图像纹理选项中，法线映射设置的下面。为了得到的正确的结果，这里的设置应该和烘焙中的设置相同。</p>
+<dl class="docutils">
+<dt>UV</dt>
+<dd><p class="first last">仅烘焙材质的颜色和纹理，不含有着色信息。</p>
+</dd>
+<dt>自发光</dt>
+<dd><p class="first last">烘焙自发光，或是材质的辉光颜色。</p>
+</dd>
+<dt>环境光</dt>
+<dd><p class="first last">烘焙从物体中心所观察到的环境。</p>
+</dd>
+<dt>Diffuse/Glossy/Transmission/Subsurface</dt>
+<dd><p class="first">Bakes the diffuse, glossiness, transmission of subsurface pass of a material.</p>
+<div class="last figure" id="id4">
+<img alt="../../_images/cycles-bake-diffuse.png" src="../../_images/cycles-bake-diffuse.png" />
+<p class="caption"><span class="caption-text">Diffuse Pass Options.</span></p>
+</div>
+</dd>
+</dl>
+<p>If only color is selected you get the pass color,
+which is a property of the surface and independent of sampling refinement.</p>
+<p>If color is not selected, you get the direct and/or indirect contributions in grayscale.</p>
+<p>If color and either direct or indirect is selected you get the direct and/or indirect contributions colored.</p>
+</div>
+</div>
+<div class="section" id="additional-options">
+<h2>附加选项<a class="headerlink" href="#additional-options" title="永久链接至标题">¶</a></h2>
+<dl class="docutils">
+<dt>边距</dt>
+<dd><p class="first last">烘焙的结果将会超出每一个UV块的边界，以此来柔和纹理中的接缝。</p>
+</dd>
+<dt>清空</dt>
+<dd><p class="first last">选择该项时，在渲染烘焙前会先清空图像。</p>
+</dd>
+<dt>所选物体&gt;主控物体</dt>
+<dd><p class="first last">烘焙所选物体的着色到活动物体。光线会从外面的低模物体投射到内部的高模物体。倘若高模物体没能被低模物体完全包裹，你可以通过调节光线距离或是罩体挤出（取决于你是否使用罩体）来调节光线的起点。对于更多的控制，你可以通过指定罩体物体来实现。</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p>Memory Usage</p>
+<p class="last">由于烘焙时，每一个物体都会占用一定的CPU和内存，为了避免内存不足而造成的崩溃，在烘焙之前，可以先将高模物体进行合并。渲染中的分块设置，也会影响到内存的使用。比如分的块越大，CPU占用的越少，而内存则会占用的更多（不管是CPU，还是GPU）。</p>
+</div>
+<dl class="docutils">
+<dt>罩体</dt>
+<dd>Cast rays to active object from a cage.
+A cage is a ballooned-out version of the lowpoly mesh created either automatically
+(by adjusting the ray distance) or manually (by specifying an object to use).
+When not using a cage the rays will conform to the mesh normals. This produces glitches on the edges,
+but it is a preferable method when baking into planes to avoid the need of adding extra loops around the edges.</dd>
+<dt>光线距离</dt>
+<dd><p class="first last">在使用所选物体&gt;活动物体时，控制光线向内投射的距离。该项仅在不使用罩体时可用。</p>
+</dd>
+<dt>罩体挤出</dt>
+<dd><p class="first last">在使用所选物体&gt;活动物体时，控制光线向内投射的距离。向内投射的光线会由不含有边线分割修改器版本的活动物体发出。当然强制分割（如应用掉边线分割修改器）也不行。因为这些都会导致边线处的法线变得不为平滑。</p>
+</dd>
+<dt>罩体</dt>
+<dd><p class="first">指定作为罩体的物体，以此替代活动物体的罩体挤出</p>
+<div class="last admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">When the base mesh extruded does not give good results,
+you can create a copy of the base mesh and modify it to use as a <em>Cage</em>.
+Both meshes need to have the same <a class="reference internal" href="../../glossary/index.html#term-topology"><span class="xref std std-term">topology</span></a> (number of faces and face order).</p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="optimizations/index.html" class="btn btn-neutral float-right" title="Optimizing Renders" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="gpu_rendering.html" class="btn btn-neutral" title="GPU渲染" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

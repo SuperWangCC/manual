@@ -1,0 +1,342 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introduction &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../index.html"/>
+        <link rel="up" title="Particles" href="index.html"/>
+        <link rel="next" title="Particle System Panel" href="particle_system_panel.html"/>
+        <link rel="prev" title="Particles" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">物理</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../baking.html">Baking Physics Simulations</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#physic-types">Physic Types</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../force_fields/index.html">Force Fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../collision.html">Collisions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cloth/index.html">Cloth Simulations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dynamic_paint/index.html">Dynamic Paint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../soft_body/index.html">Soft Body</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../fluid/index.html">Fluid Simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../smoke/index.html">Smoke Simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rigid_body/index.html">Rigid Body</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Particles</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particle_system_panel.html">Particle System Panel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="properties/index.html">Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hair/index.html">Hair</a></li>
+<li class="toctree-l4"><a class="reference internal" href="texture_influence.html">Texture Influence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mode.html">Particle Edit Mode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">物理</a> &raquo;</li>
+      
+          <li><a href="index.html">Particles</a> &raquo;</li>
+      
+    <li>Introduction</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/physics/particles/introduction.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="永久链接至标题">¶</a></h1>
+<p>Particles are lots of items emitted from mesh objects, typically in the thousands.
+Each particle can be a point of light or a mesh, and be joined or dynamic.
+They may react to many different influences and forces, and have the notion of a lifespan.
+Dynamic particles can represent fire, smoke, mist,
+and other things such as dust or magic spells.</p>
+<p><a class="reference internal" href="hair/index.html"><span class="doc">Hair</span></a> type particles are a subset of regular particles.
+Hair systems form strands that can represent hair, fur, grass and bristles.</p>
+<p>You see particles as a <em>Particle</em> modifier,
+but all settings are done in the <em>Particle tab</em>.</p>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../_images/physics_particle_introduction_fur_example.jpg"><img alt="../../_images/physics_particle_introduction_fur_example.jpg" src="../../_images/physics_particle_introduction_fur_example.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Some fur made from particles.</span></p>
+</div>
+<p>Particles generally flow out from their mesh into space.
+Their movement can be affected by many things, including:</p>
+<ul class="simple">
+<li>Initial velocity out from the mesh.</li>
+<li>Movement of the emitter (vertex, face or object) itself.</li>
+<li>Movement according to &#8220;gravity&#8221; or &#8220;air resistance&#8221;.</li>
+<li>Influence of force fields like wind, vortexes or guided along a curve.</li>
+<li>Interaction with other objects like collisions.</li>
+<li>Partially intelligent members of a flock (herd, school, ...),
+that react to other members of their flock, while trying to reach a target or avoid predators.</li>
+<li>Smooth motion with softbody physics (only <em>Hair</em> particle systems).</li>
+<li>Or even manual transformation with <a class="reference internal" href="../../modeling/modifiers/deform/lattice.html"><span class="doc">Lattices</span></a>.</li>
+</ul>
+<p>Particles may be rendered as:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../render/blender_render/materials/special_effects/halo.html"><span class="doc">Halos</span></a>
+(for Flames, Smoke, Clouds).</li>
+<li>Meshes which in turn may be animated (e.g. fish, bees, ...).
+In these cases, each particle &#8220;carries&#8221; another object.</li>
+<li><a class="reference internal" href="../../render/blender_render/materials/properties/strands.html"><span class="doc">Strands</span></a>
+(for <a class="reference internal" href="hair/index.html"><span class="doc">Hair, Fur, Grass</span></a>);
+the complete way of a particle will be shown as a strand.
+These strands can be manipulated in the 3D View (combing, adding, cutting, moving, etc).</li>
+</ul>
+<p>Every object may carry many particle systems. Each particle system may contain up to
+100.000 particles. Certain particle types (<em>Hair</em> and <em>Keyed</em>)
+may have up to 10.000 children for each particle
+(children move and emit more or less like their respective parents).
+The size of your memory and your patience are your practical boundaries.</p>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="永久链接至标题">¶</a></h2>
+<p>Each system has the same basic sets of controls,
+but options within those sets vary based on the system employed. These sets of controls are:</p>
+<dl class="docutils">
+<dt><a class="reference internal" href="particle_system_panel.html"><span class="doc">Particle System Panel</span></a></dt>
+<dd>Basic Settings.</dd>
+<dt><a class="reference internal" href="properties/emission.html"><span class="doc">Emission</span></a></dt>
+<dd>Settings for the initial distribution of particles on the emitter and the way they are born into the scene.</dd>
+<dt><a class="reference internal" href="properties/cache.html"><span class="doc">Cache</span></a></dt>
+<dd>In order to increase realtime response and avoid unnecessary recalculation of particles,
+the particle data can be cached in memory or stored on disk.</dd>
+<dt><a class="reference internal" href="properties/physics/index.html"><span class="doc">Velocity</span></a></dt>
+<dd>Initial speed of particles.</dd>
+<dt><a class="reference internal" href="properties/physics/index.html"><span class="doc">Rotation</span></a></dt>
+<dd>Rotational behavior of particles.</dd>
+<dt><a class="reference internal" href="properties/physics/index.html"><span class="doc">Physics</span></a></dt>
+<dd>How the movement of the particles behaves.</dd>
+<dt><a class="reference internal" href="properties/render.html"><span class="doc">Render</span></a></dt>
+<dd>Rendering options.</dd>
+<dt><a class="reference internal" href="properties/display.html"><span class="doc">Display</span></a></dt>
+<dd>Realtime display in the 3D View.</dd>
+<dt><a class="reference internal" href="properties/children.html"><span class="doc">Children</span></a></dt>
+<dd>Control the creation of additional child particles.</dd>
+<dt><a class="reference internal" href="properties/physics/index.html"><span class="doc">Field Weights</span></a></dt>
+<dd>Factors for external forces.</dd>
+<dt><a class="reference internal" href="properties/physics/index.html"><span class="doc">Force Field Settings</span></a></dt>
+<dd>Makes particles force fields.</dd>
+<dt><a class="reference internal" href="properties/vertex_groups.html"><span class="doc">Vertex Groups</span></a></dt>
+<dd>Influencing various settings with vertex groups.</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="particle_system_panel.html" class="btn btn-neutral float-right" title="Particle System Panel" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Particles" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,405 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>编辑融球 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../index.html"/>
+        <link rel="up" title="Metaball" href="index.html"/>
+        <link rel="next" title="文本物体" href="../texts/index.html"/>
+        <link rel="prev" title="Properties" href="properties.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Metaball</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介&#8211;一善鱼翻译</a></li>
+<li class="toctree-l3"><a class="reference internal" href="primitives.html">Primitives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structure.html">Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties.html">Properties</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">编辑融球</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#meta-shape">融球形状</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stiffness">硬度</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#negative-influence">负影响</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hiding-elements">隐藏元素</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deleting-elements">删除元素</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conversion">转换</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#object-families">物体家族</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples">样例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">制作模型</a> &raquo;</li>
+      
+          <li><a href="index.html">Metaball</a> &raquo;</li>
+      
+    <li>编辑融球</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/modeling/metas/editing.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="editing-metas">
+<h1>编辑融球<a class="headerlink" href="#editing-metas" title="永久链接至标题">¶</a></h1>
+<p>When in <em>Edit Mode</em>, the <em>Active Element</em> panel appears.
+These settings apply only to the selected meta element.</p>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../_images/modeling_metas_properties_active-element-panel.png"><img alt="../../_images/modeling_metas_properties_active-element-panel.png" src="../../_images/modeling_metas_properties_active-element-panel.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Active element panel.</span></p>
+</div>
+<div class="section" id="meta-shape">
+<h2>融球形状<a class="headerlink" href="#meta-shape" title="永久链接至标题">¶</a></h2>
+<p>类型 菜单能让您选择所需要的融球形状，如上所示。</p>
+</div>
+<div class="section" id="stiffness">
+<h2>硬度<a class="headerlink" href="#stiffness" title="永久链接至标题">¶</a></h2>
+<p>临界值和Stiffness刚性一齐控制影响范围。虽然临界值在同一个物体里是应用于所有融球（或者甚至在同一个object family家庭物体里也是这样），而刚性则是分别应用于各个融球。</p>
+<p>缩放里面的绿色圆环可以改变Stiffness刚性的值。刚性参数限定了融球有多大程度的填充。这本质上决定了这个融球在影响其它融球时的敏感度。较低的刚性，融球会在相距很远的地方就开始变形。较高的刚性，融球则需要彼此靠得更近才能开始合并。</p>
+<p>When a <em>Meta</em> object comes within &#8220;range&#8221; of another meta,
+the two will begin to interact with each other. They do not necessarily need to intersect,
+and depending on the <em>Threshold</em> and <em>Stiffness</em> settings,
+they most likely will not need to.
+<em>Stiffness</em> is materialized by the <em>green ring</em></p>
+<p>The range is from (0.0 to 10.0). But to be visible,
+the <em>Stiffness</em> must be slightly larger than the <em>Threshold</em> value. You
+can also visually adjust the <em>Stiffness</em> ring by using the <code class="kbd docutils literal"><span class="pre">RMB</span></code> to
+select it and activate <em>Scale</em> mode with <code class="kbd docutils literal"><span class="pre">S</span></code>.</p>
+<div class="figure" id="id2">
+<span id="fig-meta-edit-stiffness"></span><a class="reference internal image-reference" href="../../_images/metastiffness.png"><img alt="../../_images/metastiffness.png" src="../../_images/metastiffness.png" style="width: 630px;" /></a>
+<p class="caption"><span class="caption-text">硬度</span></p>
+</div>
+<p>In Fig. <a class="reference internal" href="#fig-meta-edit-stiffness"><span class="std std-ref">硬度</span></a>, the meta ball labeled &#8220;A&#8221;,
+has a smaller <em>Stiffness</em> value than the one labeled &#8220;B&#8221;.
+As you can see, the radius (green ring) is different for each of them.</p>
+</div>
+<div class="section" id="negative-influence">
+<h2>负影响<a class="headerlink" href="#negative-influence" title="永久链接至标题">¶</a></h2>
+<div class="figure" id="id3">
+<span id="fig-meta-ball-negative"></span><a class="reference internal image-reference" href="../../_images/metaobject-metaball-negative-ex.jpg"><img alt="../../_images/metaobject-metaball-negative-ex.jpg" src="../../_images/metaobject-metaball-negative-ex.jpg" style="width: 630px;" /></a>
+<p class="caption"><span class="caption-text">负.</span></p>
+</div>
+<p>The opposite effect of a <em>positive</em> influence would be a <em>negative</em> influence:
+the objects repel each other. Fig. <a class="reference internal" href="#fig-meta-ball-negative"><span class="std std-ref">负.</span></a>
+shows a meta ball and a meta plane where the first is negative and the second, positive.
+Notice how the negative meta is not visible: only the surrounding circles appear.
+This is how Blender indicates that the object is negative.</p>
+<p>圆球向平面移动会引起平面的网格部分“塌陷”或向内崩溃。如果您移动平面远离圆球，平面的网格部分将会恢复原状。</p>
+<p>要让融球成为negative负的，只需选中这个融球，在编辑模式active element活动元素面板中，勾选negative负这个选项即可。</p>
+</div>
+<div class="section" id="hiding-elements">
+<h2>隐藏元素<a class="headerlink" href="#hiding-elements" title="永久链接至标题">¶</a></h2>
+<p>As in <em>Object Mode</em>, you can hide the selected meta(s),
+and then reveal what was hidden. This is very handy for cleaning your views up a bit... Note
+that the two red and green rings always remain visible in <em>Edit Mode</em>,
+as well as the select circle (in <em>Object Mode</em>...).</p>
+<p>To hide the current selection, use <code class="kbd docutils literal"><span class="pre">H</span></code>,
+the <em>Hide</em> toggle button in the <em>Metaball tools</em>,
+or the <span class="menuselection">Metaball ‣ Show/Hide ‣ Hide Selected</span> menu option.</p>
+<p>To hide everything but the current selection,
+press <code class="kbd docutils literal"><span class="pre">Shift-H</span></code> or use <span class="menuselection">Metaball ‣ Show/Hide ‣ Hide Deselected</span>.</p>
+<p>To reveal what was hidden, use <code class="kbd docutils literal"><span class="pre">Alt-H</span></code>,
+or the relevant option in the same <span class="menuselection">Metaball ‣ Show/Hide</span> menu.
+You can also un-toggle the <em>Hide</em> button in the (<em>Metaball tools</em> panel).</p>
+</div>
+<div class="section" id="deleting-elements">
+<h2>删除元素<a class="headerlink" href="#deleting-elements" title="永久链接至标题">¶</a></h2>
+<p>没有专门为融球提供的Erase擦除菜单，如果您打算删除已选中的融球，在常用的X或者Del删除命令后，只需在弹出菜单中确认即可。简单明了！</p>
+</div>
+<div class="section" id="conversion">
+<h2>转换<a class="headerlink" href="#conversion" title="永久链接至标题">¶</a></h2>
+<div class="figure" id="id4">
+<a class="reference internal image-reference" href="../../_images/metaconverttomesh.jpg"><img alt="../../_images/metaconverttomesh.jpg" src="../../_images/metaconverttomesh.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Convert Menu.</span></p>
+</div>
+<p>您可以把融球转换为网格物体，但在此，您也可以选择保持原始的Meta融球（即：创建一个新的Mesh网格物体，而不是&#8221;真的&#8221;转换……）。注意：用于新网格物体的解析度是Wiresize线框尺寸，而不是Rendersize渲染尺寸。</p>
+<p>To convert the meta, press <code class="kbd docutils literal"><span class="pre">Alt-C</span></code> in <em>Object Mode</em>, and select <em>Mesh/Text</em>,</p>
+</div>
+<div class="section" id="object-families">
+<h2>物体家族<a class="headerlink" href="#object-families" title="永久链接至标题">¶</a></h2>
+<p><em>Meta</em> objects have different behavior in <em>Object Mode</em> than other object types.
+They can be &#8220;regrouped&#8221; into so-called &#8220;families&#8221;.</p>
+<p>“物体家族”可以用于重组几个融球，产生的效果类似于一个物体里包含有几个融球。</p>
+<p>A family is defined by the left part of an object&#8217;s name (the one before the dot). Remember,
+an object&#8217;s name is the one in the <em>OB</em> field, in most panels,
+<strong>not</strong> the <em>MB</em> field, which is the meta data-block&#8217;s name... For example,
+the <em>family</em> part of &#8220;MetaPlane.001&#8221; is <code class="docutils literal"><span class="pre">MetaPlane</span></code>.
+Each meta object in the same &#8220;family&#8221; is associated with one another as discussed below.</p>
+<div class="figure" id="id5">
+<span id="fig-meta-ball-base"></span><a class="reference internal image-reference" href="../../_images/metaobject-base-ex.jpg"><img alt="../../_images/metaobject-base-ex.jpg" src="../../_images/metaobject-base-ex.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">基本融球圆球.</span></p>
+</div>
+<p>Families of metas are controlled by a <em>base</em> meta object which is identified by
+an object name <strong>without</strong> a right number part. For example,
+if we have five metas called &#8220;MetaThing&#8221;, &#8220;MetaThing.001&#8221;,
+&#8220;MetaThing.002&#8221;, &#8220;MetaThing.003&#8221; and &#8220;MetaThing.004&#8221;,
+the <em>base</em> meta object would be &#8220;MetaThing&#8221;.</p>
+<p>The <em>base</em> meta object determines the basis, the resolution, the threshold,
+<em>and</em> the transformations. It also has the material and texture area.
+The <em>base</em> meta is effectively the parent of
+(or perhaps a better word to use is &#8220;the owner of&#8221;) the other metas in the group (i.e.
+it is as if the other metas were &#8220;included&#8221; or joined into the base one).</p>
+<div class="admonition hint">
+<p class="first admonition-title">提示</p>
+<p>When working with multiple scenes,
+take care naming your meta objects so the <em>base</em> is always in the same scene as other metas.</p>
+<p class="last">Failing to do this will give confusing behavior (invisible meta objects).</p>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>样例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
+<p>Fig. <a class="reference internal" href="#fig-meta-ball-base"><span class="std std-ref">基本融球圆球.</span></a> shows the <em>base</em> meta labeled &#8220;B&#8221;.
+The other two <em>Meta</em> objects are <em>children</em>. Children&#8217;s selection rings are always black,
+while the group&#8217;s mesh is orange.
+Because the metas are grouped,
+they form a unified mesh which can always be selected by selecting the mesh of any meta in the group.
+For example, in the example Fig. <a class="reference internal" href="#fig-meta-ball-base"><span class="std std-ref">基本融球圆球.</span></a>, only the lower sphere (the parent) has been selected,
+and you see that both the parent&#8217;s mesh <em>and</em> all of the children&#8217;s meshes are now highlighted.</p>
+<div class="figure" id="id6">
+<span id="fig-meta-ball-scale"></span><a class="reference internal image-reference" href="../../_images/metaobject-base-scale-ex.png"><img alt="../../_images/metaobject-base-scale-ex.png" src="../../_images/metaobject-base-scale-ex.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">缩放“基本”.</span></p>
+</div>
+<p>The <em>base</em> meta object controls the <em>polygonalization</em> (mesh structure)
+for the group, and as such, also controls the polygonalization for the children (non-base)
+metas. If we transform the <em>base</em> meta, the children&#8217;s polygonalization changes. However,
+if we transform the children, the polygonalization remains unchanged.</p>
+<div class="admonition hint">
+<p class="first admonition-title">提示</p>
+<p class="last">This discussion of &#8220;polygonization&#8221; does <em>not</em> mean that the various meshes do not deform
+towards or away from each other (meta objects always influence one another in the usual way,
+whether or not they are members of the same family). Rather,
+it means that the underlying mesh structure changes only when the <em>base</em> object transforms.
+For example, if you scale the <em>base</em>, the children&#8217;s mesh structure changes. In
+Fig. <a class="reference internal" href="#fig-meta-ball-scale"><span class="std std-ref">缩放“基本”.</span></a>, the <em>base</em> has been scaled down,
+which has the effect of scaling the mesh structure of each of the children. As you can see,
+the children&#8217;s mesh resolution has increased, while the <em>base</em> decreased.
+The children did <em>not</em> change size!</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../texts/index.html" class="btn btn-neutral float-right" title="文本物体" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="properties.html" class="btn btn-neutral" title="Properties" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

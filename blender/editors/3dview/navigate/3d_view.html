@@ -1,0 +1,748 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3D 视图–颖心欢欣 翻译 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../../index.html"/>
+        <link rel="up" title="视图导航" href="index.html"/>
+        <link rel="next" title="相机视图–颖心欢欣 翻译" href="camera_view.html"/>
+        <link rel="prev" title="简介—SongNing 翻译" href="introduction.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#d">3D</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介&#8211;NGENNGT 翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../startup_scene.html">Startup Scene</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modes.html">Object Modes</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">视图导航</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d_cursor.html">3D游标&#8211;NGENNGT 翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../object/index.html">Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../display/index.html">Display Options</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="../index.html">3D视图</a> &raquo;</li>
+      
+          <li><a href="index.html">视图导航</a> &raquo;</li>
+      
+    <li>3D 视图&#8211;颖心欢欣 翻译</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/editors/3dview/navigate/3d_view.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="d-view">
+<h1>3D 视图&#8211;颖心欢欣 翻译<a class="headerlink" href="#d-view" title="永久链接至标题">¶</a></h1>
+<p>To be able to work in the three dimensional space that Blender uses,
+you must be able to change your viewpoint as well as the viewing direction of the scene.
+While we will describe the <em>3D View</em> editor, most of the other windows have similar functions.
+For example, it is possible to translate and zoom a Properties editor and its panels.</p>
+<div class="admonition tip">
+<p class="first admonition-title">小技巧</p>
+<p>鼠标按键和数字键盘</p>
+<p class="last">If you have a mouse with less than three buttons or a keyboard without numpad,
+see the <a class="reference internal" href="../../../getting_started/installing/configuration/hardware.html"><span class="doc">Keyboard and Mouse</span></a>
+page of the manual to learn how to use them with Blender.</p>
+</div>
+<div class="section" id="perspective-and-orthographic-views">
+<span id="dview-projections"></span><h2>透视图与正交视图<a class="headerlink" href="#perspective-and-orthographic-views" title="永久链接至标题">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">模式：  所有模式</div>
+<div class="line">Menu:     <span class="menuselection">View ‣ Perspective</span>, <span class="menuselection">View ‣ Orthographic</span></div>
+<div class="line">快捷键:   <code class="kbd docutils literal"><span class="pre">Numpad5</span></code></div>
+</div>
+</div>
+<p>Each 3D View supports two different types of projection.
+These are demonstrated in the Fig. below.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id4">
+<a class="reference internal image-reference" href="../../../_images/editors_3dview_navigate_3d-view_view-orthographic.png"><img alt="../../../_images/editors_3dview_navigate_3d-view_view-orthographic.png" src="../../../_images/editors_3dview_navigate_3d-view_view-orthographic.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Orthographic projections.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id5">
+<a class="reference internal image-reference" href="../../../_images/editors_3dview_navigate_3d-view_view-perspective.png"><img alt="../../../_images/editors_3dview_navigate_3d-view_view-perspective.png" src="../../../_images/editors_3dview_navigate_3d-view_view-perspective.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Perspective projections.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>我们的眼睛习惯透视视觉，因为远处的物体看起来要小一些。 正交投影则看起来有一点古怪，因为不管远近，物体看起来都是同样大小。正交视图就像是从无限远处看场景。然而，正交视图却是非常有用的（在Blender和其它3D应用程序中正交视图都是默认的），因为它提供了对场景更“技术”的视觉，让它易于绘制和判断比例。</p>
+<div class="section" id="options">
+<h3>选项<a class="headerlink" href="#options" title="永久链接至标题">¶</a></h3>
+<div class="figure" id="id6">
+<span id="fig-view3d-camera-view"></span><img alt="../../../_images/editors_3dview_navigate_3d-view_camera-view.png" src="../../../_images/editors_3dview_navigate_3d-view_camera-view.png" />
+<p class="caption"><span class="caption-text">摄像机视图的演示</span></p>
+</div>
+<p>To change the projection for a 3D View, choose the <span class="menuselection">View ‣ Orthographic</span>
+or the <span class="menuselection">View ‣ Perspective</span> menu entry.
+The <code class="kbd docutils literal"><span class="pre">Numpad5</span></code> shortcut toggles between the two modes.
+Changing the projection for a 3D View does not affect the way the scene will be rendered.
+Rendering is in perspective by default. If you need to create an orthographic rendering,
+select the camera, go to the Camera tab and press the
+<em>Orthographic</em> button in the <em>Lens</em> panel.</p>
+<p>The <span class="menuselection">View ‣ Camera</span> menu entry sets the 3D View to camera mode <code class="kbd docutils literal"><span class="pre">Numpad0</span></code>.
+The scene is then displayed as it will be rendered later (see Fig. <a class="reference internal" href="#fig-view3d-camera-view"><span class="std std-ref">摄像机视图的演示</span></a>).
+The rendered image will contain everything within the orange dotted line.
+Zooming in and out is possible in this view, but to change the viewpoint,
+you have to move or rotate the camera.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">参见</p>
+<ul class="last simple">
+<li><a class="reference internal" href="../../../render/blender_render/camera/object_data.html#camera-lens-type"><span class="std std-ref">Render perspectives</span></a></li>
+<li><p class="first">: doc: 相机视图</p>
+</li>
+<li><p class="first">: ref:&#8217; 相机剪切&lt;camera-clipping&gt;&#8217;&lt;/camera-clipping&gt;</p>
+</li>
+<li><p class="first">: 词:&#8217; &lt;projection&gt;&#8217;&lt;/projection&gt;相机预测</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="rotating-the-view">
+<h2>旋转视图<a class="headerlink" href="#rotating-the-view" title="永久链接至标题">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">模式：  所有模式</div>
+<div class="line">菜单:     <span class="menuselection">视图 ‣ 视图切换</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">MMB</span></code>, <code class="kbd docutils literal"><span class="pre">Numpad2</span></code>, <code class="kbd docutils literal"><span class="pre">Numpad4</span></code>, <code class="kbd docutils literal"><span class="pre">Numpad6</span></code>,
+<code class="kbd docutils literal"><span class="pre">Numpad8</span></code>, <code class="kbd docutils literal"><span class="pre">Ctrl-Alt-Wheel</span></code></div>
+</div>
+</div>
+<div class="figure align-right" id="id7">
+<img alt="../../../_images/editors_3dview_navigate_3d-view_navigation-menu.png" src="../../../_images/editors_3dview_navigate_3d-view_navigation-menu.png" />
+<p class="caption"><span class="caption-text">A 3D View&#8217;s View menu.</span></p>
+</div>
+<p>Blender默认提供四种默认查看方向: <em>侧视图</em>, <em>前视图</em>,
+<em>顶视图</em> 和 <em>摄像机视图</em> .
+Blender 采用直角 &#8220;卡迪尔&#8221; 坐标系中Z轴指向上.
+&#8220;侧面&#8221; 对应于沿着 X 轴正负方向,
+&#8220;前&#8221; 沿着Y 轴, 和 &#8220;顶&#8221; 沿着 Z轴.</p>
+<div class="section" id="id1">
+<h3>选项<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
+<p>You can select the viewing direction for a 3D View with the <em>View</em> menu entries,
+or by pressing the hotkeys <code class="kbd docutils literal"><span class="pre">Numpad3</span></code> for &#8220;side&#8221;, <code class="kbd docutils literal"><span class="pre">Numpad1</span></code> for &#8220;front&#8221;,
+<code class="kbd docutils literal"><span class="pre">Numpad7</span></code> for &#8220;top&#8221;. You can select the opposite directions if you hold
+<code class="kbd docutils literal"><span class="pre">Ctrl</span></code> while using the same numpad shortcuts.
+Finally <code class="kbd docutils literal"><span class="pre">Numpad0</span></code> gives access to the &#8220;camera&#8221; viewpoint.</p>
+<p>Apart from these four default directions, the view can be rotated to any angle you wish.
+Click and drag <code class="kbd docutils literal"><span class="pre">MMB</span></code> on the viewport&#8217;s area.
+If you start in the middle of the area and move up and down or left and right,
+the view is rotated around the middle of the area. Alternatively,
+if the <em>Emulate 3 button mouse</em> option is select in the <em>User Preferences</em> you can press and hold
+<code class="kbd docutils literal"><span class="pre">Alt</span></code> while dragging <code class="kbd docutils literal"><span class="pre">LMB</span></code> in the viewport&#8217;s area.</p>
+<p>以不连续的改变视角, 使用快捷键 <code class="kbd docutils literal"><span class="pre">Numpad8</span></code> 和 <code class="kbd docutils literal"><span class="pre">Numpad2</span></code>
+(相当于从任意视点垂直点击 <code class="kbd docutils literal"><span class="pre">MMB</span></code> 拖动),
+或者使用快捷键 <code class="kbd docutils literal"><span class="pre">Numpad4</span></code> 和 <code class="kbd docutils literal"><span class="pre">Numpad6</span></code> (或 <code class="kbd docutils literal"><span class="pre">Ctrl-Alt-Wheel</span></code>)
+从你当前的视点根据全局坐标 Z 轴去旋转场景.</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p>快捷键</p>
+<p class="last">Remember that most hotkeys affect the <strong>active</strong> area (the one that has focus),
+so check that the mouse cursor is in the area you want to work in before your use the hotkeys.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">参见</p>
+<ul class="last simple">
+<li><a class="reference internal" href="../../../preferences/input.html#prefs-input-orbit-style"><span class="std std-ref">Orbit Style Preference</span></a></li>
+<li><a class="reference internal" href="../../../preferences/interface.html#prefs-interface-auto-perspective"><span class="std std-ref">Auto-Perspective Preference</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="panning-the-view">
+<h2>平移视图<a class="headerlink" href="#panning-the-view" title="永久链接至标题">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">模式：  所有模式</div>
+<div class="line">菜单:     <span class="menuselection">视图 ‣ 视图切换</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Shift-MMB</span></code> , <code class="kbd docutils literal"><span class="pre">Ctrl-Numpad2</span></code>, <code class="kbd docutils literal"><span class="pre">Ctrl-Numpad4</span></code>,
+<code class="kbd docutils literal"><span class="pre">Ctrl-Numpad6</span></code>, <code class="kbd docutils literal"><span class="pre">Ctrl-Numpad8</span></code>, <code class="kbd docutils literal"><span class="pre">Shift-Alt-LMB</span></code></div>
+</div>
+</div>
+<p>To pan the view, hold down <code class="kbd docutils literal"><span class="pre">Shift</span></code> and drag <code class="kbd docutils literal"><span class="pre">MMB</span></code> in the 3D View.
+For discrete steps, use the hotkeys <code class="kbd docutils literal"><span class="pre">Ctrl-Numpad8</span></code>, <code class="kbd docutils literal"><span class="pre">Ctrl-Numpad2</span></code>,
+<code class="kbd docutils literal"><span class="pre">Ctrl-Numpad4</span></code> and <code class="kbd docutils literal"><span class="pre">Ctrl-Numpad6</span></code> as with rotating (note:
+you can replace <code class="kbd docutils literal"><span class="pre">Ctrl</span></code> by <code class="kbd docutils literal"><span class="pre">Shift</span></code>).
+For those without a middle mouse button,
+you can hold <code class="kbd docutils literal"><span class="pre">Shift-Alt</span></code> while dragging with <code class="kbd docutils literal"><span class="pre">LMB</span></code>.</p>
+</div>
+<div class="section" id="zooming-the-view">
+<h2>缩放视图<a class="headerlink" href="#zooming-the-view" title="永久链接至标题">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">模式：  所有模式</div>
+<div class="line">菜单:     <span class="menuselection">视图 ‣ 视图切换</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Ctrl-MMB</span></code>, <code class="kbd docutils literal"><span class="pre">Wheel</span></code>, <code class="kbd docutils literal"><span class="pre">NumpadPlus</span></code>, <code class="kbd docutils literal"><span class="pre">NumpadMinus</span></code></div>
+</div>
+</div>
+<p>You can zoom in and out by holding down <code class="kbd docutils literal"><span class="pre">Ctrl</span></code> and dragging <code class="kbd docutils literal"><span class="pre">MMB</span></code>.
+The hotkeys are <code class="kbd docutils literal"><span class="pre">NumpadPlus</span></code> and <code class="kbd docutils literal"><span class="pre">NumpadMinus</span></code>.
+The <span class="menuselection">View ‣ Navigation</span> sub-menu holds these functions too as well.
+Refer to the 3D View&#8217;s <em>View</em> menu image above for more information.</p>
+<p>If you have a wheel mouse, you can perform all of the actions in the 3D View that you
+would do with <code class="kbd docutils literal"><span class="pre">NumpadPlus</span></code> and <code class="kbd docutils literal"><span class="pre">NumpadMinus</span></code> by rotating the <code class="kbd docutils literal"><span class="pre">Wheel</span></code>.
+To zoom a Properties editor,
+hold <code class="kbd docutils literal"><span class="pre">Ctrl-MMB</span></code> and move your mouse up and down.</p>
+<div class="admonition hint">
+<p class="first admonition-title">提示</p>
+<p>如果你转晕了</p>
+<p class="last">If you get lost in 3D space, which is not uncommon, two hotkeys will help you:
+<code class="kbd docutils literal"><span class="pre">Home</span></code> changes the view so that you can see all objects <span class="menuselection">View ‣ View All</span>,
+while <code class="kbd docutils literal"><span class="pre">NumpadPeriod</span></code> zooms the view to the currently selected objects when in perspective mode
+<span class="menuselection">View ‣ View Selected</span>.</p>
+</div>
+<div class="section" id="zoom-border">
+<span id="dview-nav-zoom-border"></span><h3>缩放区域<a class="headerlink" href="#zoom-border" title="永久链接至标题">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">模式：  所有模式</div>
+<div class="line">Menu:     <span class="menuselection">View ‣ Zoom Border</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Shift-B</span></code></div>
+</div>
+</div>
+<p>The <em>Zoom Border</em> tool allows you to specify a rectangular region and zoom in so
+that the region fills the 3D View.</p>
+<p>你可以通过 <em>视图</em> 访问菜单或者快捷键 <code class="kbd docutils literal"><span class="pre">Shift-B</span></code>,
+点击 <code class="kbd docutils literal"><span class="pre">LMB</span></code> 并拖动 矩形进行放大.</p>
+<p>另外，你可以使用 <code class="kbd docutils literal"><span class="pre">MMB</span></code> 进行缩小.</p>
+</div>
+</div>
+<div class="section" id="dolly-the-view">
+<span id="dview-nav-zoom-dolly"></span><h2>滑动视图<a class="headerlink" href="#dolly-the-view" title="永久链接至标题">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">模式：  所有模式</div>
+<div class="line">快捷键:   <code class="kbd docutils literal"><span class="pre">Ctrl-Shift-MMB</span></code></div>
+</div>
+</div>
+<p>In most cases its sufficient to zoom the view to get a closer look at something,
+however, you may notice that at a certain point you cannot zoom any closer.</p>
+<p>This is because Blender stores a view-point thats used for orbiting and zooming.
+It works well in many cases, but sometimes you want to move the view-point to a different place.
+This is what Dolly supports, allowing you to transport the view from one place to another.</p>
+<p>你可以按着 <code class="kbd docutils literal"><span class="pre">Ctrl-Shift</span></code> 并拖动
+<code class="kbd docutils literal"><span class="pre">MMB</span></code> 进行视图推拉.</p>
+</div>
+<div class="section" id="aligning-the-view">
+<h2>对齐视图<a class="headerlink" href="#aligning-the-view" title="永久链接至标题">¶</a></h2>
+<div class="section" id="align-view">
+<h3>对齐视图<a class="headerlink" href="#align-view" title="永久链接至标题">¶</a></h3>
+<p>这些选项能让你 在不同的视角对齐方向.
+它们可以在 <em>视图菜单</em> 中找到</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>对齐到选定象菜单</dt>
+<dd><p class="first">These options align your view with specified local axes of the selected object, bone or in <em>Edit Mode</em>,
+with the normal of the selected face.</p>
+<p class="last">按着 <code class="kbd docutils literal"><span class="pre">Shift</span></code> 同时使用 小键盘 区设置视图方向.</p>
+</dd>
+<dt>Center Cursor and View All <code class="kbd docutils literal"><span class="pre">Shift-C</span></code></dt>
+<dd>moves the cursor back to the origin and zooms in/out so that you can see everything in your scene.</dd>
+<dt>摄像机对齐到视角, <code class="kbd docutils literal"><span class="pre">Ctrl-Alt-Numpad0</span></code></dt>
+<dd>Gives your active camera the current viewpoint.</dd>
+<dt>查看所选, <code class="kbd docutils literal"><span class="pre">NumpadPeriod</span></code></dt>
+<dd><p class="first last">将视图焦点移动到当前选中 对象的中心,并放大填满屏幕。</p>
+</dd>
+<dt>视图中心移动到游标, <code class="kbd docutils literal"><span class="pre">Alt-Home</span></code></dt>
+<dd>Centers view to 3D-cursor.</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt>视图选择</dt>
+<dd>See above.</dd>
+</dl>
+<dl class="docutils" id="dview-view-all">
+<dt>查看所有 <code class="kbd docutils literal"><span class="pre">Home</span></code></dt>
+<dd><p class="first last">视口缩放到显示当前帧场景中的所有可见对象.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="local-view">
+<span id="dview-local-view"></span><h2>Local View<a class="headerlink" href="#local-view" title="永久链接至标题">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id8">
+<a class="reference internal image-reference" href="../../../_images/editors_3dview_navigate_3d-view_local-view-1.png"><img alt="../../../_images/editors_3dview_navigate_3d-view_local-view-1.png" src="../../../_images/editors_3dview_navigate_3d-view_local-view-1.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Global View.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id9">
+<a class="reference internal image-reference" href="../../../_images/editors_3dview_navigate_3d-view_local-view-2.png"><img alt="../../../_images/editors_3dview_navigate_3d-view_local-view-2.png" src="../../../_images/editors_3dview_navigate_3d-view_local-view-2.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Local View.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>You can toggle <em>Local View</em> by selecting the option
+from the <em>View Menu</em> or using the shortcut <code class="kbd docutils literal"><span class="pre">NumpadSlash</span></code>.</p>
+<p>Local view isolates the selected object or objects,
+so that they are the only ones visible in the viewport.
+This is useful for working on objects that are obscured by other ones, or have heavy geometry.
+Press <code class="kbd docutils literal"><span class="pre">NumpadSlash</span></code> to exit <em>Local View</em>.</p>
+<p>This allow you to focus on a specific object without others getting in your way,
+and can be used to speed up viewport performance in heavy scenes.</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p>These notes cover changes in local-view which are not immediately obvious.</p>
+<dl class="last docutils">
+<dt>3D Cursor</dt>
+<dd>In local-view the 3D cursor is not locked to the scene.
+Instead, each view has an independent cursor location.</dd>
+<dt>Layers</dt>
+<dd><p class="first">Local-view bypasses layers, using only the selected objects when entering local-view.
+Although new objects may be added while in local-view.</p>
+<p class="last">Its also possible to send objects out of local view,
+using <span class="menuselection">Object ‣ Move Objects out of Local View</span>,
+which can be useful to further isolate a selection.</p>
+</dd>
+<dt>Preview Renders</dt>
+<dd>Preview renders will still use lamps outside the local-view,
+this allows you to quickly render previews
+without having to remember to select all lamps when entering local-view.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="quad-view">
+<h2>四格视图<a class="headerlink" href="#quad-view" title="永久链接至标题">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">模式：  所有模式</div>
+<div class="line">菜单:     <span class="menuselection">视图 ‣ 切换到四格视图</span></div>
+<div class="line">Panel     <span class="menuselection">Properties region ‣ Display ‣ Toggle Quad View</span></div>
+<div class="line">快捷键:   <code class="kbd docutils literal"><span class="pre">Ctrl-Alt-Q</span></code></div>
+</div>
+</div>
+<p>Toggling Quad View will split the 3D View into four views:
+3 <em>Orthographic</em> &#8220;side views&#8221; and a <em>Camera</em>/<em>User View</em>.
+This view will allow you to instantly see your model from a number of view points.
+In this arrangement, you can zoom and pan each view independently but you cannot rotate the view.</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">Quad View is different from <a class="reference internal" href="../../../interface/window_system/areas.html"><span class="doc">splitting the area</span></a>
+and aligning the view manually. In Quad View, the four views are still part of a single 3D View.
+So they share the same draw options and layers.</p>
+</div>
+<div class="figure" id="id10">
+<img alt="../../../_images/editors_3dview_navigate_3d-view_quad-view.png" src="../../../_images/editors_3dview_navigate_3d-view_quad-view.png" />
+<p class="caption"><span class="caption-text">Quad View.</span></p>
+</div>
+<div class="section" id="id2">
+<h3>选项<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+<p>These options can be found in <span class="menuselection">Properties region ‣ Display</span>.</p>
+<dl class="docutils">
+<dt>Lock</dt>
+<dd><p class="first last">如果你想成为能够旋转每个视图，您可以取消勾选*锁定* 选项。</p>
+</dd>
+<dt>Box</dt>
+<dd>Syncs view position between side views.</dd>
+<dt>Clip</dt>
+<dd>Clip objects based on what is visible in other side views.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="view-clipping-border">
+<span id="dview-clip-border"></span><h2>视图裁剪区域<a class="headerlink" href="#view-clipping-border" title="永久链接至标题">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">模式：  所有模式</div>
+<div class="line">菜单:     <span class="menuselection">视图 ‣ 视图裁剪区域</span></div>
+<div class="line">快捷键:   <code class="kbd docutils literal"><span class="pre">Alt-B</span></code></div>
+</div>
+</div>
+<table border="1" class="docutils" id="id11">
+<caption><span class="caption-text">区域/体积 裁剪.</span><a class="headerlink" href="#id11" title="永久链接至表格">¶</a></caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id12">
+<a class="reference internal image-reference" href="../../../_images/editors_3dview_navigate_3d-view_clipping-border-1.png"><img alt="../../../_images/editors_3dview_navigate_3d-view_clipping-border-1.png" src="../../../_images/editors_3dview_navigate_3d-view_clipping-border-1.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Selecting a region.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id13">
+<a class="reference internal image-reference" href="../../../_images/editors_3dview_navigate_3d-view_clipping-border-2.png"><img alt="../../../_images/editors_3dview_navigate_3d-view_clipping-border-2.png" src="../../../_images/editors_3dview_navigate_3d-view_clipping-border-2.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Region selected.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id14">
+<a class="reference internal image-reference" href="../../../_images/editors_3dview_navigate_3d-view_clipping-border-3.png"><img alt="../../../_images/editors_3dview_navigate_3d-view_clipping-border-3.png" src="../../../_images/editors_3dview_navigate_3d-view_clipping-border-3.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">View rotated.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>To assist in the process of working with complex models and scenes,
+you can set the view clipping to visually isolate what you are working on.</p>
+<p>Once clipping is used, you will only see whats inside a volume you have defined.
+Tools such as paint, sculpt, selection, transform-snapping, etc.
+will also ignore geometry outside the clipping bounds.</p>
+<p>Once activated with <code class="kbd docutils literal"><span class="pre">Alt-B</span></code>, you have to draw a rectangle with the mouse,
+in the wanted 3D View. The created clipping volume will then be:</p>
+<ul class="simple">
+<li>A right-angled <a class="reference external" href="https://en.wikipedia.org/wiki/Parallelepiped">parallelepiped</a>
+(of infinite length) if your view is orthographic.</li>
+<li><p class="first">矩形为基础的金字塔（无限高度）如果你的视图是透视。使用MMB旋转视图，你会看到只有什么是金字塔形的体积内可见。所有的编辑工具，还是作为正常的，但只在锥体体积剪裁。</p>
+</li>
+</ul>
+<p>取消这裁剪, 再按一次 <code class="kbd docutils literal"><span class="pre">Alt-B</span></code> 。</p>
+<div class="section" id="example">
+<h3>例子<a class="headerlink" href="#example" title="永久链接至标题">¶</a></h3>
+<p>在 <em>区域/体积 裁剪</em> 图像示出了使用剪取工具与立方体的一个例子。开始通过使用 <code class="kbd docutils literal"><span class="pre">Alt-B</span></code> (图像的左上角).这将产生一个虚十字光标r.点击 <code class="kbd docutils literal"><span class="pre">LMB</span></code> 并拖动到右上角显示一个矩形区域.现在的区域被定义 并且裁剪应用于指定在三维空间中的区域.注意立方体的一部分现在是不可见或裁剪 U使用 <code class="kbd docutils literal"><span class="pre">MMB</span></code> t旋转视图你会看到只有金字塔形的区域内可见。只有在金字塔形裁剪体积，所有的编辑工具仍然功能正常,.</p>
+<p>暗灰色区域是剪切体积本身。
+一旦限幅被停用另一个 <code class="kbd docutils literal"><span class="pre">Alt-B</span></code>,
+所有的三维空间将再次变得可见.</p>
+</div>
+</div>
+<div class="section" id="walk-fly-mode">
+<span id="dview-walk-fly"></span><h2>步行/飞模式<a class="headerlink" href="#walk-fly-mode" title="永久链接至标题">¶</a></h2>
+<p>当你要放置视图，通常你就如上所述。</p>
+<p>However, there are cases in which you really prefer to just navigate your model,
+especially if it is very large, like environments or some architectural model.
+In these cases viewing the model in perspective mode has limitations,
+for example after zooming a lot of panning is extremely uncomfortable and difficult,
+or you apparently cannot move the camera any nearer. As an example,
+try to navigate to a very distant object in the view with traditional methods
+(explained above) and see what you can get.</p>
+<p>步行/飞模式与您移动、 平移、 倾斜，和小车相机周围没有任何的这些限制。</p>
+<div class="figure" id="id15">
+<img alt="../../../_images/editors_3dview_navigate_3d-view_walk-fly-mode.png" src="../../../_images/editors_3dview_navigate_3d-view_walk-fly-mode.png" />
+<p class="caption"><span class="caption-text">视图浏览</span></p>
+</div>
+<p>In the <a class="reference internal" href="../../../preferences/index.html"><span class="doc">User Preferences editor</span></a>
+select the navigation mode you want to use as default when invoking the View Navigation operator.
+Alternatively you can call the individual modes from the View Navigation menu.</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">This mode actually <em>moves</em> the camera used by the view.
+This means that when you are in camera view,
+it moves the active camera, which is another way to place and aim it.</p>
+</div>
+<div class="section" id="walk-mode">
+<h3>步行模式<a class="headerlink" href="#walk-mode" title="永久链接至标题">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">模式：  所有模式</div>
+<div class="line">菜单:: menuselection:&#8211;&gt;&#8211;&gt; 步行导航视图导航视图</div>
+<div class="line">快捷键:   <code class="kbd docutils literal"><span class="pre">Shift-F</span></code></div>
+</div>
+</div>
+<p>激活鼠标指针将动议在视图的中心和交叉的标记会出现......</p>
+<p>This navigation mode behaves similar to the first person navigation system available in most 3D world games nowadays.
+It works with a combination of keyboard keys <code class="kbd docutils literal"><span class="pre">W</span></code>, <code class="kbd docutils literal"><span class="pre">A</span></code>, <code class="kbd docutils literal"><span class="pre">S</span></code>, <code class="kbd docutils literal"><span class="pre">D</span></code> and mouse movement.
+By default the navigation is in the &#8220;free&#8221; mode, with no gravity influence.
+You can toggle between gravity and free mode during the navigation <code class="kbd docutils literal"><span class="pre">Tab</span></code>.</p>
+<p>To move to places more quickly you can teleport <code class="kbd docutils literal"><span class="pre">Spacebar</span></code> around your scene.
+If there is an object in front of the walk cross/aim you will move in that direction until you reach the point
+(offset by the <em>camera height</em> value set in the <a class="reference internal" href="../../../preferences/index.html"><span class="doc">User Preferences</span></a>).</p>
+<div class="section" id="shortcuts">
+<h4>快捷键<a class="headerlink" href="#shortcuts" title="永久链接至标题">¶</a></h4>
+<ul class="simple">
+<li><p class="first">移动鼠标左/右平移视图左/右或移动它向上/向下倾斜视图向上/向下。</p>
+</li>
+<li>Move the camera forward/backward <code class="kbd docutils literal"><span class="pre">W</span></code>, <code class="kbd docutils literal"><span class="pre">S</span></code>.</li>
+<li>Strafe left/right <code class="kbd docutils literal"><span class="pre">A</span></code>, <code class="kbd docutils literal"><span class="pre">D</span></code>.</li>
+<li>Jump <code class="kbd docutils literal"><span class="pre">V</span></code> - only in <em>gravity</em> mode.</li>
+<li>Move up and down <code class="kbd docutils literal"><span class="pre">Q</span></code>, <code class="kbd docutils literal"><span class="pre">E</span></code> - only in <em>free</em> mode.</li>
+<li>Alternate between <em>free</em> and <em>gravity</em> modes <code class="kbd docutils literal"><span class="pre">Tab</span></code>.</li>
+<li>Change the movement speed:
+- <code class="kbd docutils literal"><span class="pre">WheelUp</span></code> or <code class="kbd docutils literal"><span class="pre">NumpadPlus</span></code> to increase the movement speed for this open session.
+- <code class="kbd docutils literal"><span class="pre">WheelDown</span></code> or to <code class="kbd docutils literal"><span class="pre">NumpadMinus</span></code> to decrease the movement speed for this open session.
+- <code class="kbd docutils literal"><span class="pre">Shift</span></code> (hold) - to speed up the movement temporarily.
+- <code class="kbd docutils literal"><span class="pre">Alt</span></code> (hold) - to slow down the movement temporarily.</li>
+</ul>
+<p>当你满意新视图，请单击: 大骨节病: &#8216;LMB&#8217; 来确认。万一你想要从你开始回去，按: 大骨节病: Esc 或: 大骨节病: &#8216;人民币&#8217;，像往常一样。</p>
+<p>If the defaults values (speed, mouse sensitivity, ...) need adjustments for your project,
+in the <a class="reference internal" href="../../../preferences/index.html"><span class="doc">User Preferences</span></a> you can select a few options for the navigation system:</p>
+</div>
+</div>
+<div class="section" id="fly-mode">
+<h3>飞行模式<a class="headerlink" href="#fly-mode" title="永久链接至标题">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">模式：  所有模式</div>
+<div class="line">菜单:: menuselection:&#8211;&gt;&#8211;&gt; 飞导航视图导航视图</div>
+<div class="line">快捷键:   <code class="kbd docutils literal"><span class="pre">Shift-F</span></code></div>
+</div>
+</div>
+<p>激活鼠标指针将动议在视图的中心和一个平方的标记会出现 — — 一种平视显示器...</p>
+<p>飞行模式的选项中有一些受鼠标指针相对于视图本身，中心的位置，围绕着这个中心的平方的标记提供了一种可以用来放置鼠标对它没有影响视图上的&#8221;安全区&#8221;。更多的是你把鼠标指针移开标记，越你泛，或跟踪等。</p>
+<div class="section" id="id3">
+<h4>快捷键<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h4>
+<ul>
+<li><p class="first">移动鼠标左/右平移视图左/右或移动它向上/向下倾斜视图向上/向下。</p>
+</li>
+<li><p class="first">Move the view forward/backward:
+- <code class="kbd docutils literal"><span class="pre">WheelUp</span></code> or <code class="kbd docutils literal"><span class="pre">NumpadPlus</span></code> to accelerate the movement forward.
+- <code class="kbd docutils literal"><span class="pre">WheelDown</span></code> or to <code class="kbd docutils literal"><span class="pre">NumpadMinus</span></code> to accelerate the movement backward.</p>
+<blockquote>
+<div><p>So if the view is already moving forward,
+<code class="kbd docutils literal"><span class="pre">WheelDown</span></code>, <code class="kbd docutils literal"><span class="pre">NumpadMinus</span></code> will eventually stop it and then move it backward, etc.</p>
+</div></blockquote>
+</li>
+<li><p class="first">拖: 大骨节病: &#8216;MMB&#8217; 向多莉。在这种情况下视图可以横向轴上移动其本地一刻你拖动鼠标 — — 很明显，分别上的左，右，向上下拖动左/右/上下使视图多莉。</p>
+</li>
+</ul>
+<p>当你满意新视图，请单击: 大骨节病: &#8216;LMB&#8217; 来确认。万一你想要从你开始回去，按: 大骨节病: Esc 或: 大骨节病: &#8216;人民币&#8217;，像往常一样。</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="camera_view.html" class="btn btn-neutral float-right" title="相机视图–颖心欢欣 翻译" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="简介—SongNing 翻译" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

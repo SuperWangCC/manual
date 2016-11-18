@@ -1,0 +1,356 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>精简修改器–knight翻译 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../../index.html"/>
+        <link rel="up" title="修改器" href="../index.html"/>
+        <link rel="next" title="棱线分离修改器–knight翻译" href="edge_split.html"/>
+        <link rel="prev" title="建造修改器–knight翻译" href="build.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">Metaball</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">Empties</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">修改器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">介绍&#8211;一钱不名</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#modify">修改</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#generate">生成</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="array.html">阵列修改器&#8211;gkuggkug豆豆翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bevel.html">倒角修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="booleans.html">布尔修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="build.html">建造修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">精简修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="edge_split.html">棱线分离修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mask.html">遮罩修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mirror.html">镜像修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="multiresolution.html">多分辨率修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="remesh.html">重新网面化修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="screw.html">螺旋修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="skin.html">植皮修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="solidify.html">加固修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsurf.html">细分表面修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="triangulate.html">三角化修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wireframe.html">线框修改器&#8211;lifetree翻译</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#deform">形变</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#simulate">模拟</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">制作模型</a> &raquo;</li>
+      
+          <li><a href="../index.html">修改器</a> &raquo;</li>
+      
+    <li>精简修改器&#8211;knight翻译</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/modeling/modifiers/generate/decimate.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="decimate-modifier">
+<h1>精简修改器&#8211;knight翻译<a class="headerlink" href="#decimate-modifier" title="永久链接至标题">¶</a></h1>
+<p>精简修改器允许你在尽量不改变网面形状的情况下，减少其顶点、面的数量。</p>
+<p>This is not usually used on meshes which have been created by modeling carefully and economically
+(where all vertices and faces are necessary to correctly define the shape).
+But if the mesh is the result of complex modeling,
+sculpting and/or applied Subdivision Surface/Multires modifiers,
+the Decimate modifier can be used to reduce the polygon count for a performance increase,
+or simply remove unnecessary vertices and edges.</p>
+<p>精简修改器是一种快速和简单的以非破坏性方式减少网面多边形数量的方式。该修改器论证了网面修改器系统的优势，因为它展示了一种交互式地并安全地使用修改器的操作，它是标准永久的，且会破坏原始网面数据。</p>
+<p>不同于大多数现有的修改器，精简修改器不允许你在编辑模式下查看所作的更改。</p>
+<div class="section" id="options">
+<h2>选项<a class="headerlink" href="#options" title="永久链接至标题">¶</a></h2>
+<div class="figure" id="id1">
+<img alt="../../../_images/modifier-decimate.jpg" src="../../../_images/modifier-decimate.jpg" />
+<p class="caption"><span class="caption-text">decimate modifier.</span></p>
+</div>
+<dl class="docutils">
+<dt>精简类型</dt>
+<dd><dl class="first last docutils">
+<dt>塌陷</dt>
+<dd><p class="first">渐进式地同时合并顶点，会考虑网面的形状。</p>
+<dl class="last docutils">
+<dt>比率</dt>
+<dd><p class="first">精简后保留面数量的比例。</p>
+<ul class="simple">
+<li>On 1.0: the mesh is unchanged.</li>
+<li>On 0.5: edges have been collapsed such that half the number of faces remain (See <em>Note</em> below).</li>
+<li>On 0.0: all faces have been removed.</li>
+</ul>
+<div class="last admonition note">
+<p class="first admonition-title">注解</p>
+<p>虽然 <em>比率</em> 与剩余面的数量直接成正比，但在计算比率时，三角形也会使用。</p>
+<p>这意味着，如果你的网面包含四边形，剩余面的数量会大于预期数量，因为如果他们的边缘不塌陷的话，四边形是保持不变的。</p>
+<p class="last">在禁用了 <em>三角化</em> 选项，上面的话才算正确。</p>
+</div>
+</dd>
+</dl>
+</dd>
+<dt>取消细分</dt>
+<dd><p class="first">可以认为是相反的细分。它试图删除一次细分操作结果的边。如果在细分操作后又做了一些编辑操作，结果可能在意料之外。</p>
+<dl class="last docutils">
+<dt>迭代次数</dt>
+<dd><p class="first last">执行取消细分操作的次数。两次迭代算是同一个细分操作，所以你通常会用偶数。</p>
+</dd>
+</dl>
+</dd>
+<dt>平面的</dt>
+<dd><p class="first">让同一个平面上的几何线消失。</p>
+<dl class="last docutils">
+<dt>角度限制</dt>
+<dd><p class="first last">让构成角度低于该设置值的几何线消失。</p>
+</dd>
+<dt>所有边界</dt>
+<dd><p class="first last">启用后，所有沿着边界面的顶点会消失掉。这样可以在用高的 <em>角度限制</em> 值时可以得到更好的结果。</p>
+</dd>
+<dt>定界</dt>
+<dd><p class="first">阻止某些地方的几何线消失。</p>
+<dl class="last docutils">
+<dt>法线</dt>
+<dd><p class="first last">不要让边界区域面的法线翻转了的边消失掉。</p>
+</dd>
+<dt>材质</dt>
+<dd><p class="first last">对于分配了不同材质的边界不作消失处理。</p>
+</dd>
+<dt>边沿</dt>
+<dd><p class="first last">对标记为边沿的棱不作消失处理。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>面数</dt>
+<dd><p class="first last">该字段显示使用了精简修改器后，剩余面的数量。</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="edge_split.html" class="btn btn-neutral float-right" title="棱线分离修改器–knight翻译" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="build.html" class="btn btn-neutral" title="建造修改器–knight翻译" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

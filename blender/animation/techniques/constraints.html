@@ -1,0 +1,320 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>在动画中使用约束 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../index.html"/>
+        <link rel="up" title="动画" href="../index.html"/>
+        <link rel="next" title="物理" href="../../physics/index.html"/>
+        <link rel="prev" title="Moving Objects on a Path" href="object_path.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">动画</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介&#8211;毛货翻译</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../keyframes/index.html">Keyframes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../actions.html">动作&#8212;小A翻译</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../drivers/index.html">Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../markers.html">标记符—小A翻译</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shape_keys/index.html">Shape Keys</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#animation-techniques">Animation Techniques</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="camera.html">Animating Cameras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="object_path.html">Moving Objects on a Path</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">在动画中使用约束</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#controlling-animation-with-constraints">使用约束来控制动画</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">动画</a> &raquo;</li>
+      
+    <li>在动画中使用约束</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/animation/techniques/constraints.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="using-constraints-in-animation">
+<h1>在动画中使用约束<a class="headerlink" href="#using-constraints-in-animation" title="永久链接至标题">¶</a></h1>
+<p>：DOC：<cite>约束&lt;/rigging/constraints/index&gt; &#8216;是一种将控制对象的属性（其位置/旋转/缩放），无论是使用普通的静态值（如：文档：</cite>“限制”的人&lt;/rigging/constraints/transform/limit_location&gt; <cite>），或（一）其他物体上，所谓的“目标”（如如：文档：</cite>“拷贝”的人&lt;/rigging/constraints/transform/copy_location&gt; <a href="#id1"><span class="problematic" id="id2">`</span></a>）。</p>
+<p>虽然这些限制可能是静态的项目中非常有用，它们的主要用途是明显的动画。有在约束“动画两个不同的方面：</p>
+<ul class="simple">
+<li><p class="first">可以通过使用其约束目标控制对象的动画（这是间接的动画的形式）。</p>
+</li>
+<li>You can animate constraints&#8217; settings.</li>
+</ul>
+<div class="section" id="controlling-animation-with-constraints">
+<h2>使用约束来控制动画<a class="headerlink" href="#controlling-animation-with-constraints" title="永久链接至标题">¶</a></h2>
+<p>这仅适用于使用目标（S）的约束。事实上，这些目标就可以控制约束的所有者的特性，因此，动画的目标将间接动画的所有者。</p>
+<p>This indirect &#8220;constraint&#8221; animation can be very simple,
+like for example with the <a class="reference internal" href="../../rigging/constraints/transform/copy_location.html"><span class="doc">Copy Location constraint</span></a>,
+where the owner object will simply copy the location of its target (with an optional constant offset).
+But you can also have very complex behaviors,
+like when using the <a class="reference internal" href="../../rigging/constraints/relationship/action.html"><span class="doc">Action constraint</span></a>,
+which is a sort of <a class="reference internal" href="../drivers/index.html"><span class="doc">Animation Driver</span></a> for actions!</p>
+<p>We should also mention the classical <a class="reference internal" href="../../rigging/constraints/relationship/child_of.html"><span class="doc">Child of Constraint</span></a>,
+which creates parent/child relationship.
+These relationships indeed imply indirect animation (as transforming the parent affects by default all its children).
+But the <em>Child Of</em> constraint is also very important, as it allows you to parent your objects to bones,
+and hence use <a class="reference internal" href="../../rigging/armatures/index.html"><span class="doc">Armatures</span></a> to animate them!</p>
+<p>回到我们简单 * 副本位置 * 示例中，您可以有两种不同行为的此约束:</p>
+<ul class="simple">
+<li>When it is <em>Offset</em> button is disabled (the default), the location of the owner is &#8220;absolutely&#8221;
+controlled by the constraint&#8217;s target, which means nothing (except other constraints below in the stack...)
+will be able to control the owner&#8217;s position. Not even the object&#8217;s animation curves.</li>
+<li><p class="first">然而，当 * 偏移量 * 按钮处于启用状态，所有者的位置&#8221;相对&#8221;受约束的目标。这意味着所有者的位置的属性的垂距目标的位置。这些所有者的位置属性可以通过例如控制其 * 井场。* 曲线 (或行动或 NLA...)!</p>
+</li>
+</ul>
+<div class="section" id="example">
+<h3>例如：<a class="headerlink" href="#example" title="永久链接至标题">¶</a></h3>
+<p>Let us use the <em>Copy Location</em> constraint and its <em>Offset</em> button. For example,
+you can make your owner (let us call it &#8220;moon&#8221;) describe perfect circles centered on the (0.0, 0.0, 0.0)
+point (using e.g. pydriven <em>LocX</em>/<em>LocY</em> animation curves, see <a class="reference internal" href="../drivers/index.html"><span class="doc">Drivers</span></a>),
+and then make it copy the location of a target (called it &#8220;earth&#8221;, for example) with the <em>Offset</em> button enabled.
+Congratulation, you just modeled a satellite in a (simplified) orbit around its planet.
+Just do the same thing with its planet around its star (which you might call &#8220;sun&#8221;, what do you think?),
+and why not, for the star around its galaxy.</p>
+<p>这里是一个小动画的&#8221;太阳能&#8221;系统 (其中几个) 使用上面描述的技术创建:</p>
+<iframe src="https://player.vimeo.com/video/15187945" style="border: 0; height: 345px; width: 560px">
+</iframe><p>Note that this &#8220;solar&#8221; system is not realistic at all (the wrong scale,
+the &#8220;earth&#8221; is rotating in the wrong direction around the &#8220;sun&#8221;, ...).</p>
+<p>You can download the blend-file
+(<a class="reference external" href="https://wiki.blender.org/index.php/File:ManAnimationTechsUsingConstraintsExSolarSys.blend">download here</a>)
+used to create this animation.</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p>动画约束影响</p>
+<p>More &#8220;classically&#8221;, you can also animate a few properties of each constraint using animation curves:</p>
+<ul class="last simple">
+<li>You can animate the <em>Influence</em> of a constraint.
+For example, in the <a class="reference internal" href="#example">Example</a> above, it is used to first stick the camera to the &#8220;moon&#8221;, then to the &#8220;earth&#8221;,
+and finally to nothing, using two <em>Copy Location</em> constraints with <em>Offset</em> set,
+and their <em>Influence</em> cross-fading together.</li>
+<li>More anecdotal, you can also, for some constraints using an armature&#8217;s bone as target,
+animate where along this bone (between root and tip) lays the real target point
+(0.0 to 1.0) means influence from the (root or tip).</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../physics/index.html" class="btn btn-neutral float-right" title="物理" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="object_path.html" class="btn btn-neutral" title="Moving Objects on a Path" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

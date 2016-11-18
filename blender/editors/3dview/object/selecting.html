@@ -1,0 +1,564 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>选择–幻星孤独翻译 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../../index.html"/>
+        <link rel="up" title="Objects" href="index.html"/>
+        <link rel="next" title="Transform" href="transform/index.html"/>
+        <link rel="prev" title="Object Types" href="types.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#d">3D</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介&#8211;NGENNGT 翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../startup_scene.html">Startup Scene</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modes.html">Object Modes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../navigate/index.html">视图导航</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d_cursor.html">3D游标&#8211;NGENNGT 翻译</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../display/index.html">Display Options</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="../index.html">3D视图</a> &raquo;</li>
+      
+          <li><a href="index.html">Objects</a> &raquo;</li>
+      
+    <li>选择&#8211;幻星孤独翻译</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/editors/3dview/object/selecting.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="selecting">
+<h1>选择&#8211;幻星孤独翻译<a class="headerlink" href="#selecting" title="永久链接至标题">¶</a></h1>
+<p>Selection determines which elements will be the target of our actions.
+Blender has advanced selection methods. Both in <em>Object Mode</em> and in <em>Edit Mode</em>.</p>
+<div class="section" id="selections-and-the-active-object">
+<span id="object-active"></span><h2>选择主控物体<a class="headerlink" href="#selections-and-the-active-object" title="永久链接至标题">¶</a></h2>
+<p>Blender区分它们两者不同的选择状态:</p>
+<div class="figure" id="id5">
+<img alt="../../../_images/editors_3dview_selecting_color.png" src="../../../_images/editors_3dview_selecting_color.png" />
+<p class="caption"><span class="caption-text">Unselected object in black, selected object in orange, and active object in yellow.</span></p>
+</div>
+<ul>
+<li><p class="first">In <em>Object Mode</em> the last (de)selected item is called the &#8220;Active Object&#8221;
+and is outlined in yellow (the others are orange).
+There is exactly one active object at any time (even when nothing is selected).</p>
+<p>一些动作在blender里使用活动物体时作为一个参考(例如连接操作).如果你已经有了一个选择,并且需要做一个不同的活动物体,那就使用快捷键shift-RMB来简单的重新选择它.</p>
+</li>
+<li><p class="first">所有其它选定的物体都是刚选好的,你可以选择任意数量的物体.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="point-selection">
+<h2>点选<a class="headerlink" href="#point-selection" title="永久链接至标题">¶</a></h2>
+<p>在物体上点击RMB可以选择这个物体。</p>
+<p>如果要同时选中多个物体，先按住SHIFT键然后再用鼠标右键分别选择即可。</p>
+<p>在视图中,如果这个物体重叠了,你使用Alt-RMB反复通过可能的选择.</p>
+<p>如果你想增加一个选择,它的快捷键是Shitf-Alt-RMB.</p>
+<p>要激活一个已选定的物体,请单击Shift-RMB.</p>
+<p>To <em>deselect</em> an active object,
+click <code class="kbd docutils literal"><span class="pre">Shift-RMB</span></code> one time and hence, two clicks if the object is not active.
+Note that this only works if there are no other objects under the mouse.
+Otherwise it just adds those to the selection. There appears to be no workaround for this bug.</p>
+</div>
+<div class="section" id="border-select">
+<span id="select-border"></span><h2>Border Select<a class="headerlink" href="#border-select" title="永久链接至标题">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Object Mode and Edit Mode</div>
+<div class="line">Menu:     <span class="menuselection">Select ‣ Border Select</span></div>
+<div class="line">快捷键:   <code class="kbd docutils literal"><span class="pre">B</span></code></div>
+</div>
+</div>
+<p>BKEY激活了边界选择。使用边界选择可以选择一组通过按住LMB画出的方框里的物体。你将选中所有在方框里或者方框边界上的物体。</p>
+<p>取消选定的物体,用MMB或者按B键之后按住Shift键再进行一次选择</p>
+<p>取消选择使用RMB键.</p>
+<div class="section" id="example">
+<h3>例子<a class="headerlink" href="#example" title="永久链接至标题">¶</a></h3>
+<div class="figure" id="id6">
+<img alt="../../../_images/object-selection-border.jpg" src="../../../_images/object-selection-border.jpg" />
+<p class="caption"><span class="caption-text">Border selecting in three steps.</span></p>
+</div>
+<p>在第一张图片里,边框选择已经激活了,并且已表明出显示一个虚线的十字光标.在第二张图片里,正通过与LMB绘制一个矩形的选择.这个矩形只覆盖两个立方体.最后,在第三张图中,释放LMB后选择完成.</p>
+<p>请注意第三张图片,选定立方体的左大部分明亮的颜色.这意思就是说它是&#8221;活动物体&#8221;,在使用边框选择工具之前最后选定的物体.</p>
+<div class="admonition hint">
+<p class="first admonition-title">提示</p>
+<p class="last">边框选择要添加到之前的选择,所以要合理选择矩形的内容,首先用A清除所有选项.</p>
+</div>
+</div>
+</div>
+<div class="section" id="lasso-select">
+<h2>套索选择<a class="headerlink" href="#lasso-select" title="永久链接至标题">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Object Mode and Edit Mode</div>
+<div class="line">菜单： 无菜单</div>
+<div class="line">快捷键:   <code class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></code></div>
+</div>
+</div>
+<p>Lasso select is used by drawing a dotted line around the pivot point of the objects,
+in <em>Object Mode</em>.</p>
+<div class="section" id="usage">
+<h3>用法<a class="headerlink" href="#usage" title="永久链接至标题">¶</a></h3>
+<p>同时按住Ctrl键,你仅仅需要圈选你想要用LMB圈选的每个物体的顶点.</p>
+<p>套索选择增加之前的选择.对于取消选择,用 Ctrl-Shift-LMB.</p>
+<div class="figure" id="id7">
+<img alt="../../../_images/object-selection-lasso.png" src="../../../_images/object-selection-lasso.png" />
+<p class="caption"><span class="caption-text">Lasso selection example.</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="circle-select">
+<span id="select-circle"></span><h2>刷选<a class="headerlink" href="#circle-select" title="永久链接至标题">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Object Mode and Edit Mode</div>
+<div class="line">Menu:     <span class="menuselection">Select ‣ Circle Select</span></div>
+<div class="line">热键:C（译注：我的电脑是ALT+C，C是圈选）</div>
+</div>
+</div>
+<p><em>Circle Select</em> is used by moving with dotted circle through objects with <code class="kbd docutils literal"><span class="pre">LMB</span></code>.
+You can select any object by touching of circle area.
+It is possible to dynamically change the diameter of circle by scrolling <code class="kbd docutils literal"><span class="pre">MMB</span></code> as
+seen in pictures below. Deselection is under the same principle - <code class="kbd docutils literal"><span class="pre">MMB</span></code>.
+To cancel the selection use <code class="kbd docutils literal"><span class="pre">RMB</span></code> or key <code class="kbd docutils literal"><span class="pre">Esc</span></code>.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id8">
+<a class="reference internal image-reference" href="../../../_images/object-selection-circle1.png"><img alt="../../../_images/object-selection-circle1.png" src="../../../_images/object-selection-circle1.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">Circle selection.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id9">
+<a class="reference internal image-reference" href="../../../_images/object-selection-circle2.png"><img alt="../../../_images/object-selection-circle2.png" src="../../../_images/object-selection-circle2.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">...with huge circle.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="menu-selection">
+<h2>菜单选择<a class="headerlink" href="#menu-selection" title="永久链接至标题">¶</a></h2>
+<p>The selection methods described above are the most common.
+There are also many more options accessible through the <em>Select</em> menu of the 3D View.</p>
+<p>每一个都更适合某些操作.</p>
+<div class="section" id="select-grouped">
+<span id="id1"></span><h3>按组选择<a class="headerlink" href="#select-grouped" title="永久链接至标题">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Object Mode</div>
+<div class="line">Menu:     <span class="menuselection">Select ‣ Grouped</span></div>
+<div class="line">快捷键:   <code class="kbd docutils literal"><span class="pre">Shift-G</span></code></div>
+</div>
+</div>
+<div class="figure align-right" id="id10">
+<img alt="../../../_images/editors_3dview_object_selecting_select-grouped-menu.png" src="../../../_images/editors_3dview_object_selecting_select-grouped-menu.png" />
+<p class="caption"><span class="caption-text">Select Grouped menu.</span></p>
+</div>
+<p>There are two ways to organize the objects in relation to one another.
+The first one is <em>parenting</em>, and the second is simple <em>grouping</em>.
+These relationships to an artist&#8217;s advantage by selecting members of respective families or groups.
+<em>Select Grouped</em> uses the active object as a basis to select all others.</p>
+<div class="section" id="options">
+<h4>选项<a class="headerlink" href="#options" title="永久链接至标题">¶</a></h4>
+<dl class="docutils">
+<dt>子级</dt>
+<dd><p class="first last">递归选择所有物体的子物体.</p>
+</dd>
+<dt>直接子级</dt>
+<dd><p class="first last">选择所有物体的直接子级.</p>
+</dd>
+<dt>父级</dt>
+<dd><p class="first last">如果它有一个物体，则选择该物体的父物体.</p>
+</dd>
+<dt>平级</dt>
+<dd><p class="first last">选择具有与活动物体相同的父级的物体,这也可以用来选择所有的根级物体(物体没有父级).</p>
+</dd>
+<dt>类型（Type）</dt>
+<dd><p class="first last">选择具有与活动物体同一类型的物体.</p>
+</dd>
+<dt>层</dt>
+<dd><p class="first last">至少有一个共用层的物体.</p>
+</dd>
+<dt>组（Group）</dt>
+<dd><p class="first last">如果在活动物体的一个组中，该组的一组（呈现绿色的默认主题）将被选中。</p>
+</dd>
+<dt>挂钩</dt>
+<dd><p class="first last">属于主控物体的每一个挂钩.</p>
+</dd>
+<dt>通道</dt>
+<dd>Select objects assigned to the same <a class="reference internal" href="../../../render/cycles/settings/passes.html#render-cycles-passes"><span class="std std-ref">render pass</span></a>.</dd>
+<dt>颜色</dt>
+<dd>Select objects with same <a class="reference internal" href="properties/display.html#objects-display-object-color"><span class="std std-ref">Object Color</span></a>.</dd>
+<dt>属性</dt>
+<dd>Select objects with same <a class="reference internal" href="../../../game_engine/logic/properties.html"><span class="doc">Game Engine Properties</span></a>.</dd>
+<dt>插帧集</dt>
+<dd>Select objects included in the active <a class="reference internal" href="../../../animation/keyframes/keying_sets.html"><span class="doc">Keying Set</span></a>.</dd>
+<dt>灯光类型</dt>
+<dd><p class="first last">选择匹配的灯光类型。</p>
+</dd>
+<dt>通道索引</dt>
+<dd><p class="first last">选择符合的物体通道索引</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="select-linked">
+<h3>选择相连元素<a class="headerlink" href="#select-linked" title="永久链接至标题">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Object Mode</div>
+<div class="line">Menu:     <span class="menuselection">Select ‣ Linked</span></div>
+<div class="line">快捷键:   <code class="kbd docutils literal"><span class="pre">Shift-L</span></code></div>
+</div>
+</div>
+<p>Selects all objects which share a common data-block with the active object.
+<em>Select linked</em> uses the active object as a basis to select all others.</p>
+<div class="section" id="id2">
+<h4>选项<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h4>
+<dl class="docutils">
+<dt>物体数据</dt>
+<dd><p class="first last">选择每一个物体,是链接同一物体数据,例如,数据块指定类型(网格,曲线等)和建立(顶点的构成基础,顶点,它们的空间位置)的物体.</p>
+</dd>
+<dt>材质模式</dt>
+<dd><p class="first last">选择每一物体都是连接在同一材质的数据块.</p>
+</dd>
+<dt>纹理着色</dt>
+<dd><p class="first last">选择每一物体都是连接在同一纹理的数据块.</p>
+</dd>
+<dt>组副本</dt>
+<dd>Selects all objects that use the same <em>Group</em> for duplication.</dd>
+<dt>粒子系统</dt>
+<dd>Selects all objects that use the same <em>Particle System</em></dd>
+<dt>库（Library）</dt>
+<dd>Selects all objects that are in the same <a class="reference internal" href="../../../data_system/linked_libraries.html"><span class="doc">Library</span></a></dd>
+<dt>Library (Object Data)</dt>
+<dd>Selects all objects that are in the same <a class="reference internal" href="../../../data_system/linked_libraries.html"><span class="doc">Library</span></a>
+and limited to <em>object data</em>.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="select-all-by-type">
+<h3>按类型全选<a class="headerlink" href="#select-all-by-type" title="永久链接至标题">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Object Mode</div>
+<div class="line">Menu:     <span class="menuselection">Select ‣ Select All by Type</span></div>
+<div class="line">热键:没有</div>
+</div>
+</div>
+<p>有了这个工具,就有可能选择某一类型的每一个可见物体.</p>
+<div class="section" id="id3">
+<h4>选项<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h4>
+<p>该类型是网格，曲线，面，融球，文本，骨架，晶格，空物体，摄像机，灯光，扬声器。</p>
+</div>
+</div>
+<div class="section" id="select-all-by-layer">
+<h3>按层全选<a class="headerlink" href="#select-all-by-layer" title="永久链接至标题">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Object Mode</div>
+<div class="line">Menu:     <span class="menuselection">Select ‣ Select All by Layer</span></div>
+<div class="line">热键:没有</div>
+</div>
+</div>
+<div class="figure align-right" id="id11">
+<img alt="../../../_images/editors_3dview_select_allbylayer.png" src="../../../_images/editors_3dview_select_allbylayer.png" />
+<p class="caption"><span class="caption-text">All by Layer selection menu.</span></p>
+</div>
+<p>的另外一种方法是,重组你的物体以适应你的需求.</p>
+<p>这个选择允许选择每一个单独的物体,在一个单一的命令里属于给定的一个层,可见或者不可见.</p>
+<div class="section" id="id4">
+<h4>选项<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h4>
+<dl class="docutils">
+<dt>匹配</dt>
+<dd><p class="first last">匹配类型选择</p>
+</dd>
+<dt>扩展</dt>
+<dd><p class="first last">启用将物体添加到当前选择而不是替换当前选择.</p>
+</dd>
+<dt>层</dt>
+<dd><p class="first last">物体所在的层。</p>
+</dd>
+</dl>
+<div class="admonition tip">
+<p class="first admonition-title">小技巧</p>
+<p>物体的选择</p>
+<p class="last">Rather than using the <span class="menuselection">Select All by Layer</span> option,
+it might be more efficient to make the needed layers visible and use <code class="kbd docutils literal"><span class="pre">A</span></code> on them.
+This method also allows objects to be deselected.</p>
+</div>
+</div>
+</div>
+<div class="section" id="other-menu-options">
+<h3>其他菜单选项<a class="headerlink" href="#other-menu-options" title="永久链接至标题">¶</a></h3>
+<p>菜单的每一级可用选项:</p>
+<dl class="docutils">
+<dt>Select Pattern</dt>
+<dd><p class="first last">选择名字和模式匹配的所有物体。支持通配符: * 匹配一切，?匹配任何单个的字符， [abc] 匹配字符在&#8221;abc&#8221; 字串中， [! abc] 匹配任何字符不在&#8221;abc&#8221; 中。可以选择匹配区分大小写。作为一个例子 <em>房子</em> 匹配任何包含 &#8220;房子&#8221; 的物体，而 地板* 匹配任何名称开始为 &#8220;地板&#8221; 的名称。</p>
+</dd>
+<dt>选择摄像机</dt>
+<dd><p class="first last">选择激活的摄像机</p>
+</dd>
+<dt>Mirror <code class="kbd docutils literal"><span class="pre">Shift-Ctrl-M</span></code></dt>
+<dd>Select the Mirror objects of the selected object eg. <span class="menuselection">L.sword ‣ R.sword</span>.</dd>
+<dt>随机</dt>
+<dd>Randomly selects unselected objects based on percentage probability on currently active layers.
+On selecting the command a numerical selection box becomes available in the <em>Tool Shelf</em>.
+It is important to note that the percentage represents the likelihood of an unselected object being
+selected and not the percentage amount of objects that will be selected.</dd>
+<dt>Inverse <code class="kbd docutils literal"><span class="pre">Ctrl-I</span></code></dt>
+<dd><p class="first last">选择所有物体,并同时取消已被选择的那些物体.</p>
+</dd>
+<dt>(De)select All <code class="kbd docutils literal"><span class="pre">A</span></code></dt>
+<dd><p class="first last">如果任何物体已经选择了,它第一项就会被取消.否则在选择和取消选择所有可见物体之间进行切换.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="transform/index.html" class="btn btn-neutral float-right" title="Transform" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="types.html" class="btn btn-neutral" title="Object Types" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,353 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Active Element &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../../../../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../../../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../../../../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../../../../../index.html"/>
+        <link rel="up" title="轴心点" href="index.html"/>
+        <link rel="next" title="Median Point" href="median_point.html"/>
+        <link rel="prev" title="轴心点" href="index.html"/> 
+
+  
+  <script src="../../../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../../index.html#d">3D</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../introduction.html">简介&#8211;NGENNGT 翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../startup_scene.html">Startup Scene</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modes.html">Object Modes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../navigate/index.html">视图导航</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../3d_cursor.html">3D游标&#8211;NGENNGT 翻译</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html">Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../display/index.html">Display Options</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../../../../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="../../../../index.html">3D视图</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">Objects</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Transform</a> &raquo;</li>
+      
+          <li><a href="../index.html">变换控制</a> &raquo;</li>
+      
+          <li><a href="index.html">轴心点</a> &raquo;</li>
+      
+    <li>Active Element</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../../../_sources/editors/3dview/object/transform/transform_control/pivot_point/active_element.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="active-element">
+<h1>Active Element<a class="headerlink" href="#active-element" title="永久链接至标题">¶</a></h1>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Object Mode and Edit Mode</div>
+<div class="line">Menu:     Select from the <img alt="pivot-icon" src="../../../../../../_images/editors_3dview_object_transform-control_pivot-point.png" /> icon in the 3D View header.</div>
+<div class="line">快捷键:   <code class="kbd docutils literal"><span class="pre">Alt-.</span></code></div>
+</div>
+</div>
+<p>The <em>active</em> element can be an Object, vertex, edge or a face. The active element is the
+last one to be selected and will be shown in a lighter orange color when in <em>Object Mode</em>
+and white when in <em>Edit Mode</em>. With <em>Active element as Pivot</em> set to active,
+all transformations will occur relative to the active element.</p>
+<div class="figure" id="id1">
+<img alt="../../../../../../_images/editors_3dview_object_transform-control_pivot-point_active-element_object-mode-display.png" src="../../../../../../_images/editors_3dview_object_transform-control_pivot-point_active-element_object-mode-display.png" />
+<p class="caption"><span class="caption-text">Display of active elements in Object Mode where the active element (cube) is a lighter orange.</span></p>
+</div>
+<div class="figure" id="id2">
+<img alt="../../../../../../_images/editors_3dview_object_transform-control_pivot-point_active-element_edit-mode-display.png" src="../../../../../../_images/editors_3dview_object_transform-control_pivot-point_active-element_edit-mode-display.png" />
+<p class="caption"><span class="caption-text">Active elements for vertices, edges and faces in Edit Mode are displayed in white.</span></p>
+</div>
+<div class="section" id="in-object-mode">
+<h2>In Object Mode<a class="headerlink" href="#in-object-mode" title="永久链接至标题">¶</a></h2>
+<p>When in <em>Object Mode</em>,
+rotation and scaling happen around the active Object&#8217;s center.
+This is shown by the figure to the below where the active Object (the cube)
+remains in the same location (note its position relative to the 3D cursor)
+while the other Objects rotate and scale in relation to the active element.</p>
+<div class="figure" id="id3">
+<img alt="../../../../../../_images/editors_3dview_object_transform-control_pivot-point_active-element_object-mode-rotation.png" src="../../../../../../_images/editors_3dview_object_transform-control_pivot-point_active-element_object-mode-rotation.png" />
+<p class="caption"><span class="caption-text">当立方体作为主控元素的时候的旋转和缩放。</span></p>
+</div>
+</div>
+<div class="section" id="in-edit-mode">
+<h2>In Edit Mode<a class="headerlink" href="#in-edit-mode" title="永久链接至标题">¶</a></h2>
+<p>Using the active element as a pivot point in <em>Edit Mode</em> may seem complex but all
+the possible transformations follow a few rules:</p>
+<ul class="simple">
+<li><p class="first">轴心点总是处于主控元素（们）的中心。</p>
+</li>
+<li>The transformations occur by transformation of the <em>vertices</em> of the selected element(s).
+If an unselected element shares one or more vertices with a selected element
+then the unselected one will get some degree of transformation also.</li>
+</ul>
+<p>Let us examine the following examples: in each case we will see that the two rules apply.</p>
+<div class="section" id="single-selection">
+<h3>单个选择<a class="headerlink" href="#single-selection" title="永久链接至标题">¶</a></h3>
+<p>选定单个元素时，会自动激活。在下图可以看到，当它变换时其顶点移动，结果是与该主控元素临接的元素共享出一个或多个顶点，这些顶点也会随主控元素变换。</p>
+<div class="figure" id="id4">
+<img alt="../../../../../../_images/editors_3dview_object_transform-control_pivot-point_active-element_edit-mode-single.png" src="../../../../../../_images/editors_3dview_object_transform-control_pivot-point_active-element_edit-mode-single.png" />
+<p class="caption"><span class="caption-text">Edit Mode and only one element selected.</span></p>
+</div>
+<p>Let us review each case:</p>
+<ul class="simple">
+<li><p class="first"><em>面</em> 的轴心点出现他们选择点上，是其所有顶点的中心。</p>
+</li>
+<li><p class="first"><em>边</em> 的轴心点在他们的中点上，因为边的中心点永远在那里。</p>
+</li>
+<li>A single <em>Vertex</em> has no dimensions at all so it cannot show any transformation
+(except translation, which is not affected by the pivot point).</li>
+</ul>
+</div>
+<div class="section" id="multiple-selection">
+<h3>多项选择<a class="headerlink" href="#multiple-selection" title="永久链接至标题">¶</a></h3>
+<p>When multiple elements are selected they all transform.
+The pivot points stay in the same place as what we have seen above,
+with only one exception for Fgons. In the image below,
+the selected elements have been rotated.</p>
+<div class="figure" id="id5">
+<img alt="../../../../../../_images/editors_3dview_object_transform-control_pivot-point_active-element_edit-mode-multiple.png" src="../../../../../../_images/editors_3dview_object_transform-control_pivot-point_active-element_edit-mode-multiple.png" />
+<p class="caption"><span class="caption-text">Edit Mode and multiple selections.</span></p>
+</div>
+<ul class="simple">
+<li><p class="first">对 <em>面</em> 来说所有面会围着主控面上的选择点发生变换。</p>
+</li>
+<li><p class="first"><em>边</em> 也会在他们中点的轴心点上保持相同的行为。</p>
+</li>
+<li><p class="first">现在是关于 <em>顶点</em> 的样子: 主控顶点是轴心点所在。所有其他顶点相对于该点变换。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="median_point.html" class="btn btn-neutral float-right" title="Median Point" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="轴心点" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

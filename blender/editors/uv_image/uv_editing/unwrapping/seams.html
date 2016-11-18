@@ -1,0 +1,347 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Seams &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../../../index.html"/>
+        <link rel="up" title="Unwrapping" href="index.html"/>
+        <link rel="next" title="Managing UV Maps" href="../layout_management.html"/>
+        <link rel="prev" title="Mapping Types" href="mapping_types.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#d">3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#animation">动画</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html#image-video">图像/视频</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">UV/Image Editor</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../navigating.html">Navigating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../image/index.html">Image</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">UV Editing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../display_panel.html">Display Panel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../painting.html">Painting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../masking.html">Masking</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../sequencer/index.html">视频剪辑编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../movie_clip_editor/index.html">Movie Clip Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="../../index.html">UV/Image Editor</a> &raquo;</li>
+      
+          <li><a href="../index.html">UV Editing</a> &raquo;</li>
+      
+          <li><a href="index.html">Unwrapping</a> &raquo;</li>
+      
+    <li>Seams</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../_sources/editors/uv_image/uv_editing/unwrapping/seams.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="seams">
+<h1>Seams<a class="headerlink" href="#seams" title="永久链接至标题">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="永久链接至标题">¶</a></h2>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../../../../_images/texture-uv-unwrap-seam-simple.png"><img alt="../../../../_images/texture-uv-unwrap-seam-simple.png" src="../../../../_images/texture-uv-unwrap-seam-simple.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Simple Seam on a Cylinder.</span></p>
+</div>
+<p>For many cases, using the Unwrap calculations of Cube, Cylinder, Sphere,
+or best fit will produce a good UV layout. However, for more complex meshes,
+especially those with lots of indentations, you may want to define a <em>seam</em> to limit and
+guide any of the unwrapping processes discussed above.</p>
+<p>Just like in sewing, a seam is where the ends of the image/cloth are sewn together.
+In unwrapping, the mesh is unwrapped at the seams.
+Think of this method as peeling an orange or skinning an animal.
+You make a series of cuts in the skin, then peel it off. You could then flatten it out,
+applying some amount of stretching. These cuts are the same as seams.</p>
+<p>When using this method, you need to be aware of how much stretching there is.
+The more seams there are, the less stretching there is,
+but this is often an issue for the texturing process.
+It is a good idea to have as few seams as possible while having the least amount of stretching.
+Try to hide seams where they will not be seen. In productions where 3D paint is used,
+this becomes less of an issue, as projection painting can easily deal with seams,
+as opposed to 2D texturing, where it is difficult to match the edges of different UV islands.</p>
+<p>The workflow is the following:</p>
+<ul class="simple">
+<li>Create seams.
+A seam is marked in Edit Mode by selecting edges to make the seam and then issuing the command to Mark Seam.</li>
+<li>Unwrap.</li>
+<li>Adjust seams and repeat.</li>
+<li>Manually adjust UVs. See the next section on Editing UVs.</li>
+</ul>
+</div>
+<div class="section" id="marking-seams">
+<h2>Marking Seams<a class="headerlink" href="#marking-seams" title="永久链接至标题">¶</a></h2>
+<div class="figure" id="id2">
+<a class="reference internal image-reference" href="../../../../_images/texture-uv-unwrap-seams.png"><img alt="../../../../_images/texture-uv-unwrap-seams.png" src="../../../../_images/texture-uv-unwrap-seams.png" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">Seamed Suzanne.</span></p>
+</div>
+<p>To add an edge to a seam,
+simply select the edge and <code class="kbd docutils literal"><span class="pre">Ctrl-E</span></code> <em>Mark Seam</em>.
+To take an edge out of a seam, select it, <code class="kbd docutils literal"><span class="pre">Ctrl-E</span></code> and <em>Clear Seam</em>.</p>
+<p>In the example to the right, the back-most edge of the cylinder was selected as the seam
+(to hide the seam), and the default unwrap calculation was used.
+In the UV/Image Editor, you can see that all the faces are nicely unwrapped,
+just as if you cut the seam with a scissors and spread out the fabric.</p>
+<p>When marking seams, you can use the <span class="menuselection">Select ‣ Linked Faces</span> or <code class="kbd docutils literal"><span class="pre">Ctrl-L</span></code> in
+Face Select Mode to check your work.
+This menu option selects all faces connected to the selected one, up to a seam.
+If faces outside your intended seam are selected, you know that your seam is not continuous.
+You do not need continuous seams, however, as long as they resolve regions that may stretch.</p>
+<p>Just as there are many ways to skin a cat,
+there are many ways to go about deciding where seams should go. In general though,
+you should think as if you were holding the object in one hand,
+and a pair of sharp scissors in the other,
+and you want to cut it apart and spread it on the table with as little tearing as possible.
+Note that we seamed the outside edges of her ears, to separate the front from the back.
+Her eyes are disconnected sub-meshes, so they are automatically unwrapped by themselves.
+A seam runs along the back of her head vertically,
+so that each side of her head is flattened out.</p>
+<p>Another use for seams is to limit the faces unwrapped. For example, when texturing a head, you
+do not really need to texture the scalp on the top and back of the head since it will be
+covered in hair. So define a seam at the hairline. Then, when you select a frontal face,
+and then select linked faces before unwrapping,
+the select will only go up to the hairline seam, and the scalp will not be unwrapped.</p>
+<p>When unwrapping anything that is bilateral, like a head or a body,
+seam it along the mirror axis. For example,
+cleave a head or a whole body right down the middle in front view. When you unwrap,
+you will be able to overlay both halves onto the same texture space,
+so that the image pixels for the right hand will be shared with the left;
+the right side of the face will match the left, etc.</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">You <strong>do not</strong> have to come up with &#8220;one unwrapping that works perfectly
+for everything everywhere.&#8221; As we will discuss later,
+you can easily have multiple UV unwrappings,
+using different approaches in different areas of your mesh.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../layout_management.html" class="btn btn-neutral float-right" title="Managing UV Maps" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="mapping_types.html" class="btn btn-neutral" title="Mapping Types" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

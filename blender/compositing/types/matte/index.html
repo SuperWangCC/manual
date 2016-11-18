@@ -1,0 +1,319 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Matte Nodes &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../../index.html"/>
+        <link rel="up" title="合成" href="../../index.html"/>
+        <link rel="next" title="Box Mask Node" href="box_mask.html"/>
+        <link rel="prev" title="Vector Curves Node" href="../vector/vector_curves.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">合成</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#node-types">Node Types</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../input/index.html">Input Nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../output/index.html">Output Nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color/index.html">Color Nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../converter/index.html">Converter Nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filter/index.html">Filter Nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../vector/index.html">Vector Nodes</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Matte Nodes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="box_mask.html">Box Mask Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="channel_key.html">Channel Key Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chroma_key.html">Chroma Key Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="color_key.html">Color Key Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="color_spill_key.html">Color Spill Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="difference_key.html">Difference Key Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="distance_key.html">Distance Key Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="double_edge_mask.html">Double Edge Mask Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ellipse_mask.html">Ellipse Mask Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="keying.html">Keying Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="keying_screen.html">Keying Screen Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="luminance_key.html">Luminance Key Node</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../distort/index.html">Distort Nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../groups.html">Node Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../layout/index.html">Layout Nodes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">合成</a> &raquo;</li>
+      
+    <li>Matte Nodes</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/compositing/types/matte/index.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="composite-nodes-matte-index"></span><div class="section" id="matte-nodes">
+<h1>Matte Nodes<a class="headerlink" href="#matte-nodes" title="永久链接至标题">¶</a></h1>
+<p>These nodes give you the essential tools for creating a <a class="reference internal" href="../../../glossary/index.html#term-matte"><span class="xref std std-term">Matte</span></a> for images
+that do not already have their own <a class="reference internal" href="../../../glossary/index.html#term-alpha-channel"><span class="xref std std-term">Alpha Channel</span></a>. One usage scenario is
+blue-screen or green-screen footage, where live action is shot in front of a
+blue or green backdrop for replacement by a matte painting or virtual background.</p>
+<p>In general, hook up these nodes to a viewer, set your UV/Image Editor to show the viewer node,
+and play with the sliders in real-time using a sample image from the footage,
+to get the settings right. In some cases,
+small adjustments can eliminate artifacts or foreground image degradation.
+Taking out too much green can result in foreground actors looking flat or blueish/purplish.</p>
+<p>You can and should chain these nodes together,
+improving your masking and color correction in successive refinements,
+using each node&#8217;s strengths to operate on the previous node&#8217;s output.
+<a class="reference internal" href="keying.html"><span class="doc">Keying Node</span></a> is the closest to a &#8220;does-it-all&#8221; node
+for green screens, but the best results stem from a combination of techniques.</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p>Garbage Matte is not a node, but a technique selecting what to
+exclude from an image. It is a <a class="reference internal" href="../../../glossary/index.html#term-mask"><span class="xref std std-term">Mask</span></a> used to identify content to be
+removed from an image that cannot be removed by an automatic process like
+chroma keying. It is used either to select specific content to be removed, or
+it is the inverse of a rough selection of the subject; removing everything else.</p>
+<p>Some nodes accept a garbage matte directly. For those that don&#8217;t, you can
+still apply one by subtracting the garbage matte from the matte generated
+by the node.</p>
+<p class="last">Simple garbage mattes can be created with the
+<a class="reference internal" href="box_mask.html"><span class="doc">Box Mask</span></a> or
+<a class="reference internal" href="ellipse_mask.html"><span class="doc">Ellipse Mask</span></a>
+More complicated matte shapes using
+<a class="reference internal" href="double_edge_mask.html"><span class="doc">Double Edge Mask</span></a> or
+using a <a class="reference internal" href="../input/mask.html"><span class="doc">Mask</span></a>.</p>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="box_mask.html">Box Mask Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="channel_key.html">Channel Key Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chroma_key.html">Chroma Key Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="color_key.html">Color Key Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="color_spill_key.html">Color Spill Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="difference_key.html">Difference Key Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distance_key.html">Distance Key Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="double_edge_mask.html">Double Edge Mask Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ellipse_mask.html">Ellipse Mask Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keying.html">Keying Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keying_screen.html">Keying Screen Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="luminance_key.html">Luminance Key Node</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="box_mask.html" class="btn btn-neutral float-right" title="Box Mask Node" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../vector/vector_curves.html" class="btn btn-neutral" title="Vector Curves Node" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

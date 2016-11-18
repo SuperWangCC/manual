@@ -1,0 +1,337 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>List Views &amp; Presets &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../../index.html"/>
+        <link rel="up" title="User Interface" href="../../index.html"/>
+        <link rel="next" title="Color Picker" href="color_picker.html"/>
+        <link rel="prev" title="Data-Block Menu" href="data_block.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">User Interface</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../splash.html">Splash Screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#window-system">Window System</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#interface-controls">界面控制</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#buttons-and-controls">Buttons and Controls</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html#extended-controls">Extended Controls</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="data_block.html">Data-Block Menu</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">List Views &amp; Presets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="color_picker.html">Color Picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="color_ramp.html">Color Ramp Widget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="curve.html">Curve Widget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="operator_search.html">Operator Search</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../common_shortcuts.html">Common Shortcuts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#tools">工具</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">User Interface</a> &raquo;</li>
+      
+    <li>List Views &amp; Presets</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/interface/controls/templates/list_presets.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="list-views-presets">
+<span id="ui-list-view"></span><h1>List Views &amp; Presets<a class="headerlink" href="#list-views-presets" title="永久链接至标题">¶</a></h1>
+<div class="section" id="list-views">
+<h2>List Views<a class="headerlink" href="#list-views" title="永久链接至标题">¶</a></h2>
+<div class="figure align-right">
+<img alt="../../../_images/extended_controls_list_view_filter.png" src="../../../_images/extended_controls_list_view_filter.png" />
+</div>
+<p>This control is useful to manage lists of items.
+They can be found in example in the object data properties.</p>
+<dl class="docutils">
+<dt>Select</dt>
+<dd>To select an item, <code class="kbd docutils literal"><span class="pre">LMB</span></code> on it.</dd>
+<dt>Rename</dt>
+<dd>By double clicking on an item, you can edit its name via a text field.
+This can also be achieved by pressing <code class="kbd docutils literal"><span class="pre">Ctrl-LMB</span></code> over it.</dd>
+<dt>Resize</dt>
+<dd>The list view can be resized to show more or fewer items.
+Hover the mouse over the handle (==) then click and drag the handle to expand or shrink the list.</dd>
+<dt>Filter</dt>
+<dd><p class="first">Click the <em>Show filtering options</em> button (+) to toggle filter option buttons.</p>
+<dl class="last docutils">
+<dt>Search</dt>
+<dd>Type part of a list item&#8217;s name in the filter text field to filter items by part of their name.</dd>
+<dt>Filter Include</dt>
+<dd>When the magnifying glass icon has a <code class="docutils literal"><span class="pre">+</span></code> sign then only items that match the text will be displayed.</dd>
+<dt>Filter Exclude</dt>
+<dd>When the magnifying glass icon has a <code class="docutils literal"><span class="pre">-</span></code> sign then only items that do not match text will be displayed.</dd>
+<dt>Sort</dt>
+<dd><p class="first">Sort list items.</p>
+<dl class="last docutils">
+<dt>Alphabetical</dt>
+<dd>This button switches between alphabetical and non-alphabetical ordering.</dd>
+<dt>Inverse</dt>
+<dd>Sort objects in ascending or descending order. This also applies to alphabetical sorting, if selected.</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>One the right of the list view are additional buttons:</p>
+<dl class="docutils">
+<dt>Add <code class="docutils literal"><span class="pre">+</span></code></dt>
+<dd>Adds a new item.</dd>
+<dt>Remove <code class="docutils literal"><span class="pre">-</span></code></dt>
+<dd>To remove the selected item.</dd>
+<dt>Specials</dt>
+<dd>The down arrow on dark background opens a pop-up menu with
+operators context-sensitive to the item type.
+i.e. copy paste, or operations on all items.</dd>
+<dt>Move Up</dt>
+<dd>The button showing an up arrow moves the selected item up one position.</dd>
+<dt>Move Down</dt>
+<dd>The down arrow moves the item down.</dd>
+</dl>
+</div>
+<div class="section" id="presets">
+<h2>Presets<a class="headerlink" href="#presets" title="永久链接至标题">¶</a></h2>
+<div class="figure align-right" id="id1">
+<img alt="../../../_images/interface_preset.png" src="../../../_images/interface_preset.png" />
+<p class="caption"><span class="caption-text">Presets without and with specials.</span></p>
+</div>
+<dl class="docutils">
+<dt>Selector</dt>
+<dd>A list of available presets. A selection will overrides the included properties.</dd>
+<dt>Add <code class="docutils literal"><span class="pre">+</span></code></dt>
+<dd>New presets can be added based on the in the preset included properties,
+which will be saved for later re-use.
+A pop-up opens where you can set a name
+after which you can select it from the list and
+in some cases additional settings.</dd>
+<dt>Remove <code class="docutils literal"><span class="pre">-</span></code></dt>
+<dd>Deletes the selected preset.</dd>
+<dt>Specials</dt>
+<dd>The down arrow on dark background opens a pop-up menu with
+operators context-sensitive to the preset type.
+i.e. copy paste.</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="color_picker.html" class="btn btn-neutral float-right" title="Color Picker" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="data_block.html" class="btn btn-neutral" title="Data-Block Menu" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

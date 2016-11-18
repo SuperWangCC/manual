@@ -1,0 +1,374 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>倒角修改器–knight翻译 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../../index.html"/>
+        <link rel="up" title="修改器" href="../index.html"/>
+        <link rel="next" title="布尔修改器–knight翻译" href="booleans.html"/>
+        <link rel="prev" title="阵列修改器–gkuggkug豆豆翻译" href="array.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">Metaball</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">Empties</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">修改器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">介绍&#8211;一钱不名</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#modify">修改</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#generate">生成</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="array.html">阵列修改器&#8211;gkuggkug豆豆翻译</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">倒角修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="booleans.html">布尔修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="build.html">建造修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="decimate.html">精简修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="edge_split.html">棱线分离修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mask.html">遮罩修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mirror.html">镜像修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="multiresolution.html">多分辨率修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="remesh.html">重新网面化修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="screw.html">螺旋修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="skin.html">植皮修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="solidify.html">加固修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsurf.html">细分表面修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="triangulate.html">三角化修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wireframe.html">线框修改器&#8211;lifetree翻译</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#deform">形变</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#simulate">模拟</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">制作模型</a> &raquo;</li>
+      
+          <li><a href="../index.html">修改器</a> &raquo;</li>
+      
+    <li>倒角修改器&#8211;knight翻译</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/modeling/modifiers/generate/bevel.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bevel-modifier">
+<h1>倒角修改器&#8211;knight翻译<a class="headerlink" href="#bevel-modifier" title="永久链接至标题">¶</a></h1>
+<p>倒角修改器可以把网格的棱切成斜角，允许控制如何以及哪里应用倒角操作到网格上。</p>
+<p>倒角修改器与编辑模式下:doc:<cite>倒角操作 &lt;/modeling/meshes/editing/subdividing/bevel&gt;</cite> 相比，具有非破坏性。</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id1">
+<a class="reference internal image-reference" href="../../../_images/modifier_generate_bevel_square_not.png"><img alt="../../../_images/modifier_generate_bevel_square_not.png" src="../../../_images/modifier_generate_bevel_square_not.png" style="width: 150px;" /></a>
+<p class="caption"><span class="caption-text">Not beveled.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id2">
+<a class="reference internal image-reference" href="../../../_images/modifier_generate_bevel_square.png"><img alt="../../../_images/modifier_generate_bevel_square.png" src="../../../_images/modifier_generate_bevel_square.png" style="width: 150px;" /></a>
+<p class="caption"><span class="caption-text">Beveled.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The images above show the side views of a plain (Not beveled) cube and a beveled one.</p>
+<div class="section" id="options">
+<h2>选项<a class="headerlink" href="#options" title="永久链接至标题">¶</a></h2>
+<div class="figure" id="id3">
+<img alt="../../../_images/modifier_generate_bevel_none_if.png" src="../../../_images/modifier_generate_bevel_none_if.png" />
+<p class="caption"><span class="caption-text">倒角修改器面板。</span></p>
+</div>
+<dl class="docutils">
+<dt>宽度</dt>
+<dd><p class="first">倒角影响的尺寸，见下面的 <em>宽度方法</em>。</p>
+<div class="last figure" id="id4">
+<a class="reference internal image-reference" href="../../../_images/modifier_generate_bevel_cubes.png"><img alt="../../../_images/modifier_generate_bevel_cubes.png" src="../../../_images/modifier_generate_bevel_cubes.png" style="width: 610px;" /></a>
+<p class="caption"><span class="caption-text">三个倒角宽度分别为 0.1、0.3 和 0.5 的立方体。</span></p>
+</div>
+</dd>
+<dt>段</dt>
+<dd><p class="first last">沿着倒角的面所添加边环的数量</p>
+</dd>
+<dt>外形</dt>
+<dd>The shape of the bevel, from concave to convex. It has no effect if <em>Segments</em> is less than 2.</dd>
+<dt>材料</dt>
+<dd>The index of the material slot to use for the bevel.
+When set to -1, the material of the nearest original face will be used.</dd>
+<dt>仅顶点</dt>
+<dd><p class="first">When enabled, only the areas near vertices are beveled; the edges are left not beveled.</p>
+<div class="last figure" id="id5">
+<a class="reference internal image-reference" href="../../../_images/modifier_generate_bevel_cubes_vertices_only.png"><img alt="../../../_images/modifier_generate_bevel_cubes_vertices_only.png" src="../../../_images/modifier_generate_bevel_cubes_vertices_only.png" style="width: 610px;" /></a>
+<p class="caption"><span class="caption-text">Three cubes with 0.1, 0.3 and 0.5 bevel Widths, with Only Vertices option enabled.</span></p>
+</div>
+</dd>
+<dt>夹钳重叠</dt>
+<dd><p class="first last">启用该选项时，每个倒角棱的宽度会限制到满足棱不会相交。相距甚远的棱仍然会全宽度倒角，仅影响靠的太近的棱。</p>
+</dd>
+<dt>限制方法</dt>
+<dd><p class="first">用来控制倒角应用到网面哪里。</p>
+<dl class="last docutils">
+<dt>无</dt>
+<dd><p class="first last">无限制，所有的棱将会倒角。</p>
+</dd>
+<dt>角度</dt>
+<dd><p class="first last">邻接面构成的二面角小于定义的阈值的棱将会倒角。用来允许你仅对物体构成尖端的棱倒角，而不影响光滑的表面。</p>
+</dd>
+<dt>权重</dt>
+<dd>Use each edge&#8217;s bevel weight to determine the width of the bevel.
+When the bevel weight is 0.0, no bevel is applied.
+See <a class="reference internal" href="../../meshes/editing/edges.html"><span class="doc">here</span></a> about adjusting bevel weights.</dd>
+<dt>顶点组</dt>
+<dd>Use weights from a vertex group to determine the width of the bevel.
+When the vertex weight is 0.0, no bevel is applied.
+An edge is only beveled if both of its vertices are in the vertex group.
+See <a class="reference internal" href="../../meshes/properties/vertex_groups/vertex_groups.html"><span class="doc">here</span></a> about adjusting vertex group weights.</dd>
+</dl>
+</dd>
+</dl>
+<dl class="docutils">
+<dt>宽度方法</dt>
+<dd><p class="first">用于控制如何度量 <em>宽度</em> 。</p>
+<dl class="last docutils">
+<dt>偏移量</dt>
+<dd><p class="first last">数量是从原始棱到新棱的偏移量。</p>
+</dd>
+<dt>宽度</dt>
+<dd><p class="first last">数量是新面的宽度。</p>
+</dd>
+<dt>深度</dt>
+<dd><p class="first last">数量是从原始棱到倒角面的垂直距离。</p>
+</dd>
+<dt>百分比</dt>
+<dd><p class="first last">数量是邻接棱长度的百分比。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="booleans.html" class="btn btn-neutral float-right" title="布尔修改器–knight翻译" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="array.html" class="btn btn-neutral" title="阵列修改器–gkuggkug豆豆翻译" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

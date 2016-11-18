@@ -1,0 +1,483 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>支持的图像格式 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../../index.html"/>
+        <link rel="up" title="Media Formats" href="index.html"/>
+        <link rel="next" title="支持的视频格式" href="video_formats.html"/>
+        <link rel="prev" title="Introduction" href="introduction.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">数据系统</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介&#8211;中二 翻译</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_blocks.html">数据块&#8211;阿尔翻译</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../custom_properties.html">用户定制属性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../scenes/index.html">Scenes</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">文件</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../open.html">打开文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../save.html">保存文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../import_export.html">导入导出文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../relative_paths.html">相对路径</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Media Formats</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">支持的图像格式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="video_formats.html">支持的视频格式</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../linked_libraries.html">追加和链接&#8211;阿尔翻译</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">数据系统</a> &raquo;</li>
+      
+          <li><a href="../index.html">文件</a> &raquo;</li>
+      
+          <li><a href="index.html">Media Formats</a> &raquo;</li>
+      
+    <li>支持的图像格式</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/data_system/files/media/image_formats.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="supported-graphics-formats">
+<h1>支持的图像格式<a class="headerlink" href="#supported-graphics-formats" title="永久链接至标题">¶</a></h1>
+<div class="section" id="image-formats">
+<h2>图像格式<a class="headerlink" href="#image-formats" title="永久链接至标题">¶</a></h2>
+<p>以下列表是Blender内置支持的图像格式一览</p>
+<table border="1" class="valign docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">格式</p>
+</th>
+<th class="head"><p class="first last"><a class="reference internal" href="#channel-depth">通道深度</a></p>
+</th>
+<th class="head">Alpha</th>
+<th class="head"><a class="reference internal" href="../../../render/output/metadata.html"><span class="doc">Metadata</span></a></th>
+<th class="head">DPI</th>
+<th class="head"><p class="first last">扩展组件</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>BMP</td>
+<td><p class="first last">8位</p>
+</td>
+<td>✗</td>
+<td>✗</td>
+<td>✓</td>
+<td><code class="docutils literal"><span class="pre">.bmp</span></code></td>
+</tr>
+<tr class="row-odd"><td>Iris</td>
+<td><p class="first last">8位</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td>✗</td>
+<td><code class="docutils literal"><span class="pre">.sgi</span></code> <code class="docutils literal"><span class="pre">.rgb</span></code> <code class="docutils literal"><span class="pre">.bw</span></code></td>
+</tr>
+<tr class="row-even"><td>PNG</td>
+<td><p class="first last">8，16 位</p>
+</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td><code class="docutils literal"><span class="pre">.png</span></code></td>
+</tr>
+<tr class="row-odd"><td>JPEG</td>
+<td><p class="first last">8位</p>
+</td>
+<td>✗</td>
+<td>✓</td>
+<td>✓</td>
+<td><code class="docutils literal"><span class="pre">.jpg</span></code> <code class="docutils literal"><span class="pre">.jpeg</span></code></td>
+</tr>
+<tr class="row-even"><td>JPEG 2000</td>
+<td><p class="first last">8、 12、 16 位</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td>✗</td>
+<td><code class="docutils literal"><span class="pre">.jp2</span></code> <code class="docutils literal"><span class="pre">.jp2</span></code> <code class="docutils literal"><span class="pre">.j2c</span></code></td>
+</tr>
+<tr class="row-odd"><td>Targa</td>
+<td><p class="first last">8位</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td>✗</td>
+<td><code class="docutils literal"><span class="pre">.tga</span></code></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#cineon-dpx">Cineon &amp; DPX</a></td>
+<td>8, 10, 12, 16bit</td>
+<td>✓</td>
+<td>✗</td>
+<td>✗</td>
+<td><code class="docutils literal"><span class="pre">.cin</span></code> <code class="docutils literal"><span class="pre">.dpx</span></code></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#openexr">OpenEXR</a></td>
+<td>float 16, 32bit</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td><code class="docutils literal"><span class="pre">.exr</span></code></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#radiance-hdr">Radiance HDR</a></td>
+<td><p class="first last">浮点型</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td>✗</td>
+<td><code class="docutils literal"><span class="pre">.hdr</span></code></td>
+</tr>
+<tr class="row-odd"><td>TIFF</td>
+<td><p class="first last">8，16 位</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td>✓</td>
+<td><code class="docutils literal"><span class="pre">.tif</span></code> <code class="docutils literal"><span class="pre">.tiff</span></code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition hint">
+<p class="first admonition-title">提示</p>
+<p>If you are not interested in technical details,
+a good rule of thumb for selecting output formats for your project is:</p>
+<dl class="docutils">
+<dt>使用 OpenEXR</dt>
+<dd><p class="first last">如果你想做合成或者对图像做色彩灰度</p>
+</dd>
+<dt>使用 PNG</dt>
+<dd><p class="first last">如果打算做屏幕输出或者要压缩成各种视频格式</p>
+</dd>
+<dt>使用 JPEG</dt>
+<dd><p class="first last">对于屏幕上输出文件的大小是和质量损失是可以接受的。</p>
+</dd>
+</dl>
+<p class="last"><em>All these formats support compression which can be important when rendering out animations.</em></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p>Quicktime</p>
+<p class="last">On macOS, Quicktime can be used to access file formats not natively supported (such as GIF).</p>
+</div>
+<div class="section" id="channel-depth">
+<h3><a class="reference internal" href="#channel-depth">通道深度</a><a class="headerlink" href="#channel-depth" title="永久链接至标题">¶</a></h3>
+<p>图像文件格式支持不同数量的每像素位数。这影响色彩的质量和文件大小。</p>
+<p>常用的深度:</p>
+<dl class="docutils">
+<dt>8 bit (256 levels)</dt>
+<dd><p class="first last">最常见的屏幕上的图形和视频</p>
+</dd>
+<dt>10, 12, 16 bit (1024, 4096, 65536 levels)</dt>
+<dd>Used for some formats focusing on photography and digital films
+(such as DPX and JPEG 2000).</dd>
+<dt>16 位半浮点</dt>
+<dd><p class="first last">由于完整的 32 位浮点数通常是超过足够的精度，那么半浮法可以节省同时提供高动态范围的磁盘空间。</p>
+</dd>
+<dt>32 位浮点数</dt>
+<dd><p class="first last">高质量颜色深度。</p>
+</dd>
+</dl>
+<p>Blender内置的图像系统支持其中任一:</p>
+<ul class="simple">
+<li><p class="first">每个通道 (4 × 8 位) 的 8 位。</p>
+</li>
+<li><p class="first">每个通道 (4 x 32 位)-32 位浮点 * 使用尽可能多的 memory.* x 4</p>
+</li>
+</ul>
+<p>高于 8 位 / 通道的图像会转换成漂浮在加载到搅拌机。</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p>浮点数经常用于: 词: &#8216;HDRI&#8217;，</p>
+<p class="last">当图像有浮颜色，在搅拌器默认要使用的所有影像功能。这包括视频序列编辑器、 纹理映射、 背景图像和排序。</p>
+</div>
+</div>
+<div class="section" id="export">
+<h3>Export<a class="headerlink" href="#export" title="永久链接至标题">¶</a></h3>
+<dl class="docutils">
+<dt>Save As Render</dt>
+<dd>ToDo.</dd>
+<dt>Copy</dt>
+<dd>The Copy checkbox will define if the data-block will reference the newly created file
+or the reference will be unchanged, maintaining it with the original one.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="format-details">
+<h2>格式细节<a class="headerlink" href="#format-details" title="永久链接至标题">¶</a></h2>
+<div class="section" id="cineon-dpx">
+<h3>DPX和Cineon——Annita翻译<a class="headerlink" href="#cineon-dpx" title="永久链接至标题">¶</a></h3>
+<p>Cineon是柯达的胶片数码化标准，10位/通道，对数运算原理。DPX已经从Cineon衍生出名为ANSI / SMPTE的行业标准。DPX支持16位色/通道，线性以及对数。DPX标准目前被广泛应用于电影的软硬件行业。</p>
+<p>DPX以及Cineon只储存和转换数值在0.0到1.0之间的“可见“色彩范围（如渲染或混合的结果）。没有通道被复写。代码已经顺利的从CinePaint中复制出来。据CinePaint的主要开发者罗宾所言，DPX代码默认为对数的色彩范围。我们还没找出禁用这的方法，但它似乎读/写正常，没有明显的损失。Blender DPX文件（整个《大象之梦》电影）已经顺利通过英国宽泰（公司）的IQ/高清/2K/剪辑/分级标准的考验，被成功引进，所以我们眼下认为它适合为专业人士所使用。</p>
+</div>
+<div class="section" id="openexr">
+<h3>OpenEXR——Annita翻译<a class="headerlink" href="#openexr" title="永久链接至标题">¶</a></h3>
+<p><a class="reference external" href="http://www.openexr.com/">ILM&#8217;s OpenEXR</a> has become a software industry standard for HDR image files,
+especially because of its flexible and expandable structure.</p>
+<p>OpenEXR文件可以存储多层和多个通道。意味着 OpenEXR 图像可以在合成编辑器中完好无损的保持渲染层和通道。</p>
+<div class="section" id="output-options">
+<h4>渲染输出:<a class="headerlink" href="#output-options" title="永久链接至标题">¶</a></h4>
+<p>可选的OpenEXR渲染输出方式有:</p>
+<dl class="docutils">
+<dt>Color Depth</dt>
+<dd><p class="first">把图像存储在自定义的每通道16位的浮点格式中。这使实际的“位深”降到10位，以及带5个字节的能量值和1个字节的符号值。</p>
+<p class="last">Float (Half), Float (Full)</p>
+</dd>
+<dt>Codec</dt>
+<dd><dl class="first last docutils">
+<dt>PIZ (无损)</dt>
+<dd>Lossless wavelet compression. Compresses images with grain well.</dd>
+<dt>ZIP (无损)</dt>
+<dd>Standard lossless compression using Zlib.</dd>
+<dt>RLE (无损)</dt>
+<dd>Run-length encoded, lossless, works well when scanlines have same values.</dd>
+<dt>Pxr24 (有损)</dt>
+<dd>Lossy algorithm from Pixar, converting 32 bits floats to 24 bits floats.</dd>
+</dl>
+</dd>
+<dt>Z Buffer</dt>
+<dd><p class="first last">保存深度信息。Blender现在也是写在浮动值里，通过“Blender单位长度”显示与摄像机的精确距离。</p>
+</dd>
+<dt>预览</dt>
+<dd><p class="first last">在渲染动画（或者通过命令行渲染单帧）时，Blender也会将同一张图片保存为JPEG格式，加快预览及下载的速度。</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="radiance-hdr">
+<h3>Radiance HDR<a class="headerlink" href="#radiance-hdr" title="永久链接至标题">¶</a></h3>
+<p>Radiance 最初是由格雷格 • 沃德写的照明模拟工具套件。Radiance 最先 (和长一段时间唯一)使用 HDR 图像格式，此格式由许多其他软件包支持。</p>
+<p>Radiance  (.hdr) 文件存储颜色仍然 8 位中的每个组件，但与附加 (共享) 8 位的指数值，使它每像素 32 位。只有 RGB 值可以存储在这些文件中。只有RGB可以存储在这些文件中。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="video_formats.html" class="btn btn-neutral float-right" title="支持的视频格式" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="Introduction" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

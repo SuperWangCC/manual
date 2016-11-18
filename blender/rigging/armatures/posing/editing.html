@@ -1,0 +1,510 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Editing &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../../index.html"/>
+        <link rel="up" title="Posing" href="index.html"/>
+        <link rel="next" title="Bone Constraints" href="bone_constraints/index.html"/>
+        <link rel="prev" title="Selecting" href="selecting.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">骨骼装配</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../constraints/index.html">Constraints</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Armatures</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bones/index.html">Bones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../properties/index.html">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structure.html">Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../skinning/index.html">Skinning</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Posing</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="selecting.html">Selecting</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Editing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bone_constraints/index.html">Bone Constraints</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../lattice.html">Lattice</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">骨骼装配</a> &raquo;</li>
+      
+          <li><a href="../index.html">Armatures</a> &raquo;</li>
+      
+          <li><a href="index.html">Posing</a> &raquo;</li>
+      
+    <li>Editing</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/rigging/armatures/posing/editing.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="editing">
+<h1>Editing<a class="headerlink" href="#editing" title="永久链接至标题">¶</a></h1>
+<div class="figure align-right" id="id1">
+<img alt="../../../_images/rigging-posetools.png" src="../../../_images/rigging-posetools.png" />
+<p class="caption"><span class="caption-text">Pose Tools.</span></p>
+</div>
+<p>In <em>Pose Mode</em>, bones behave like objects. So the transform actions
+(grab/rotate/scale, etc.) are very similar to the same ones in <em>Object</em> mode
+(all available ones are regrouped in the <span class="menuselection">Pose ‣ Transform</span> sub-menu). However,
+there are some important specificities:</p>
+<ul class="simple">
+<li>Bones&#8217; relationships are crucial (see <a class="reference internal" href="../bones/properties/relations.html#bone-relations-parenting"><span class="std std-ref">Parenting</span></a>).</li>
+<li>The &#8220;transform center&#8221; of a given bone
+(i.e. its default pivot point, when it is the only selected one) is <em>its root</em>.
+Note by the way that some pivot point options seem to not work properly, In fact,
+except for the <em>3D Cursor</em> one, all others appear to always use the median point of the selection
+(and not e.g. the active bone&#8217;s root when <em>Active Object</em> is selected, etc.).</li>
+</ul>
+<div class="section" id="basic-posing">
+<h2>Basic Posing<a class="headerlink" href="#basic-posing" title="永久链接至标题">¶</a></h2>
+<p>As previously noted,
+bones&#8217; transformations are performed based on the <em>Rest Position</em> of the armature,
+which is its state as defined in <em>Edit Mode</em>. This means that in rest position,
+in <em>Pose Mode</em>, each bone has a scale of 1.0, and null rotation and position
+(as you can see it in the <em>Transform</em> panel, in the 3D Views,
+<code class="kbd docutils literal"><span class="pre">N</span></code>).</p>
+<div class="figure" id="id2">
+<img alt="../../../_images/rigging_posing_editing_local-rotation.png" src="../../../_images/rigging_posing_editing_local-rotation.png" />
+<p class="caption"><span class="caption-text">An example of locally-Y-axis locked rotation, with two bones selected.
+Note that the two green lines materializing the axes are centered on the armature&#8217;s center,
+and not each bone&#8217;s root...</span></p>
+</div>
+<p>Moreover, the local space for these actions is the bone&#8217;s own one
+(visible when you enable the <em>Axes</em> option of the <em>Armature</em> panel).
+This is especially important when using axis locking, for example,
+there is no specific &#8220;bone roll&#8221; tool in <em>Pose Mode</em>,
+as you can rotate around the bone&#8217;s main axis just by locking on the local Y axis
+<code class="kbd docutils literal"><span class="pre">R-Y-Y</span></code>... This also works with several bones selected;
+each one is locked to its own local axis!</p>
+<p>When you pose your armature,
+you are supposed to have one or more objects skinned on it! And obviously,
+when you transform a bone in <em>Pose Mode</em>,
+its related objects or object&#8217;s shape is moved/deformed accordingly, in real time.
+Unfortunately, if you have a complex rig set-up and/or a heavy skin object,
+this might produce lag, and make interactive editing very painful.
+If you experience such troubles, try enabling the <em>Delay Deform</em> button of the
+<em>Armature</em> panel the skin objects will only be updated once you validate the
+transform operation.</p>
+</div>
+<div class="section" id="auto-ik">
+<h2>Auto IK<a class="headerlink" href="#auto-ik" title="永久链接至标题">¶</a></h2>
+<p>The auto IK option in the tool shelf enables a temporary IK constraint when posing bones.
+The chain acts from the tip of the selected bone to root of the uppermost parent bone.
+Note that this mode lacks options,
+and only works by applying the resulting transform to the bones in the chain.</p>
+</div>
+<div class="section" id="clear-transform">
+<h2>Clear Transform<a class="headerlink" href="#clear-transform" title="永久链接至标题">¶</a></h2>
+<p>Once you have transformed some bones, if you want to return to their rest position,
+just clear their transformations (usual <code class="kbd docutils literal"><span class="pre">Alt-G</span></code>/<code class="kbd docutils literal"><span class="pre">Alt-R</span></code>/<code class="kbd docutils literal"><span class="pre">Alt-S</span></code> shortcuts,
+or <span class="menuselection">Pose ‣ Clear Transform ‣ Clear User Transform</span>, <code class="kbd docutils literal"><span class="pre">W-5</span></code>, to clear
+everything at once... - commands also available in the <span class="menuselection">Pose ‣ Clear Transform</span> sub-menu).</p>
+<p>Note that in <em>Envelope</em> visualization, <code class="kbd docutils literal"><span class="pre">Alt-S</span></code> does not clear the scale,
+but rather scales the <em>Distance</em> influence area of the selected bones (also
+available through the <span class="menuselection">Pose ‣ Scale Envelope Distance</span> menu entry,
+which is only effective in <em>Envelope</em> visualization, even though it is always available...).</p>
+</div>
+<div class="section" id="apply">
+<h2>Apply<a class="headerlink" href="#apply" title="永久链接至标题">¶</a></h2>
+<p>Conversely, you may define the current pose as the new rest position (i.e.
+&#8220;apply&#8221; current transformations to the <em>Edit Mode</em>),
+using the <span class="menuselection">Pose ‣ Apply Pose as Restpose</span> menu entry
+(or <code class="kbd docutils literal"><span class="pre">Ctrl-A</span></code> and confirm the pop-up menu). When you do so,
+the skinned objects/geometry is <strong>also</strong> reset to its default, undeformed state,
+which generally means you will have to skin it again.</p>
+</div>
+<div class="section" id="in-betweens">
+<h2>In-Betweens<a class="headerlink" href="#in-betweens" title="永久链接至标题">¶</a></h2>
+<p>There are several tools for editing poses in an animation.</p>
+<div class="section" id="relax-pose">
+<h3>Relax Pose<a class="headerlink" href="#relax-pose" title="永久链接至标题">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     Pose Mode</div>
+<div class="line">Menu:    <span class="menuselection">Pose ‣ In-Betweens ‣ Relax Pose</span>, <code class="kbd docutils literal"><span class="pre">Alt-E</span></code></div>
+</div>
+</div>
+<p>Relax pose is somewhat related to the above topic, but it is only useful with keyframed bones
+(see the <a class="reference internal" href="../../../animation/index.html"><span class="doc">animation chapter</span></a>).
+When you edit such a bone (and hence take it &#8220;away&#8221; from its &#8220;keyed position&#8221;),
+using this command will progressively &#8220;bring it back&#8221; to its &#8220;keyed position&#8221;,
+with smaller and smaller steps as it comes near it.</p>
+</div>
+<div class="section" id="push-pose">
+<h3>Push Pose<a class="headerlink" href="#push-pose" title="永久链接至标题">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     Pose Mode</div>
+<div class="line">Menu:    <span class="menuselection">Pose ‣ In-Betweens ‣ Relax Pose</span>, <code class="kbd docutils literal"><span class="pre">Ctrl-E</span></code></div>
+</div>
+</div>
+<p>Push pose exaggerates the current pose.</p>
+</div>
+<div class="section" id="breakdowner">
+<h3>Breakdowner<a class="headerlink" href="#breakdowner" title="永久链接至标题">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     Pose Mode</div>
+<div class="line">Menu:    <span class="menuselection">Pose ‣ In-Betweens ‣ Pose Breakdowner</span>, <code class="kbd docutils literal"><span class="pre">Shift-E</span></code></div>
+</div>
+</div>
+<p>Creates a suitable breakdown pose on the current frame.</p>
+<p>There are also in <em>Pose Mode</em> a bunch of armature-specific editing options/tools,
+like <a class="reference internal" href="../bones/editing/naming.html#armature-editing-naming-bones"><span class="std std-ref">auto-bones naming</span></a>,
+<a class="reference internal" href="../bones/editing/properties.html#armature-bone-properties"><span class="std std-ref">properties switching/enabling/disabling</span></a>, etc.,
+that we already described in the armature editing pages. See the links above...</p>
+</div>
+</div>
+<div class="section" id="copy-paste-pose">
+<h2>Copy/Paste Pose<a class="headerlink" href="#copy-paste-pose" title="永久链接至标题">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     Pose Mode</div>
+<div class="line">Panel:    <em>3D View</em> header (<img alt="copy-paste" src="../../../_images/rigging-copypastepose.png" />)</div>
+<div class="line">Menu:     <span class="menuselection">Pose ‣ Copy Current Pose</span>,
+<span class="menuselection">Pose ‣ Paste Pose</span>, <span class="menuselection">Pose ‣ Paste Flipped Pose</span></div>
+</div>
+</div>
+<p>Blender allows you to copy and paste a pose, either through the <em>Pose</em> menu, or
+directly using the three &#8220;copy/paste&#8221; buttons found at the right part of the 3D Views header:</p>
+<dl class="docutils">
+<dt><span class="menuselection">Pose ‣ Copy Current Pose</span></dt>
+<dd>to copy the current pose of selected bones into the pose buffer.</dd>
+<dt><span class="menuselection">Pose ‣ Paste Pose</span></dt>
+<dd>paste the buffered pose to the currently posed armature.</dd>
+<dt><span class="menuselection">Pose ‣ Paste Flipped Pose</span></dt>
+<dd>paste the <em>X axis mirrored</em> buffered pose to the currently posed armature.</dd>
+</dl>
+<p>Here are important points:</p>
+<ul class="simple">
+<li>This tool works at the Blender session level, which means you can use it across armatures, scenes, and even files.
+However, the pose buffer is not saved, so you lose it when you close Blender.</li>
+<li>There is only one pose buffer.</li>
+<li>Only the selected bones are taken into account during copying (i.e. you copy only selected bones&#8217; pose).</li>
+<li>During pasting, on the other hand, bone selection has no importance.
+The copied pose is applied on a per-name basis
+(i.e. if you had a <code class="docutils literal"><span class="pre">forearm</span></code> bone selected when you copied the pose,
+the <code class="docutils literal"><span class="pre">forearm</span></code> bone of the current posed armature will get its pose when you paste it &#8211;
+and if there is no such named bone, nothing will happen...).</li>
+<li>What is copied and pasted is in fact the position/rotation/scale of each bone, in its own space.
+This means that the resulting pasted pose might be very different from the originally copied one, depending on:
+- The rest position of the bones, and
+- The current pose of their parents.</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id3">
+<img alt="../../../_images/rigging_posing_editing_copy-paste-pose-examples-1.png" src="../../../_images/rigging_posing_editing_copy-paste-pose-examples-1.png" />
+<p class="caption"><span class="caption-text">The rest position of our original armature.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id4">
+<img alt="../../../_images/rigging_posing_editing_copy-paste-pose-examples-2.png" src="../../../_images/rigging_posing_editing_copy-paste-pose-examples-2.png" />
+<p class="caption"><span class="caption-text">The rest position of our destination armature.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils" id="id5">
+<caption><span class="caption-text">Examples of pose copy/paste.</span><a class="headerlink" href="#id5" title="永久链接至表格">¶</a></caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id6">
+<img alt="../../../_images/rigging_posing_editing_copy-paste-pose-examples-3.png" src="../../../_images/rigging_posing_editing_copy-paste-pose-examples-3.png" />
+<p class="caption"><span class="caption-text">The first copied pose (note that only two bones are selected and hence copied).</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id7">
+<img alt="../../../_images/rigging_posing_editing_copy-paste-pose-examples-4.png" src="../../../_images/rigging_posing_editing_copy-paste-pose-examples-4.png" />
+<p class="caption"><span class="caption-text">...pasted on the destination armature...</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id8">
+<img alt="../../../_images/rigging_posing_editing_copy-paste-pose-examples-5.png" src="../../../_images/rigging_posing_editing_copy-paste-pose-examples-5.png" />
+<p class="caption"><span class="caption-text">...and mirror-pasted on the destination armature.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id9">
+<img alt="../../../_images/rigging_posing_editing_copy-paste-pose-examples-6.png" src="../../../_images/rigging_posing_editing_copy-paste-pose-examples-6.png" />
+<p class="caption"><span class="caption-text">The same pose as above is copied, but this time with all bones selected, ...</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id10">
+<img alt="../../../_images/rigging_posing_editing_copy-paste-pose-examples-7.png" src="../../../_images/rigging_posing_editing_copy-paste-pose-examples-7.png" />
+<p class="caption"><span class="caption-text">...pasted on the destination armature...</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id11">
+<img alt="../../../_images/rigging_posing_editing_copy-paste-pose-examples-8.png" src="../../../_images/rigging_posing_editing_copy-paste-pose-examples-8.png" />
+<p class="caption"><span class="caption-text">...and mirror-pasted on the destination armature.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="show-hide">
+<span id="armature-bone-hide"></span><h2>Show/Hide<a class="headerlink" href="#show-hide" title="永久链接至标题">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     All Modes</div>
+<div class="line">Panel:    <span class="menuselection">Bone ‣ Display</span></div>
+<div class="line">Menu:    <span class="menuselection">... ‣ Show/Hide</span></div>
+</div>
+</div>
+<p>You do not have to use bone layers to show/hide some bones. As with objects,
+vertices or control points, you can use <code class="kbd docutils literal"><span class="pre">H</span></code>:</p>
+<ul class="simple">
+<li><code class="kbd docutils literal"><span class="pre">H</span></code> will hide the selected bone(s).</li>
+<li><code class="kbd docutils literal"><span class="pre">Shift-H</span></code> will hide all bones <em>but the selected one(s)</em>.</li>
+<li><code class="kbd docutils literal"><span class="pre">Alt-H</span></code> will show all hidden bones.</li>
+</ul>
+<p>You can also use the <em>Hide</em> checkbox of the
+<span class="menuselection">Bone tab ‣ Display panel</span>.</p>
+<p>Note that hidden bones are specific to a mode,
+i.e. you can hide some bones in <em>Edit Mode</em>,
+they will still be visible in <em>Pose Mode</em>, and vice-versa.
+Hidden bone in <em>Pose Mode</em> are also invisible in <em>Object Mode</em>.
+And in <em>Edit Mode</em>, the bone to hide must be fully selected,
+not just his root or tip.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bone_constraints/index.html" class="btn btn-neutral float-right" title="Bone Constraints" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="selecting.html" class="btn btn-neutral" title="Selecting" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

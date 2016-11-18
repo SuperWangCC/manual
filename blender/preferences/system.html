@@ -1,0 +1,563 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>System &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../genindex.html"/>
+        <link rel="search" title="搜索" href="../search.html"/>
+    <link rel="top" title="Blender Manual" href="../index.html"/>
+        <link rel="up" title="用户偏好设置" href="index.html"/>
+        <link rel="next" title="Info Editor" href="../editors/info/index.html"/>
+        <link rel="prev" title="File" href="file.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">User Interface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../editors/index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#d">3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../editors/index.html#settings">设置</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../editors/properties_editor.html">Properties Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editors/outliner.html">大纲视图&#8211;­爱在南江村路口等你翻译</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">User Preferences</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#tabs">Tabs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../editors/info/index.html">Info Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">用户偏好设置</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#tabs">Tabs</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="interface.html">界面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing.html">编辑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input.html">输入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="addons.html">插件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="themes.html">主题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file.html">File</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">System</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#general">常规项</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sound">声音</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#screencast">程序截屏:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#compute-device">计算设备</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#opensubdiv-compute">OpenSubdiv计算</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#opengl">OpenGL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#window-draw-method">窗口绘制方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#textures">纹理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sequencer-clip-editor">音序器/剪裁编辑器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#solid-opengl-lights">OpenGL 实色光照:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#color-picker-type">拾色器类型</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#custom-weight-paint-range">自定义权重绘制色域</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#internationalization">国际化与本地化</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../editors/index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="index.html">用户偏好设置</a> &raquo;</li>
+      
+    <li>System</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/preferences/system.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="system">
+<h1>System<a class="headerlink" href="#system" title="永久链接至标题">¶</a></h1>
+<p>系统面板使你可以设置分辨率，脚本控制器权重，声卡显卡设置，以及语言设置。</p>
+<div class="figure">
+<img alt="../_images/preferences_system.png" src="../_images/preferences_system.png" />
+</div>
+<div class="section" id="general">
+<h2>常规项<a class="headerlink" href="#general" title="永久链接至标题">¶</a></h2>
+<dl class="docutils">
+<dt>DPI</dt>
+<dd>Value of the screen resolution which controls the size of Blender&#8217;s interface fonts and internal icons shown.
+Useful for taking screen shots for book printing and use of high resolution monitors.
+During typical usage, you may prefer to use zoom which is an available in many parts of Blender interface.</dd>
+<dt>虚拟像素模式</dt>
+<dd><p class="first">Allows you to select global scaling. While the DPI only scales the interface,
+this will scale line width, vertex-size. This is intended for hi-dpi monitors,
+and is auto-detected on macOS.</p>
+<dl class="last docutils">
+<dt>Native</dt>
+<dd>The normal pixel size.</dd>
+<dt>Double</dt>
+<dd>Double of the native pixel size.</dd>
+</dl>
+</dd>
+<dt>帧服务器端口</dt>
+<dd><p class="first last">TCP/IP协议是用来在渲染时连接你计算机的地址和帧服务器的，这功能在使用分布渲染的时候就会生效，最好不要更改这个端口，除非这个端口和你现使用操作系统的服务器端口冲突了。在更改这个选项之前切记先看看操作系统的文件和运行情况，或者看看你电脑的管理员。</p>
+</dd>
+<dt>控制台缓存</dt>
+<dd><p class="first last">控制台窗口缓存的最大信息行数，这可使你向上追溯系统运行状态，来排除故障和命令行渲染。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="sound">
+<span id="prefs-system-sound"></span><h2>声音<a class="headerlink" href="#sound" title="永久链接至标题">¶</a></h2>
+<dl class="docutils">
+<dt>Audio Device</dt>
+<dd><p class="first">设置声音输出硬件，或者禁用声音，以下有三个选项。</p>
+<dl class="last docutils">
+<dt>无</dt>
+<dd><p class="first last">禁用声音（但是有关声音的脚本程序运行正常）</p>
+</dd>
+<dt>SDL</dt>
+<dd>Uses Simple Direct Media Layer API from <a class="reference external" href="https://www.libsdl.org">libsdl.org</a>
+to render sounds directly to the sound device output. Very useful for sequencer strips editing.</dd>
+<dt>OpenAL</dt>
+<dd>Provides buffered sound rendering with 3D/spatial support.
+Used for 3D source support by <em>Speaker Objects</em> and the <em>Game Engine</em>.</dd>
+</dl>
+</dd>
+</dl>
+<div class="section" id="sound-options">
+<h3>Sound options<a class="headerlink" href="#sound-options" title="永久链接至标题">¶</a></h3>
+<p>Specific to <em>SDL</em> or <em>OpenAL</em> enabled.</p>
+<dl class="docutils">
+<dt>通道</dt>
+<dd>Set the audio channel count. Available options are: <em>Stereo</em>, <em>4 Channels</em> , <em>5.1 Surround</em> , <em>7.1 Surround</em></dd>
+<dt>混合缓冲区</dt>
+<dd>Set the number of samples used by the audio mixing buffer. Available options are:
+<em>512</em> , <em>1024</em> , <em>2048</em>, <em>4096</em> , <em>8192</em>, <em>16384</em>, and <em>32768</em></dd>
+<dt>采样率</dt>
+<dd>Set the audio sample rate. Available options are: <em>44.1 Khz</em>, <em>48 Khs</em>, <em>96 Khz</em> and <em>192Khz</em></dd>
+<dt>采样格式</dt>
+<dd>Set the audio sample format. Available options are:
+<em>32 bit float</em>, <em>8 bit Unsigned</em>, <em>16 Bits Signed</em>, <em>24 Bits Signed</em>,
+<em>32 Bits Signed</em>, <em>32 Bits Float</em>, and <em>64 Bits Float</em>.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="screencast">
+<span id="prefs-system-screencast"></span><h2>程序截屏:<a class="headerlink" href="#screencast" title="永久链接至标题">¶</a></h2>
+<p>These settings are used to control the frame-rate for recording a <a class="reference internal" href="../editors/info/screenshot.html#info-screencast"><span class="std std-ref">Screencast</span></a>.</p>
+<dl class="docutils">
+<dt>FPS</dt>
+<dd>Frame-rate for screencast playback.</dd>
+<dt>Wait Timer</dt>
+<dd>Time in milliseconds between each frame recorded for screencast.</dd>
+</dl>
+</div>
+<div class="section" id="compute-device">
+<h2>计算设备<a class="headerlink" href="#compute-device" title="永久链接至标题">¶</a></h2>
+<p>这个选项选择Cycles渲染器使用的计算设备</p>
+<dl class="docutils">
+<dt>无</dt>
+<dd><p class="first last">当你选择“无”或者只能选择“无”的时候（如果你穷的买不起大显卡），你的CPU将作为Cycles的计算设备。</p>
+</dd>
+<dt>CUDA</dt>
+<dd>If the system has a compatible Nvidia CUDA enabled graphics card you will be able
+to use it to render with the <a class="reference internal" href="../render/cycles/features.html"><span class="doc">Cycles</span></a> render engine.</dd>
+<dt>OpenCL</dt>
+<dd><p class="first">If the system has a compatible OpenCL device, it will show up has an option for rendering cycles.</p>
+<div class="last admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">that this currently has limited support, see:
+<a class="reference internal" href="../render/cycles/features.html"><span class="doc">Cycles Features</span></a> page for more information.</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="opensubdiv-compute">
+<span id="prefs-system-opensubdiv"></span><h2>OpenSubdiv计算<a class="headerlink" href="#opensubdiv-compute" title="永久链接至标题">¶</a></h2>
+<p>此处的选项将设置为使用OpenSubdiv计算设备 <a class="reference internal" href="../modeling/modifiers/generate/subsurf.html"><span class="doc">细分曲面修改器</span></a>.</p>
+<dl class="docutils">
+<dt>无</dt>
+<dd>Disables any OpenSubdiv compute devices, makes sure legacy subdivision method is used.
+Use this option when OpenSubdiv causes any bugs or regressions.</dd>
+<dt>CPU</dt>
+<dd><p class="first last">单线程CPU实现。当GPU计算是可能的，线程CPU选项会使工件（这是不可能发生的，但还是有可能的）它主要是有用的情况下。</p>
+</dd>
+<dt>OpenMP</dt>
+<dd>Multi-threaded CPU implementation. Use it for maximum performance in cases when GPU compute is not available.</dd>
+<dt>GLSL变换反馈</dt>
+<dd><p class="first last">使用GPU进行计算，有最低要求视频卡和驱动程序。</p>
+</dd>
+<dt>GLSL计算</dt>
+<dd>Uses GPU to perform calculations, supposed to be more efficient than <em>Transform Feedback</em>
+but also has higher requirements to video card and driver.</dd>
+</dl>
+</div>
+<div class="section" id="opengl">
+<h2>OpenGL<a class="headerlink" href="#opengl" title="永久链接至标题">¶</a></h2>
+<dl class="docutils">
+<dt>限制 Alpha</dt>
+<dd>Clip alpha below this threshold in the 3D View.
+Note that the default is set to a low value to prevent issues on some GPU&#8217;s.</dd>
+<dt>多级纹理</dt>
+<dd>Scale textures for 3D View using Mipmap filtering. This increases display quality, but uses more memory.</dd>
+<dt>GPU 多级纹理生成</dt>
+<dd><p class="first last">使用GPU生成多级纹理，把CPU的工作量完全转交给GPU.</p>
+</dd>
+<dt>16 位浮点纹理图</dt>
+<dd><p class="first last">给每单位图像纹理使用16位纹理（需要是浮动纹理）。</p>
+</dd>
+<dt>Selection</dt>
+<dd><p class="first">Selection method to use for selecting.</p>
+<dl class="last docutils">
+<dt>Automatic</dt>
+<dd>Automatically choses the best setting depending on your OS, GPU, and drivers.</dd>
+<dt>OpenGL Select</dt>
+<dd>Legacy OpenGL selection method for legacy hardware.</dd>
+<dt>OpenGL Occlusion Queries</dt>
+<dd>More optimized OpenGL selection method.
+Use this method if you are using an <a class="reference internal" href="#opensubdiv-compute">OpenSubdiv Compute</a> compute device.</dd>
+</dl>
+</dd>
+<dt>各向异性过滤</dt>
+<dd>Sets the level of anisotropic filtering.
+This improves the quality of how textures are drawn at the cost of performance.
+Available Options are: <em>Off</em> (No Filtering), <em>2x</em>, <em>4x</em>, <em>8x</em>, and <em>16x</em>.</dd>
+</dl>
+</div>
+<div class="section" id="window-draw-method">
+<span id="prefs-system-window-draw"></span><h2>窗口绘制方法<a class="headerlink" href="#window-draw-method" title="永久链接至标题">¶</a></h2>
+<dl class="docutils">
+<dt>窗口绘制方法</dt>
+<dd><p class="first">定义Blender视窗的绘制方法。</p>
+<dl class="last docutils">
+<dt>Automatic</dt>
+<dd><p class="first last">根据驱动器和显卡自动绘制。</p>
+</dd>
+<dt>三重缓存</dt>
+<dd><p class="first last">为细致的刷新屏幕使用第三层缓存，这会消耗更多的内存，当然如果你有个吊炸天的GPU（核弹显卡什么的），你可开启这个选项，blender的动态显示将会变得又快又棒。</p>
+</dd>
+<dt>重叠</dt>
+<dd><p class="first last">刷新所有重叠区，在尽量减少内存消耗的前提下多次刷新，推荐给一些使用显卡和驱动器搭配的用户。</p>
+</dd>
+<dt>重叠反转</dt>
+<dd><p class="first last">刷新所有重叠区，在尽量减少内存消耗的前提下多次刷新（图像驱动器会自动跳过），推荐给一些使用显卡和驱动搭配的用户。</p>
+</dd>
+<dt>全部</dt>
+<dd><p class="first last">每次都完全重绘。测试和其他选项都失败的情况下使用。有些卡没有或者很烂的opengl加速的时候使用。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="docutils" id="prefs-system-multi-sampling">
+<dt>多重采样</dt>
+<dd><p class="first">This enables <a class="reference internal" href="../glossary/index.html#term-fsaa"><span class="xref std std-term">FSAA</span></a> for smoother drawing, at the expense of some performance.</p>
+<div class="last admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">This is known to cause selection issues on some configurations,
+see: <a class="reference internal" href="../troubleshooting/3d_view.html#troubleshooting-3dview-invalid-selection"><span class="std std-ref">选择无效</span></a>.</p>
+</div>
+</dd>
+<dt>区域重叠</dt>
+<dd><p class="first">This checkbox will enable Blender to draw regions overlapping the 3D View.
+It means that the <em>Tool Shelf</em> and <em>Properties regions</em>,
+will be drawn overlapping the 3D View editor.</p>
+<p class="last">If you have a capable graphics card and drivers with <em>Triple Buffer</em> support,
+clicking the checkbox will enable the overlapping regions to be drawn using the <em>Triple Buffer</em> method,
+which will also enable them to be drawn using Alpha, showing the 3D View contents trough the regions.</p>
+</dd>
+<dt>文本绘制选项:</dt>
+<dd>Enable interface text anti-aliasing.
+When disabled, texts are drawn using text straight render (Filling only absolute Pixels).</dd>
+</dl>
+</div>
+<div class="section" id="textures">
+<h2>纹理<a class="headerlink" href="#textures" title="永久链接至标题">¶</a></h2>
+<dl class="docutils">
+<dt>尺寸限制</dt>
+<dd>Limit the maximum resolution for pictures used in textured display to save memory.
+The limit options are specified in a square of pixels,
+(e.g.: the option 256 means a texture of 256×256 pixels) This is useful for game engineers,
+whereas the texture limit matches paging blocks of the textures in the target graphic card memory.
+Available Options are: <em>Off</em> (No limit), <em>128</em>, <em>256</em>, <em>512</em>, <em>1024</em>, <em>2048</em>, <em>4096</em>, and <em>8192</em>.</dd>
+<dt>超时间隔</dt>
+<dd>Time since last access of a GL texture in seconds, after which it is freed. Set to 0 to keep textures allocated.
+Minimum: <em>0</em>, Maximum: <em>3600</em>.</dd>
+<dt>收集速率</dt>
+<dd>Number of seconds between each run of the GL texture garbage collector.
+Minimum: <em>0</em>, Maximum: <em>3600</em>.</dd>
+<dt>Image Draw Method</dt>
+<dd><p class="first">Method to draw images as the following options are supported:</p>
+<dl class="last docutils">
+<dt>2D Texture</dt>
+<dd>Uses CPU for display transform and draws images as a 2D texture.</dd>
+<dt>GLSL</dt>
+<dd>Fastest method using GLSL for display transform and draws images as a 2D texture.</dd>
+<dt>Draw Pixels</dt>
+<dd>Uses CPU for display transform and draws images as a 2D texture.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="sequencer-clip-editor">
+<h2>音序器/剪裁编辑器<a class="headerlink" href="#sequencer-clip-editor" title="永久链接至标题">¶</a></h2>
+<dl class="docutils">
+<dt>内存缓存限值</dt>
+<dd>Upper limit of the sequencer&#8217;s memory cache (megabytes).
+For optimum clip editor and sequencer performance, high values are recommended.</dd>
+</dl>
+</div>
+<div class="section" id="solid-opengl-lights">
+<h2>OpenGL 实色光照:<a class="headerlink" href="#solid-opengl-lights" title="永久链接至标题">¶</a></h2>
+<p><em>Solid OpenGL Lights</em> are used to light the 3D View,
+mostly during <em>Solid view</em>. Lighting is constant and position &#8220;world&#8221; based.
+There are three virtual light sources, also called OpenGL auxiliary lamps,
+used to illuminate 3D View scenes, which will not display in renders.</p>
+<p>你可点击灯泡图标来开启或关闭OpenGL实色光照，然而你不能把他们全禁用，至少会有一种实色光照处于开启状态。这三种灯光差不多，他们的区别在于不同的位置和颜色。你可控制灯的方向和漫射高光颜色可选的选项有：</p>
+<dl class="docutils">
+<dt>Use</dt>
+<dd>Toggles the specific lamp.</dd>
+<dt>漫射</dt>
+<dd>This is the constant color of the lamp.</dd>
+<dt>高光</dt>
+<dd>This is the highlight color of the lamp.</dd>
+<dt>方向</dt>
+<dd>Clicking with <code class="kbd docutils literal"><span class="pre">LMB</span></code> in the sphere and dragging the mouse cursor
+let us the user change the direction of the lamp by rotating the sphere.
+The direction of the lamp will be the same as shown at the sphere surface.</dd>
+</dl>
+</div>
+<div class="section" id="color-picker-type">
+<h2>拾色器类型<a class="headerlink" href="#color-picker-type" title="永久链接至标题">¶</a></h2>
+<p>Choose which type of <a class="reference internal" href="../glossary/index.html#term-color-space"><span class="xref std std-term">color space</span></a> you prefer. It will show when clicking <code class="kbd docutils literal"><span class="pre">LMB</span></code> on any color button.</p>
+<p>See the different color picker types at the
+<a class="reference internal" href="../interface/controls/templates/color_picker.html"><span class="doc">Extended Controls</span></a> page.</p>
+</div>
+<div class="section" id="custom-weight-paint-range">
+<span id="prefs-system-weight"></span><h2>自定义权重绘制色域<a class="headerlink" href="#custom-weight-paint-range" title="永久链接至标题">¶</a></h2>
+<p><em>Mesh skin weighting</em> is used to control how much a bone deforms the mesh of a character.
+To visualize and paint these weights, Blender uses a color ramp (from blue to green, and from yellow to red).
+Enabling the checkbox will enable an alternate map using a ramp starting with an empty range.
+Now you can create your custom map using the common color ramp options.
+For detailed information about how to use color ramps,
+see: to the <a class="reference internal" href="../interface/controls/templates/color_ramp.html"><span class="doc">Extended Controls</span></a> page.</p>
+</div>
+<div class="section" id="internationalization">
+<span id="prefs-system-international"></span><h2>国际化与本地化<a class="headerlink" href="#internationalization" title="永久链接至标题">¶</a></h2>
+<p>Blender支持很多国家的语言，打开这个选项就能启用Blender的国际化字体，国际化字体可以替换Blender的界面中默认的英文字体。</p>
+<p>This will also enable options for translating the User Interface
+through a list of languages and Tips for Blender tools which appear
+whenever the user hovers a mouse over Blender tools.</p>
+<p>Blender支持I18N国际化。想要了解更多关于加载国际化字体的信息，请阅读 <a class="reference internal" href="../modeling/texts/editing.html"><span class="doc">编辑字体</span></a>  页。</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../editors/info/index.html" class="btn btn-neutral float-right" title="Info Editor" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="file.html" class="btn btn-neutral" title="File" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

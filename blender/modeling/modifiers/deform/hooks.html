@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>钩挂修改器–knight翻译 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../../index.html"/>
+        <link rel="up" title="修改器" href="../index.html"/>
+        <link rel="next" title="拉普拉斯平滑修改器–knight翻译" href="laplacian_smooth.html"/>
+        <link rel="prev" title="置换修改器–knight翻译" href="displace.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">Metaball</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">Empties</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">修改器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">介绍&#8211;一钱不名</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#modify">修改</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#generate">生成</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#deform">形变</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="armature.html">骨架修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cast.html">铸型修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="corrective_smooth.html">平滑矫正修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="curve.html">曲线修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="displace.html">置换修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">钩挂修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="laplacian_smooth.html">拉普拉斯平滑修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="laplacian_deform.html">拉普拉斯变形修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lattice.html">晶格修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_deform.html">网格变形修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shrinkwrap.html">收缩环绕修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="simple_deform.html">简单变形修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="smooth.html">平滑修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="warp.html">弯曲环绕修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wave.html">波浪修改器&#8211;knight翻译</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#simulate">模拟</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">制作模型</a> &raquo;</li>
+      
+          <li><a href="../index.html">修改器</a> &raquo;</li>
+      
+    <li>钩挂修改器&#8211;knight翻译</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/modeling/modifiers/deform/hooks.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="hook-modifier">
+<h1>钩挂修改器&#8211;knight翻译<a class="headerlink" href="#hook-modifier" title="永久链接至标题">¶</a></h1>
+<p>牵引修改器用其他物体（通常是空物体或骨头，但可以用任何物体）来对变形*网格*、<em>弯曲**晶格</em>。</p>
+<p>As the hook moves, it pulls vertices from the mesh with it.
+You can think of it as animated
+<a class="reference internal" href="../../../editors/3dview/object/transform/transform_control/proportional_edit.html"><span class="doc">proportional editing</span></a>.</p>
+<p>在顶点运动方面，虽然牵引操作不能提供像形变键一样好的可控性，但是它有着可以直接抓取顶点操作的优势。</p>
+<div class="figure" id="id1">
+<img alt="../../../_images/modifier-hook-example1.png" src="../../../_images/modifier-hook-example1.png" />
+<p class="caption"><span class="caption-text">两个用作牵引的球变形一个细分过的立方体。</span></p>
+</div>
+<div class="section" id="options">
+<h2>选项<a class="headerlink" href="#options" title="永久链接至标题">¶</a></h2>
+<div class="figure" id="id2">
+<img alt="../../../_images/modifier-hook.jpg" src="../../../_images/modifier-hook.jpg" />
+<p class="caption"><span class="caption-text">Hook modifier.</span></p>
+</div>
+<dl class="docutils">
+<dt>物体</dt>
+<dd><p class="first last">牵引顶点的物体的名字</p>
+</dd>
+<dt>顶点组</dt>
+<dd><p class="first">允许你按顶点设定影响力</p>
+<p class="last">Useful when you do not something other than a spherical field of influence.</p>
+</dd>
+<dt>半径</dt>
+<dd><p class="first last">牵引作用的范围</p>
+</dd>
+<dt>强度</dt>
+<dd><p class="first">Adjust this hooks influance on the vertices, were (0.0 to 1.0) (no change to fully follows the hook).</p>
+<p class="last">由于多个牵引操作可作用在同一个顶点上，你可以用这个属性来加权一个牵引操作的影响力。</p>
+</dd>
+<dt>衰减类型</dt>
+<dd><p class="first last">该项可以用来调节在网格上牵引修改器用到的曲线，你也可以自定义曲线获取更高级别的控制度。</p>
+</dd>
+<dt>均匀衰减</dt>
+<dd><p class="first">当你在缩放过的物体上用牵引修改器时，该项设置有用，尤其是在非均匀缩放会拉伸牵引修改器作用的结果的场合中。</p>
+<p class="last">This is especially useful for lattices, where its common to use non-uniform scaling.</p>
+</dd>
+</dl>
+<p>以下设置仅在编辑模式可用：</p>
+<dl class="docutils">
+<dt>重置</dt>
+<dd><p class="first last">重新计算，并清除牵引操作的偏移变换</p>
+</dd>
+<dt>重定位中心</dt>
+<dd><p class="first last">设置牵引中心为3D光标的位置。</p>
+</dd>
+<dt>选择</dt>
+<dd><p class="first last">选择受该牵引操作影响的顶点</p>
+</dd>
+<dt>指派</dt>
+<dd><p class="first last">指定选择好的顶点到该牵引修改器。</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">The Hook Modifier stores vertex indices from the original mesh to determine what to effect;
+this means that modifiers that generate geometry, like a Subdivision Surface modifier,
+should always be applied <strong>after</strong> the hook modifier;
+otherwise the generated geometry will be left out of the hook&#8217;s influence.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="laplacian_smooth.html" class="btn btn-neutral float-right" title="拉普拉斯平滑修改器–knight翻译" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="displace.html" class="btn btn-neutral" title="置换修改器–knight翻译" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

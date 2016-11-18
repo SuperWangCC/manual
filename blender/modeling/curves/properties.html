@@ -1,0 +1,499 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Properties &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../index.html"/>
+        <link rel="up" title="曲线" href="index.html"/>
+        <link rel="next" title="Selecting" href="selecting.html"/>
+        <link rel="prev" title="Non-Uniform Rational B-Splines (NURBS)" href="nurbs.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">Meshes</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">曲线</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介&#8211;Q哥媳妇翻译</a></li>
+<li class="toctree-l3"><a class="reference internal" href="primitives.html">Primitives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bezier.html">Bézier Curves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nurbs.html">Non-Uniform Rational B-Splines (NURBS)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Properties</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#shape">Shape</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometry">Geometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#path-animation">Path Animation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#active-spline">Active Spline</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selecting.html">Selecting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing/index.html">编辑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="curve_display.html">Curve Display</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metas/index.html">Metaball</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../empties.html">Empties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">制作模型</a> &raquo;</li>
+      
+          <li><a href="index.html">曲线</a> &raquo;</li>
+      
+    <li>Properties</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/modeling/curves/properties.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="properties">
+<h1>Properties<a class="headerlink" href="#properties" title="永久链接至标题">¶</a></h1>
+<p>Curve Properties can be set from the <em>Object Data</em>
+option in the <em>Properties Header</em> (shown below in blue).</p>
+<div class="figure">
+<img alt="../../_images/modeling_curves_properties_header.png" src="../../_images/modeling_curves_properties_header.png" />
+</div>
+<div class="section" id="shape">
+<h2>Shape<a class="headerlink" href="#shape" title="永久链接至标题">¶</a></h2>
+<div class="figure" id="id1">
+<img alt="../../_images/modeling_curves_properties_curves-shape-panel.png" src="../../_images/modeling_curves_properties_curves-shape-panel.png" />
+<p class="caption"><span class="caption-text">Curves Shape panel.</span></p>
+</div>
+<dl class="docutils">
+<dt>2D and 3D Curves</dt>
+<dd>By default, new curves are set to be 3D, which means that Control Points can be placed anywhere in 3D space.
+Curves can also be set to 2D which constrain the Control Points to the Curve&#8217;s local XY axis.</dd>
+</dl>
+<dl class="docutils" id="curve-resolution">
+<dt>Resolution</dt>
+<dd><p class="first">The <em>resolution</em> property defines the number of points that are computed between every pair of Control Points.
+Curves can be made more or less smooth by increasing and decreasing the resolution respectively.
+The <em>Preview U</em> setting determines the resolution in the 3D View while the <em>Render U</em> setting
+determines the Curve&#8217;s render resolution. If <em>Render U</em> is set to zero (0),
+then the <em>Preview U</em> setting is used for both the 3D View and render resolution.</p>
+<div class="last figure" id="id2">
+<img alt="../../_images/modeling_curves_shape-resolution.jpg" src="../../_images/modeling_curves_shape-resolution.jpg" />
+<p class="caption"><span class="caption-text">Curves with a resolution of 3 (left) and 12 (right).</span></p>
+</div>
+</dd>
+<dt>Twisting</dt>
+<dd><p class="first">A 3D Curve has Control Points that are not located on the Curve&#8217;s local XY plane.
+This gives the Curve a twist which can affect the Curve normals.
+You can alter how the twist of the Curve is calculated by choosing from <em>Minimum,
+Tangent</em> and <em>Z-Up</em> options from the select menu.</p>
+<div class="last figure" id="id3">
+<img alt="../../_images/modeling_curves_shape-twist.jpg" src="../../_images/modeling_curves_shape-twist.jpg" />
+<p class="caption"><span class="caption-text">Curves with a twist of minimum (left) and tangent (right).</span></p>
+</div>
+</dd>
+<dt>Fill</dt>
+<dd><p class="first">Fill determines the way a Curve is displayed when it is Beveled (see below for details on Beveling).
+When set to <em>Half</em> (the default) the Curve is displayed as half a cylinder.</p>
+<dl class="docutils">
+<dt>Fill Deformed</dt>
+<dd>Fills the curve after applying all modification that might deform the curve (i.e. shape keys and modifiers).</dd>
+</dl>
+<div class="last figure" id="id4">
+<img alt="../../_images/modeling_curves_shape-fill.jpg" src="../../_images/modeling_curves_shape-fill.jpg" />
+<p class="caption"><span class="caption-text">Curves with a fill of half (left) and full (right).</span></p>
+</div>
+</dd>
+<dt>Path/Curve-Deform</dt>
+<dd>These options are primarily utilized when using a Curve as a Path or when using the Curve Deform property.
+The <em>Radius, Stretch</em> and <em>Bounds Clamp</em> options control how Objects use the
+Curve and are dealt with in more detail in the appropriate links below.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">参见</p>
+<ul class="last simple">
+<li><a class="reference internal" href="editing/introduction.html"><span class="doc">Basic Curve Editing</span></a></li>
+<li><a class="reference internal" href="../../animation/techniques/object_path.html"><span class="doc">Animation Paths</span></a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="geometry">
+<h2>Geometry<a class="headerlink" href="#geometry" title="永久链接至标题">¶</a></h2>
+<div class="figure" id="id5">
+<img alt="../../_images/modeling_curves_properties_geometry-panel.png" src="../../_images/modeling_curves_properties_geometry-panel.png" />
+<p class="caption"><span class="caption-text">Curves Geometry panel.</span></p>
+</div>
+<dl class="docutils">
+<dt>Modification</dt>
+<dd><dl class="first last docutils">
+<dt>Offset</dt>
+<dd>By default, text Objects are treated as curves.
+The Offset option will alter the space between letters.</dd>
+<dt>Extrude</dt>
+<dd>Will extrude the curve along both the positive and negative local Z axes.</dd>
+</dl>
+</dd>
+<dt>Bevel</dt>
+<dd><dl class="first last docutils">
+<dt>Depth</dt>
+<dd><p class="first">Changes the size of the bevel.</p>
+<div class="last figure" id="id6">
+<img alt="../../_images/modeling_curves_geometry-bevel-depth.png" src="../../_images/modeling_curves_geometry-bevel-depth.png" />
+<p class="caption"><span class="caption-text">A Curve with different Bevel depths applied.</span></p>
+</div>
+</dd>
+<dt>Resolution</dt>
+<dd><p class="first">Alters the smoothness of the bevel.</p>
+<div class="last figure" id="id7">
+<img alt="../../_images/modeling_curves_geometry-bevel-resolution.png" src="../../_images/modeling_curves_geometry-bevel-resolution.png" />
+<p class="caption"><span class="caption-text">A Curve with different resolutions applied.</span></p>
+</div>
+</dd>
+</dl>
+</dd>
+<dt>Taper Object</dt>
+<dd><p class="first">Tapering a Curve causes it to get thinner towards one end.
+You can also alter the proportions of the Taper throughout the tapered object
+by moving/scaling/rotating the Control Points of the Taper Object.
+The Taper Object can only be another Curve.
+Editing the Handles and Control Points of the Taper Object will cause the original Object to change shape.</p>
+<div class="last figure" id="id8">
+<img alt="../../_images/modeling_curves_geometry-taper.jpg" src="../../_images/modeling_curves_geometry-taper.jpg" />
+<p class="caption"><span class="caption-text">A Curve before (left) and after (right) a Bézier Curve Taper Object was applied.</span></p>
+</div>
+</dd>
+<dt>Bevel Object</dt>
+<dd><p class="first">Beveling a Bézier Curve with a Bézier Curve as the Bevel Object generally gives it the appearance of a plane,
+while using a Bézier Circle as the Bevel Object will give it the appearance of a cylinder.
+The Bevel Object can only be another Curve.
+Editing the Handles and Control Points of the Bevel Object will cause the original Object to change shape.
+Given the options available, it is best to experiment and see the results of this operation.</p>
+<div class="last figure" id="id9">
+<img alt="../../_images/modeling_curves_geometry-bevel.jpg" src="../../_images/modeling_curves_geometry-bevel.jpg" />
+<p class="caption"><span class="caption-text">A Curve with the Bevel Object as a Bézier Curve (left) and as a Bézier Circle (right).</span></p>
+</div>
+</dd>
+<dt>Fill Caps</dt>
+<dd>Seals the ends of a beveled Curve.</dd>
+<dt>Map Taper</dt>
+<dd><p class="first">For Curves using a Taper Object and with modifications to the <em>Start/End Bevel Factor</em>
+the <em>Map Taper</em> option will apply the taper to the beveled part of the Curve (not the whole Curve).</p>
+<div class="last figure" id="id10">
+<img alt="../../_images/modeling_curves_geometry-map-taper.jpg" src="../../_images/modeling_curves_geometry-map-taper.jpg" />
+<p class="caption"><span class="caption-text">A Curve without (left) and with (right) Map Taper applied.</span></p>
+</div>
+</dd>
+<dt>Start Bevel Factor and End Bevel Factor</dt>
+<dd><p class="first">These options determine where to start the Bevel operation on the Curve being beveled.
+Increasing the <em>Start Bevel Factor</em> to 0.5 will start beveling the Curve 50% of the distance from the start
+of the Curve (in effect shortening the Curve).
+Decreasing the <em>End Bevel Factor</em> by 0.25 will start beveling the Curve 25% of the distance from the end
+of the Curve (again, shortening the Curve).</p>
+<div class="last figure" id="id11">
+<img alt="../../_images/modeling_curves_geometry-bevel-start-end-factor.jpg" src="../../_images/modeling_curves_geometry-bevel-start-end-factor.jpg" />
+<p class="caption"><span class="caption-text">A Curve with no Bevel factor applied (left),
+with a 50% Start Bevel Factor (middle) and with a 25% End Bevel Factor (right).</span></p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="path-animation">
+<h2>Path Animation<a class="headerlink" href="#path-animation" title="永久链接至标题">¶</a></h2>
+<p>The <em>Path Animation</em> settings can be used to determine how Objects move along a certain path.</p>
+<dl class="docutils">
+<dt>Frames</dt>
+<dd>The number of frames that are needed to traverse the path,
+defining the maximum value for the <em>Evaluation Time</em> setting.</dd>
+<dt>Evaluation Time</dt>
+<dd>Parametric position along the length of the curve that object following it should be at
+(the position is evaluated by by dividing by the <em>Path Length</em> value).</dd>
+<dt>Follow</dt>
+<dd>Make the curve path children rotate along the path.</dd>
+</dl>
+<p><a class="reference internal" href="../../animation/techniques/object_path.html"><span class="doc">Read more about utilizing Curves for paths during animation</span></a></p>
+</div>
+<div class="section" id="active-spline">
+<h2>Active Spline<a class="headerlink" href="#active-spline" title="永久链接至标题">¶</a></h2>
+<div class="figure" id="id12">
+<img alt="../../_images/modeling_curves_properties_active-spline-panel-curves.png" src="../../_images/modeling_curves_properties_active-spline-panel-curves.png" />
+<p class="caption"><span class="caption-text">Curves Active Spline panel.</span></p>
+</div>
+<p>The <em>Active Spline</em> panel becomes available during <em>Edit Mode</em>.</p>
+<dl class="docutils">
+<dt>Cyclic</dt>
+<dd>Closes the Curve.</dd>
+<dt>Resolution</dt>
+<dd>Alters the smoothness of each segment by changing the number of subdivisions.</dd>
+<dt>Interpolation</dt>
+<dd><dl class="first last docutils">
+<dt>Tilt</dt>
+<dd>Alters how the tilt of a segment is calculated.</dd>
+<dt>Radius</dt>
+<dd>Alters how the radius of a Beveled Curve is calculated.
+The effects are easier to see after Shrinking/Fattening a control point <code class="kbd docutils literal"><span class="pre">Alt-S</span></code>.</dd>
+<dt>Smooth</dt>
+<dd>Smooths the normals of the Curve.</dd>
+</dl>
+</dd>
+</dl>
+<div class="section" id="nurbs-curves">
+<h3>NURBS Curves<a class="headerlink" href="#nurbs-curves" title="永久链接至标题">¶</a></h3>
+<div class="figure" id="id13">
+<img alt="../../_images/modeling_curves_properties_active-spline-panel-nurbs.png" src="../../_images/modeling_curves_properties_active-spline-panel-nurbs.png" />
+<p class="caption"><span class="caption-text">NURBS Active Spline panel.</span></p>
+</div>
+<dl class="docutils" id="modeling-curve-knot">
+<dt>Knots</dt>
+<dd><p class="first">One of the characteristics of a NURBS object is the <em>knot vector</em>. This is a sequence of
+numbers used to determine the influence of the control points on the curve.
+While you cannot edit the knot vectors directly, you can influence them through the
+<em>Endpoint</em> and <em>Bézier</em> options in the Active Spline panel. Note that the
+<em>Endpoint</em> and <em>Bézier</em> settings only apply to open NURBS curves.</p>
+<dl class="last docutils">
+<dt>Cyclic</dt>
+<dd><p class="first">Makes the NURBS curve cyclic.</p>
+<div class="last figure" id="id14">
+<img alt="../../_images/modeling_curves_nurbs-cyclic.png" src="../../_images/modeling_curves_nurbs-cyclic.png" />
+<p class="caption"><span class="caption-text">A NURBS curve with Cyclic applied.</span></p>
+</div>
+</dd>
+<dt>Bézier</dt>
+<dd>Makes the NURBS curve act like a Bézier curve.</dd>
+<dt>Endpoint</dt>
+<dd><p class="first">Makes the curve contact the end control points. Cyclic must be disabled for this option to work.</p>
+<div class="last figure" id="id15">
+<img alt="../../_images/modeling_curves_nurbs-endpoint.png" src="../../_images/modeling_curves_nurbs-endpoint.png" />
+<p class="caption"><span class="caption-text">A NURBS curve with Endpoint enabled.</span></p>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="docutils" id="modeling-curve-order">
+<dt>Order</dt>
+<dd><p class="first">The order of the NURBS curve determines the area of influence of the control points over the curve.
+Higher order values means that a single control point has a greater
+influence over a greater relative proportion of the curve.
+The valid range of <em>Order</em> values is 2-6 depending on the number of control points present in the curve.</p>
+<div class="last figure" id="id16">
+<img alt="../../_images/modeling_curves_nurbs-order.png" src="../../_images/modeling_curves_nurbs-order.png" />
+<p class="caption"><span class="caption-text">NURBS curves with orders of 2 (left), 4 (middle) and 6 (right).</span></p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="selecting.html" class="btn btn-neutral float-right" title="Selecting" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="nurbs.html" class="btn btn-neutral" title="Non-Uniform Rational B-Splines (NURBS)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

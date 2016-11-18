@@ -1,0 +1,445 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>比例化编辑 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../../../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../../../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../../../../index.html"/>
+        <link rel="up" title="变换控制" href="index.html"/>
+        <link rel="next" title="变换坐标系" href="transform_orientations.html"/>
+        <link rel="prev" title="清除物体变换" href="reset_object_transformations.html"/> 
+
+  
+  <script src="../../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html#d">3D</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../index.html">3D视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../introduction.html">简介&#8211;NGENNGT 翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../startup_scene.html">Startup Scene</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../modes.html">Object Modes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../navigate/index.html">视图导航</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../3d_cursor.html">3D游标&#8211;NGENNGT 翻译</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html">Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../display/index.html">Display Options</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../../../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">3D视图</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Objects</a> &raquo;</li>
+      
+          <li><a href="../index.html">Transform</a> &raquo;</li>
+      
+          <li><a href="index.html">变换控制</a> &raquo;</li>
+      
+    <li>比例化编辑</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../../_sources/editors/3dview/object/transform/transform_control/proportional_edit.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="proportional-edit">
+<h1>比例化编辑<a class="headerlink" href="#proportional-edit" title="永久链接至标题">¶</a></h1>
+<p>比例编辑是一种变换选定的元素（如顶点）同时能够将变换影响其他附近的元素的编辑方式。例如，有一个顶点的运动也影响到在给定范围内选定顶点的运动。未选中的顶点离这个选中顶点近的将比那些离它远的点要移动得更多（即他们将相对于选定的元素的位置比例化的衰减移动）。由于比例编辑影响到附近的几何体，当你需要在非常细分的网格上进行平滑变形的编辑是非常有用的。</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p>雕刻</p>
+<p class="last">Blender also has <a class="reference internal" href="../../../../../sculpt_paint/sculpting/index.html#painting-sculpting-index"><span class="std std-ref">Sculpting</span></a>
+that contains brushes and tools for proportionally editing a mesh without seeing the individual vertices.</p>
+</div>
+<div class="section" id="object-mode">
+<h2>Object Mode<a class="headerlink" href="#object-mode" title="永久链接至标题">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Object Mode</div>
+<div class="line">Menu:     Via the <img alt="prop-edit-icon" src="../../../../../_images/editors_3dview_object_transform-control_proportional-edit_header-object-mode.png" /> icon in the header indicated by the yellow square in the below image.</div>
+<div class="line">快捷键:   <code class="kbd docutils literal"><span class="pre">O</span></code></div>
+</div>
+</div>
+<p>Proportional editing is typically used in <em>Edit Mode</em>, however,
+it can also be used in <em>Object Mode</em>. In <em>Object Mode</em> the tool works on
+entire objects rather than individual mesh components. In the image below,
+the green cube is the active Object, while the red and blue cubes are located within the
+proportional edit tool&#8217;s radius of influence. When the green cube is moved to the right,
+the other two cubes follow the movement.</p>
+<div class="figure" id="id1">
+<img alt="../../../../../_images/editors_3dview_transform-control_proportional-edit-object-mode.jpg" src="../../../../../_images/editors_3dview_transform-control_proportional-edit-object-mode.jpg" />
+<p class="caption"><span class="caption-text">Proportional editing in Object Mode.</span></p>
+</div>
+</div>
+<div class="section" id="edit-mode">
+<h2>Edit Mode<a class="headerlink" href="#edit-mode" title="永久链接至标题">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Edit Mode</div>
+<div class="line">Menu:     <span class="menuselection">Mesh ‣ Proportional Editing</span> and via the <img alt="prop-edit-edit-mode-icon" src="../../../../../_images/editors_3dview_object_transform-control_proportional-edit_header-edit-mode.png" /> highlighted icon</div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">O</span></code>, <code class="kbd docutils literal"><span class="pre">Alt-O</span></code>, <code class="kbd docutils literal"><span class="pre">Shift-O</span></code></div>
+</div>
+</div>
+<p>当使用密集的几何结构，比例化编辑可以轻易的做出调整在模型的表面的顶点，微妙的做出可见肿块和皱纹。当你面对这样的情况时，比例编辑工具可以用于平滑变形模型的表面。通过该工具自动修正在给定的范围内的未选定顶点。</p>
+<div class="figure" id="id2">
+<img alt="../../../../../_images/editors_3dview_transform-control_proportional-edit-edit-mode.png" src="../../../../../_images/editors_3dview_transform-control_proportional-edit-edit-mode.png" />
+<p class="caption"><span class="caption-text">Proportional editing in Edit Mode.</span></p>
+</div>
+<div class="section" id="influence">
+<h3>影响<a class="headerlink" href="#influence" title="永久链接至标题">¶</a></h3>
+<p>You can increase or decrease the radius of the proportional editing influence with the mouse
+wheel <code class="kbd docutils literal"><span class="pre">WheelUp</span></code>, <code class="kbd docutils literal"><span class="pre">WheelDown</span></code> or <code class="kbd docutils literal"><span class="pre">PageUp</span></code>, <code class="kbd docutils literal"><span class="pre">PageDown</span></code>
+respectively. As you change the radius,
+the points surrounding your selection will adjust their positions accordingly.</p>
+<div class="figure" id="id3">
+<img alt="../../../../../_images/editors_3dview_transform-control_proportional-edit-influence.jpg" src="../../../../../_images/editors_3dview_transform-control_proportional-edit-influence.jpg" />
+<p class="caption"><span class="caption-text">影响圈。</span></p>
+</div>
+</div>
+<div class="section" id="options">
+<h3>选项<a class="headerlink" href="#options" title="永久链接至标题">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id4">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_transform-control_proportional-edit-tool.jpg"><img alt="../../../../../_images/editors_3dview_transform-control_proportional-edit-tool.jpg" src="../../../../../_images/editors_3dview_transform-control_proportional-edit-tool.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">比例的编辑工具。</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id5">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_transform-control_proportional-edit-falloff-options.jpg"><img alt="../../../../../_images/editors_3dview_transform-control_proportional-edit-falloff-options.jpg" src="../../../../../_images/editors_3dview_transform-control_proportional-edit-falloff-options.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">衰减菜单。</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p><em>比例编辑</em> 模式菜单位于 <em>3D 视图</em> 菜单栏中。</p>
+<dl class="docutils">
+<dt>Disable <code class="kbd docutils literal"><span class="pre">O</span></code>, <code class="kbd docutils literal"><span class="pre">Alt-O</span></code></dt>
+<dd><p class="first last">比例的编辑是关闭，只有所选的顶点都会受到影响。</p>
+</dd>
+<dt>Enable <code class="kbd docutils literal"><span class="pre">O</span></code>, <code class="kbd docutils literal"><span class="pre">Alt-O</span></code></dt>
+<dd><p class="first last">受影响比所选顶点的顶点，定义半径范围内。</p>
+</dd>
+<dt>投射 (2D)</dt>
+<dd><p class="first">应用半径时，就会忽略视图沿深度。</p>
+<div class="last figure" id="id6">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_transform-control_proportional-edit-2d_compare.png"><img alt="../../../../../_images/editors_3dview_transform-control_proportional-edit-2d_compare.png" src="../../../../../_images/editors_3dview_transform-control_proportional-edit-2d_compare.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">经常和投影 (2D) 比例选项 (右) 的区别。</span></p>
+</div>
+</dd>
+<dt>Connected <code class="kbd docutils literal"><span class="pre">Alt-O</span></code></dt>
+<dd>Rather than using a radius only, the proportional falloff spreads via connected geometry. This means that you can
+proportionally edit the vertices in a finger of a hand without affecting the other fingers.
+While the other vertices are physically close (in 3D space),
+they are far away following the topological edge connections of the mesh.
+The icon will have a gray center when <em>Connected</em> is active.
+This mode is only available in <em>Edit Mode</em>.</dd>
+<dt>衰减</dt>
+<dd>While editing, you can change the curve profile used by either using the
+<span class="menuselection">Mesh ‣ Proportional Falloff</span> submenu, using the header icon <em>Falloff menu</em>,
+or by pressing <code class="kbd docutils literal"><span class="pre">Shift-O</span></code> to toggle between the various options.</dd>
+</dl>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id7">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_transform-control_proportional-edit-falloff-constant.png"><img alt="../../../../../_images/editors_3dview_transform-control_proportional-edit-falloff-constant.png" src="../../../../../_images/editors_3dview_transform-control_proportional-edit-falloff-constant.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">常量衰减</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id8">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_transform-control_proportional-edit-falloff-random.png"><img alt="../../../../../_images/editors_3dview_transform-control_proportional-edit-falloff-random.png" src="../../../../../_images/editors_3dview_transform-control_proportional-edit-falloff-random.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">随机化衰减</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id9">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_transform-control_proportional-edit-falloff-linear.png"><img alt="../../../../../_images/editors_3dview_transform-control_proportional-edit-falloff-linear.png" src="../../../../../_images/editors_3dview_transform-control_proportional-edit-falloff-linear.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">线性衰减</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id10">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_transform-control_proportional-edit-falloff-sharp.png"><img alt="../../../../../_images/editors_3dview_transform-control_proportional-edit-falloff-sharp.png" src="../../../../../_images/editors_3dview_transform-control_proportional-edit-falloff-sharp.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">尖锐衰减</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="first last figure" id="id11">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_transform-control_proportional-edit-falloff-root.png"><img alt="../../../../../_images/editors_3dview_transform-control_proportional-edit-falloff-root.png" src="../../../../../_images/editors_3dview_transform-control_proportional-edit-falloff-root.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">根部衰减</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id12">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_transform-control_proportional-edit-falloff-sphere.png"><img alt="../../../../../_images/editors_3dview_transform-control_proportional-edit-falloff-sphere.png" src="../../../../../_images/editors_3dview_transform-control_proportional-edit-falloff-sphere.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">球形化</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id13">
+<a class="reference internal image-reference" href="../../../../../_images/editors_3dview_transform-control_proportional-edit-falloff-smooth.png"><img alt="../../../../../_images/editors_3dview_transform-control_proportional-edit-falloff-smooth.png" src="../../../../../_images/editors_3dview_transform-control_proportional-edit-falloff-smooth.png" style="width: 320px;" /></a>
+<p class="caption"><span class="caption-text">平滑衰减</span></p>
+</div>
+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="examples">
+<h3>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h3>
+<p>Switch to a front view <code class="kbd docutils literal"><span class="pre">Numpad1</span></code> and activate the grab tool with <code class="kbd docutils literal"><span class="pre">G</span></code>.
+As you drag the point upwards, notice how nearby vertices are dragged along with it.
+When you are satisfied with the placement, click <code class="kbd docutils literal"><span class="pre">LMB</span></code> to fix the position.
+If you are not satisfied,
+cancel the operation and revert your mesh to the way it looked before with
+<code class="kbd docutils literal"><span class="pre">RMB</span></code>, <code class="kbd docutils literal"><span class="pre">Esc</span></code>.</p>
+<p>You can use the proportional editing tool to produce great effects with the scaling
+<code class="kbd docutils literal"><span class="pre">S</span></code> and rotation <code class="kbd docutils literal"><span class="pre">R</span></code> tools,
+as Fig. <a class="reference internal" href="#fig-view3d-transform-landscape"><span class="std std-ref">通过比例编辑获得的景观。</span></a> shows.</p>
+<div class="figure" id="id14">
+<span id="fig-view3d-transform-landscape"></span><img alt="../../../../../_images/editors_3dview_transform-control_proportional-edit-landscape.jpg" src="../../../../../_images/editors_3dview_transform-control_proportional-edit-landscape.jpg" />
+<p class="caption"><span class="caption-text">通过比例编辑获得的景观。</span></p>
+</div>
+<p>Combine these techniques with vertex painting to create fantastic landscapes.
+The Fig. <a class="reference internal" href="#fig-view3d-transform-landscape-rendered"><span class="std std-ref">最终渲染大地场景</span></a> below shows the results of proportional editing after the
+application of textures and lighting.</p>
+<div class="figure" id="id15">
+<span id="fig-view3d-transform-landscape-rendered"></span><a class="reference internal image-reference" href="../../../../../_images/editors_3dview_objects_transform_proportional-edit_example.jpg"><img alt="../../../../../_images/editors_3dview_objects_transform_proportional-edit_example.jpg" src="../../../../../_images/editors_3dview_objects_transform_proportional-edit_example.jpg" style="width: 620px;" /></a>
+<p class="caption"><span class="caption-text">最终渲染大地场景</span></p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="transform_orientations.html" class="btn btn-neutral float-right" title="变换坐标系" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="reset_object_transformations.html" class="btn btn-neutral" title="清除物体变换" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

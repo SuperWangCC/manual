@@ -1,0 +1,356 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>线框修改器–lifetree翻译 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../../index.html"/>
+        <link rel="up" title="修改器" href="../index.html"/>
+        <link rel="next" title="骨架修改器–knight翻译" href="../deform/armature.html"/>
+        <link rel="prev" title="三角化修改器–knight翻译" href="triangulate.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">Metaball</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">Empties</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">修改器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">介绍&#8211;一钱不名</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#modify">修改</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#generate">生成</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="array.html">阵列修改器&#8211;gkuggkug豆豆翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bevel.html">倒角修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="booleans.html">布尔修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="build.html">建造修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="decimate.html">精简修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="edge_split.html">棱线分离修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mask.html">遮罩修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mirror.html">镜像修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="multiresolution.html">多分辨率修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="remesh.html">重新网面化修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="screw.html">螺旋修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="skin.html">植皮修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="solidify.html">加固修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsurf.html">细分表面修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="triangulate.html">三角化修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">线框修改器&#8211;lifetree翻译</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#deform">形变</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#simulate">模拟</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">制作模型</a> &raquo;</li>
+      
+          <li><a href="../index.html">修改器</a> &raquo;</li>
+      
+    <li>线框修改器&#8211;lifetree翻译</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/modeling/modifiers/generate/wireframe.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="wireframe-modifier">
+<h1>线框修改器&#8211;lifetree翻译<a class="headerlink" href="#wireframe-modifier" title="永久链接至标题">¶</a></h1>
+<p>The Wireframe modifier transforms a mesh into a wireframe by iterating over its
+faces, collecting all edges and turning those edges into four sided polygons.
+Be aware of the fact that your mesh needs to have faces to be wireframed.
+You can define the thickness, the material and several other parameters of the generated
+wireframe dynamically via the given modifier options.</p>
+<div class="section" id="options">
+<h2>选项<a class="headerlink" href="#options" title="永久链接至标题">¶</a></h2>
+<div class="figure" id="id1">
+<img alt="../../../_images/modifier_wireframe.jpg" src="../../../_images/modifier_wireframe.jpg" />
+<p class="caption"><span class="caption-text">Wireframe Modifier.</span></p>
+</div>
+<dl class="docutils">
+<dt>厚度</dt>
+<dd><p class="first last">线框的深度或大小。</p>
+</dd>
+<dt>偏移量</dt>
+<dd>A value between (-1 to 1) to change whether the wireframes are
+generated inside or outside the original mesh.
+Set to zero, <em>Offset</em> will center the wireframes around the original edges.</dd>
+<dt>顶点组</dt>
+<dd><p class="first">限制修改为仅此顶点组。</p>
+<dl class="last docutils">
+<dt>反转</dt>
+<dd><p class="first last">反转顶点组权重</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="figure" id="id2">
+<a class="reference internal image-reference" href="../../../_images/modifier_wireframe_result.jpg"><img alt="../../../_images/modifier_wireframe_result.jpg" src="../../../_images/modifier_wireframe_result.jpg" style="width: 350px;" /></a>
+<p class="caption"><span class="caption-text">线框作用在displaced plane.。在这个例子中,线框图进行第二个(黑色)材质而displaced plane 使用原来的材质。</span></p>
+</div>
+<dl class="docutils">
+<dt>折痕边</dt>
+<dd><p class="first">This option is intended for usage with the <a class="reference internal" href="subsurf.html"><span class="doc">Subdivision Modifier</span></a>.
+Enable this option to crease edges on their junctions and prevent large curved intersections.</p>
+<dl class="last docutils">
+<dt>折痕权重</dt>
+<dd>Define how much crease (0 to 1) (no to full) the junctions should receive.</dd>
+</dl>
+</dd>
+<dt>均衡厚度</dt>
+<dd><p class="first last">通过调整维持尖角的厚度。有时改善质量,但也会增加计算时间。</p>
+</dd>
+<dt>相对厚度</dt>
+<dd>Determines the edge thickness by the length of the edge. Longer edges will be thicker.</dd>
+<dt>边界范围</dt>
+<dd><p class="first last">创建线框网格做为边界</p>
+</dd>
+<dt>替换原物体</dt>
+<dd><p class="first last">如果启用了此选项,原始网格生成的线框将被取代。如果取消,原始网格将被保留。</p>
+</dd>
+<dt>材质偏移</dt>
+<dd><p class="first last">使用所选的材质索引作为的线框材质,这是应用一个偏移值做为第一个材质。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="examples">
+<h2>例子<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
+<p>当你得到了更多的面孔,满足他们一度正在形成恒星像模式像下面的例子。</p>
+<div class="figure" id="id3">
+<img alt="../../../_images/modeling_modifiers_generate_wireframe_example-cube.png" src="../../../_images/modeling_modifiers_generate_wireframe_example-cube.png" />
+<p class="caption"><span class="caption-text">Original / Wireframe / Original and Wireframe.</span></p>
+</div>
+<div class="figure" id="id4">
+<img alt="../../../_images/modeling_modifiers_generate_wireframe_example-suzanne.png" src="../../../_images/modeling_modifiers_generate_wireframe_example-suzanne.png" />
+<p class="caption"><span class="caption-text">Vertex Group weighting: One half 0 weighted, one half 1 weighted.</span></p>
+</div>
+<div class="figure" id="id5">
+<img alt="../../../_images/modeling_modifiers_generate_wireframe_example-crease.png" src="../../../_images/modeling_modifiers_generate_wireframe_example-crease.png" />
+<p class="caption"><span class="caption-text">Cube and Subdivision Surface with 0 / 0.5 / 1 crease weight.</span></p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">警告</p>
+<p class="last">线框厚度是一个近似值。而甚至厚度应该产生良好的结果在许多情况下,细长的面会导致难看的尖刺。在这种情况下,您可以减少厚度系数或禁用均衡厚度的选择。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../deform/armature.html" class="btn btn-neutral float-right" title="骨架修改器–knight翻译" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="triangulate.html" class="btn btn-neutral" title="三角化修改器–knight翻译" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

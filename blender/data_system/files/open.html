@@ -1,0 +1,324 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>打开文件 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../index.html"/>
+        <link rel="up" title="文件" href="index.html"/>
+        <link rel="next" title="保存文件" href="save.html"/>
+        <link rel="prev" title="文件" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">数据系统</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介&#8211;中二 翻译</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_blocks.html">数据块&#8211;阿尔翻译</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom_properties.html">用户定制属性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scenes/index.html">Scenes</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">文件</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">打开文件</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#usage">用法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#options">打开选项</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-file-open-options">其它文件打开选项</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="save.html">保存文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="import_export.html">导入导出文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="relative_paths.html">相对路径</a></li>
+<li class="toctree-l3"><a class="reference internal" href="media/index.html">Media Formats</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../linked_libraries.html">追加和链接&#8211;阿尔翻译</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">数据系统</a> &raquo;</li>
+      
+          <li><a href="index.html">文件</a> &raquo;</li>
+      
+    <li>打开文件</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/data_system/files/open.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="opening-files">
+<h1>打开文件<a class="headerlink" href="#opening-files" title="永久链接至标题">¶</a></h1>
+<div class="figure">
+<img alt="../../_images/file-browser-open.jpg" src="../../_images/file-browser-open.jpg" />
+</div>
+<div class="section" id="usage">
+<h2>用法<a class="headerlink" href="#usage" title="永久链接至标题">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">菜单:     <span class="menuselection">文件File ‣ 打开Open</span></div>
+<div class="line">快捷键:   <code class="kbd docutils literal"><span class="pre">Ctrl-O</span></code> 或者  <code class="kbd docutils literal"><span class="pre">F1</span></code></div>
+</div>
+</div>
+<p>The upper text field displays the current directory path,
+and the lower text field contains the selected filename.</p>
+<div class="admonition warning">
+<p class="first admonition-title">警告</p>
+<p>For Linux and macOS users:</p>
+<p>When exiting you are <strong>not</strong> asked to save unsaved changes to the scene you were previously working on.
+So take care to save your work.</p>
+<p class="last">On MS-Windows, there is a <a class="reference internal" href="../../preferences/file.html#prefs-save-load"><span class="std std-ref">保存和读取</span></a> option to warn on exit.</p>
+</div>
+</div>
+<div class="section" id="options">
+<h2>打开选项<a class="headerlink" href="#options" title="永久链接至标题">¶</a></h2>
+<dl class="docutils" id="file-load-ui">
+<dt>加载用户界面</dt>
+<dd><p class="first">When <em>Load UI</em> is checked, it loads the screen layout saved inside each blend-file,
+replacing the current layout. Otherwise the file screen layout is ignored.</p>
+<div class="last admonition tip">
+<p class="first admonition-title">小技巧</p>
+<p class="last">If you want to work on the blend-file using your own defaults, start a fresh Blender,
+then open the file browser and turn off the <em>Load UI</em> button, and then open the file.</p>
+</div>
+</dd>
+<dt>可信任源</dt>
+<dd>When enabled, Python scripts and drivers that may be included in the file will be run automatically.
+Enable this only if you created the file yourself,
+or you trust that the person who gave it to you did not include any malicious code with it.
+See <a class="reference internal" href="../../advanced/scripting/security.html"><span class="doc">Python Security</span></a> to configure default trust options.</dd>
+</dl>
+</div>
+<div class="section" id="other-file-open-options">
+<span id="id1"></span><h2>其它文件打开选项<a class="headerlink" href="#other-file-open-options" title="永久链接至标题">¶</a></h2>
+<p>从 <em>文件</em> 菜单中,你也可以用以下工具可打开文件:</p>
+<dl class="docutils">
+<dt>打开最近文件</dt>
+<dd><p class="first last">列出最近打开的文件,点击后载入文件.</p>
+</dd>
+<dt>恢复最后一次工程</dt>
+<dd><p class="first last">将会载入退出Blender前最后一次自动保存的 quit.blend 文件.所以此选项可以恢复最后一次工程的文件,例如:意外关闭Blender时.</p>
+</dd>
+<dt>恢复自动保存的工程</dt>
+<dd><p class="first last">此选项将会打开自动保存的文件.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">参见</p>
+<p class="last"><a class="reference internal" href="../../troubleshooting/recover.html#troubleshooting-file-recovery"><span class="std std-ref">Auto Saves</span></a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="save.html" class="btn btn-neutral float-right" title="保存文件" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="文件" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,725 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>布尔修改器–knight翻译 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../../index.html"/>
+        <link rel="up" title="修改器" href="../index.html"/>
+        <link rel="next" title="建造修改器–knight翻译" href="build.html"/>
+        <link rel="prev" title="倒角修改器–knight翻译" href="bevel.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">制作模型</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">曲面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">Metaball</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">文本物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">Empties</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">修改器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">介绍&#8211;一钱不名</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#modify">修改</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#generate">生成</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="array.html">阵列修改器&#8211;gkuggkug豆豆翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bevel.html">倒角修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">布尔修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="build.html">建造修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="decimate.html">精简修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="edge_split.html">棱线分离修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mask.html">遮罩修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mirror.html">镜像修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="multiresolution.html">多分辨率修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="remesh.html">重新网面化修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="screw.html">螺旋修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="skin.html">植皮修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="solidify.html">加固修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subsurf.html">细分表面修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="triangulate.html">三角化修改器&#8211;knight翻译</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wireframe.html">线框修改器&#8211;lifetree翻译</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#deform">形变</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#simulate">模拟</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">制作模型</a> &raquo;</li>
+      
+          <li><a href="../index.html">修改器</a> &raquo;</li>
+      
+    <li>布尔修改器&#8211;knight翻译</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/modeling/modifiers/generate/booleans.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="boolean-modifier">
+<h1>布尔修改器&#8211;knight翻译<a class="headerlink" href="#boolean-modifier" title="永久链接至标题">¶</a></h1>
+<p>The Boolean modifier performs operations on meshes that are otherwise too complex
+to achieve with as few steps by editing meshes manually. The Boolean modifier
+uses one of three Boolean operations that can be used to create a single mesh out of two mesh objects:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Difference:</th><td class="field-body">Negation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Union:</th><td class="field-body">Conjunction</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Intersect:</th><td class="field-body">Disjunction</td>
+</tr>
+</tbody>
+</table>
+<div class="figure" id="id1">
+<img alt="../../../_images/modifier_generate_boolean_union_intersect_difference_examples.png" src="../../../_images/modifier_generate_boolean_union_intersect_difference_examples.png" />
+<p class="caption"><span class="caption-text">The Union, Intersection and Difference between a Cube and a UV Sphere,
+with the modifier applied to the Sphere and using the cube as target.</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<ul class="last simple">
+<li><p class="first">布尔修改器适用于开放和封闭的形体。</p>
+</li>
+<li>The Boolean modifier does not work on edges without faces.</li>
+<li><p class="first">目标的拓扑结构决定着修改网面的新的拓扑结构。</p>
+</li>
+<li><p class="first">计算时，面的法线也考虑在内。</p>
+</li>
+<li>Whether faces are marked for smooth or flat for shading does not affect the calculations of this modifier.</li>
+<li><p class="first">该修改器算出的线条由修改网面和目标的面的首个切线接触点划定界限。</p>
+</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">小技巧</p>
+<p>这是一个动态实时修改器！</p>
+<p class="last">If you have marked your Objects to show the Edges
+(in <span class="menuselection">Properties Editor ‣ Object ‣ Display</span>, enable <em>Wire</em>),
+you will see the Edge creation process while you are moving your Objects. Depending on your mesh topology,
+you can also enable X-Ray and Transparency and see the topology being created in real time.</p>
+</div>
+<div class="section" id="usage">
+<h2>用法<a class="headerlink" href="#usage" title="永久链接至标题">¶</a></h2>
+<p>To use the <em>Boolean Modifier</em> select the desired mesh Object then add a <em>Boolean modifier</em>.
+When you add the Boolean modifier for an object, Blender will need a second object to
+be the target of the operation. You can use open or closed meshes,
+as long as they have available face normals for the calculations to take effect.
+You can add one or more modifiers of this type for an Object but you can only apply one
+operation for the Boolean modifier at a time.</p>
+</div>
+<div class="section" id="options">
+<h2>选项<a class="headerlink" href="#options" title="永久链接至标题">¶</a></h2>
+<div class="figure" id="id2">
+<img alt="../../../_images/modeling_modifiers_generate_booleans.png" src="../../../_images/modeling_modifiers_generate_booleans.png" />
+<p class="caption"><span class="caption-text">Boolean Modifier Options.</span></p>
+</div>
+<div class="section" id="operations">
+<h3>操作<a class="headerlink" href="#operations" title="永久链接至标题">¶</a></h3>
+<dl class="docutils">
+<dt>操作</dt>
+<dd><p class="first">将使用的布尔操作。</p>
+<dl class="last docutils">
+<dt>差</dt>
+<dd><p class="first">从目标网面减去修改的网面。</p>
+<ul class="last simple">
+<li><p class="first">如果目标网面的法线是反的，Blender会对修改的网面求交。</p>
+</li>
+<li><p class="first">如果修改的网面的法线是反的，Blender将添加两个网面（并）。</p>
+</li>
+<li><p class="first">如果两个网面的法线都是反的，Blender将对目标网面求交。</p>
+</li>
+</ul>
+</dd>
+<dt>并</dt>
+<dd><p class="first">目标网面添加到修改的网面。</p>
+<ul class="last simple">
+<li><p class="first">如果目标网面的法线是反的，Blender会对目标网面求交。</p>
+</li>
+<li><p class="first">如果修改的网面的法线是反的，Blender会减去目标网面。</p>
+</li>
+<li><p class="first">如果两个网面的法线都是反的，Blender将对修改的网面求交。</p>
+</li>
+</ul>
+</dd>
+<dt>交</dt>
+<dd><p class="first">修改的网面减去目标网面。</p>
+<ul class="last simple">
+<li><p class="first">如果目标网面的法线是反的，Blender会减去目标网面。</p>
+</li>
+<li><p class="first">如果修改的网面的法线是反的，Blender会对目标网面求交。</p>
+</li>
+<li><p class="first">如果两个网面的法线都是反的，Blender会添加两个网面（并）。</p>
+</li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt>物体</dt>
+<dd><p class="first last">目标网面物体的名字</p>
+</dd>
+<dt>Solver</dt>
+<dd>TODO</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="materials">
+<span id="boolean-materials"></span><h2>材质<a class="headerlink" href="#materials" title="永久链接至标题">¶</a></h2>
+<p>布尔修改器保留了参与运算的网面的材质，包括它们的基本纹理和映射方式，修改的网面的材质索引将被分配到新的拓扑结构上（第一个活动状态下的材质）。</p>
+<p>Below, some examples are shown to exemplify how materials work with the Boolean modifier;
+we took the cube as the modified mesh, and the icosphere as the target with one material
+(white). We added four different indexes to one of the faces of the cube,
+leaving another basic material in the other faces.
+The top left image shows how the Boolean modifier interacts with the materials.
+The other three images show the three different Boolean operations applied to the modified mesh.
+In all the images the meshes have normals pointed outwards with the Icosphere as the target,
+and the Cube being the modified mesh.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id3">
+<img alt="../../../_images/modifier_generate_boolean_multi_materials_example_base.png" src="../../../_images/modifier_generate_boolean_multi_materials_example_base.png" />
+<p class="caption"><span class="caption-text">Cube with Multi-Materials and Icosphere with basic Material.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id4">
+<img alt="../../../_images/modifier_generate_boolean_multi_materials_example_union.png" src="../../../_images/modifier_generate_boolean_multi_materials_example_union.png" />
+<p class="caption"><span class="caption-text">Union: The first active Material of the Cube is added to the new topology.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id5">
+<img alt="../../../_images/modifier_generate_boolean_multi_materials_example_difference_.png" src="../../../_images/modifier_generate_boolean_multi_materials_example_difference_.png" />
+<p class="caption"><span class="caption-text">Difference: The Icosphere was subtracted from the Cube.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id6">
+<img alt="../../../_images/modifier_generate_boolean_multi_materials_example_intersect_.png" src="../../../_images/modifier_generate_boolean_multi_materials_example_intersect_.png" />
+<p class="caption"><span class="caption-text">Intersect: The resulting Mesh was copied and rotated 180.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The only exception is the difference operation when the normals of the target and modified
+mesh are inverted. In this case, Blender will project the textures in an
+inverted direction over the target using the center contact of the meshes as a pivot and the
+resulting mesh will have the modified mesh subtracted from the target.
+For complex target meshes in some particular cases,
+you may have to reassign materials to faces because Blender will use the possible projection,
+and this may result in a sub-optimal texture assignment. You can see this in the last example below.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id7">
+<img alt="../../../_images/modifier_generate_boolean_multi_materials_example_inverted_normals_back.png" src="../../../_images/modifier_generate_boolean_multi_materials_example_inverted_normals_back.png" />
+<p class="caption"><span class="caption-text">Front of the target with the modified mesh materials.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id8">
+<img alt="../../../_images/modifier_generate_boolean_multi_materials_example_inverted_normals_front.png" src="../../../_images/modifier_generate_boolean_multi_materials_example_inverted_normals_front.png" />
+<p class="caption"><span class="caption-text">Back of the target with the modified mesh materials.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="uv-mappings">
+<h3>UV映射<a class="headerlink" href="#uv-mappings" title="永久链接至标题">¶</a></h3>
+<p>当你映射UV图到目标上时，Blender将为目标的每个的面附加一张图。当你应用布尔修改器时，Blender将按照已分配给目标的面的拓扑来弄，该UV图将成为修改的网格的操作结果。Blender也将使用相同的图像，该图像源自修改的网面且映射到目标网面的面。</p>
+<div class="admonition warning">
+<p class="first admonition-title">警告</p>
+<p class="last">取决于你在UV展开时赋予纹理给面的方式，以及你网面的复杂性，布尔操作可能会为新的面产生不太好的UV。</p>
+</div>
+<p>Below we have four Images, a UV sphere mapped with a test grid tinted blue and the other face tinted in purple,
+one face of the cube tinted in a light orange and the other faces using the normal test grid.
+The first image shows the operation at the start (difference), and on to the right of that shows the resulting mesh.
+And in the bottom row we show the unwrap in the Blender UV/Image Editor.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id9">
+<img alt="../../../_images/modifier_generate_boolean_uv_boolean_difference_operation_op_start.png" src="../../../_images/modifier_generate_boolean_uv_boolean_difference_operation_op_start.png" />
+<p class="caption"><span class="caption-text">A UV Sphere and a Cube with different UV Maps.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id10">
+<img alt="../../../_images/modifier_generate_boolean_uv_boolean_difference_operation_applied.png" src="../../../_images/modifier_generate_boolean_uv_boolean_difference_operation_applied.png" />
+<p class="caption"><span class="caption-text">Difference operation applied.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id11">
+<img alt="../../../_images/modifier_generate_boolean_uv_map_face_modified_mesh.png" src="../../../_images/modifier_generate_boolean_uv_map_face_modified_mesh.png" />
+<p class="caption"><span class="caption-text">Faces of the modified mesh mapped.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id12">
+<img alt="../../../_images/modifier_generate_boolean_uv_map_face_modified_mesh_new_topology.png" src="../../../_images/modifier_generate_boolean_uv_map_face_modified_mesh_new_topology.png" />
+<p class="caption"><span class="caption-text">New topology mapped and UV faces assigned.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="other-modifiers">
+<h2>其他修改器<a class="headerlink" href="#other-modifiers" title="永久链接至标题">¶</a></h2>
+<p>The Boolean modifier calculation is performed using the target modified mesh
+topology and dimensions. Other modifiers added to the modified mesh are bypassed.
+This means that if a target is using another modifier, like Subdivision Surface,
+the resulting topology for the modified mesh will take into account the subdivision of the target;
+but for the modified mesh, the basic topology is used anyway (see examples).</p>
+<p>If you add Subdivision Surface to the modified mesh with a Boolean modifier,
+Blender will visually add the subdivision for the modified mesh, but not for its calculations;
+it will only take into account its basic mesh topology.
+If you want to have a Subdivision Surface modifier added to the modified mesh,
+you have to apply the Subdivision Surface to the Boolean modified mesh before applying the Boolean operation.</p>
+<p>The Boolean modifier can be added together with other modifiers in the modified mesh,
+but depending on the modifier, the calculations cannot be done and/or the modifier cannot execute.
+When the modifier cannot execute, it will show the message <code class="docutils literal"><span class="pre">&quot;Cannot</span> <span class="pre">execute</span> <span class="pre">boolean</span> <span class="pre">operation&quot;</span></code>,
+and when the modifier cannot be applied to the mesh,
+Blender will show the message <code class="docutils literal"><span class="pre">&quot;Modifier</span> <span class="pre">is</span> <span class="pre">disabled,</span> <span class="pre">Skipping</span> <span class="pre">Apply.&quot;</span></code>.
+In this case, you either have to remove some modifiers or apply the necessary ones.</p>
+<p>最常见的情形是当你添加或复制一个布尔修改器，用修改的网面配合另一个目标后期使用时，Blender会在栈上随后的布尔修改器提示警告信息，因为你可能对同一个修改的网面创建了并发的布尔操作，这也是多数情况下不可能执行下去的，它取决于你选择的目标。这种情况下，你可以对目标应用栈上第一个布尔修改器，接着用栈上其他布尔修改器完成接下来的操作。</p>
+<p>此外，如果一些其他的修改器置于此修改器之上，你点击了应用按钮，Blender会警告你 <code class="docutils literal"><span class="pre">&quot;没有首先应用其他的修改器在，结果可能不如预期&quot;</span></code>。该修改器的最佳使用场合是准备好你待修改的网面和目标网面，然后再使用布尔修改器。</p>
+<p>当布尔修改器是栈上第一个修改器并且应用后，其他修改器将作用于布尔操作后的网面，用布尔操作后的拓扑，并且留在修改器栈上。</p>
+<p>Below are two images: one with the Subdivision Surface modifier added to the target,
+and another with the resulting topology.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id13">
+<img alt="../../../_images/modifier_generate_boolean_subsurf_added_to_the_target.png" src="../../../_images/modifier_generate_boolean_subsurf_added_to_the_target.png" />
+<p class="caption"><span class="caption-text">Modifier with Subdivision Surface Target.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id14">
+<img alt="../../../_images/modifier_generate_boolean_resulting_mesh_subsurf_added_to_the_target.png" src="../../../_images/modifier_generate_boolean_resulting_mesh_subsurf_added_to_the_target.png" />
+<p class="caption"><span class="caption-text">The Resulting Topology.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>As you can see, the added (not applied) Subdivision Surface modifier to the target was taken into consideration.
+The topology of the Icosphere with (Level 2) subdivision was completely transferred to the modified mesh.</p>
+<div class="admonition tip">
+<p class="first admonition-title">小技巧</p>
+<p>目标拓扑决定着最终的拓扑。</p>
+<p class="last">目标拓扑确定着布尔修改器操作的结果。这意味着，任何添加到目标并修改其拓扑的修改器会影响操作的最终网面。</p>
+</div>
+</div>
+<div class="section" id="concurrent-operations">
+<h2>并发操作<a class="headerlink" href="#concurrent-operations" title="永久链接至标题">¶</a></h2>
+<p>对于修改的网面，你每次只能应用一次操作，但对其他修改的网面可以使用同一个目标，或使用修改的网面作为目标提供给其他网面也行。此外，您可以多次复制或添加相同的修改器到修改器栈上，以满足你所需的操作数量。但要注意，如果你选择了并发目标，此目标同时是指向对方的修改的网面，会导致Blender因组成的闭环而崩溃！</p>
+<div class="section" id="hints">
+<h3>提示<a class="headerlink" href="#hints" title="永久链接至标题">¶</a></h3>
+<p>注意到其他修改器和它们在栈上的位置可能导致该修改器在某些情况下无法工作。</p>
+<div class="admonition tip">
+<p class="first admonition-title">小技巧</p>
+<p class="last">用此修改器工作，并且当你需要做同一个修改器的一系列操作时，最佳方法是在你需要应用变化到拓扑上时定义好目标。</p>
+</div>
+</div>
+</div>
+<div class="section" id="face-normals">
+<h2>面的法线<a class="headerlink" href="#face-normals" title="永久链接至标题">¶</a></h2>
+<p>When using the Boolean modifier,
+Blender will use the face normal directions to calculate the three Boolean operations.
+The direction of the normals will define the result of the three available operations.
+When one of the participants has inverted normals, you are in fact multiplying the operation by -1
+and inverting the calculation order. You can, at any time, select your modified mesh,
+enter Edit Mode and flip the normals to change the behavior of the Boolean modifier.
+See Tips: Fixing Mixed Normals below.</p>
+<p>当参与者的一个或多个网面法线在接触的地方既有向外又有向内混合着的法线时，Blender也不能对布尔操作作优化处理。</p>
+<p>这意味着操作中，你可以使用完全指向参与者里或外的网面法线，但是你不能对用来计算的拓扑面混用指向里和指向外的法线。在这种情况下，Blender会启用修改器，你可能也会应用修改器，但坏事是没有效果。我们做了一个关于立方体和正二十面体的例子来说明结果。</p>
+<p>In the images below, all face normals are pointing outwards (Normal meshes).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id15">
+<img alt="../../../_images/modifier_generate_boolean_normals_pointing_outwards.png" src="../../../_images/modifier_generate_boolean_normals_pointing_outwards.png" />
+<p class="caption"><span class="caption-text">Faces with normals pointing outwards.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id16">
+<img alt="../../../_images/modifier_boolean_difference_normals_pointing_outwards.png" src="../../../_images/modifier_boolean_difference_normals_pointing_outwards.png" />
+<p class="caption"><span class="caption-text">Normal Boolean modifier operation (Difference operation).</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>In the images below, all face normals are inverted and using the intersection operation</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id17">
+<img alt="../../../_images/modifier_generate_boolean_normals_pointing_inwards.png" src="../../../_images/modifier_generate_boolean_normals_pointing_inwards.png" />
+<p class="caption"><span class="caption-text">Boolean Operation with inverted normals.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id18">
+<img alt="../../../_images/modifier_generate_boolean_intersection_normals_pointing_inwards.png" src="../../../_images/modifier_generate_boolean_intersection_normals_pointing_inwards.png" />
+<p class="caption"><span class="caption-text">Normal Boolean modifier operation.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Now, let us see what happens when the normal directions are mixed for one of the
+participants in the Boolean modifier operation. The images below show face normals mixed,
+pointed to different directions and the resulting operation,
+you can see that the modifier has bad effects when applied, leaving faces opened:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id19">
+<img alt="../../../_images/modifier_generate_boolean_normals_mixed_inwards_outwards.png" src="../../../_images/modifier_generate_boolean_normals_mixed_inwards_outwards.png" />
+<p class="caption"><span class="caption-text">Face normals mixed, pointed to different directions.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id20">
+<img alt="../../../_images/modifier_generate_boolean_resulting_mesh_normals_mixed.png" src="../../../_images/modifier_generate_boolean_resulting_mesh_normals_mixed.png" />
+<p class="caption"><span class="caption-text">Resulting operation leaves faces opened.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>As you can see, the normal directions can be pointing to any of the Mesh sides,
+but cannot be mixed in opposite directions for the faces of the participants.
+The Library cannot determine properly what is positive and negative for the operation, so the
+results will be bad or you will have no effect when using the Boolean modifier operation.</p>
+<p>A quick way to fix this is to use Blender&#8217;s
+<a class="reference internal" href="../../meshes/editing/normals.html"><span class="doc">Recalculate Normals</span></a> operation in Edit Mode.</p>
+<p>If you still have some ugly black gouges you will have to
+<a class="reference internal" href="../../meshes/editing/normals.html"><span class="doc">Manually Flip the Normals</span></a>.</p>
+</div>
+<div class="section" id="empty-or-duplicated-faces">
+<h2>空洞的面或重复的面<a class="headerlink" href="#empty-or-duplicated-faces" title="永久链接至标题">¶</a></h2>
+<p>This modifier does not work when the modified and/or the target mesh uses empty faces in the
+topology used for calculations. If the modifier faces a situation where you have empty faces mixed with normal faces,
+the modifier will try, as much as possible, to connect the faces and apply the operation.
+For situations where you have two concurrent faces at the same position,
+the modifier will operate on the target mesh using both faces,
+but the resulting normals will get messed. To avoid duplicated faces,
+you can remove doubles for the vertices before recalculating the normals outside or inside.
+The button for remove doubles is located in the <em>Mesh Tools</em> Panel in the 3D View, while in Edit Mode.</p>
+<p>该修改器的最佳使用场合是在你对网面作了清理，面都明显地指向一个方向（向内/向外）。</p>
+<p>下面显示了一个网面的例子，网面带着张开的面并与正常的面混合来创建新的拓扑。在这个例子中，应用了立方体和正二十面体之间的差，但Blender连接正二十面体的副本到立方网面上，尽可能地尝试应用。</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id21">
+<img alt="../../../_images/modifier_generate_boolean_mesh_with_mixed_empty_faces.png" src="../../../_images/modifier_generate_boolean_mesh_with_mixed_empty_faces.png" />
+<p class="caption"><span class="caption-text">Mesh with two empty faces mixed with normal faces.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id22">
+<img alt="../../../_images/modifier_generate_boolean_mesh_with_mixed_empty_faces_result.png" src="../../../_images/modifier_generate_boolean_mesh_with_mixed_empty_faces_result.png" />
+<p class="caption"><span class="caption-text">Result of a difference operation applied.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="open-volumes">
+<h2>张开的形体<a class="headerlink" href="#open-volumes" title="永久链接至标题">¶</a></h2>
+<p>The Boolean Modifier permits you to use open meshes or non-closed volumes (not open faces).</p>
+<p>When using open meshes or non-closed volumes, the Boolean modifier will not perform
+any operation in faces that do not create a new topology filled with faces using the faces of the target.</p>
+<p>In the images below, is the resulting operation when using two non-closed volumes with faces forming a new topology.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id23">
+<img alt="../../../_images/modifiers_generate_boolean_complete_face_shape.png" src="../../../_images/modifiers_generate_boolean_complete_face_shape.png" />
+<p class="caption"><span class="caption-text">Non-closed volumes forming a new topology.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id24">
+<img alt="../../../_images/modifier_generate_boolean_resulting_complete_face_shape.png" src="../../../_images/modifier_generate_boolean_resulting_complete_face_shape.png" />
+<p class="caption"><span class="caption-text">Resulting operation using two open volumes.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Now, let us see what happens when we use meshes that are partially open,
+incomplete, or meshes that are not forming a new topology.</p>
+<p>As you can see in the images below the faces of one participant in the Boolean operation
+gives incomplete information to the modifier. The resulting edges get messy and there is
+not enough information to create faces for the resulting Mesh.
+This example uses a smooth shaded UV-sphere cut in half. As explained before,
+the shading (smooth/flat) does not affect the calculations of the modifier.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id25">
+<img alt="../../../_images/modifiers_boolean_incomplete_face_shape.png" src="../../../_images/modifiers_boolean_incomplete_face_shape.png" />
+<p class="caption"><span class="caption-text">Open volumes that are not forming a new topology.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id26">
+<img alt="../../../_images/modifier_generate_boolean_resulting_incomplete_face_shape.png" src="../../../_images/modifier_generate_boolean_resulting_incomplete_face_shape.png" />
+<p class="caption"><span class="caption-text">Resulting Operation of image on the left</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="build.html" class="btn btn-neutral float-right" title="建造修改器–knight翻译" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bevel.html" class="btn btn-neutral" title="倒角修改器–knight翻译" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

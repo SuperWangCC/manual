@@ -1,0 +1,432 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Usage &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../index.html"/>
+        <link rel="up" title="Non-Linear Animation Editor" href="index.html"/>
+        <link rel="next" title="Properties &amp; Modifiers" href="properties_modifiers.html"/>
+        <link rel="prev" title="Introduction" href="introduction.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#d">3D</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#animation">动画</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../timeline.html">Timeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../graph_editor/index.html">Graph Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dope_sheet/index.html">Dope Sheet</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Non-Linear Animation Editor</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="properties_modifiers.html">Properties &amp; Modifiers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="index.html">Non-Linear Animation Editor</a> &raquo;</li>
+      
+    <li>Usage</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/editors/nla/usage.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="永久链接至标题">¶</a></h1>
+<div class="section" id="tracks">
+<h2>Tracks<a class="headerlink" href="#tracks" title="永久链接至标题">¶</a></h2>
+<p>Tracks are the layering system of the NLA. At its most basic level,
+it can help organize strips. But it also layers motion much like an image editor layers pixels &#8211;
+the bottom layer first, to the top, last.</p>
+<div class="figure" id="id1">
+<img alt="../../_images/editors_nla_tracks.png" src="../../_images/editors_nla_tracks.png" />
+<p class="caption"><span class="caption-text">NLA Tracks and Strips.</span></p>
+</div>
+<dl class="docutils">
+<dt>Solo (Star icon)</dt>
+<dd>Toggling <em>Solo Track</em> causes only the selected tracks effects to be visible when animating.</dd>
+<dt>Mute (Speaker icon)</dt>
+<dd>Keeps the track from having an effect on the animation.</dd>
+<dt>Lock (Lock icon)</dt>
+<dd>Prevents changes from being made to this layer.</dd>
+</dl>
+<div class="section" id="action-track">
+<h3>Action Track<a class="headerlink" href="#action-track" title="永久链接至标题">¶</a></h3>
+<dl class="docutils">
+<dt>Push Down (double down arrow peak icon)</dt>
+<dd><p class="first">Turns the action into a new action strip.</p>
+<div class="figure">
+<img alt="../../_images/editors_nla_push-down-button.png" src="../../_images/editors_nla_push-down-button.png" />
+</div>
+<p class="last">Push Down action button.</p>
+</dd>
+<dt>Pin (Pin icon)</dt>
+<dd><p class="first">If you try moving the strip, while in <em>Tweak Mode</em>,
+you will notice that the keys will go along with it. On occasion,
+you will prefer the keys to remain on their original frames, regardless of where the strip is.
+To do so, hit the <em>unpin</em> icon, next to the strip.</p>
+<div class="figure" id="id2">
+<img alt="../../_images/editors_nla_pinned_01.png" src="../../_images/editors_nla_pinned_01.png" />
+<p class="caption"><span class="caption-text">Nla strip with pinned keys.</span></p>
+</div>
+<div class="figure" id="id3">
+<img alt="../../_images/editors_nla_pin_02.png" src="../../_images/editors_nla_pin_02.png" />
+<p class="caption"><span class="caption-text">Strip moved, notice the keys move with it.</span></p>
+</div>
+<div class="last figure" id="id4">
+<img alt="../../_images/editors_nla_pin_03.png" src="../../_images/editors_nla_pin_03.png" />
+<p class="caption"><span class="caption-text">The unpinned keys return to their original frames.</span></p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="strips">
+<h2>Strips<a class="headerlink" href="#strips" title="永久链接至标题">¶</a></h2>
+<p>There are four kinds of strips: Action, Transition, Sound clip and Meta.</p>
+<div class="section" id="action-strips">
+<h3>Action Strips<a class="headerlink" href="#action-strips" title="永久链接至标题">¶</a></h3>
+<p>An Action Strip is a container of keyframe data of an action.
+Any action used by the NLA first must be turned into an Action strip.
+This is done so by clicking the Push Down action button see above.
+Alternatively, you can go to <span class="menuselection">Add ‣ Action</span>.</p>
+</div>
+<div class="section" id="transition-strips">
+<h3>Transition Strips<a class="headerlink" href="#transition-strips" title="永久链接至标题">¶</a></h3>
+<p>Transitions interpolate between Actions. They must be placed in between other strips.
+Select two or more strips on the same track,
+and go to: <span class="menuselection">Add ‣ Transition</span>.</p>
+<div class="figure" id="id5">
+<img alt="../../_images/editors_nla-basics_transition.png" src="../../_images/editors_nla-basics_transition.png" />
+<p class="caption"><span class="caption-text">Transition Strip.</span></p>
+</div>
+</div>
+<div class="section" id="sound-clip-strips">
+<h3>Sound Clip Strips<a class="headerlink" href="#sound-clip-strips" title="永久链接至标题">¶</a></h3>
+<p>Controls when a speaker plays a sound clip.
+<span class="menuselection">Add ‣ Sound Clip</span>.</p>
+</div>
+<div class="section" id="meta-strips">
+<h3>Meta Strips<a class="headerlink" href="#meta-strips" title="永久链接至标题">¶</a></h3>
+<p>Meta strips group strips together as a whole, so you can move them as one.
+If you find yourself moving a lot of strips together, you can group them into a Meta strip.
+A meta strip can be moved and duplicated like a normal strip.</p>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Menu:     <span class="menuselection">Add ‣ Add Meta-Strips</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Shift-G</span></code></div>
+</div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id6">
+<a class="reference internal image-reference" href="../../_images/editors_nla_meta_strips_01.png"><img alt="../../_images/editors_nla_meta_strips_01.png" src="../../_images/editors_nla_meta_strips_01.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Shift-select two or more strips..</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id7">
+<a class="reference internal image-reference" href="../../_images/editors_nla_meta_strips_02.png"><img alt="../../_images/editors_nla_meta_strips_02.png" src="../../_images/editors_nla_meta_strips_02.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Combine them into a meta strip.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>A meta strip still contains the underlying strips. You can ungroup a Meta strip.</p>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Menu:     <span class="menuselection">Add ‣ Remove Meta-Strips</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Alt-G</span></code></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="editing-strips">
+<h2>Editing Strips<a class="headerlink" href="#editing-strips" title="永久链接至标题">¶</a></h2>
+<div class="section" id="start-tweaking-strips-action">
+<h3>Start Tweaking Strips Action<a class="headerlink" href="#start-tweaking-strips-action" title="永久链接至标题">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Menu:     <span class="menuselection">Edit ‣ Start Tweaking Strips Action</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Tab</span></code></div>
+</div>
+</div>
+<p>The contents of Action strips can be edited, but you must be in <em>Tweak Mode</em> to do so.
+The keyframes of the action can then be edited in the Dope Sheet.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id8">
+<a class="reference internal image-reference" href="../../_images/editors_nla_strip_nla_mode.png"><img alt="../../_images/editors_nla_strip_nla_mode.png" src="../../_images/editors_nla_strip_nla_mode.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Strip in NLA mode..</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id9">
+<a class="reference internal image-reference" href="../../_images/editors_nla_strip_editmode.png"><img alt="../../_images/editors_nla_strip_editmode.png" src="../../_images/editors_nla_strip_editmode.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Strip in Tweak mode.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>When your finished editing the strip, simply go to <span class="menuselection">Edit ‣ Tweaking Strips Action</span>
+or press <code class="kbd docutils literal"><span class="pre">Tab</span></code>.</p>
+</div>
+<div class="section" id="linked-duplicate">
+<h3>Linked Duplicate<a class="headerlink" href="#linked-duplicate" title="永久链接至标题">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Menu:     <span class="menuselection">Edit ‣ Linked Duplicate</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Alt-D</span></code></div>
+</div>
+</div>
+<p>The contents of one Action strip can be instanced multiple times. To instance another strip,
+select a strip, go to <span class="menuselection">Edit ‣ Linked Duplicate</span></p>
+<p>Now, when any strip is tweaked, the others will change too.
+If a strip other than the original is tweaked,
+the original will turn to red.</p>
+<div class="figure" id="id10">
+<img alt="../../_images/editors_nla_linked-strip-edit.png" src="../../_images/editors_nla_linked-strip-edit.png" />
+<p class="caption"><span class="caption-text">Linked duplicated strip being edited.</span></p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="properties_modifiers.html" class="btn btn-neutral float-right" title="Properties &amp; Modifiers" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="Introduction" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

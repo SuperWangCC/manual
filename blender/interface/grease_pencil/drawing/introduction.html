@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introduction &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../../index.html"/>
+        <link rel="up" title="Drawing Strokes" href="index.html"/>
+        <link rel="next" title="层" href="layers.html"/>
+        <link rel="prev" title="Drawing Strokes" href="index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">User Interface</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../splash.html">Splash Screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#window-system">Window System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#interface-controls">界面控制</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#tools">工具</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../undo_and_redo.html">撤销和重做 -  Soulv 翻译</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ruler_and_protractor.html">3D 量尺 和 量角器</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">蜡笔系统</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Drawing Strokes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../stroke_edit.html">Stroke Edit Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../animating.html">Animating Sketches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../converting_to_geometry.html">将草图转为物体</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">User Interface</a> &raquo;</li>
+      
+          <li><a href="../index.html">蜡笔系统</a> &raquo;</li>
+      
+          <li><a href="index.html">Drawing Strokes</a> &raquo;</li>
+      
+    <li>Introduction</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/interface/grease_pencil/drawing/introduction.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="永久链接至标题">¶</a></h1>
+<p>Enable the <em>Grease Pencil</em> by clicking <em>Draw, Line, Poly or Erase</em> from the Tool Shelf <code class="kbd docutils literal"><span class="pre">T</span></code>.
+A new layer will be automatically added for you to draw on.</p>
+<p>A new layer can be added from the Grease Pencil panel in the Properties region.
+This panel can also be used to customize the color, opacity and thickness of the pencil lines.
+Changes to these settings will affect all strokes on the current layer.</p>
+<div class="figure" id="id1">
+<img alt="../../../_images/interface_gp_example.png" src="../../../_images/interface_gp_example.png" />
+<p class="caption"><span class="caption-text">An example of Blender&#8217;s Grease Pencil.</span></p>
+</div>
+<p><em>蜡笔</em> 草图能够转换为可以编辑的几何体然后在动画流程中使用。</p>
+<ul class="simple">
+<li><a class="reference internal" href="layers.html"><span class="doc">Read more about Layers and Animation</span></a></li>
+<li><p class="first"><a class="reference internal" href="../converting_to_geometry.html"><span class="doc">阅读更多关于转换草图到几何体</span></a></p>
+</li>
+</ul>
+<div class="section" id="drawing">
+<h2>绘制<a class="headerlink" href="#drawing" title="永久链接至标题">¶</a></h2>
+<p>The Tool Shelf provides a number of options for drawing with the <em>Grease Pencil</em> which are detailed below.</p>
+<div class="figure" id="id2">
+<img alt="../../../_images/sketchinggreasepencil.jpg" src="../../../_images/sketchinggreasepencil.jpg" />
+<p class="caption"><span class="caption-text">Grease Pencil Tool Shelf and Properties region.</span></p>
+</div>
+<div class="section" id="grease-pencil-mode-and-shortcut-summary">
+<h3>蜡笔模式和快捷键总结<a class="headerlink" href="#grease-pencil-mode-and-shortcut-summary" title="永久链接至标题">¶</a></h3>
+<dl class="docutils">
+<dt>绘画 <code class="kbd docutils literal"><span class="pre">D-LMB</span></code></dt>
+<dd><p class="first last">画出新的笔画（多根短线，连接的线）。画的笔画会在你释放鼠标后停止。</p>
+</dd>
+<dt>线 <code class="kbd docutils literal"><span class="pre">Ctrl-D-LMB</span></code></dt>
+<dd><p class="first last">以橡皮筋模式画一根线（定首末点位置）。释放鼠标按钮的时候线绘制完成。</p>
+</dd>
+<dt>多边形 <code class="kbd docutils literal"><span class="pre">Ctrl-D-RMB</span></code></dt>
+<dd><p class="first last">点几下点就画出一些相互连接的线。这些线会自动添加在两个点之间。</p>
+</dd>
+<dt>擦除 <code class="kbd docutils literal"><span class="pre">D-RMB</span></code></dt>
+<dd>Erases segments of strokes that fall within the radius of the eraser &#8220;brush&#8221;.
+The erasing will continue until the mouse button is released.
+If begun with <em>Erase</em>, either <code class="kbd docutils literal"><span class="pre">RMB</span></code> or <code class="kbd docutils literal"><span class="pre">LMB</span></code> will erase strokes.
+The size of the eraser &#8220;brush&#8221; can be controlled with <code class="kbd docutils literal"><span class="pre">Wheel</span></code>, or with
+<code class="kbd docutils literal"><span class="pre">NumpadPlus</span></code> and <code class="kbd docutils literal"><span class="pre">NumpadMinus</span></code>, while still holding <code class="kbd docutils literal"><span class="pre">RMB</span></code>.</dd>
+</dl>
+</div>
+<div class="section" id="sketching-sessions">
+<h3>草图状态<a class="headerlink" href="#sketching-sessions" title="永久链接至标题">¶</a></h3>
+<p>A Sketching Session allows for rapid sketching with the <em>Grease Pencil</em> when
+multiple strokes are desired. With this option set,
+a sketching session starts when a <em>Grease Pencil</em> stroke is made.
+The type of session (Draw, Line, Poly, Erase)
+is determined by the first stroke made which can be done via hotkeys or the Tool Shelf.
+Use <code class="kbd docutils literal"><span class="pre">Esc</span></code> or <code class="kbd docutils literal"><span class="pre">Return</span></code> to exit the sketching session. Note that in an Erase
+Sketching Session both <code class="kbd docutils literal"><span class="pre">LMB</span></code> or <code class="kbd docutils literal"><span class="pre">RMB</span></code> can be used once the session has started.</p>
+</div>
+</div>
+<div class="section" id="drawing-settings">
+<h2>绘制设置<a class="headerlink" href="#drawing-settings" title="永久链接至标题">¶</a></h2>
+<div class="figure align-right" id="id3" style="width: 148px">
+<img alt="../../../_images/interface_gp_draw_settings.png" src="../../../_images/interface_gp_draw_settings.png" />
+<p class="caption"><span class="caption-text">蜡笔绘制设置。</span></p>
+</div>
+<p>In the <em>Grease Pencil Panel</em> of the <em>Tool</em> shelf <code class="kbd docutils literal"><span class="pre">T</span></code>
+there are several choices for <em>Drawing Settings</em>.</p>
+<dl class="docutils">
+<dt>视图</dt>
+<dd><p class="first last">新笔画锁定在视图上。</p>
+</dd>
+<dt>Cursor <em>(3D View only)</em></dt>
+<dd>New strokes are drawn in 3D-space,
+with position determined by the 3D cursor and the view rotation at the time of drawing.
+<em>Cursor</em> is available as an option in the <em>UV/Image Editor</em>
+but it functions identically to the <em>View</em> option.  <em>(3D View only)</em></dd>
+<dt>Surface</dt>
+<dd>New strokes are drawn in 3D-space, with their position projected onto the first visible surface.
+<em>(3D View only)</em></dd>
+<dt>笔触</dt>
+<dd>New strokes are drawn in 3D-space, with their position projected onto existing visible strokes.
+Note that strokes created with <em>View</em> are not in 3D-space and are not considered for this projection.
+<em>(3D View only)</em></dd>
+<dt>Only Endpoints</dt>
+<dd>Applies the drawing setting only to the endpoints of the stroke.
+The part of the stroke between the endpoints is adjusted to lie on a plane passing through the endpoints.</dd>
+</dl>
+<div class="figure" id="id4">
+<img alt="../../../_images/editors_3dview_sketching_drawing_grease-pencil-drawing-settings.png" src="../../../_images/editors_3dview_sketching_drawing_grease-pencil-drawing-settings.png" />
+<p class="caption"><span class="caption-text">蜡笔笔画上的不同绘制的效果。</span></p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">小技巧</p>
+<p>Notes For Tablet Users:</p>
+<ul class="last simple">
+<li>The thickness of a stroke at a particular point is affected
+by the pressure used when drawing that part of the stroke.</li>
+<li>The &#8220;eraser&#8221; end of the stylus can be used to erase strokes.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="layers.html" class="btn btn-neutral float-right" title="层" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Drawing Strokes" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,480 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>标记符—小A翻译 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../genindex.html"/>
+        <link rel="search" title="搜索" href="../search.html"/>
+    <link rel="top" title="Blender Manual" href="../index.html"/>
+        <link rel="up" title="动画" href="index.html"/>
+        <link rel="next" title="Shape Keys" href="shape_keys/index.html"/>
+        <link rel="prev" title="Troubleshooting" href="drivers/troubleshooting.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">动画</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">简介&#8211;毛货翻译</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyframes/index.html">Keyframes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="actions.html">动作&#8212;小A翻译</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drivers/index.html">Drivers</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">标记符—小A翻译</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#types">Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#visualization">可视化</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#standard">标准</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sequencer">序列编辑器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#d-view">3D 视图</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pose-markers">Pose Markers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#add-marker">Add Marker</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#marker-pose-add">Pose Markers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#selecting">Selecting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#editing">Editing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#duplicate-marker">Duplicate Marker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deleting-markers">删除标记符</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rename-marker">Rename Marker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#grab-move-marker">Grab/Move Marker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#show-pose-markers">Show Pose Markers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#make-markers-local">Make Markers Local</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="shape_keys/index.html">Shape Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#animation-techniques">Animation Techniques</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">动画</a> &raquo;</li>
+      
+    <li>标记符—小A翻译</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/animation/markers.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="markers">
+<h1>标记符—小A翻译<a class="headerlink" href="#markers" title="永久链接至标题">¶</a></h1>
+<p>Markers are used to denote frames at which something significant happens,
+i.e. it could be that a character&#8217;s animation starts, the camera changes position, or a door opens.
+Markers can be given names to make them more meaningful at a quick glance.
+They are available in many of Blender&#8217;s editors.</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">Unlike keyframes, markers are always placed at a whole frame number, you cannot set a marker at frame 2.5.</p>
+</div>
+<p>Markers can be created and edited in the following editors:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../editors/graph_editor/introduction.html"><span class="doc">Graph Editor</span></a></li>
+<li><a class="reference internal" href="../editors/dope_sheet/introduction.html"><span class="doc">Dope Sheet</span></a></li>
+<li><a class="reference internal" href="../editors/nla/index.html"><span class="doc">NLA Editor</span></a></li>
+<li><a class="reference internal" href="../editors/sequencer/index.html"><span class="doc">Video Sequence Editor</span></a></li>
+<li><a class="reference internal" href="../editors/timeline.html"><span class="doc">Timeline</span></a></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">A marker created in one of these editors will also appear in all others that support them.</p>
+</div>
+<div class="section" id="types">
+<h2>Types<a class="headerlink" href="#types" title="永久链接至标题">¶</a></h2>
+<p>Next to the standard markers <em>Pose markers</em> are another type of markers,
+which are specific to armatures and shape keys.
+They are used to denote poses in the Action Editor mode and Shape Keys Editor of Dope Sheet.</p>
+</div>
+<div class="section" id="visualization">
+<h2>可视化<a class="headerlink" href="#visualization" title="永久链接至标题">¶</a></h2>
+<div class="section" id="standard">
+<h3>标准<a class="headerlink" href="#standard" title="永久链接至标题">¶</a></h3>
+<div class="figure align-right" id="id2">
+<img alt="../_images/animation_markers_standard.png" src="../_images/animation_markers_standard.png" />
+<p class="caption"><span class="caption-text">标记符很小却很实用</span></p>
+</div>
+<p>Most of the editors visualize markers the same way: as small triangles at their bottom,
+white if unselected or yellow if selected.</p>
+<p>If they have a name, this is shown to their right, in white when the marker is selected.</p>
+<div class="lead container">
+</div>
+</div>
+<div class="section" id="sequencer">
+<h3>序列编辑器<a class="headerlink" href="#sequencer" title="永久链接至标题">¶</a></h3>
+<div class="figure align-right" id="id3">
+<img alt="../_images/animation_markers_sequencer.png" src="../_images/animation_markers_sequencer.png" />
+<p class="caption"><span class="caption-text">Markers in the Sequencer.</span></p>
+</div>
+<p>The <em>Video Sequence Editor</em> just adds a vertical dashed line to each marker
+(gray if the marker is unselected, or white if it is selected).</p>
+<div class="lead container">
+</div>
+</div>
+<div class="section" id="d-view">
+<h3>3D 视图<a class="headerlink" href="#d-view" title="永久链接至标题">¶</a></h3>
+<div class="figure align-right" id="id4">
+<img alt="../_images/animation_markers_3d-view.png" src="../_images/animation_markers_3d-view.png" />
+<p class="caption"><span class="caption-text">3D窗口中显示的标记符</span></p>
+</div>
+<p>The 3D View does not allow you to create, edit, and remove markers,
+it just show their name in the Object Info in the bottom left corner,
+when on their frame (see Marker in a 3D View).</p>
+<div class="lead container">
+</div>
+</div>
+<div class="section" id="pose-markers">
+<h3>Pose Markers<a class="headerlink" href="#pose-markers" title="永久链接至标题">¶</a></h3>
+<div class="figure align-right" id="id5">
+<img alt="../_images/animation_markers_pose.png" src="../_images/animation_markers_pose.png" />
+<p class="caption"><span class="caption-text">Pose markers in the Action Editor.</span></p>
+</div>
+<p>Pose markers show a diamond-shaped icon in the Dope Sheet.
+In the NLA editor the pose marker are shown as a red dashed line.</p>
+<div class="lead container">
+</div>
+</div>
+</div>
+<div class="section" id="add-marker">
+<h2>Add Marker<a class="headerlink" href="#add-marker" title="永久链接至标题">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     All modes</div>
+<div class="line">Menu:     <span class="menuselection">Marker ‣ Add Marker</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">M</span></code> or <code class="kbd docutils literal"><span class="pre">Ctrl-Alt-M</span></code> in the VSE Editor</div>
+</div>
+</div>
+<p>The simplest way to add a marker is to move to the frame where you would like it to appear,
+and press <code class="kbd docutils literal"><span class="pre">M</span></code>.</p>
+<div class="admonition hint">
+<p class="first admonition-title">提示</p>
+<p class="last">Markers can also be added while playback.</p>
+</div>
+<div class="section" id="marker-pose-add">
+<span id="id1"></span><h3>Pose Markers<a class="headerlink" href="#marker-pose-add" title="永久链接至标题">¶</a></h3>
+<p>If <em>Show Pose Markers</em> is checked a pose marker and
+a new pose in the <a class="reference internal" href="../rigging/armatures/properties/pose_library.html"><span class="doc">Pose Library</span></a> are added.</p>
+</div>
+</div>
+<div class="section" id="selecting">
+<h2>Selecting<a class="headerlink" href="#selecting" title="永久链接至标题">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     All modes</div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">RMB</span></code></div>
+</div>
+</div>
+<p>Click <code class="kbd docutils literal"><span class="pre">RMB</span></code> on the marker&#8217;s triangle to select it.
+Use <code class="kbd docutils literal"><span class="pre">Shift-RMB</span></code> to select multiple markers.</p>
+<p>In the Graph Editor, Dope Sheet, NLA Editor, and Video Sequence Editor,
+you can also select all markers with <code class="kbd docutils literal"><span class="pre">Ctrl-A</span></code>, and border-select them with <code class="kbd docutils literal"><span class="pre">Ctrl-B</span></code>
+(as usual, <code class="kbd docutils literal"><span class="pre">LMB</span></code> to select, <code class="kbd docutils literal"><span class="pre">RMB</span></code> to deselect).
+The corresponding options are found in the Select menu of these editors.</p>
+<p>In the Timeline, you can select all markers with <code class="kbd docutils literal"><span class="pre">A</span></code>, and border select with <code class="kbd docutils literal"><span class="pre">B</span></code>.</p>
+</div>
+<div class="section" id="editing">
+<h2>Editing<a class="headerlink" href="#editing" title="永久链接至标题">¶</a></h2>
+<div class="section" id="duplicate-marker">
+<h3>Duplicate Marker<a class="headerlink" href="#duplicate-marker" title="永久链接至标题">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     All modes</div>
+<div class="line">Menu:     <span class="menuselection">Marker ‣ Duplicate Marker</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">Shift-D</span></code></div>
+</div>
+</div>
+<p>You can duplicate the selected markers by pressing <code class="kbd docutils literal"><span class="pre">Shift-D</span></code>. Once duplicated,
+the new ones are automatically placed in grab mode, so you can move them to the desired location.</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">Note that unlike most other duplications in Blender,
+the names of the duplicated markers are not altered at all
+(no <code class="docutils literal"><span class="pre">.001</span></code> numeric counter append).</p>
+</div>
+</div>
+<div class="section" id="deleting-markers">
+<h3>删除标记符<a class="headerlink" href="#deleting-markers" title="永久链接至标题">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     All modes</div>
+<div class="line">Menu:     <span class="menuselection">Marker ‣ Delete Marker</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">X</span></code></div>
+</div>
+</div>
+<p>To delete the selected markers simply press <code class="kbd docutils literal"><span class="pre">X</span></code>,
+and confirm the pop-up message with <code class="kbd docutils literal"><span class="pre">LMB</span></code>.</p>
+</div>
+<div class="section" id="rename-marker">
+<h3>Rename Marker<a class="headerlink" href="#rename-marker" title="永久链接至标题">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     All modes</div>
+<div class="line">Menu:     <span class="menuselection">Marker ‣ Rename Marker</span></div>
+<div class="line">快捷键:   <code class="kbd docutils literal"><span class="pre">Ctrl-M</span></code></div>
+</div>
+</div>
+<p>Having dozens of markers scattered throughout your scene&#8217;s time will not help you much unless you
+know what they stand for. You can name a marker by selecting it, pressing <code class="kbd docutils literal"><span class="pre">Ctrl-M</span></code>,
+typing the name, and pressing the OK button.</p>
+</div>
+<div class="section" id="grab-move-marker">
+<h3>Grab/Move Marker<a class="headerlink" href="#grab-move-marker" title="永久链接至标题">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     All modes</div>
+<div class="line">Menu:     <span class="menuselection">Marker ‣ Grab/Move Marker</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">G</span></code></div>
+</div>
+</div>
+<p>Once you have one or more markers selected, press <code class="kbd docutils literal"><span class="pre">G</span></code>,
+while hovering with the mouse over the marker bar,
+to move them, and confirm the move with <code class="kbd docutils literal"><span class="pre">LMB</span></code> or <code class="kbd docutils literal"><span class="pre">Return</span></code>
+(as usual, cancel the move with <code class="kbd docutils literal"><span class="pre">RMB</span></code>, or <code class="kbd docutils literal"><span class="pre">Esc</span></code>).
+Or drag them with the <code class="kbd docutils literal"><span class="pre">RMB</span></code>.</p>
+<p>By default, you grab the markers in one-frame steps, but if you hold <code class="kbd docutils literal"><span class="pre">Ctrl</span></code>,
+the markers will move in steps corresponding to one second (according to the scenes <em>FPS</em>).</p>
+</div>
+<div class="section" id="show-pose-markers">
+<h3>Show Pose Markers<a class="headerlink" href="#show-pose-markers" title="永久链接至标题">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     Action Editor and Shape Keys Editor</div>
+<div class="line">Menu:     <span class="menuselection">Marker ‣ Show Pose Markers</span></div>
+</div>
+</div>
+<p>Only Pose markers are shown and editable in Action editor or Shape Keys editor by enabling
+the <span class="menuselection">Marker ‣ Show Pose Markers</span> checkbox.</p>
+</div>
+<div class="section" id="make-markers-local">
+<h3>Make Markers Local<a class="headerlink" href="#make-markers-local" title="永久链接至标题">¶</a></h3>
+<div class="refbox admonition">
+<p class="first admonition-title">参考</p>
+<div class="last line-block">
+<div class="line">Mode:     All modes</div>
+<div class="line">Menu:     <span class="menuselection">Marker ‣ Make Markers Local</span></div>
+</div>
+</div>
+<p>It is possible to convert standard markers into Pose markers with <span class="menuselection">Marker ‣ Make Markers Local</span>.
+Note that the original marker will be gone. If you want to keep it, make a duplicate before you convert.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="shape_keys/index.html" class="btn btn-neutral float-right" title="Shape Keys" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="drivers/troubleshooting.html" class="btn btn-neutral" title="Troubleshooting" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

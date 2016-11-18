@@ -1,0 +1,386 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Material Panel &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../../index.html"/>
+        <link rel="up" title="Materials" href="index.html"/>
+        <link rel="next" title="Assigning a Material" href="assigning_a_material.html"/>
+        <link rel="prev" title="Introduction" href="introduction.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Blender Render Engine</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Materials</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Material Panel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="assigning_a_material.html">Assigning a Material</a></li>
+<li class="toctree-l4"><a class="reference internal" href="properties/index.html">Material Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nodes/index.html">Material Nodes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="special_effects/index.html">Special Material Effects</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../textures/index.html">Textures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lighting/index.html">Lighting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../camera/index.html">Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../world/index.html">World</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../settings/index.html">Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../post_processing/index.html">Post Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bake.html">Render Baking</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../optimizations/index.html">Optimization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../cycles/index.html">Cycles Render Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../output/index.html">Render Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../post_process/index.html">Post Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workflows/index.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../opengl.html">OpenGL Render</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../audio/index.html">Audio Rendering</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">渲染</a> &raquo;</li>
+      
+          <li><a href="../index.html">Blender Render Engine</a> &raquo;</li>
+      
+          <li><a href="index.html">Materials</a> &raquo;</li>
+      
+    <li>Material Panel</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/render/blender_render/materials/material_panel.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="material-panel">
+<h1>Material Panel<a class="headerlink" href="#material-panel" title="永久链接至标题">¶</a></h1>
+<p>Materials can be linked to objects and Object&#8217;s data in the <span class="menuselection">materials tab ‣ materials panel</span>.
+Here is where you can manage how materials are linked to objects, meshes, etc.
+and activate a material for editing in the rest of the panels.</p>
+<div class="figure" id="id1">
+<img alt="../../../_images/render_blender-render_materials_assigning_material-panel-object-mode.png" src="../../../_images/render_blender-render_materials_assigning_material-panel-object-mode.png" />
+<p class="caption"><span class="caption-text">Material panel.</span></p>
+</div>
+<div class="section" id="material-slots">
+<h2>Material slots<a class="headerlink" href="#material-slots" title="永久链接至标题">¶</a></h2>
+<dl class="docutils">
+<dt>Active Material</dt>
+<dd><p class="first">The objects material slots displayed in a <a class="reference internal" href="../../../interface/controls/templates/list_presets.html#ui-list-view"><span class="std std-ref">List View</span></a>.</p>
+<dl class="last docutils">
+<dt>Specials</dt>
+<dd>Copy and paste the selected material slot.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="multiple-materials">
+<h2>Multiple materials<a class="headerlink" href="#multiple-materials" title="永久链接至标题">¶</a></h2>
+<p>Meshes can handle having more than one material.
+Materials can be mapped on a per-face basis,
+as detailed on the <a class="reference internal" href="assigning_a_material.html#bi-multiple-materials"><span class="std std-ref">Multiple Materials</span></a> page.
+In edit mode, the following tools appear:</p>
+<dl class="docutils">
+<dt>Assign</dt>
+<dd>Assign the material in the selected material slot to selected vertices.</dd>
+<dt>Select</dt>
+<dd>Select vertices assigned to the selected material slot.</dd>
+<dt>Deselect</dt>
+<dd>Deselect vertices assigned to the selected material slot.</dd>
+</dl>
+</div>
+<div class="section" id="material-naming-and-linking">
+<h2>Material naming and linking<a class="headerlink" href="#material-naming-and-linking" title="永久链接至标题">¶</a></h2>
+<dl class="docutils">
+<dt>Material</dt>
+<dd>The Material <a class="reference internal" href="../../../interface/controls/templates/data_block.html#ui-data-block"><span class="std std-ref">Data-Block Menu</span></a> for the selected material slot.</dd>
+<dt>Nodes</dt>
+<dd>Toogle <img alt="node-icon" src="../../../_images/render_blender-render_materials_material-panel_node-icon.png" /> that designates this material to be a material node setup,
+and not from the Material/Ramps/Shaders settings.</dd>
+<dt>Data-block Links</dt>
+<dd><p class="first">Specifies whether the material is to be linked to the Object or to the Object Data.</p>
+<p>The Link selector has two choices, Data and Object.
+These two menu choices determine whether the material is linked to the object or to the data,
+(i.e. a mesh or curve). The Data menu item determines that this material will be linked to the mesh&#8217;s
+data-block which is linked to the object&#8217;s data-block.
+The Object menu item determines that the material will be linked to the object&#8217;s data-block directly.</p>
+<p>This has consequences of course. For example, different objects may share the same mesh data-block.
+Since this data-block defines the shape of the object any change in edit mode
+will be reflected on all of those objects.
+Moreover, anything linked to that mesh data-block will be shared by every object that shares that mesh.
+So, if the material is linked to the mesh, every object will share it.</p>
+<p>On the other hand, if the material is linked directly to the object data-block, the objects can have
+different materials and still share the same mesh.</p>
+<p class="last">Short explanation: If connected to the object, you can have several instances of the same Object Data using
+different materials. If linked to mesh data, you cannot.
+See <a class="reference internal" href="../../../data_system/introduction.html"><span class="doc">Data System</span></a> for more information.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="material-type">
+<h2>Material type<a class="headerlink" href="#material-type" title="永久链接至标题">¶</a></h2>
+<p>Material added in edit mode
+These toggles tell Blender where this material fits into the Render Pipeline,
+and what aspects of the material are to be rendered.</p>
+<dl class="docutils">
+<dt>Surface</dt>
+<dd>Render object as a surface.</dd>
+<dt>Wire</dt>
+<dd>Render the edges of faces as wires (not supported in ray tracing).</dd>
+<dt>Volume</dt>
+<dd>Render object as a volume.
+See <a class="reference internal" href="special_effects/volume.html"><span class="doc">Volume</span></a>.</dd>
+<dt>Halo</dt>
+<dd>Render object as halo particles.
+See <a class="reference internal" href="special_effects/halo.html"><span class="doc">Halo</span></a>.</dd>
+</dl>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id2">
+<img alt="../../../_images/materials_render_surface.jpg" src="../../../_images/materials_render_surface.jpg" />
+<p class="caption"><span class="caption-text">Surface.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id3">
+<img alt="../../../_images/materials_render_wire.jpg" src="../../../_images/materials_render_wire.jpg" />
+<p class="caption"><span class="caption-text">Wire.</span></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last figure" id="id4">
+<img alt="../../../_images/materials_render_volume.jpg" src="../../../_images/materials_render_volume.jpg" />
+<p class="caption"><span class="caption-text">Volume.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id5">
+<img alt="../../../_images/materials_render_halo.jpg" src="../../../_images/materials_render_halo.jpg" />
+<p class="caption"><span class="caption-text">Halo.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="assigning_a_material.html" class="btn btn-neutral float-right" title="Assigning a Material" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="Introduction" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

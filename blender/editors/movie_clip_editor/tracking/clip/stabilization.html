@@ -1,0 +1,591 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2D Stabilization &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../../../index.html"/>
+        <link rel="up" title="Clip View" href="index.html"/>
+        <link rel="next" title="Movie Clip Tools" href="tools.html"/>
+        <link rel="prev" title="Movie Clip Properties" href="properties.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#d">3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#animation">动画</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html#image-video">图像/视频</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../uv_image/index.html">UV/Image Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../sequencer/index.html">视频剪辑编辑器</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">Movie Clip Editor</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../properties/index.html">Movie Clip Properties</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">Motion Tracking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../masking.html">Masking</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#settings">设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Movie Clip Editor</a> &raquo;</li>
+      
+          <li><a href="../index.html">Motion Tracking</a> &raquo;</li>
+      
+          <li><a href="index.html">Clip View</a> &raquo;</li>
+      
+    <li>2D Stabilization</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../_sources/editors/movie_clip_editor/tracking/clip/stabilization.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="d-stabilization">
+<h1>2D Stabilization<a class="headerlink" href="#d-stabilization" title="永久链接至标题">¶</a></h1>
+<p>The 2D video stabilization is a feature built on top of Blender&#8217;s image feature tracking abilities:
+we use some <em>tracking points</em> to remove shakiness, bumps and jerks from video footage.
+Typically, image stabilization is part of a <strong>2D workflow</strong> to prepare and improve footage
+prior to further processing or modeling steps. This page helps to understand how it works,
+introduces related terms and concepts, describes the available interface controls in detail
+and finally gives some hints about usage in practice.</p>
+<p>Typical <strong>usage scenarios</strong> of the stabilizer:</p>
+<ul class="simple">
+<li>fix minor deficiencies (shaky tripod, jerk in camera movement)</li>
+<li>&#8220;poor man’s steadycam&#8221; (when a real steadycam was not available, affordable or applicable)</li>
+<li>as preparation for masking, matching and rotoscoping</li>
+</ul>
+<p>It is not uncommon for 2D stabilization to have to deal with somewhat imperfect and flawed footage.</p>
+<div class="section" id="how-it-works">
+<h2>How it works<a class="headerlink" href="#how-it-works" title="永久链接至标题">¶</a></h2>
+<p>To detect spurious movement in a given shot, we&#8217;ll assume a simplified model about this movement.
+We then try to fit the movement of tracked features with this simplified model to derive a compensation.
+Of course, this works only to the degree our model is adequate &#8211; yet in practice, this simplified approach works
+surprisingly well even with rather complicated shots, where our basic assumption was just an approximation of
+much more elaborate movements.</p>
+<p>This simplified model underlying the 2D stabilization as implemented here assumes movement
+by an <strong>affine-linear transform</strong>:</p>
+<ul class="simple">
+<li>the camera is pushed up/down/sideways by some <strong>translation component</strong></li>
+<li>the image is then <strong>tilted</strong> and <strong>scaled</strong> around a <strong>pivot point</strong> (rotation center)</li>
+</ul>
+<p>To compensate movement according to this simplified model, the 2D stabilizer proceeds in two steps.
+First we try to detect the translation offset from the weighted average of all <em>translation tracking points</em>.
+After compensating this translation component, we then use additional <em>rotation/scale tracking points</em> to detect
+rotation around a given pivot point. Again, we detect rotation and scale changes through a weighted average
+of all the rotation/scale tracking points given.</p>
+<p>In the current version, the <strong>pivot point</strong> is anchored to the <em>weight center of the translation tracking points</em>.
+So effectively the detected translation is already factored out. In some cases this is not optimal,
+especially when tracks have gaps or do not cover the whole duration of the footage &#8211; we plan further options
+to better control the pivot point in future releases.</p>
+<div class="section" id="stabilization-tracks">
+<h3>Stabilization tracks<a class="headerlink" href="#stabilization-tracks" title="永久链接至标题">¶</a></h3>
+<p>Thus, as foundation for any image stabilization, we need tracked image features to derive the movements.
+These <em>tracking points</em> or &#8220;tracks&#8221; can be established with Blender&#8217;s
+<a class="reference internal" href="introduction.html"><span class="doc">image feature tracking component</span></a>
+The right choice of points to track is somewhat tricky, yet crucial for successful image stabilization.
+Often, we&#8217;re here because we&#8217;ll have to deal with imperfect footage. In such cases, the <em>averaging of tracks</em>
+helps to work around image or tracking errors at some point.
+Moreover, when the footage contains <em>perspective induced movements,</em> symmetrically placed tracking points above
+and below the horizon can be used to cancel out spurious movement and get stabilization to the focal area in between.</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../../../_images/editors_movie-clip_stabilization_perspective.jpg"><img alt="../../../../_images/editors_movie-clip_stabilization_perspective.jpg" src="../../../../_images/editors_movie-clip_stabilization_perspective.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Diverging movements caused by perspective.</span></p>
+</div>
+<p>Tracks can be added in two groups</p>
+<ul class="simple">
+<li>first of all is the list of tracks to be used to compensate for jumps in the camera location.
+From all the tracking points added to this group, we calculate a <em>weighted average.</em>
+We then try to keep this average location constant during the whole shot.
+Thus it is a good idea to use tracking markers close to and centered around the most important subject.</li>
+<li>a second selection of tracks is used to keep the rotation and scale of the image constant.
+You may use the same tracks for both selections. But usually it is best to use tracking points with large distance
+from the image center, and symmetrically, on both sides, to capture the angular movements more precisely.
+Similar to the &#8220;location&#8221; case, we calculate an <em>average angular contribution</em> and then try
+to keep this value constant during the whole shot.</li>
+</ul>
+</div>
+<div class="section" id="footage-image-and-canvas">
+<h3>Footage, image and canvas<a class="headerlink" href="#footage-image-and-canvas" title="永久链接至标题">¶</a></h3>
+<p>When talking about the movement stabilization of video, we have to distinguish several frames of reference.
+The image elements featured by the footage move around irregularly within the footage&#8217;s <strong>original image boundaries</strong>
+&#8211; this is the very reason why we are using the stabilizer. When our attempt at stabilization was successful,
+the image elements can be considered <em>stable</em> now, while in exchange the footage&#8217;s image boundaries have taken on
+irregular movement and jump around in the opposite way.
+This is the immediate consequence of the stabilizer&#8217;s activity.</p>
+<p>Since the actual image elements, i.e the subject of our footage can be considered stable now, we may use these
+as a new frame of reference: we consider them attached to a fixed backdrop, which we call the <strong>canvas</strong>.
+Introducing this concept of a &#8220;canvas&#8221; helps to deal with deliberate movements of the camera. And beyond that,
+it yields an additional benefit: It is very frequent for the pixels of video footage to be <em>non square.</em>
+So we have to stretch and expand those pixels, before we&#8217;re able to preform any sensible rotation stabilization.
+Thus the canvas becomes, by definition, the reference for an undistorted display of the image contents.</p>
+<p>But when the camera was <em>moved intentionally,</em> we have to consider yet another frame of reference beyond the canvas:
+namely the frame (or <em>&#8220;cadre&#8221;</em>) of the <strong>final image</strong> we want to create. To understand this distinction,
+let&#8217;s consider a hand-held, panning shot to the right: Since our camera was turned towards the right side,
+the actual image contents move towards the left side <em>within</em> the original image frame.
+But let&#8217;s assume the stabilizer was successful with &#8220;fixing&#8221; any image contents relative to the <em>canvas</em> &#8211;
+which in turn means, that the original image boundaries start to move irregularly towards the right side,
+and the <em>contents</em> of the image will begin to disappear gradually behind the left boundary of the original image.
+After some amount of panning, we&#8217;ll have lost all of our original contents and just see an empty black image backdrop.
+The only solution to deal with that problem is to <em>move the final image frame along to the right,</em>
+thus following the originally intended panning movement. Of course, this time, we do want to perform this
+newly added panning movement in a smooth and clean way.</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../../../_images/editors_movie-clip_stabilization_panning.jpg"><img alt="../../../../_images/editors_movie-clip_stabilization_panning.jpg" src="../../../../_images/editors_movie-clip_stabilization_panning.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Stabilizing a panning shot.</span></p>
+</div>
+<div class="figure align-right" id="id3">
+<a class="reference internal image-reference" href="../../../../_images/editors_movie-clip_stabilization_canvas.jpg"><img alt="../../../../_images/editors_movie-clip_stabilization_canvas.jpg" src="../../../../_images/editors_movie-clip_stabilization_canvas.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Restoring the expected camera movement.</span></p>
+</div>
+<p>To allow for such a compensation and to reintroduce deliberate panning, or tilting and zoom of the resulting image,
+the stabilizer offers a dedicated set of controls: <em>Expected position</em>, <em>Expected rotation</em> and <em>Expected scale</em>.
+These act like the controls of a virtual camera filming the contents we have fixed onto the canvas.
+By <em>animating</em> those parameters, we&#8217;re able to perform all kinds of deliberate camera movements in a smooth fashion.</p>
+<div class="lead container">
+</div>
+</div>
+<div class="section" id="the-dancing-black-borders">
+<h3>The &#8220;dancing&#8221; black borders<a class="headerlink" href="#the-dancing-black-borders" title="永久链接至标题">¶</a></h3>
+<p>As explained above, when we succeed with stabilizing the image contents, the boundaries of the original footage
+start to jump around in the opposite direction of the movements compensated. This is inevitable &#8211; yet very annoying,
+since due to the irregular nature of these movements, these &#8220;dancing black borders&#8221; tend to draw away attention
+from the actual subject and introduce an annoying restlessness. Thus our goal must be to hide those dancing borders
+as good as possible. A simple solution is to add a small amount of zoom. Sometimes we&#8217;ll also need to animate
+the parameter <em>Expected position</em> in order to keep the image centered as good as we can &#8211; this helps to reduce
+the amount of zoom necessary to remove those annoying borders.</p>
+<p>The <strong>Autoscale function</strong> can be used to find the minimal amount of zoom just sufficient to remove
+those black borders completely. However, if the camera jumps a lot, the autoscale function often zooms in too much,
+especially since this calculation aims at finding a single, static zoom factor for the whole duration of the footage.
+When this happens, you&#8217;ll typically get overall better results
+with animating both the zoom factor and the expected position manually.</p>
+</div>
+</div>
+<div class="section" id="d-stabilizer-panel">
+<h2>2D Stabilizer Panel<a class="headerlink" href="#d-stabilizer-panel" title="永久链接至标题">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">To <em>activate</em> the 2D stabilizer, you need to set the toggle in the panel,
+and additionally you need to enable <em>Display Stabilization</em> in the <em>Display</em> panel.</p>
+</div>
+<div class="figure align-right" id="id4">
+<a class="reference internal image-reference" href="../../../../_images/editors_movie-clip_2d_stabilization_panel.png"><img alt="../../../../_images/editors_movie-clip_2d_stabilization_panel.png" src="../../../../_images/editors_movie-clip_2d_stabilization_panel.png" style="width: 210px;" /></a>
+<p class="caption"><span class="caption-text">UI of the 2D Stabilizer.</span></p>
+</div>
+<dl class="docutils">
+<dt>Anchor Frame</dt>
+<dd>Reference point to anchor stabilization:
+other frames will be adjusted relative to this frame&#8217;s position, orientation and scale.
+You might want to select a frame number where your main subject is featured in an optimal way.</dd>
+<dt>Stabilization Type</dt>
+<dd><dl class="first last docutils">
+<dt>Rotation</dt>
+<dd>In addition to location, stabilizes detected rotation around the <em>rotation pivot point,</em>
+which is the weighted average of all location tracking points.</dd>
+<dt>Scale</dt>
+<dd>Compensates any scale changes relative to center of rotation.</dd>
+</dl>
+</dd>
+<dt>Tracks For Stabilization</dt>
+<dd><dl class="first last docutils">
+<dt>Location</dt>
+<dd>List of tracks to be used to compensate for camera jumps, or location movement.</dd>
+<dt>Rotation/Scale</dt>
+<dd>List of tracks to be used to compensate for camera tilts and scale changes.</dd>
+</dl>
+</dd>
+<dt>Autoscale</dt>
+<dd><p class="first">Finds smallest scale factor which, when applied to the footage,
+would eliminate all empty black borders near the image boundaries.</p>
+<dl class="last docutils">
+<dt>Max</dt>
+<dd>Limits the amount of automatic scaling.</dd>
+</dl>
+</dd>
+<dt>Expected Position X/Y</dt>
+<dd>Known relative offset of original shot, will be subtracted, e.g. for panning shots</dd>
+<dt>Expected Rotation</dt>
+<dd>Rotation present on original shot, will be compensated, e.g. for deliberate tilting.</dd>
+<dt>Expected Zoom</dt>
+<dd>Explicitly scale resulting frame to compensate zoom of original shot.</dd>
+<dt>Influence</dt>
+<dd>The amount of transformation applied to the footage can be controlled.
+In some cases it is not necessary to fully compensate camera jumps.
+The amount of stabilization applied to the footage can be controlled.
+In some cases you may not want to fully compensate some of the camera&#8217;s jumps.
+Please note that these &#8220;* <em>Influence</em>&#8221; parameters do control only the <em>compensation movements</em>
+calculated by the stabilizer, not the deliberate movements added through the &#8220;<em>Expected</em> *&#8221;-parameters.</dd>
+<dt>Interpolate</dt>
+<dd><p class="first">The stabilizer calculates compensation movements with sub pixel accuracy.
+Consequently, a resulting image pixel needs to be derived from several adjacent source footage pixels.
+Unfortunately, any interpolation causes some minor degree of softening and loss of image quality.</p>
+<dl class="last docutils">
+<dt>Nearest</dt>
+<dd>No interpolation, uses nearest neighboring pixel.
+No interpolation, use nearest neighboring pixel.
+This setting basically retains the original image&#8217;s sharpness.
+The downside is we also retain residual movement below the size of one pixel,
+and compensation movements are done in 1 pixel steps, which might be noticeable as irregular jumps.</dd>
+<dt>Bilinear</dt>
+<dd>Simple linear interpolation between adjacent pixels.</dd>
+<dt>Bicubic</dt>
+<dd>Highest quality interpolation, most expensive to calculate</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="stabilization-workflow">
+<h2>Stabilization Workflow<a class="headerlink" href="#stabilization-workflow" title="永久链接至标题">¶</a></h2>
+<p>Depending on the original footage&#8217;s properties, achieving good stabilization results might be simple and easy,
+or it might require some work, dedication and careful planning. This section covers some practical considerations
+to help improving the results.</p>
+<div class="section" id="the-simple-case">
+<h3>The simple case<a class="headerlink" href="#the-simple-case" title="永久链接至标题">¶</a></h3>
+<p>Whenever the camera is basically fixed, or at least &#8220;almost&#8221; stationary, and the footage is crisp and without
+motion blur, perfect stabilization is easy to achieve. This might be the case when a tripod was used,
+but wind or vibrations on the floor (e.g. on a stage) caused some minor shakes. Shoulder camera shots done
+by an experienced operator also frequently fall into this category.</p>
+<ul class="simple">
+<li>Use as few points as possible. Start with a single point right on the main subject.</li>
+<li>Track this single point as accurate as possible. Beware of movements and shape changes of the tracked feature.
+Proceed in small increments (e.g. 50 frames), zoom in and readjust the target point manually when it drifts away.
+Another option is to use a larger target area for tracking; since we&#8217;re tracking only a single point,
+the slower tracking speed might be acceptable.</li>
+<li>After enabling the basic (location) stabilization, consider if you really need rotation stabilization.
+Often, some minor, slow swinging movements are not really noticeable and do not warrant the additional working time
+and quality loss caused by rotation and scale stabilization.</li>
+<li>For rotation, start with one extra point, well spaced but preferably still attached to the main subject.</li>
+<li>Consider to fix some slow residual motion by manually animating the &#8220;<em>Expected</em> *&#8221; parameters,
+before you even think of adding more tracking markers. Because doing so is often not worth the effort.</li>
+<li>If you need to add more points, the most important goal is to achieve <em>symmetry.</em>
+Place location tracking points symmetrically above and below the horizon.
+Place rotation tracking points into diagonally opposed direction, always centered around the main focal area.</li>
+</ul>
+</div>
+<div class="section" id="avoid-problematic-footage">
+<h3>Avoid problematic footage<a class="headerlink" href="#avoid-problematic-footage" title="永久链接至标题">¶</a></h3>
+<p>The 2D stabilizer can not work miracles; some flaws simply can not be fixed satisfactory.
+Notorious issues are motion blur, rolling shutter, pumping autofocus and moving compression artifacts.
+Especially if you do succeed with basic stabilization, such image flaws become yet the more noticeable and annoying.
+When on set or on location, it might be tempting to &#8220;fix matters in postpro&#8221;.
+Resist that deception, it rarely works out well.</p>
+<ul class="simple">
+<li>Prefer a short exposure time to avoid motion blur.
+While motion blur is good to render filmed movements more smooth and natural,
+it seriously impedes the ability to track features precisely.
+As a guideline, try to get at least to 1/250 s</li>
+<li>Prefer higher frame rates. The more <em>temporal resolution</em> the stabilizer has to work on, the better the results.
+If you have the option to choose between progressive and interlaced modes, by all means use interlaced
+and de-interlace the footage to the <em>doubled frame rate.</em> This can be done with the
+<a class="reference external" href="https://ffmpeg.org/ffmpeg-filters.html#yadif-1">yadif</a> filter of FFmpeg: use the mode 1 (<code class="docutils literal"><span class="pre">send_field</span></code>).</li>
+<li>Beware of <a class="reference external" href="https://en.wikipedia.org/wiki/Rolling_shutter">Rolling Shutter</a>.
+Avoid fast lateral movements. If you can, prefer a camera which produces less rolling shutter.
+Also, using a higher frame rate reduces the amount of rolling shutter; another reason to prefer
+interlaced over progressive for the purpose at hand.</li>
+<li>Switch off autofocus.
+Better plan your movement beforehand, set a fixed focus and rely on depth-of-field through using a small aperture.
+Pumping movements might not be so noticeable to the human observer, but the feature tracking tends to slide away
+on defocused image elements; fixing this manually after the fact can cause a huge waste of time.</li>
+<li>Increase the lighting level, at least use a higher sensitivity.
+This helps to set a fast shutter speed plus a small aperture.
+Better lighting and good exposure also help to reduce the impact of compression artifacts.
+If you can, also select a codec with less data reduction, better color space etc.
+Inevitably, we&#8217;re loosing some quality through the interpolation necessary for stabilization.
+Plus we&#8217;re loosing some quality due to color space conversion.</li>
+</ul>
+</div>
+<div class="section" id="elaborate-movements">
+<h3>Elaborate movements<a class="headerlink" href="#elaborate-movements" title="永久链接至标题">¶</a></h3>
+<p>When the footage builds on elaborate intended movement of the camera, the process of stabilization
+becomes more involved &#8211; especially when there is a shift in the main area of interest within the shot.
+When working with many tracks and fine grained animation, it is easy to get into a situation where additional
+manipulations actually decrease the quality, while it might be hard to spot and locate the root cause of problems.
+Recommendation is to proceed systematically, starting from the general outline down to tweaking of specific aspects.</p>
+<ol class="arabic">
+<li><p class="first">Understand the nature of the movements in the shot, both the intended and the accidental.</p>
+</li>
+<li><p class="first">Track some relevant features for location.</p>
+</li>
+<li><p class="first">Establish the basic location stabilization.
+This includes the decision, which feature to use for what segment of the shot.
+Work with the track weights to get an overall consistent movement of the weight center,
+in accordance with the inherent focus of the shot.</p>
+</li>
+<li><p class="first">Define the panning movements of the virtual camera (through animation of the <em>Expected Position</em> parameter)</p>
+</li>
+<li><p class="first">Add tracking for rotation and zoom stabilization</p>
+</li>
+<li><p class="first">Fine tuning pass:</p>
+<p>Break down the whole duration of the shot into logical segments to define the intended camera movement.
+Then refine those segments incrementally step by step, until the overall result looks satisfactory...</p>
+</li>
+</ol>
+</div>
+<div class="section" id="animating-stabilization-parameters">
+<h3>Animating stabilization parameters<a class="headerlink" href="#animating-stabilization-parameters" title="永久链接至标题">¶</a></h3>
+<p>Animating some parameters over duration of the shot is often necessary, at least to get the final touch,
+including control of the scale factor to hide the dancing black borders. Unfortunately there is a <strong>known limitation</strong>
+in the current version: it is not possible to open the generic animation editors (F-curve and dope sheet)
+for animation data beyond the 3D scene. So, while it <em>is possible</em> to set key frames <em>right within the UI controls</em>
+of the stabilizer (either through pressing the <code class="kbd docutils literal"><span class="pre">I</span></code> key or with the help of the context menu), it is not possible
+to manipulate the resulting curves graphically. The only way to readjust or remove a misguided keyframe is to locate
+the timeline to the very frame and then use the context menu of the animated UI control.
+(Hint: the color of the UI control changes when you have located at precisely the frame number of the keyframe)</p>
+</div>
+<div class="section" id="irregular-track-setup">
+<h3>Irregular track setup<a class="headerlink" href="#irregular-track-setup" title="永久链接至标题">¶</a></h3>
+<p>It might not be possible to track a given feature over the whole duration of the shot.
+The feature might be blurred or obscured; it might even move out of sight entirely, due to deliberate camera movement.
+In such a situation, we need <em>another tracked feature</em> to take on it&#8217;s role, and we need some <em>overlap time</em>
+to get a smooth transition without visible jump.</p>
+<div class="figure align-right" id="id5">
+<a class="reference internal image-reference" href="../../../../_images/editors_movie-clip_stabilization_irregular-tracks.png"><img alt="../../../../_images/editors_movie-clip_stabilization_irregular-tracks.png" src="../../../../_images/editors_movie-clip_stabilization_irregular-tracks.png" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">Irregular Tracks.</span></p>
+</div>
+<p>The stabilizer is able to deal with gaps and partial coverage within the given tracks.
+However, the basic assumption is that each track covers a single, fixed reference point whenever there is any
+usable/enabled data. Thus, you must not &#8220;re-use&#8221; a given track to follow several different points,
+rather you should disable and thus end one track, when tracking this feature is no longer feasible.
+You may include &#8220;gaps&#8221;, when a tracking point is temporarily disabled or unavailable,
+but you should start a new track for each distinct new feature to be tracked.</p>
+<p>Each track contributes to the overall result by the degree controlled through its <em>Stab Weight</em> parameter.
+It is evaluated on a per frame base, which enables us to control the influence of a track by <em>animating</em> this
+<em>Stab Weight</em>. You may imagine the overall working of the stabilizer as if each tracking point &#8220;drags&#8221; the image
+through a flexible spring: When you turn down the <em>Stab Weight</em> of a tracking point, you decrease the amount of &#8220;drag&#8221;
+it creates. Sometimes the contribution of different tracks has to work partially counter each other.
+This effect might be used to cancel out spurious movement, e.g. as caused by perspective.
+But when, in such a situation, one of the involved tracks suddenly goes away,
+a jump in image position or rotation might be the result. Thus, whenever we notice
+a jump at the very frame where some partially covered track starts or ends, we need to soften the transition.
+We do so by animating the <em>Stab Weight</em> gradually down, so that it reaches zero at the boundary point.
+In a similar vein, when we plan a &#8220;handover&#8221; between several partially covered tracks, we define a <em>cross-fade</em> over
+the duration where the tracks overlap, again by animating the <em>Stab Weight</em> parameters accordingly.
+But even with such cross-fade smoothing, some residual movement might remain,
+which then needs to be corrected with the <em>Expected Position</em>
+or <em>Expected rotation</em> parameters. It is crucial to avoid &#8220;overshooting&#8221; movements in such a situation &#8211;
+always strive at setting the animation keyframes onto precisely
+the same frame number for all the tracks and parameters involved.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tools.html" class="btn btn-neutral float-right" title="Movie Clip Tools" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="properties.html" class="btn btn-neutral" title="Movie Clip Properties" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

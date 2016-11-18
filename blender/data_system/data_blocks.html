@@ -1,0 +1,674 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>数据块–阿尔翻译 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../genindex.html"/>
+        <link rel="search" title="搜索" href="../search.html"/>
+    <link rel="top" title="Blender Manual" href="../index.html"/>
+        <link rel="up" title="数据系统" href="index.html"/>
+        <link rel="next" title="用户定制属性" href="custom_properties.html"/>
+        <link rel="prev" title="简介–中二 翻译" href="introduction.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">数据系统</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">简介&#8211;中二 翻译</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">数据块&#8211;阿尔翻译</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#users-garbage-collection">使用者（垃圾回收）</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fake-user">伪使用者</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#users-sharing">使用者（共享）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#removing-data-blocks">删除数据块</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-block-types">数据块类型</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="custom_properties.html">用户定制属性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenes/index.html">Scenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="files/index.html">文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linked_libraries.html">追加和链接&#8211;阿尔翻译</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">数据系统</a> &raquo;</li>
+      
+    <li>数据块&#8211;阿尔翻译</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/data_system/data_blocks.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-blocks">
+<h1>数据块&#8211;阿尔翻译<a class="headerlink" href="#data-blocks" title="永久链接至标题">¶</a></h1>
+<p>Blender 项目的基本单元是数据块。例如：网格（meshes）、物体（objects）、材质（materials）、纹理（textures）、节点树（node-trees）、场景（scenes）、文本（texts）、笔刷（brushes） ，甚至是屏幕（screens）。</p>
+<p>区分说明：骨骼（bones），序列片段（sequence strips） 和顶点组（vertex groups） <strong>不是</strong> 数据块, 而是分别属于骨架（armature），场景（scene） 和网格（mesh）的 类型。</p>
+<p>公共特性：</p>
+<ul class="simple">
+<li>They are the primary contents of the blend-file.</li>
+<li>They can link to each other, for reuse and instancing.
+(child/parent, object/object-data, with modifiers and constraints too).</li>
+<li><p class="first">具有唯一名字。</p>
+</li>
+<li><p class="first">允许被添加、删除、修改和复制。</p>
+</li>
+<li>They can be linked between files (only enabled for a limited set of data-blocks).</li>
+<li><p class="first">能有自己的动画数据</p>
+</li>
+<li>They can have <a class="reference internal" href="custom_properties.html"><span class="doc">Custom Properties</span></a>.</li>
+</ul>
+<p>When doing more complex projects, managing data-blocks becomes more important,
+especially when inter-linking blend-files.</p>
+<div class="figure" id="id1">
+<a class="reference internal image-reference" href="../_images/data_system_datablocks.jpg"><img alt="../_images/data_system_datablocks.jpg" src="../_images/data_system_datablocks.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Data-blocks view.</span></p>
+</div>
+<div class="section" id="users-garbage-collection">
+<h2>使用者（垃圾回收）<a class="headerlink" href="#users-garbage-collection" title="永久链接至标题">¶</a></h2>
+<p>It is good to be aware of how Blender,
+handles data-blocks lifetime, when they are freed and why.</p>
+<p>Blender 使用常规的数据块处理规则，没有被使用就移除。</p>
+<p>Since it is common to add and remove a lot of data while working,
+this has the advantage of not having to manually manage every single data-block.</p>
+<p>当写入 <code class="docutils literal"><span class="pre">.blend</span></code> 文件的时候，这些零使用数据块将将不会被保存。</p>
+<p>In some cases, you want to save a data-block even when it is unused
+(typically for re-usable asset libraries). see <a class="reference internal" href="#fake-user">Fake User</a>.</p>
+<div class="section" id="fake-user">
+<span id="data-system-datablock-fake-user"></span><h3>伪使用者<a class="headerlink" href="#fake-user" title="永久链接至标题">¶</a></h3>
+<p>Since zero user data-blocks are not saved,
+there are times when you want to force the data to be kept irrespective of its users.</p>
+<p>If you are building a blend-file to serve as a library of things that you intend to link to and from other files,
+you will need to make sure that they do not accidentally get deleted from the library file.</p>
+<p>Do this by giving the data-blocks a <em>Fake User</em>,
+by pressing the <em>F</em> button next to the name of the data-block.
+This prevents the user count from ever becoming zero: therefore,
+the data-block will not be deleted.
+(since Blender does not keep track of how many other files link to this one.)</p>
+</div>
+</div>
+<div class="section" id="users-sharing">
+<h2>使用者（共享）<a class="headerlink" href="#users-sharing" title="永久链接至标题">¶</a></h2>
+<p>很多种类的数据块可以与其他的数据库共享</p>
+<p>Examples where sharing data is common:</p>
+<ul class="simple">
+<li><p class="first">在材质中共享纹理。</p>
+</li>
+<li><p class="first">不同的物体中共享网格。（实例化）</p>
+</li>
+<li><p class="first">不同的物体中分享动画动作，比如让所有的灯光同时变暗。</p>
+</li>
+</ul>
+<p>You can also share data-blocks between files, see:</p>
+<ul class="simple">
+<li><a class="reference internal" href="linked_libraries.html"><span class="doc">linked libraries</span></a>.</li>
+</ul>
+</div>
+<div class="section" id="removing-data-blocks">
+<h2>删除数据块<a class="headerlink" href="#removing-data-blocks" title="永久链接至标题">¶</a></h2>
+<p>As covered in <a class="reference internal" href="#users-garbage-collection">Users (Garbage Collection)</a>, data-blocks are typically removed when they are no longer used.</p>
+<p>但是也有例外的时候。</p>
+<p>Scene, Text, Group 和 Screen 这些数据块可以被直接移除。</p>
+<p>其他数据块，比如组和动作可以在 <em>大纲编辑器</em> 的上下文按钮中 <em>取消链接</em> 。</p>
+<div class="admonition tip">
+<p class="first admonition-title">小技巧</p>
+<p>很多数据（特别是图像）是非常难于统计和追踪的，就算图像查看可以统计用户数也有问题。</p>
+<p class="last">For data-blocks that can be unlinked hold <code class="kbd docutils literal"><span class="pre">Shift</span></code>, while pressing on the <em>X</em> button.
+This force clears the user-count, so the data-block will be removed on reloading.</p>
+</div>
+</div>
+<div class="section" id="data-block-types">
+<span id="data-system-datablock-types"></span><h2>数据块类型<a class="headerlink" href="#data-block-types" title="永久链接至标题">¶</a></h2>
+<p>这里有一张可存储在``.blend``文件的数据块的表用于参考。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Link:</th><td class="field-body">Library Linking, supports being linked into other blend-files.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Pack:</th><td class="field-body">File Packing, supports file contents being packed into the blend-file.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="valign docutils">
+<colgroup>
+<col width="25%" />
+<col width="10%" />
+<col width="10%" />
+<col width="55%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">类型（Type）</p>
+</th>
+<th class="head"><p class="first last">链接（Link）</p>
+</th>
+<th class="head"><p class="first last">打包（Pack）</p>
+</th>
+<th class="head"><p class="first last">描述</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="first last">动作（Action）</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">Stores animation F-Curves.</div>
+<div class="line">用作动画数据，</div>
+<div class="line">以及非线性编辑</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">骨架（Armature）</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">形变网格的骨骼。</div>
+<div class="line">Used as object data &amp; by the Armature Modifier.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">笔刷（Brush）</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">画图工具</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">相机（Camera）</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">Used as object data.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">曲线（Curve）</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">应用于相机，文字以及物体表面</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">字形（Font）</p>
+</td>
+<td>✓</td>
+<td>✓</td>
+<td><div class="first last line-block">
+<div class="line">字体文件参考。</div>
+<div class="line">应用于字形数据</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">蜡笔（GreasePencil）</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">2D/3D 素描数据</div>
+<div class="line">在 3D 视窗，图像、序列&amp;影片剪辑编辑器中</div>
+<div class="line">3D View, Image, Sequencer &amp; MovieClip editors.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">组（Group）</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">物体的引用。</div>
+<div class="line">用作副本组和常用库链接。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">图像（Image）</p>
+</td>
+<td>✓</td>
+<td>✓</td>
+<td><div class="first last line-block">
+<div class="line">图像文件。</div>
+<div class="line">应用于纹理以及着色器节点。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">灯（Lamp）</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">用作对象数据</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">晶格（Lattice）</p>
+</td>
+<td>✗</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">基于网格的晶格变形</div>
+<div class="line">Used as object data and by the Lattice Modifier.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">库（Library）</p>
+</td>
+<td>✗</td>
+<td>✓</td>
+<td><div class="first last line-block">
+<div class="line">引用到外部``.blend``文件。</div>
+<div class="line">Access from the outliner&#8217;s blend-file view.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">线条样式（LineStyle）</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">FreeStyle 渲染引擎使用。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">遮罩（Mask）</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">平面动态遮盖曲线</div>
+<div class="line">被合成节点与序列片段使用。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">材质（Material）</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">设置阴影和纹理的渲染属性</div>
+<div class="line">应用于物件，网格与曲线。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">网格（Mesh）</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">几何形状（顶点/边/面）</div>
+<div class="line">用作对象数据</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">融球（MetaBall）</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">三维的等值曲面</div>
+<div class="line">用作对象数据</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">影片剪辑（MovieClip）</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">引用给图片序列或视频文件</div>
+<div class="line">用于运动追踪编辑器</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">节点组（NodeGroup）</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">复用节点的收集</div>
+<div class="line">Used in the Node Editor.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">物体（Object）</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">场景中有位置，</div>
+<div class="line">旋转和缩放的物体。</div>
+<div class="line">被用于场景和组</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">粒子（Particle）</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">粒子设置</div>
+<div class="line">用于粒子系统</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">调色板（Palette）</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">存储预设的颜色</div>
+<div class="line">从绘图工具中使用</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">场景（Scene）</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">主要存储所有的显示数据和动画数据。</div>
+<div class="line">是物体和动画的最高存储位置。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">屏幕（Screen）</p>
+</td>
+<td>✗</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">屏幕布局</div>
+<div class="line">被每个有自己屏幕的窗口使用。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">形变关键帧（ShapeKeys）</p>
+</td>
+<td>✗</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">几何形状的形变信息。</div>
+<div class="line">Used by mesh, curve, and lattice objects.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">声音（Sounds）</p>
+</td>
+<td>✓</td>
+<td>✓</td>
+<td><div class="first last line-block">
+<div class="line">声音文件的引用</div>
+<div class="line">Used by speaker objects and the Game Engine.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">扬声器（Speaker）</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">为三维场景的发声源</div>
+<div class="line">用作对象数据</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">文本（Text）</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">文本数据</div>
+<div class="line">用于 Pyhont 脚本和 QSL shaders</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">纹理（Texture）</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">2D/3D 纹理</div>
+<div class="line">用于材质，世界和笔刷</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">世界（World）</p>
+</td>
+<td>✓</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">用于场景的环境渲染设置</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>WindowManager</td>
+<td>✗</td>
+<td>✗</td>
+<td><div class="first last line-block">
+<div class="line">TODO.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="custom_properties.html" class="btn btn-neutral float-right" title="用户定制属性" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="简介–中二 翻译" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

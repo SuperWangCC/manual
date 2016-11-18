@@ -1,0 +1,424 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>支持的视频格式 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../../index.html"/>
+        <link rel="up" title="Media Formats" href="index.html"/>
+        <link rel="next" title="追加和链接–阿尔翻译" href="../../linked_libraries.html"/>
+        <link rel="prev" title="支持的图像格式" href="image_formats.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">数据系统</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介&#8211;中二 翻译</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data_blocks.html">数据块&#8211;阿尔翻译</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../custom_properties.html">用户定制属性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../scenes/index.html">Scenes</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">文件</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../open.html">打开文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../save.html">保存文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../import_export.html">导入导出文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../relative_paths.html">相对路径</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Media Formats</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="image_formats.html">支持的图像格式</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">支持的视频格式</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../linked_libraries.html">追加和链接&#8211;阿尔翻译</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../index.html">数据系统</a> &raquo;</li>
+      
+          <li><a href="../index.html">文件</a> &raquo;</li>
+      
+          <li><a href="index.html">Media Formats</a> &raquo;</li>
+      
+    <li>支持的视频格式</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/data_system/files/media/video_formats.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="supported-video-formats">
+<h1>支持的视频格式<a class="headerlink" href="#supported-video-formats" title="永久链接至标题">¶</a></h1>
+<div class="section" id="video-formats">
+<h2>视频格式<a class="headerlink" href="#video-formats" title="永久链接至标题">¶</a></h2>
+<p>这些格式主要用于将渲染完成的序列压缩成一个可播放的电影（它们也可以被用来制造普通的音频文件）。</p>
+<p>编码器是压制视频的常用工具，所以它会适用于DVD或者互联网，缆线传播的流媒体技术，或只是一个合适的文件尺寸。编码器把视频的各个通道压制进储存空间并支持回放。有损的编码器可以消耗图像的质量来减小文件的尺寸。像H264，适用于过大的图像。编码器可用来编码和解码视频，并且肯定也通用于制作器（blender)和播放器。解码完成的数据会被储存在文件中。</p>
+<p>行业内有几十个，甚至几百个，编解码器，包括XviD格式，H.264，DIVX，微软，等等。每个人都有优点和缺点，并兼容不同的操作系统不同的播放器。</p>
+<p>大多数编解码器只能压缩RGB或YUV色彩空间，但一些编码器也很好地支持Alpha通道。支持RGBA的编解码器包括：</p>
+<ul class="simple">
+<li><p class="first">QuickTime</p>
+</li>
+<li>PNG TIFF Pixlet is not loss-less, and may be only available on macOS.</li>
+<li><a class="reference external" href="http://lags.leetcode.net/codec.html">Lagarith Lossless Video Codec</a></li>
+</ul>
+<dl class="docutils">
+<dt>AVI Codec</dt>
+<dd><p class="first last">AVI解码压缩器。依附于操作系统的可用编码器。当选择了AVI编解码器，编解码对话框会自动启动。该编解码器可以使用出现的*集编解码器*按钮进行更改（* AVI解码器设置。<a href="#id1"><span class="problematic" id="id2">*</span></a>）。</p>
+</dd>
+<dt>AVI Jpeg</dt>
+<dd><p class="first last">也是AVI但使用了JPEG压缩。有损，能得到更小的文件但小不过一个由编解码器的压缩算法得到的文件。JPEG压缩在数字摄像机中使用的DV格式中也有使用。</p>
+</dd>
+<dt>AVI Raw</dt>
+<dd><p class="first last">音视频交织（AVI）的未压缩的帧集。</p>
+</dd>
+<dt>Frameserver</dt>
+<dd>Blender puts out <a class="reference external" href="https://wiki.blender.org/index.php/Dev:Source/Render/Frameserver">frames upon request</a>
+as part of a render farm.
+The port number is specified in the User Preferences.</dd>
+<dt>H.264</dt>
+<dd><p class="first last">将编码 H.264 编解码器的电影。查看 <a href="#id1"><span class="problematic" id="id2">`Advanced Encoding`_</span></a>.</p>
+</dd>
+<dt>MPEG</dt>
+<dd><p class="first last">将编码 Xvid 编解码器的电影。查看  <a href="#id3"><span class="problematic" id="id4">`Advanced Encoding`_</span></a>.</p>
+</dd>
+<dt>Ogg Theora</dt>
+<dd><p class="first last">将电影与 Theora 编解码器编码为 Ogg 文件。查看  <a href="#id5"><span class="problematic" id="id6">`Advanced Encoding`_</span></a>.</p>
+</dd>
+<dt>QuickTime</dt>
+<dd>Apple&#8217;s Quicktime <code class="docutils literal"><span class="pre">.mov</span></code> file.
+The Quicktime codec dialog is available when this codec is installed on macOS.
+See <em>Quicktime</em> in <a class="reference internal" href="#video-containers">Video Containers</a>.</dd>
+<dt>Xvid</dt>
+<dd><p class="first last">将编码 Xvid 编解码器的电影。查看  <a href="#id7"><span class="problematic" id="id8">`Advanced Encoding`_</span></a>.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="video-containers">
+<h2>视频:<a class="headerlink" href="#video-containers" title="永久链接至标题">¶</a></h2>
+<dl class="docutils">
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/MPEG-1">MPEG-1</a>: <code class="docutils literal"><span class="pre">.mpg</span></code>, <code class="docutils literal"><span class="pre">.mpeg</span></code></dt>
+<dd><p class="first last">一个标准的视频和音频的有损压缩格式。它被设计用来压缩VHS质量的原始数字视频和低至1.5兆比特/秒的音频。</p>
+</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/MPEG-2">MPEG-2</a>: <code class="docutils literal"><span class="pre">.dvd</span></code>, <code class="docutils literal"><span class="pre">.vob</span></code>, <code class="docutils literal"><span class="pre">.mpg</span></code>, <code class="docutils literal"><span class="pre">.mpeg</span></code></dt>
+<dd><p class="first last">一个标准的“运动图像的通用编码和相关音频信息”。它描述了有损视频压缩和有损音频压缩方法的合集，其允许存储和传输使用目前可用的存储介质的电影，和传输带宽。</p>
+</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/MPEG-4">MPEG-4(DivX)</a>: <code class="docutils literal"><span class="pre">.mp4</span></code>, <code class="docutils literal"><span class="pre">.mpg</span></code>, <code class="docutils literal"><span class="pre">.mpeg</span></code></dt>
+<dd><p class="first last">吸收许多的MPEG-1和MPEG-2和其他相关标准的功能，并增加新的功能。</p>
+</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/Audio_Video_Interleave">AVI</a>: <code class="docutils literal"><span class="pre">.avi</span></code></dt>
+<dd>A derivative of the Resource Interchange File Format (RIFF), which divides a file&#8217;s data into blocks, or &#8220;chunks&#8221;.</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/.mov">Quicktime</a>: <code class="docutils literal"><span class="pre">.mov</span></code></dt>
+<dd><p class="first last">一个多跟踪格式。 QuickTime和MP4容器的格式可以使用相同的MPEG-4格式;他们大多在仅使用QuickTime的环境中可交换。 MP4作为国际标准，有更多的支持项。</p>
+</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/DV">DV</a>: <code class="docutils literal"><span class="pre">.dv</span></code></dt>
+<dd><p class="first last">帧内视频压缩方案，它使用离散的余弦变换（DCT）来从帧接帧的基础上压缩视频。音频存储不经过压缩。</p>
+</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/H.264">H.264</a>: <code class="docutils literal"><span class="pre">.avi</span></code> <em>for now</em>.</dt>
+<dd><p class="first last">一种标准的视频压缩，是目前最常用的记录，压缩和分配高清晰度视频的格式中的一员。</p>
+</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/Xvid">Xvid</a>: <code class="docutils literal"><span class="pre">.avi</span></code> <em>for now</em></dt>
+<dd><p class="first last">视频编解码器库遵循MPEG-4标准。它使用了ASP功能如b帧，全局和四分之一像素运动补偿，LUMI掩蔽，网格量化，和H.263，MPEG，自定义量化矩阵。 XVID是DivX Pro编解码器的主要竞争对手。</p>
+</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/Theora">Ogg</a>: <code class="docutils literal"><span class="pre">.ogg</span></code>, <code class="docutils literal"><span class="pre">.ogv</span></code></dt>
+<dd><p class="first last">免费的有损压缩格式。它是由Xiph.Org基金会开发并免费分发。</p>
+</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/Matroska">Matroska</a>: <code class="docutils literal"><span class="pre">.mkv</span></code></dt>
+<dd><p class="first last">一个开放的标准自由容器格式，可以容纳在一个文件中无限数量的视频，音频，图片或字幕轨道的一个文件格式。</p>
+</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/Flash_Video">Flash</a>: <code class="docutils literal"><span class="pre">.flv</span></code></dt>
+<dd><p class="first last">容器文件格式，用于提供使用AdobeFlash播放器的互联网视频服务。</p>
+</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/Wav">Wav</a>: <code class="docutils literal"><span class="pre">.wav</span></code></dt>
+<dd><p class="first last">未压缩（或轻度压缩）的微软和IBM音频文件格式。</p>
+</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/MP3">Mp3</a>: <code class="docutils literal"><span class="pre">.mp3</span></code></dt>
+<dd><p class="first last">高度压缩的，有专利的采用有损数据压缩形式的数字音频编码格式。它是一种常见的用来储存音频的音频格式，并且其实它是用来在电子播放器上传输和重放音频的标准数字音频压缩。</p>
+</dd>
+</dl>
+<div class="section" id="video-codecs">
+<h3>视频编码<a class="headerlink" href="#video-codecs" title="永久链接至标题">¶</a></h3>
+<dl class="docutils">
+<dt>无</dt>
+<dd>For audio-only encoding.</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/MPEG-1">MPEG-1</a></dt>
+<dd><p class="first last">请看视频格式</p>
+</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/MPEG-2">MPEG-2</a></dt>
+<dd><p class="first last">请看视频格式</p>
+</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/MPEG-4">MPEG-4(DivX)</a></dt>
+<dd><p class="first last">请看视频格式</p>
+</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/Huffyuv">HuffYUV</a></dt>
+<dd><p class="first last">低损视频编码</p>
+</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/DV">DV</a></dt>
+<dd><p class="first last">请看视频格式</p>
+</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/H.264">H.264</a></dt>
+<dd><p class="first last">请看视频格式</p>
+</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/Xvid">Xvid</a></dt>
+<dd><p class="first last">请看视频格式</p>
+</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/Theora">Theora</a></dt>
+<dd><p class="first last">在上面的视频格式看看Ogg</p>
+</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/Flash_Video">Flash Video</a></dt>
+<dd><p class="first last">请看视频格式</p>
+</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/FFV1">FFmpeg video codec #1</a></dt>
+<dd><p class="first last">AKA FFV1，一个无损耗帧内视频编解码器。它可以使用可变长度编码或熵编码算术编码。编码器和解码器是免费的，开放源码库的libavcodec是FFmpeg的一部分。</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="audio-containers">
+<h2>视频:<a class="headerlink" href="#audio-containers" title="永久链接至标题">¶</a></h2>
+<dl class="docutils">
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/MPEG-1_Audio_Layer_II">MP2</a></dt>
+<dd><p class="first last">一种由ISO/IEC 11172-3制定的有损的音频格式。</p>
+</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/MP3">MP3</a></dt>
+<dd>See MP3 in <a class="reference internal" href="#video-formats">Video Formats</a> (above).</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/Dolby_Digital">AC3</a></dt>
+<dd><p class="first last">Audio Codec 3, 一种Dolby实验室开发的音频格式。</p>
+</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/Advanced_Audio_Coding">AAC</a></dt>
+<dd>Advanced Audio Codec, a standardized, lossy compression and encoding scheme for digital audio.
+&#8211; AAC generally achieves better sound quality than MP3 at similar bit rates.</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/Vorbis">Vorbis</a></dt>
+<dd>An open-standard, highly-compressed format comparable to MP3 or AAC.
+&#8211; Vorbis generally achieves better sound quality than MP3 at similar bit rates.</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/FLAC">FLAC</a></dt>
+<dd><p class="first last">自由的低损音频格式，FLAC编码的音频通常可以保留50-60%的原始音效尺寸，并且解压到一个原始音频数据的完美拷贝里。</p>
+</dd>
+<dt><a class="reference external" href="https://en.wikipedia.org/wiki/PCM">PCM</a></dt>
+<dd>Pulse Code Modulation, a method used to digitally represent sampled analog signals.
+It is the standard form for digital audio in computers and various Blu-ray,
+Compact Disc and DVD formats, as well as other uses such as digital telephone systems.</dd>
+</dl>
+</div>
+<div class="section" id="known-limitations">
+<h2>Known Limitations<a class="headerlink" href="#known-limitations" title="永久链接至标题">¶</a></h2>
+<div class="section" id="video-output-size">
+<h3>Video Output Size<a class="headerlink" href="#video-output-size" title="永久链接至标题">¶</a></h3>
+<p>Some codecs impose limitations on output size,
+<code class="docutils literal"><span class="pre">H.264</span></code>, for example requires both the height and width to be divisible by 2.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../linked_libraries.html" class="btn btn-neutral float-right" title="追加和链接–阿尔翻译" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="image_formats.html" class="btn btn-neutral" title="支持的图像格式" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

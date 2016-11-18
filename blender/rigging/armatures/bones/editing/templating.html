@@ -1,0 +1,558 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Armature Templating &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../../../../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="搜索" href="../../../../search.html"/>
+    <link rel="top" title="Blender Manual" href="../../../../index.html"/>
+        <link rel="up" title="Editing" href="index.html"/>
+        <link rel="next" title="Properties" href="../properties/index.html"/>
+        <link rel="prev" title="Skeleton Sketching" href="sketching.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../../../../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">骨骼装配</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../constraints/index.html">Constraints</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">Armatures</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Bones</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../structure.html">Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../selecting.html">Selecting</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Editing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../properties/index.html">Properties</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../properties/index.html">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure.html">Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../skinning/index.html">Skinning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../posing/index.html">Posing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lattice.html">Lattice</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../preferences/index.html">用户偏好设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">骨骼装配</a> &raquo;</li>
+      
+          <li><a href="../../index.html">Armatures</a> &raquo;</li>
+      
+          <li><a href="../index.html">Bones</a> &raquo;</li>
+      
+          <li><a href="index.html">Editing</a> &raquo;</li>
+      
+    <li>Armature Templating</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../_sources/rigging/armatures/bones/editing/templating.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="armature-templating">
+<h1>Armature Templating<a class="headerlink" href="#armature-templating" title="永久链接至标题">¶</a></h1>
+<p>The idea of templating is to use an already existing armature as base (&#8220;template&#8221;)
+to create a new armature. It differs from a simple copy in that you can directly define the
+new armature different in some aspects than its reference rig.</p>
+<p>In Blender, the only templating tool is the bone sketching one
+(Etch-a-ton, described in <a class="reference internal" href="sketching.html"><span class="doc">the previous page</span></a>),
+with its <em>Template</em> conversion method, so you should have read its page before this one!</p>
+<div class="section" id="using-bone-sketching">
+<h2>Using Bone Sketching<a class="headerlink" href="#using-bone-sketching" title="永久链接至标题">¶</a></h2>
+<div class="refbox admonition">
+<p class="first admonition-title">Reference</p>
+<div class="last line-block">
+<div class="line">Mode:     Edit Mode</div>
+<div class="line">Panel:    Bone Sketching (3D View editor)</div>
+<div class="line">Menu:     <span class="menuselection">Armature ‣ Bone Sketching</span></div>
+<div class="line">Hotkey:   <code class="kbd docutils literal"><span class="pre">P</span></code></div>
+</div>
+</div>
+<p>The <em>Template</em> conversion method of <em>Bone Sketching</em> tool maps a copy of
+existing bones to each selected stroke. The new bones will inherit some of their properties
+(influence, number of segments, etc.) from the corresponding bones in the template,
+but they will acquire their lengths, rolls and rotation from the sketch;
+so these properties would be different as compared to the template.</p>
+<p>This is easier to understand with some examples.</p>
+<p>In the following image, &#8220;armature.002&#8221; is set as the template,
+and the stroke maps with &#8220;chain_a&#8221; of this template.
+None of the bones are selected in the template.
+Note that there is no second stroke to map with chain &#8220;chain_b&#8221; of the template.
+The result is shown at right:
+Blender creates a copy of &#8220;chain_a&#8221; and matches the bones with the stroke.</p>
+<p>Blender also creates a copy of &#8220;chain_b&#8221;, but this chain is not altered in any way;
+because this command can map only one selected chain with a stroke.</p>
+<p>In the following example, no template is selected. (In other words, all the action is within the armature itself.)</p>
+<p>Two bones are selected in &#8220;chain_b&#8221;,
+and the property panel is set to map the joints with the stroke. So these two selected bones
+are copied and the newly created copy of the chain is matched with the stroke.
+(Note that the newly created bones are named in continuation of the original chain.)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id1">
+<img alt="../../../../_images/rigging_armatures_editing_templating_sketching-panel-1.png" src="../../../../_images/rigging_armatures_editing_templating_sketching-panel-1.png" />
+<p class="caption"><span class="caption-text">Conversion settings.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id2">
+<img alt="../../../../_images/rigging_armatures_editing_templating_stroke-conversion-1.png" src="../../../../_images/rigging_armatures_editing_templating_stroke-conversion-1.png" />
+<p class="caption"><span class="caption-text">Before conversion.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id3">
+<img alt="../../../../_images/rigging_armatures_editing_templating_stroke-conversion-2.png" src="../../../../_images/rigging_armatures_editing_templating_stroke-conversion-2.png" />
+<p class="caption"><span class="caption-text">After conversion.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>If you had selected both the chains (&#8220;Chain_a&#8221; and &#8220;Chain_b&#8221;),
+you would have still got the same result as in the example above,
+because the command maps to stroke only one selected chain.</p>
+<p>In the following example also, only one chain is selected,
+but there are three strokes to map to. In this case, the same chain is copied three times
+(once for each stroke) and then mapped to individual strokes.
+Note how a two-bone chain is fitted to a three-segment stroke.</p>
+<table border="1" class="docutils" id="id4">
+<caption><span class="caption-text">The newly created bones are numbered sequentially, after the original bones&#8217; names.</span><a class="headerlink" href="#id4" title="永久链接至表格">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id5">
+<img alt="../../../../_images/rigging_armatures_editing_templating_stroke-multi-conversion-1.png" src="../../../../_images/rigging_armatures_editing_templating_stroke-multi-conversion-1.png" />
+<p class="caption"><span class="caption-text">Before conversion.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id6">
+<img alt="../../../../_images/rigging_armatures_editing_templating_stroke-multi-conversion-2.png" src="../../../../_images/rigging_armatures_editing_templating_stroke-multi-conversion-2.png" />
+<p class="caption"><span class="caption-text">After conversion.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>OK now, here are some important ground rules:</p>
+<ul class="simple">
+<li>This conversion method can use as reference bones either the selected bones in the <em>currently</em> edited armature,
+or <em>all</em> bones from another armature.
+In general, it is a better idea to create new &#8220;templated&#8221; bones inside the &#8220;reference&#8221;
+armature, so you can precisely select which bones to use as template &#8211;
+if you want the new bones in a different armature, you can then use the <em>Separate</em>
+<code class="kbd docutils literal"><span class="pre">Ctrl-Alt-P</span></code> and optionally <em>Join</em> (<code class="kbd docutils literal"><span class="pre">Ctrl-J</span></code> in <em>Object Mode</em>) commands...</li>
+<li>This tool only considers <em>one</em> chain of bones,
+so it is better to select only one chain of bones inside the current armature
+(or use a single-chain armature object as template).
+Else, the chain of the template containing the first created bones will be mapped to the
+selected strokes, and the other chains will just be &#8220;copied&#8221; <em>as is</em>, without any modification.</li>
+<li>This tool maps the same chain of bones on all selected strokes,
+so you cannot use multiple strokes to map a multi-chains template &#8211;
+you will rather get a whole set of new bones for each selected stroke!</li>
+<li>If you have strokes only made of straight segments,
+they must have <em>at least</em> as much segments as there are bones in the template chain
+(else, the newly created chain is not mapped at all to the stroke,
+and remains an exact duplicate of its template).
+If there are more segments than necessary,
+the conversion algorithm will chose the best &#8220;joints&#8221; for the bones to fit to the reference chain,
+using the same influence settings as for free segments (<em>Angle</em>, <em>Length</em> and <em>Definition</em> settings, see below).</li>
+<li>If you try to <em>Convert</em> without template bones (i.e.
+either an empty armature selected as template,
+or no bones selected in the current edited armature),
+you will get the error message <code class="docutils literal"><span class="pre">No</span> <span class="pre">Template</span> <span class="pre">and</span> <span class="pre">no</span> <span class="pre">deforming</span> <span class="pre">bones</span> <span class="pre">selected</span></code>, and nothing will occur.</li>
+</ul>
+<table border="1" class="docutils" id="id7">
+<caption><span class="caption-text">The <em>Skeleton Sketching</em> panel with <em>Retarget</em> conversion method enabled.</span><a class="headerlink" href="#id7" title="永久链接至表格">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id8">
+<img alt="../../../../_images/rigging_armatures_editing_templating_sketching-panel-1.png" src="../../../../_images/rigging_armatures_editing_templating_sketching-panel-1.png" />
+<p class="caption"><span class="caption-text">With current edited armature as template.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id9">
+<img alt="../../../../_images/rigging_armatures_editing_templating_sketching-panel-2.png" src="../../../../_images/rigging_armatures_editing_templating_sketching-panel-2.png" />
+<p class="caption"><span class="caption-text">With another armature as template.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Now, here are the settings of this conversion method:</p>
+<dl class="docutils">
+<dt>No, View, Joint buttons</dt>
+<dd><p class="first">These three toggle buttons (mutually exclusive) control how the roll angle of newly created bones is affected:</p>
+<dl class="last docutils">
+<dt>No</dt>
+<dd>Do not alter the bones roll (i.e. the new bones&#8217; rolls fit their reference ones).</dd>
+<dt>View</dt>
+<dd>Roll each bone so that one of its X, Y or Z local axis is aligned
+(as much as possible) with the current view&#8217;s Z axis.</dd>
+<dt>Joint</dt>
+<dd>New bones roll fit their original rotation (as <em>No</em> option),
+but with regards to the bend of the joint with its parent.</dd>
+</dl>
+</dd>
+</dl>
+<table border="1" class="docutils" id="id10">
+<caption><span class="caption-text">Templating: bone roll example.</span><a class="headerlink" href="#id10" title="永久链接至表格">¶</a></caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id11">
+<img alt="../../../../_images/rigging_armatures_editing_templating_bone-roll-1.png" src="../../../../_images/rigging_armatures_editing_templating_bone-roll-1.png" />
+<p class="caption"><span class="caption-text">With No roll option.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id12">
+<img alt="../../../../_images/rigging_armatures_editing_templating_bone-roll-2.png" src="../../../../_images/rigging_armatures_editing_templating_bone-roll-2.png" />
+<p class="caption"><span class="caption-text">With View roll option.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id13">
+<img alt="../../../../_images/rigging_armatures_editing_templating_bone-roll-3.png" src="../../../../_images/rigging_armatures_editing_templating_bone-roll-3.png" />
+<p class="caption"><span class="caption-text">With Joint roll option.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The &#8220;Bone.003&#8221; to &#8220;Bone.005&#8221; chain is the mapped-to-stroke
+version of &#8220;Bone&#8221; to &#8220;Bone.002&#8221; selected one, and &#8220;Bone.001&#8221; has a modified roll angle.</p>
+<dl class="docutils">
+<dt>Template</dt>
+<dd>In this data-ID you can select the armature to use as template.
+If you choose <em>None</em>, the selected bones from the currently edited armature will be used as reference,
+else all bones of the other armature will be used.</dd>
+<dt><em>Angle</em>, <em>Length</em>, <em>Definition</em> are numeric fields.</dt>
+<dd><p class="first">These settings control how the template is mapped to the selected strokes.
+Each one can have a value between (0.0 and 10.0), the default being 1.0.</p>
+<dl class="last docutils">
+<dt>Angle</dt>
+<dd>Controls the influence of the angle of the joints (i.e. angle between bones). The higher this value,
+the more the conversion process will try to preserve these joints angle in the new chain.</dd>
+<dt>Length</dt>
+<dd>Controls the influence of the bones&#8217; length. The higher this value,
+the more the conversion process will try to preserve these lengths in the new bones.</dd>
+<dt>Definition</dt>
+<dd>Controls the influence of the stroke&#8217;s shape. The higher this value,
+the more the conversion process will try to follow the stroke with the new chain.</dd>
+</dl>
+</dd>
+</dl>
+<div class="figure" id="id14">
+<img alt="../../../../_images/rigging_armatures_editing_templating_influence-weights.png" src="../../../../_images/rigging_armatures_editing_templating_influence-weights.png" />
+<p class="caption"><span class="caption-text">Examples of Template conversions for various influence weights values,
+with one stroke quite similar to the template chain&#8217;s shape, and one stroke very different.</span></p>
+</div>
+<dl class="docutils">
+<dt>Side and Number text fields, <em>auto</em> button</dt>
+<dd>These control how the new bones are named. By default,
+they just take the same names as the originals from the template, except for the final number,
+increased as needed. However, if the template bones have &#8220;&amp;s&#8221; somewhere in their name,
+this &#8220;placeholder&#8221; will be replaced in the &#8220;templated&#8221; bones&#8217; names by the content of the <em>Side</em> text field.
+Similarly, a &#8220;&amp;n&#8221; placeholder will be replaced by the <em>Number</em> field content.
+If you enable the small <em>auto</em> button, the <em>Number</em> field content is auto-generated,
+producing a number starting from nothing, and increased each time you press the <em>Convert</em> button,
+and the &#8220;&amp;s&#8221; placeholder is replaced by the side of the bone (relative to the local X axis:
+&#8220;r&#8221; for negative X values, &#8220;l&#8221; for positive ones).</dd>
+</dl>
+<table border="1" class="docutils" id="id15">
+<caption><span class="caption-text">Naming and placeholders, using a simple leg template.</span><a class="headerlink" href="#id15" title="永久链接至表格">¶</a></caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id16">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_editing_templating_sketching-panel-3.png"><img alt="../../../../_images/rigging_armatures_editing_templating_sketching-panel-3.png" src="../../../../_images/rigging_armatures_editing_templating_sketching-panel-3.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Conversion settings.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id17">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_editing_templating_name-placeholders-1.png"><img alt="../../../../_images/rigging_armatures_editing_templating_name-placeholders-1.png" src="../../../../_images/rigging_armatures_editing_templating_name-placeholders-1.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Before conversion (note the &amp;n and &amp;s
+placeholders in template bones&#8217; names).</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id18">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_editing_templating_name-placeholders-2.png"><img alt="../../../../_images/rigging_armatures_editing_templating_name-placeholders-2.png" src="../../../../_images/rigging_armatures_editing_templating_name-placeholders-2.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">After conversion: the placeholders have been replaced by the
+content of the S and N text fields of the Bone Sketching panel.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils" id="id19">
+<caption><span class="caption-text">Auto naming and placeholders, using a simple leg template.</span><a class="headerlink" href="#id19" title="永久链接至表格">¶</a></caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure" id="id20">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_editing_templating_sketching-panel-4.png"><img alt="../../../../_images/rigging_armatures_editing_templating_sketching-panel-4.png" src="../../../../_images/rigging_armatures_editing_templating_sketching-panel-4.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Conversion settings.</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id21">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_editing_templating_auto-naming-1.png"><img alt="../../../../_images/rigging_armatures_editing_templating_auto-naming-1.png" src="../../../../_images/rigging_armatures_editing_templating_auto-naming-1.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">Before conversion (note that, in the Bone Sketching panel,
+the S and N fields are empty, and the small &#8220;auto&#8221; button is enabled).</span></p>
+</div>
+</td>
+<td><div class="first last figure" id="id22">
+<a class="reference internal image-reference" href="../../../../_images/rigging_armatures_editing_templating_auto-naming-2.png"><img alt="../../../../_images/rigging_armatures_editing_templating_auto-naming-2.png" src="../../../../_images/rigging_armatures_editing_templating_auto-naming-2.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">After conversion.</span></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Static text line</dt>
+<dd><p class="first">The line just above the <em>Peel Objects</em> button gives you two informations:</p>
+<ul class="last simple">
+<li>The <em>n</em> joints part gives you the number of joints
+(i.e. bones&#8217; ends, with connected ends considered as one joint),
+either from the selected bones of the edited armature, or in the whole other template armature.</li>
+<li>The second part is only present when another armature has been selected as template &#8211;
+it gives you the <em>root bone&#8217;s name</em> of the chain that will be mapped to the strokes.
+Or, while you are drawing a stroke with straight segments,
+the name of the bone corresponding to the current segment
+(and &#8220;Done&#8221; when you have enough segments for all bones in the template chain).</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../properties/index.html" class="btn btn-neutral float-right" title="Properties" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="sketching.html" class="btn btn-neutral" title="Skeleton Sketching" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

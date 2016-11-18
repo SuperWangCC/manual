@@ -1,0 +1,453 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>界面 &mdash; Blender Manual</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="在 Blender Manual 中搜索" href="../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="索引"
+              href="../genindex.html"/>
+        <link rel="search" title="搜索" href="../search.html"/>
+    <link rel="top" title="Blender Manual" href="../index.html"/>
+        <link rel="up" title="用户偏好设置" href="index.html"/>
+        <link rel="next" title="编辑" href="editing.html"/>
+        <link rel="prev" title="简介" href="introduction.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> Blender 2.78 Manual
+          
+
+          
+            
+            <img src="../_static/sidebar_logo.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Blender入门</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">User Interface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../editors/index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#d">3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#animation">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#image-video">图像/视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#nodes-logic">节点/逻辑</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../editors/index.html#settings">设置</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../editors/properties_editor.html">Properties Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editors/outliner.html">大纲视图&#8211;­爱在南江村路口等你翻译</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">User Preferences</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#tabs">Tabs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../editors/info/index.html">Info Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../editors/index.html#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data_system/index.html">数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">制作模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">绘制与雕刻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rigging/index.html">骨骼装配</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../game_engine/index.html">游戏引擎</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">用户偏好设置</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#tabs">Tabs</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">界面</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#display">显示</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#warnings">Warnings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#view-manipulation">View Manipulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#d-viewports">2D 视口:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#menus">菜单:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pie-menus">Pie Menus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#splash">Splash</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="editing.html">编辑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input.html">输入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="addons.html">插件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="themes.html">主题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file.html">File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system.html">System</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于本手册</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../contents.html">Blender 2.78 Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../contents.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../editors/index.html">编辑器</a> &raquo;</li>
+      
+          <li><a href="index.html">用户偏好设置</a> &raquo;</li>
+      
+    <li>界面</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/preferences/interface.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="interface">
+<h1>界面<a class="headerlink" href="#interface" title="永久链接至标题">¶</a></h1>
+<p>这类选项更改UI元素显示和回馈的方式。</p>
+<div class="figure">
+<img alt="../_images/user_prefs-interface_tab.png" src="../_images/user_prefs-interface_tab.png" />
+</div>
+<div class="section" id="display">
+<h2>显示<a class="headerlink" href="#display" title="永久链接至标题">¶</a></h2>
+<dl class="docutils">
+<dt>工具提示</dt>
+<dd>When enabled, a tooltip will appear when your mouse pointer is over a control.
+This tip explains the function of what is under the pointer,
+gives the associated hotkey (if any) and the Python function that refers to it.</dd>
+<dt>Python Tooltips</dt>
+<dd>Displays a property&#8217;s Python information below the tooltip.</dd>
+<dt>物体信息</dt>
+<dd>Display the active Object name and frame number at the bottom left of the 3D View.</dd>
+<dt>大号光标</dt>
+<dd><p class="first last">勾选后使用大号光标。</p>
+</dd>
+<dt>视图名称</dt>
+<dd>Display the name and type of the current view in the top left corner of the 3D View.
+For example: <em>User Persp</em> or <em>Top Ortho</em>.</dd>
+<dt>播放帧速</dt>
+<dd>Show the frames per second screen refresh rate while an animation is played back.
+It appears in the viewport corner, displaying red if the frame rate set cannot be reached.</dd>
+<dt>全局场景</dt>
+<dd><p class="first last">强行在所有屏幕上显示当前场景（在一个工程文件中可以包含多个场景）。</p>
+</dd>
+<dt>物体原点尺寸</dt>
+<dd><p class="first last">调整3D物体中心的直径大小（可调整范围为4像素~6像素）</p>
+</dd>
+<dt>显示小轴</dt>
+<dd><p class="first last">在视窗的左下角显示3D坐标轴的小轴。</p>
+</dd>
+<dt>尺寸</dt>
+<dd><p class="first last">小轴的尺寸</p>
+</dd>
+<dt>亮度</dt>
+<dd><p class="first last">调整小轴的亮度。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="warnings">
+<h2>Warnings<a class="headerlink" href="#warnings" title="永久链接至标题">¶</a></h2>
+<dl class="docutils">
+<dt>Prompt Quit</dt>
+<dd>When exiting Blender, a pop-up will ask you weather or not you really want to quit
+(currently only available on MS-Windows).</dd>
+</dl>
+</div>
+<div class="section" id="view-manipulation">
+<h2>View Manipulation<a class="headerlink" href="#view-manipulation" title="永久链接至标题">¶</a></h2>
+<dl class="docutils">
+<dt>指针深度</dt>
+<dd><p class="first last">在放置指针的时候使用鼠标深度。</p>
+</dd>
+</dl>
+<dl class="docutils" id="prefs-auto-depth">
+<dt>自动深度</dt>
+<dd>Use the depth under the mouse to improve view pan, rotate, zoom functionality.
+Useful in combination with <em>Zoom To Mouse Position</em>.</dd>
+</dl>
+<dl class="docutils" id="prefs-zoom-mouse-pos">
+<dt>放大至鼠标的位置</dt>
+<dd><p class="first last">当这个选项被勾选时，鼠标指针的位置将会替代2D视窗中心成为缩放的焦点，这会在频繁内外翻转缩放时有助于避免发生位移。</p>
+</dd>
+<dt>围绕选择物体旋转</dt>
+<dd><p class="first">The selected object becomes the rotation center of the viewport.
+When there is no selection the last selection will be used.</p>
+<div class="last admonition hint">
+<p class="first admonition-title">提示</p>
+<p class="last">This may seem ideal behavior,
+however, it can become problematic with larger objects such as a terrain-mesh,
+where the center is not necessarily your point of interest.</p>
+</div>
+</dd>
+<dt>全局转轴</dt>
+<dd>Lock the same rotation/scaling pivot in all 3D Views.</dd>
+<dt>Camera Parent Lock</dt>
+<dd>When the camera is locked to the view and in fly mode, transform the parent rather than the camera.</dd>
+</dl>
+<dl class="docutils" id="prefs-interface-auto-perspective">
+<dt>自动透视模式</dt>
+<dd><p class="first last">当你将视图模式从正交的顶视/侧视/前视图改为用户视图时，视图的透视类型将会自动从正交调整为透视，当该选项被取消勾选时，三视图将会回到正交/透视试图类型（视图将会保持当前状态，切换视图视角不会改变透视类型）。</p>
+</dd>
+<dt>平滑视图</dt>
+<dd><p class="first last">调整通过小键盘切换视图视角时的变化动画时间，当你把数值调为0时，也就取消了该变化动画。</p>
+</dd>
+<dt>旋转角度</dt>
+<dd>Rotation step size in degrees, when <code class="kbd docutils literal"><span class="pre">Numpad4</span></code>, <code class="kbd docutils literal"><span class="pre">Numpad6</span></code>, <code class="kbd docutils literal"><span class="pre">Numpad8</span></code>,
+or <code class="kbd docutils literal"><span class="pre">Numpad2</span></code> are used to rotate the 3D View.</dd>
+</dl>
+</div>
+<div class="section" id="d-viewports">
+<h2>2D 视口:<a class="headerlink" href="#d-viewports" title="永久链接至标题">¶</a></h2>
+<dl class="docutils">
+<dt>最小栅格间距</dt>
+<dd><p class="first last">2D视窗（比如顶视图/正交）中栅格线之间的最小像素间距。</p>
+</dd>
+<dt>Time Code Style</dt>
+<dd><p class="first last">时间码是不使用帧为时间单位时（无时间线等显示帧的窗口时）显示时间的格式，此格式用“+”来分隔次级帧数，必要时使用左右两侧的分隔线。</p>
+</dd>
+<dt>Zoom To Frame Type</dt>
+<dd><p class="first">How zooming to frame focuses around current frame.</p>
+<table class="last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Keep Range:</th><td class="field-body">Todo.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Seconds:</th><td class="field-body">Todo.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Keyframes:</th><td class="field-body">Todo.</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl class="docutils" id="prefs-interface-manipulator">
+<dt>操纵器</dt>
+<dd>Turns manipulators on and off.</dd>
+<dt>尺寸</dt>
+<dd>Diameter of the manipulator.</dd>
+<dt>Handle Size</dt>
+<dd>Size of manipulator handles, as a percentage of the manipulator radius (<em>size</em>/ 2).</dd>
+<dt>Hotspot</dt>
+<dd>Hotspot size (in pixels) for clicking the manipulator handles.</dd>
+</dl>
+</div>
+<div class="section" id="menus">
+<h2>菜单:<a class="headerlink" href="#menus" title="永久链接至标题">¶</a></h2>
+<dl class="docutils">
+<dt>鼠标划过时开启菜单</dt>
+<dd><p class="first last">勾选此选项之后，把鼠标指针悬浮在菜单按钮上就能开启菜单，这样就不用点击啦~</p>
+</dd>
+<dt>菜单开启延迟</dt>
+<dd><p class="first last">这会给系统点时间来开启菜单。</p>
+</dd>
+<dt>主菜单开启延迟</dt>
+<dd><p class="first last">菜单打开前会有1/10秒的延迟（鼠标滑过开启菜单这丫必须被勾选）</p>
+</dd>
+<dt>子菜单开启延迟</dt>
+<dd><p class="first last">和楼上一样，只是作用于次级菜单（例如文件→用户偏好设置）</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="pie-menus">
+<span id="prefs-pie-menu"></span><h2>Pie Menus<a class="headerlink" href="#pie-menus" title="永久链接至标题">¶</a></h2>
+<dl class="docutils">
+<dt>Animation Timeout</dt>
+<dd>Length of animation when opening Pie Menus.</dd>
+<dt>Recenter Timeout</dt>
+<dd>The window system tries to keep the pie menu within the window borders.
+Pie menus will use the initial mouse position as center for this amount of time, measured in 1/100ths of a second.
+This allows for fast dragged selections.</dd>
+<dt>Radius</dt>
+<dd>Size of the Pie Menu.</dd>
+<dt>Threshold</dt>
+<dd>Distance from center before a selection can be made.</dd>
+<dt>Confirm Threshold</dt>
+<dd>Distance threshold after which selection is made (zero disables).</dd>
+</dl>
+</div>
+<div class="section" id="splash">
+<h2>Splash<a class="headerlink" href="#splash" title="永久链接至标题">¶</a></h2>
+<dl class="docutils">
+<dt>Show Splash</dt>
+<dd>Display the <a class="reference internal" href="../interface/splash.html#splash"><span class="std std-ref">Splash Screen</span></a> when starting Blender.</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="editing.html" class="btn btn-neutral float-right" title="编辑" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="简介" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; 版权所有 : This page is licensed under a CC-BY-SA 4.0 Int. License.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.78',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1418081-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>
